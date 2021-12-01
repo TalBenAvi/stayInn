@@ -22,6 +22,5 @@ export default {
         return this.$store.getters.stays
       }
     }
-
 }
 </script>
