@@ -1,17 +1,18 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">home</router-link> 
-    </div>
+    <app-header />
     <router-view/>
   </div>
 </template>
 
 <script>
-
+import appHeader from './cmps/app-header.vue'
 export default{
   created() {
 
+  },
+  components: {
+    appHeader,
   }
 }
 </script>

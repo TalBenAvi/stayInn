@@ -18,33 +18,42 @@ async function query() {
     }
 }
 
-function  _createStays() {
+function _createStays() {
     let stays = utilService.loadFromStorage(STAY_KEY);
     if (!stays || !stays.length) {
         stays = [];
-        stays.push(_createStay());
+        stays.push(_createStay("10006546","Ribeira Charming Duplex",['./imgs/1.jpg', './imgs/2.jpg', './imgs/3.jpg', './imgs/4.jpg', './imgs/5.jpg']));
+        stays.push(_createStay("10006566","Ribeira Charming Duplex",['./imgs/1.jpg', './imgs/2.jpg', './imgs/3.jpg', './imgs/4.jpg', './imgs/5.jpg']));
+        stays.push(_createStay("10006576","Ribeira Charming Duplex",['./imgs/1.jpg', './imgs/2.jpg', './imgs/3.jpg', './imgs/4.jpg', './imgs/5.jpg']));
+        stays.push(_createStay("10006536","Ribeira Charming Duplex",['./imgs/1.jpg', './imgs/2.jpg', './imgs/3.jpg', './imgs/4.jpg', './imgs/5.jpg']));
+        stays.push(_createStay("10002146","Ribeira Charming Duplex",['./imgs/1.jpg', './imgs/2.jpg', './imgs/3.jpg', './imgs/4.jpg', './imgs/5.jpg']));
+        stays.push(_createStay("10034546","Ribeira Charming Duplex",['./imgs/1.jpg', './imgs/2.jpg', './imgs/3.jpg', './imgs/4.jpg', './imgs/5.jpg']));
+        stays.push(_createStay("10023546","Ribeira Charming Duplex",['./imgs/1.jpg', './imgs/2.jpg', './imgs/3.jpg', './imgs/4.jpg', './imgs/5.jpg']));
+        stays.push(_createStay("10012546","Ribeira Charming Duplex",['./imgs/1.jpg', './imgs/2.jpg', './imgs/3.jpg', './imgs/4.jpg', './imgs/5.jpg']));
+        stays.push(_createStay("10012546","Ribeira Charming Duplex",['./imgs/1.jpg', './imgs/2.jpg', './imgs/3.jpg', './imgs/4.jpg', './imgs/5.jpg']));
+        stays.push(_createStay("100045546","Ribeira Charming Duplex",['./imgs/1.jpg', './imgs/2.jpg', './imgs/3.jpg', './imgs/4.jpg', './imgs/5.jpg']));
         utilService.saveToStorage(STAY_KEY, stays);
     }
     return stays;
 }
 
 
-function _createStay() {
+function _createStay(id,name,imgUrls) {
     return {
-        _id: "10006546",
-        name: "Ribeira Charming Duplex",
-        imgUrls: ['./imgs/1.jpg','./imgs/2.jpg','./imgs/3.jpg','./imgs/4.jpg','./imgs/5.jpg' ],
+        id,
+        name,
+        imgUrls,
         price: 80.00,
         summary: "Fantastic duplex apartment with three bedrooms, located in...",
-        propertyType: 'House',
-        TypeOfPlace: 'Entire Place',
-        HouseRules: ['Pets Allowed', 'Children Allowed'],
+        propertyType: 'House',
+        TypeOfPlace: 'Entire Place',
+        HouseRules: ['Pets Allowed', 'Children Allowed'],
         accommodates: 8,
-        beds: 1,
-        bedrooms: 2,
-        bath: 1,
+        beds: 1,
+        bedrooms: 2,
+        bath: 1,
         amenities: ['TV', 'Wifi'],
-        host: {
+        host: {
             _id: '51399391',
             fullName: 'Davit Pok',
             imgUrl: 'https://x.com/pic.jpg',
@@ -58,18 +67,18 @@ function _createStay() {
         },
         reviews: [ //*all reviews are pushed here
             {
-            id: 'madeId',
-            txt: 'Very helpful hosts. Cooked traditional...',
-            rate: 4,
-            by: {
-                _id: 'u102',
-                fullName: 'user2',
-                imgUrl: '/img/img2.jpg'
+                id: 'madeId',
+                txt: 'Very helpful hosts. Cooked traditional...',
+                rate: 4,
+                by: {
+                    _id: 'u102',
+                    fullName: 'user2',
+                    imgUrl: '/img/img2.jpg'
+                }
             }
-        }
-    ]
+        ]
 
-}
+    }
 
 
 }
