@@ -1,6 +1,9 @@
 <template>
 <div class="stay-app">
-     {{staysForDisplay}}
+ <section class="stay-filter-container flex space-between align-center">
+
+ </section>
+     <!-- {{staysForDisplay}} -->
   </div>
 </template>
 
