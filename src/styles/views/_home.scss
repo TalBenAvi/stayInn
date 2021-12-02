@@ -1,0 +1,61 @@
+.home {
+    background-color: black;
+    width: 100%;
+}
+
+
+.top-fold {
+    position: relative;
+    margin-top: 70px;
+    height: 850px;
+    
+    .home-img {
+        height: 950px;
+        // max-width: 1400px;
+        grid-column: 2/3;
+        object-fit: contain;
+
+
+
+        img {
+            border-radius: 20px;
+        }
+    }
+    .slogan {
+        font-family: airbnb-medium;
+        font-size: 40px;
+        top:350px;
+        left: 320px;
+        color: white;
+        position: absolute;
+        z-index: 3;
+
+
+    
+    }
+
+    .flexible-btn {
+        top: 450px;
+        position: absolute;
+        left: 550px;
+        padding: 16px 32px;
+        cursor: pointer;
+        text-align: center;
+        width: auto;
+        font-family: airbnb-medium;
+        font-size: 16px;
+        line-height: 20px;
+        border-radius: 1000px;
+        border: 1px solid black;
+
+        span {
+            -webkit-text-fill-color: transparent;
+            background: -webkit-linear-gradient(90deg, #6F019C 0%, #C6017E 135.12%);
+            background: -moz-linear-gradient(90deg, #6F019C 0%, #C6017E 135.12%);
+            background: linear-gradient(90deg, #6F019C 0%, #C6017E 135.12%);
+            background-clip: text;
+
+        }
+    }
+
+}

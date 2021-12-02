@@ -1,4 +1,106 @@
 .app-header{
-height: 80px;
-background-color: aqua;
+    display: flex;
+    position: sticky;
+
+    >* {
+        display: flex;
+        align-items: center;
+    }
+    align-items: center;
+    height: 80px;
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
+        .logo-img {
+            object-fit: contain;
+            cursor: pointer;
+            margin-inline-start: $layoutPadding;
+            width: 123px;
+            height: 37px;
+        }
+
+        .logo-icon {
+            cursor: pointer;
+            margin-inline-start: $layoutPadding;
+            width: 37px;
+            height: 37px;
+        }
+
+        .initial-search-bar{
+            margin:0 auto;
+            cursor: pointer;
+            position: relative;
+            box-shadow: rgb(46 47 48 / 27%) 0px 0px 0.1em 0.04em, rgb(90 125 188 / 5%) 0px 0.25em 1em;
+            border-radius: 40px;
+            background-color: white;
+            width: 300px;
+            height: 47px;
+
+            p {
+                font-family: airbnb-medium;
+                letter-spacing: 0.1px;
+                font-size: 14px;
+                color: $black;
+                padding-inline-start: 25px;
+            }
+
+            .circle{
+                cursor: pointer;
+                .search-icon {
+                    position: absolute;
+                    top: 7px;
+                    right: 7px;
+                    width: 32px;
+                    height: 32px;
+
+                }
+
+            }
+        }   
+
+        .host-options {
+            cursor: pointer;
+ 
+
+            .become {
+                letter-spacing: 0.1px;
+                margin-inline-end: 25px;
+                font-family: airbnb-medium;
+                font-size: 14px;
+            }
+
+        }
+
+        .global img{
+            margin-inline-end: 25px;
+            cursor: pointer;
+            width: 18px;
+            height: 18px;
+        }
+
+
+
+        .user-options {
+            cursor: pointer;
+            position: relative;
+            box-shadow: rgb(46 47 48 / 27%) 0px 0px 0.1em 0.04em, rgb(90 125 188 / 5%) 0px 0.25em 1em;
+            width: 75px;
+            height: 40px;
+            border-radius: 40px;
+            margin-inline-end:$layoutPadding+20px ;
+
+            .avatar {
+                
+                position: absolute;
+                right: 6px;
+                width: 30px;
+                height: 30px;
+            }
+
+            .burger {
+                position: absolute;
+                color: $black;
+                left: 13px;
+            }
+           
+
+        }
 }
