@@ -133,6 +133,7 @@
     border-radius: 10px;
     font-family: airbnb-medium;
     font-size: 0.65rem;
+    margin-bottom: 10px;
     
 }
 .check-in {
@@ -156,6 +157,32 @@
 .guests-num{
     grid-row:2;
     grid-column: span 2;
+}
+.check-available{
+    display: flex;
+    justify-content:center;
+    font-family: airbnb-medium;
+    border-radius: 10px;
+    margin: 0 auto;
+    width: 86.48%;
+    height: 50px;
+    background-color: $brand;
+    color: white;
+    margin-bottom: 30px;
+}
+.report-stay{
+    text-align: center;
+    color: $gray;
+}
+.report-stay img{
+width: 20px;
+}
+.report-text{
+color: $gray;
+text-decoration: underline;
+}
+.text-avilable{
+    margin-top:15px;
 }
 .minimal-details {
     margin-bottom: 5px;
