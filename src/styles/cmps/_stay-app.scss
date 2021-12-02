@@ -1,3 +1,16 @@
+.stay-app{
+    display: grid;
+    grid-template-columns: $layoutPadding 1fr $layoutPadding;
+
+    > * {
+        grid-column: 2;
+    }
+
+    > *.full {
+        grid-column: 1 / -1;
+    }
+}
+
 .stay-filter-container {
     margin-top: 30px;
 }
@@ -22,20 +35,26 @@
 .grid-card-container {
     margin-top: 38px;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns:  1fr 1fr 1fr 1fr;
     // grid-column: 2;
 }
 
 .grid-card-item {
     display: flex;
     flex-direction: column;
+    margin-bottom: 20px;
 }
 
 .grid-img {
     width: 300px;
-    border-radius: 15px;
+   height: 300px;
 }
-
+.grid-img img{
+    width: 300px;
+    height: 300px;
+    border-radius: 15px;
+    object-fit: cover;
+}
 .stay-name{
     margin-top: 7px;
     font-family:airbnb-medium;
