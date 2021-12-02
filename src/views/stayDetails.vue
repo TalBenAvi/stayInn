@@ -33,7 +33,12 @@
                <div class="rate">{{this.stay.reviews[0].rate}}</div>
                 <div class="reviews"> ({{this.stay.reviews.length}} reviews)</div>
           </div>
-          <div class="checking"></div>
+          <div class="checking">
+              <div class="dates">
+                  <div class="check-in">check-in</div>
+                  <div class="check-out">check-out</div>
+              </div>
+          </div>
         </div>
       </div>
     </div>

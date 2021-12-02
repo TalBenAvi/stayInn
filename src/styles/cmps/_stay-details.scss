@@ -129,6 +129,17 @@ height: 112px;
 border:solid 1px $gray;
 border-radius: 10px;
 }
+.dates{
+display: flex;
+flex-direction: row;
+justify-content: space-around;
+}
+.check-in{
+
+}
+.check-out{
+
+}
 .minimal-details {
     margin-bottom: 5px;
     font-family: airbnb-medium;
