@@ -1,0 +1,47 @@
+.stay-filter-container {
+    margin-top: 30px;
+}
+
+.filter-btn {
+    cursor: pointer;
+    text-align: center;
+    border: 1px solid rgb(221, 221, 221);
+    background-color: rgb(255, 255, 255);
+    border-radius: 30px;
+    color: $black;
+    padding: 10px 16px;
+    font-size: 14px;
+    font-family: airbnb-book;
+    margin-left: 8px;
+}
+
+.filter-btn:hover {
+    border: 1px solid $black;
+}
+
+.grid-card-container {
+    margin-top: 38px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    // grid-column: 2;
+}
+
+.grid-card-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.grid-img {
+    width: 300px;
+    border-radius: 15px;
+}
+
+.stay-name{
+    margin-top: 7px;
+    font-family:airbnb-medium;
+}
+
+.stay-details-display{
+    color: $gray;
+    font-family:airbnb;
+}

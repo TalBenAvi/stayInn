@@ -4,12 +4,23 @@ $brand : #ff385c;
 $black: #222222;
 $gray: #717171;
 
-//LAYOUT
 
+//LAYOUT
 $layoutPadding: 80px;
+
+//LAYOUT-HOME
 $layoutPaddingHome: 80px;
+
+// LAYOUT-DETAILS
+$layoutPaddingDetails: 230px;
+$layoutimgsheight:390px;
+$layoutimgswidth:1120px;
+
 
 // LAYOUT BREAKPOINTS
 $break-narrow: 460px;
 $break-normal: 640px;
 $break-wide: 980px;
+
+
+

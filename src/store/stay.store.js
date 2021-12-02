@@ -12,6 +12,9 @@ export const stayStore = {
     mutations: {
         setStays(state,{stays}) {
             state.stays = stays
+        },
+         setStay(state,{stays}) {
+            state.stay = stays.find(stay=>stay.id===stayId)
         }
     },
     actions: {
@@ -22,6 +25,16 @@ export const stayStore = {
                 console.log(stays)
                 commit({type:'setStays', stays})
             }catch (err) {
+                console.log('had trouble retriving from query in store:' , err)
+                throw err;
+            }
+        },
+         async loadStay({commit}) {
+            try  {
+                var stay = await stayService.query()
+                console.log(stay)
+                commit({type:'setStay', stay})
+            } catch(err) {
                 console.log('had trouble retriving from query in store:' , err)
                 throw err;
             }
