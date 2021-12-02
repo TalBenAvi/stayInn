@@ -22,7 +22,7 @@ function _createStays() {
     let stays = utilService.loadFromStorage(STAY_KEY);
     if (!stays || !stays.length) {
         stays = [];
-        stays.push(_createStay("10006546","Ribeira Charming Duplex",['./imgs/1.jpg', './imgs/2.jpg', './imgs/3.jpg', './imgs/4.jpg', './imgs/5.jpg']));
+        stays.push(_createStay("10006546","El Port de la Selva",['./imgs/1.jpg', './imgs/2.jpg', './imgs/3.jpg', './imgs/4.jpg', './imgs/5.jpg']));
         stays.push(_createStay("10006566","Ribeira Charming Duplex",['./imgs/1.jpg', './imgs/2.jpg', './imgs/3.jpg', './imgs/4.jpg', './imgs/5.jpg']));
         stays.push(_createStay("10006576","Ribeira Charming Duplex",['./imgs/1.jpg', './imgs/2.jpg', './imgs/3.jpg', './imgs/4.jpg', './imgs/5.jpg']));
         stays.push(_createStay("10006536","Ribeira Charming Duplex",['./imgs/1.jpg', './imgs/2.jpg', './imgs/3.jpg', './imgs/4.jpg', './imgs/5.jpg']));
@@ -61,7 +61,7 @@ function _createStay(id,name,imgUrls) {
         loc: {
             country: 'Portugal',
             countryCode: 'PT',
-            address: 'Porto, Portugal',
+            address: 'Catalonia',
             lat: -8.61308,
             lng: 41.1413
         },
