@@ -1,8 +1,7 @@
 <template>
   <header class="app-header">
     <div class="logo">
-      
-      <img :class="logo" :src="require(`@/assets/imgs/branding/${imgSrc}.png`)" />
+      <img :class="logo" :src="require(`@/assets/imgs/branding/${imgSrc}.png`)"  @click="toHome"/>
     </div>
 
     <div class="initial-search-bar">
@@ -52,6 +51,9 @@ export default {
       } else {
         this.imgSrc ='airbnb-logo'
       }
+    },
+    toHome() {
+      this.$router.push('/')
     }
   },
   computed: {

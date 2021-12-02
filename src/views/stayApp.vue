@@ -58,6 +58,15 @@ export default {
     showDetails(stayId) {
       this.$router.push({path: `/stay/details/${stayId}`})
     }
+  },
+  watch: {
+        '$route.query.filter': {
+            handler() {
+                const filterBy  = this.$route.query.filter;
+                console.log(filterBy)
+            },
+            immediate: true
+      }
   }
 };
 </script>

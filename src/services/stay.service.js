@@ -5,7 +5,8 @@ const STAY_KEY = 'staysDB'
 _createStays()
 
 export const stayService = {
-    query
+    query,
+    getStayById
 }
 
 async function query() {
@@ -18,11 +19,24 @@ async function query() {
     }
 }
 
+async function getStayById(stayId) {
+    try {
+        console.log(stayId)
+        var stay = await storageService.get(STAY_KEY, stayId);
+        console.log(stay)
+        return stay
+    } catch (err) {
+        console.log('Had an error getting stay by id (in front-service)', err)
+        throw err;
+    }
+}
+
+
 function _createStays() {
     let stays = utilService.loadFromStorage(STAY_KEY);
     if (!stays || !stays.length) {
         stays = [];
-        stays.push(_createStay("10016546","El Port de la Selva",['imgs/4.jpg', './imgs/2.jpg', './imgs/3.jpg', './imgs/4.jpg', './imgs/5.jpg']));
+        stays.push(_createStay("10016546","El Port de la Selva",['imgs/4.jpg', 'imgs/2.jpg', 'imgs/3.jpg', 'imgs/4.jpg', 'imgs/5.jpg','imgs/6.jpg']));
         stays.push(_createStay("10006566","Ribeira Charming Duplex",['imgs/4.jpg', './imgs/2.jpg', './imgs/3.jpg', './imgs/4.jpg', './imgs/5.jpg']));
         stays.push(_createStay("10306576","Ribeira Charming Duplex",['imgs/4.jpg', './imgs/2.jpg', './imgs/3.jpg', './imgs/4.jpg', './imgs/5.jpg']));
         stays.push(_createStay("10706536","Ribeira Charming Duplex",['imgs/4.jpg', './imgs/2.jpg', './imgs/3.jpg', './imgs/4.jpg', './imgs/5.jpg']));

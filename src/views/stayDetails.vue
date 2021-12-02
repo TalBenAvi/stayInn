@@ -7,7 +7,7 @@
         · {{ this.stay.loc.address }},{{ this.stay.loc.country }}
       </div>
     </div>
-    <div class="imgs-layout">
+    <div v-if="stay" class="imgs-layout">
       <img class="img1" :src="require(`@/assets/${this.stay.imgUrls[5]}`)" />
       <div class="first-row">
         <img class="img2" :src="require(`@/assets/${this.stay.imgUrls[4]}`)" />
@@ -65,54 +65,55 @@ export default {
   name: "stay-details",
   data() {
     return {
-      stay: {
-        id: "10006546",
-        name: "Ribeira Charming Duplex",
-        imgUrls: [
-          "imgs/1.jpg",
-          "imgs/2.jpg",
-          "imgs/3.jpg",
-          "imgs/4.jpg",
-          "imgs/5.jpg",
-          "imgs/6.jpg",
-        ],
-        price: 80.0,
-        summary:
-          "Fantastic duplex apartment with three bedrooms, located in...",
-        propertyType: "House",
-        TypeOfPlace: "Entire Place",
-        HouseRules: ["Pets Allowed", "Children Allowed"],
-        accommodates: 8,
-        beds: 4,
-        bedrooms: 2,
-        bath: 1,
-        amenities: ["TV", "Wifi"],
-        host: {
-          _id: "51399391",
-          fullName: "Davit Pok",
-          imgUrl: "https://x.com/pic.jpg",
-        },
-        loc: {
-          country: "Portugal",
-          countryCode: "PT",
-          address: "Porto",
-          lat: -8.61308,
-          lng: 41.1413,
-        },
-        reviews: [
-          //*all reviews are pushed here
-          {
-            id: "madeId",
-            txt: "Very helpful hosts. Cooked traditional...",
-            rate: 4.93,
-            by: {
-              _id: "u102",
-              fullName: "user2",
-              imgUrl: "/img/img2.jpg",
-            },
-          },
-        ],
-      },
+      stay: null,
+      // testStay: {
+      //   id: "10006546",
+      //   name: "Ribeira Charming Duplex",
+      //   imgUrls: [
+      //     "imgs/1.jpg",
+      //     "imgs/2.jpg",
+      //     "imgs/3.jpg",
+      //     "imgs/4.jpg",
+      //     "imgs/5.jpg",
+      //     "imgs/6.jpg",
+      //   ],
+      //   price: 80.0,
+      //   summary:
+      //     "Fantastic duplex apartment with three bedrooms, located in...",
+      //   propertyType: "House",
+      //   TypeOfPlace: "Entire Place",
+      //   HouseRules: ["Pets Allowed", "Children Allowed"],
+      //   accommodates: 8,
+      //   beds: 4,
+      //   bedrooms: 2,
+      //   bath: 1,
+      //   amenities: ["TV", "Wifi"],
+      //   host: {
+      //     _id: "51399391",
+      //     fullName: "Davit Pok",
+      //     imgUrl: "https://x.com/pic.jpg",
+      //   },
+      //   loc: {
+      //     country: "Portugal",
+      //     countryCode: "PT",
+      //     address: "Porto",
+      //     lat: -8.61308,
+      //     lng: 41.1413,
+      //   },
+      //   reviews: [
+      //     //*all reviews are pushed here
+      //     {
+      //       id: "madeId",
+      //       txt: "Very helpful hosts. Cooked traditional...",
+      //       rate: 4.93,
+      //       by: {
+      //         _id: "u102",
+      //         fullName: "user2",
+      //         imgUrl: "/img/img2.jpg",
+      //       },
+      //     },
+      //   ],
+      // },
     };
   },
   //   created() {
@@ -122,6 +123,24 @@ export default {
     // stayForDisplay() {
     //   return this.stay;
     // },
-  },
+  }, watch: {
+        '$route.params.stayId': {
+            async handler() {
+              
+                const { stayId } = this.$route.params;
+                console.log(stayId)
+                try {
+                  var stay = await this.$store.dispatch({type: 'getStayById', stayId: stayId})
+                  this.stay = stay
+                  console.log(stay)
+                } catch (err){
+                  console.log('had error', err)
+                  throw err;
+
+                }
+            },
+            immediate: true
+      }
+  }
 };
 </script>
