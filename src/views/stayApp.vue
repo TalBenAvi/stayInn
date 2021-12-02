@@ -24,7 +24,7 @@
         <p class="stay-name">
           {{ staysForDisplay[0].name }}, {{ staysForDisplay[0].loc.address }}
         </p>
-        <p class="stay-details">
+        <p class="stay-details-display">
           {{ staysForDisplay[0].accommodates }} guestts ∙
           {{ staysForDisplay[0].bedrooms }} bedrooms ∙
           {{ staysForDisplay[0].beds }} bed ∙ {{ staysForDisplay[0].bath }} bath
@@ -35,7 +35,7 @@
         <p class="stay-name">
           {{ staysForDisplay[0].name }}, {{ staysForDisplay[0].loc.address }}
         </p>
-        <p class="stay-details">
+        <p class="stay-details-display">
           {{ staysForDisplay[0].accommodates }} guestts ∙
           {{ staysForDisplay[0].bedrooms }} bedrooms ∙
           {{ staysForDisplay[0].beds }} bed ∙ {{ staysForDisplay[0].bath }} bath
@@ -46,7 +46,7 @@
         <p class="stay-name">
           {{ staysForDisplay[0].name }}, {{ staysForDisplay[0].loc.address }}
         </p>
-        <p class="stay-details">
+        <p class="stay-details-display">
           {{ staysForDisplay[0].accommodates }} guestts ∙
           {{ staysForDisplay[0].bedrooms }} bedrooms ∙
           {{ staysForDisplay[0].beds }} bed ∙ {{ staysForDisplay[0].bath }} bath
