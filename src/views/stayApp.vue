@@ -18,7 +18,7 @@
       <button class="filter-btn">Filters</button>
     </section>
     <!-- Card Grid Display -->
-    <section class="grid-card-container">
+    <section v-if="staysForDisplay" class="grid-card-container">
       <div class="grid-card-item">
         <img class="grid-img" src="../assets/imgs/4.jpg" />
         <p class="stay-name">
