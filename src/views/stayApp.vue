@@ -18,83 +18,19 @@
       <button class="filter-btn">Filters</button>
     </section>
     <!-- Card Grid Display -->
+
     <section v-if="staysForDisplay" class="grid-card-container">
-      <div class="grid-card-item">
+      <div v-for="stay in staysForDisplay" :key="stay.id" class="grid-card-item" @click="showDetails(stay.id)">
         <div class="grid-img">
-          <img src="../assets/imgs/4.jpg" />
+          <img :src="require(`@/assets/${stay.imgUrls[0]}`)" />
         </div>
         <p class="stay-name">
-          {{ staysForDisplay[0].name }}, {{ staysForDisplay[0].loc.address }}
+          {{ stay.name }}, {{ stay.loc.address }}
         </p>
         <p class="stay-details-display">
-          {{ staysForDisplay[0].accommodates }} guests ∙
-          {{ staysForDisplay[0].bedrooms }} bedrooms ∙
-          {{ staysForDisplay[0].beds }} bed ∙ {{ staysForDisplay[0].bath }} bath
-        </p>
-      </div>
-      <div class="grid-card-item">
-        <div class="grid-img">
-        <img src="../assets/imgs/home-page/homes/cabin/1.jpeg"/>
-         </div>
-        <p class="stay-name">
-          {{ staysForDisplay[0].name }}, {{ staysForDisplay[0].loc.address }}
-        </p>
-        <p class="stay-details-display">
-          {{ staysForDisplay[0].accommodates }} guests ∙
-          {{ staysForDisplay[0].bedrooms }} bedrooms ∙
-          {{ staysForDisplay[0].beds }} bed ∙ {{ staysForDisplay[0].bath }} bath
-        </p>
-      </div>
-      <div class="grid-card-item">
-         <div class="grid-img">
-        <img src="../assets/imgs/home-page/homes/camper/1.jpeg"/>
-        </div>
-        <p class="stay-name">
-          {{ staysForDisplay[0].name }}, {{ staysForDisplay[0].loc.address }}
-        </p>
-        <p class="stay-details-display">
-          {{ staysForDisplay[0].accommodates }} guests ∙
-          {{ staysForDisplay[0].bedrooms }} bedrooms ∙
-          {{ staysForDisplay[0].beds }} bed ∙ {{ staysForDisplay[0].bath }} bath
-        </p>
-      </div>
-       <div class="grid-card-item">
-         <div class="grid-img">
-        <img src="../assets/imgs/home-page/homes/kezhan/1.jpeg"/>
-        </div>
-        <p class="stay-name">
-          {{ staysForDisplay[0].name }}, {{ staysForDisplay[0].loc.address }}
-        </p>
-        <p class="stay-details-display">
-          {{ staysForDisplay[0].accommodates }} guests ∙
-          {{ staysForDisplay[0].bedrooms }} bedrooms ∙
-          {{ staysForDisplay[0].beds }} bed ∙ {{ staysForDisplay[0].bath }} bath
-        </p>
-      </div>
-      <div class="grid-card-item">
-         <div class="grid-img">
-        <img src="../assets/imgs/home-page/homes/trullo/1.jpeg"/>
-        </div>
-        <p class="stay-name">
-          {{ staysForDisplay[0].name }}, {{ staysForDisplay[0].loc.address }}
-        </p>
-        <p class="stay-details-display">
-          {{ staysForDisplay[0].accommodates }} guests ∙
-          {{ staysForDisplay[0].bedrooms }} bedrooms ∙
-          {{ staysForDisplay[0].beds }} bed ∙ {{ staysForDisplay[0].bath }} bath
-        </p>
-      </div>
-      <div class="grid-card-item">
-         <div class="grid-img">
-        <img src="../assets/imgs/home-page/homes/camper/1.jpeg"/>
-        </div>
-        <p class="stay-name">
-          {{ staysForDisplay[0].name }}, {{ staysForDisplay[0].loc.address }}
-        </p>
-        <p class="stay-details-display">
-          {{ staysForDisplay[0].accommodates }} guests ∙
-          {{ staysForDisplay[0].bedrooms }} bedrooms ∙
-          {{ staysForDisplay[0].beds }} bed ∙ {{ staysForDisplay[0].bath }} bath
+          {{stay.accommodates}} guests ∙
+          {{ stay.bedrooms }} bedrooms ∙
+          {{ stay.beds }} bed ∙ {{ stay.bath }} bath
         </p>
       </div>
     </section>
@@ -106,7 +42,7 @@ export default {
   name: "stay-app",
   data() {
     return {
-      stays: null,
+      stay: null,
     };
   },
   created() {
@@ -114,9 +50,15 @@ export default {
   },
   computed: {
     staysForDisplay() {
+      
       return this.$store.getters.stays;
     },
   },
+  methods : {
+    showDetails(stayId) {
+      this.$router.push({path: `/stay/details/${stayId}`})
+    }
+  }
 };
 </script>
 
