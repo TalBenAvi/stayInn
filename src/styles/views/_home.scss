@@ -5,39 +5,39 @@
 
 
 .top-fold {
-    position: relative;
+    
     margin-top: 70px;
-    height: 850px;
+    height: 700px;
     
     .home-img {
-        height: 950px;
-        // max-width: 1400px;
+        
+        height: 900px;
+        min-width: 0px;
         grid-column: 2/3;
         object-fit: contain;
 
-
-
         img {
+            position: relative;
             border-radius: 20px;
         }
     }
     .slogan {
+        white-space: nowrap;
+        max-width: 100%;
         font-family: airbnb-medium;
-        font-size: 40px;
-        top:350px;
-        left: 320px;
+        font-size: 35px;
+        top: 70%;
+        left: 50%;
+        transform: translate( -50%, -50% );
+        text-align: center;
         color: white;
         position: absolute;
-        z-index: 3;
-
-
-    
     }
 
     .flexible-btn {
-        top: 450px;
+        top:75%;
         position: absolute;
-        left: 550px;
+        left: 44%;
         padding: 16px 32px;
         cursor: pointer;
         text-align: center;
@@ -58,4 +58,89 @@
         }
     }
 
+}
+
+.bottom-fold {
+    margin-top: 100px;
+    background-color: white;
+
+    h1:not(:first-child) {
+        margin-top: 105px;
+        margin-bottom: 30px;
+    }
+
+    .locations-section {
+        margin-top: 50px;
+        font-family: airbnb-medium;
+        font-size: 23px;
+        letter-spacing: -0.02em;
+
+        h1 {
+            color: $black;
+            margin-bottom: 30px;
+        }
+        .location-cards {
+            cursor: pointer;
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            column-gap: 12px;
+    
+            .location-img {
+                height: 100%;
+                border-radius: 10px;
+                aspect-ratio: 1 / 1;
+                object-fit: cover;
+            }
+    
+            h4 {
+                font-family: airbnb;
+                font-size: 16px;
+                color: $black;
+            }
+    
+        }
+
+        .first-banner {
+            position: relative;
+            margin-top: 105px;
+
+            h1 {
+                font-family: airbnb-book;
+                margin-top: 100px;
+                margin-left: 50px;
+                font-size: 50px;
+                letter-spacing: -0.02em;
+                color: white;
+                position: absolute;
+            }
+
+            img {
+                height: 550px;
+                object-fit: cover;
+            }
+
+            button {
+                cursor: pointer;
+                position: absolute;
+                margin-top: 185px;
+                margin-left: 50px;
+                color: $black;
+                font-size: 15px;
+                font-family: airbnb-medium;
+                background-color: #FFFFFF;
+                padding-top: 16px;
+                padding-right: 18px;
+                padding-bottom: 16px;
+                padding-left: 18px;
+                border-radius: 8px;
+                border: none;
+            }
+          
+        }
+    }
+
+ 
+
+
+ 
 }
