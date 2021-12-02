@@ -28,20 +28,29 @@
         </div>
       </div>
       <div class="stay-reserve">
-          <div class="price-reviews">
-              <div class="stay-price">${{ this.stay.price}} </div> <div class="night"> / night</div>
-               <div class="rate">{{this.stay.reviews[0].rate}}</div>
-                <div class="reviews"> ({{this.stay.reviews.length}} reviews)</div>
+        <div class="price-reviews">
+          <div class="stay-price">${{ this.stay.price }}</div>
+          <div class="night">/ night</div>
+          <div class="rate">{{ this.stay.reviews[0].rate }}</div>
+          <div class="reviews">({{ this.stay.reviews.length }} reviews)</div>
+        </div>
+        <div class="checking">
+          <div class="check-in">
+            <div class="category-stay-label">CHECK-IN</div>
+            <div class="add">Add date</div>
           </div>
-          <div class="checking">
-              <div class="dates">
-                  <div class="check-in">check-in</div>
-                  <div class="check-out">check-out</div>
-              </div>
+          <div class="check-out">
+            <div class="category-stay-label">CHECK-OUT</div>
+            <div class="add">Add date</div>
           </div>
+          <div class="guests-num">
+              <div class="category-stay-label">GUESTS</div>
+            <div class="add">1 guest</div>
+            </div>
         </div>
       </div>
     </div>
+  </div>
 </template>
 
 <script>
