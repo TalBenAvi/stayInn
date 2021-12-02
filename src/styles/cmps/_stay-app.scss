@@ -10,17 +10,17 @@
         grid-column: 1 / -1;
     }
 
-    @include for-narrow-layout {
-        @include layoutGTC($break-narrow);
-    }
+//     @include for-narrow-layout {
+//         @include layoutGTC($break-narrow);
+//     }
 
-    @include for-normal-layout {
-        @include layoutGTC($break-normal);
-    }
+//     @include for-normal-layout {
+//         @include layoutGTC($break-normal);
+//     }
 
-    @include for-wide-layout {
-        @include layoutGTC($break-wide);
-    }
+//     @include for-wide-layout {
+//         @include layoutGTC($break-wide);
+//     }
 }
 
 .stay-filter-container {
@@ -47,20 +47,26 @@
 .grid-card-container {
     margin-top: 38px;
     display: grid;
-    // grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     // grid-column: 2;
 }
 
 .grid-card-item {
     display: flex;
     flex-direction: column;
+    margin-bottom: 20px;
 }
 
 .grid-img {
     width: 300px;
-    border-radius: 15px;
+   height: 300px;
 }
-
+.grid-img img{
+    width: 300px;
+    height: 300px;
+    border-radius: 15px;
+    object-fit: cover;
+}
 .stay-name{
     margin-top: 7px;
     font-family:airbnb-medium;
