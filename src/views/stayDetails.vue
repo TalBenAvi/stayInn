@@ -8,14 +8,15 @@
       </div>
     </div>
     <div v-if="stay" class="imgs-layout">
-      <img class="img1" :src="require(`@/assets/${this.stay.imgUrls[5]}`)" />
+ 
+      <img class="img1" :src="require(`@/assets/imgs/stays/${stay.initials}/${stay.imgUrls[5]}`)" />
       <div class="first-row">
-        <img class="img2" :src="require(`@/assets/${this.stay.imgUrls[4]}`)" />
-        <img class="img3" :src="require(`@/assets/${this.stay.imgUrls[0]}`)" />
+        <img class="img2" :src="require(`@/assets/imgs/stays/${stay.initials}/${stay.imgUrls[4]}`)" />
+        <img class="img3" :src="require(`@/assets/imgs/stays/${stay.initials}/${stay.imgUrls[0]}`)" />
       </div>
       <div class="second-row">
-        <img class="img4" :src="require(`@/assets/${this.stay.imgUrls[2]}`)" />
-        <img class="img5" :src="require(`@/assets/${this.stay.imgUrls[1]}`)" />
+        <img class="img4" :src="require(`@/assets/imgs/stays/${stay.initials}/${stay.imgUrls[2]}`)" />
+        <img class="img5" :src="require(`@/assets/imgs/stays/${stay.initials}/${stay.imgUrls[1]}`)" />
       </div>
     </div>
     <div class="res-details-layout">

@@ -36,26 +36,27 @@ function _createStays() {
     let stays = utilService.loadFromStorage(STAY_KEY);
     if (!stays || !stays.length) {
         stays = [];
-        stays.push(_createStay("10016546","El Port de la Selva",['imgs/4.jpg', 'imgs/2.jpg', 'imgs/3.jpg', 'imgs/4.jpg', 'imgs/5.jpg','imgs/6.jpg']));
-        stays.push(_createStay("10006566","Ribeira Charming Duplex",['imgs/4.jpg', './imgs/2.jpg', './imgs/3.jpg', './imgs/4.jpg', './imgs/5.jpg']));
-        stays.push(_createStay("10306576","Ribeira Charming Duplex",['imgs/4.jpg', './imgs/2.jpg', './imgs/3.jpg', './imgs/4.jpg', './imgs/5.jpg']));
-        stays.push(_createStay("10706536","Ribeira Charming Duplex",['imgs/4.jpg', './imgs/2.jpg', './imgs/3.jpg', './imgs/4.jpg', './imgs/5.jpg']));
-        stays.push(_createStay("10602146","Ribeira Charming Duplex",['imgs/4.jpg', './imgs/2.jpg', './imgs/3.jpg', './imgs/4.jpg', './imgs/5.jpg']));
-        stays.push(_createStay("10034546","Ribeira Charming Duplex",['imgs/4.jpg', './imgs/2.jpg', './imgs/3.jpg', './imgs/4.jpg', './imgs/5.jpg']));
-        stays.push(_createStay("10023546","Ribeira Charming Duplex",['imgs/4.jpg', './imgs/2.jpg', './imgs/3.jpg', './imgs/4.jpg', './imgs/5.jpg']));
-        stays.push(_createStay("101012546","Ribeira Charming Duplex",['imgs/4.jpg', './imgs/2.jpg', './imgs/3.jpg', './imgs/4.jpg', './imgs/5.jpg']));
-        stays.push(_createStay("10012546","Ribeira Charming Duplex",['imgs/4.jpg', './imgs/2.jpg', './imgs/3.jpg', './imgs/4.jpg', './imgs/5.jpg']));
-        stays.push(_createStay("100045546","Ribeira Charming Duplex",['imgs/4.jpg', './imgs/2.jpg', './imgs/3.jpg', './imgs/4.jpg', './imgs/5.jpg']));
+        stays.push(_createStay("10016546","Sunflower House",'SH',['1.jpg', '2.jpg', '3.jpg', '4.jpg', '5.jpg','6.jpg']));
+        stays.push(_createStay("10006566","Carapathian Log Home",'CLH',['1.jpg', '2.jpg', '3.jpg', '4.jpg', '5.jpg','6.jpg']));
+        stays.push(_createStay("10306576","Shuhe Arcade Ancient Town",'SAT',['1.jpg', '2.jpg', '3.jpg', '4.jpg', '5.jpg','6.jpg']));
+        stays.push(_createStay("10706536","Stylish Trullo with pool & terrace",'STP',['1.jpg', '2.jpg', '3.jpg', '4.jpg', '5.jpg','6.jpg']));
+        stays.push(_createStay("10602146","Tiny house Zhorec nearby Bezdružic",'THZ',['1.jpg', '2.jpg', '3.jpg', '4.jpg', '5.jpg','6.jpg']));
+        stays.push(_createStay("10034546","Ribeira Charming Duplex",'SH',['1.jpg', '2.jpg', '3.jpg', '4.jpg', '5.jpg','6.jpg']));
+        stays.push(_createStay("10023546","Ribeira Charming Duplex",'SH',['1.jpg', '2.jpg', '3.jpg', '4.jpg', '5.jpg','6.jpg']));
+        stays.push(_createStay("101012546","Ribeira Charming Duplex",'SH',['1.jpg', '2.jpg', '3.jpg', '4.jpg', '5.jpg','6.jpg']));
+        stays.push(_createStay("10012546","Ribeira Charming Duplex",'SH',['1.jpg', '2.jpg', '3.jpg', '4.jpg', '5.jpg','6.jpg']));
+        stays.push(_createStay("100045546","Ribeira Charming Duplex",'SH',['1.jpg', '2.jpg', '3.jpg', '4.jpg', '5.jpg','6.jpg']));
         utilService.saveToStorage(STAY_KEY, stays);
     }
     return stays;
 }
 
 
-function _createStay(id,name,imgUrls) {
+function _createStay(id,name,initials,imgUrls) {
     return {
         id,
         name,
+        initials,
         imgUrls,
         price: 80.00,
         summary: "Fantastic duplex apartment with three bedrooms, located in...",

@@ -22,7 +22,7 @@
     <section v-if="staysForDisplay" class="grid-card-container">
       <div v-for="stay in staysForDisplay" :key="stay.id" class="grid-card-item" @click="showDetails(stay.id)">
         <div class="grid-img">
-          <img :src="require(`@/assets/${stay.imgUrls[0]}`)" />
+          <img :src="require(`@/assets/imgs/stays/${stay.initials}/${stay.imgUrls[0]}`)" />
         </div>
         <p class="stay-name">
           {{ stay.name }}, {{ stay.loc.address }}
