@@ -24,7 +24,7 @@ export const stayStore = {
                 var stays = await stayService.query()
                 console.log(stays)
                 commit({type:'setStays', stays})
-            } catch(err) {
+            }catch (err) {
                 console.log('had trouble retriving from query in store:' , err)
                 throw err;
             }

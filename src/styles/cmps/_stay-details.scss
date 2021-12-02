@@ -1,0 +1,131 @@
+.stay-details {
+    display: grid;
+    grid-template-columns: $layoutPaddingDetails 1fr $layoutPaddingDetails;
+
+    > * {
+        grid-column: 2;
+    }
+
+    > *.full {
+        grid-column: 1 / -1;
+    }
+
+    @include for-narrow-layout {
+        @include layoutGTC($break-narrow);
+    }
+
+    @include for-normal-layout {
+        @include layoutGTC($break-normal);
+    }
+
+    @include for-wide-layout {
+        @include layoutGTC($break-wide);
+    }
+}
+.name {
+    margin-top: 19px;
+    margin-bottom: 13px;
+    font-family: airbnb-medium;
+    font-size: 27px;
+}
+.location-name {
+    color: $gray;
+    font-family: airbnb-medium;
+    font-size: 0.85rem;
+    text-decoration: underline;
+    margin-bottom: 24px;
+}
+.imgs-layout {
+    height: $layoutimgsheight;
+    width: $layoutimgswidth;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+.img1 {
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    width: 49.82%;
+    object-fit: cover;
+}
+.first-row {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 24.28%;
+}
+.img2 {
+    height: 50%;
+    object-fit: cover;
+}
+.img3 {
+    height: 47.94%;
+    object-fit: cover;
+}
+.second-row {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 24.28%;
+}
+.img4 {
+    border-top-right-radius: 15px;
+    height: 50%;
+    object-fit: cover;
+}
+.img5 {
+    border-bottom-right-radius: 15px;
+    height: 47.94%;
+    object-fit: cover;
+}
+.res-details-layout {
+    margin-top: 45.5px;
+    display: flex;
+    flex-direction: row;
+}
+.stay-info {
+    width: 66.97%;
+}
+.stay-reserve {
+    width: 33.03%;
+    border: 1px solid rgb(221, 221, 221);
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: rgb(0 0 0 / 12%) 0px 6px 16px;
+}
+.stay-price{
+    font-family: airbnb-medium;
+    font-size: 24px;
+    margin-right: 3px;
+}
+.night{
+    width:43.5% ;
+    margin-top: 5px;
+    font-size: 1rem;
+    font-family: airbnb;
+}
+.rate{
+    margin-top: 5px;
+    font-size: 1rem;
+    font-family: airbnb;
+}
+.reviews{
+    color: $gray;
+    margin-top: 5px;
+    font-size: 1rem;
+    text-decoration: underline;
+    font-family: airbnb;
+}
+.price-reviews{
+    display: flex;
+    flex-direction: row;
+}
+.minimal-details {
+    margin-bottom: 5px;
+    font-family: airbnb-medium;
+    font-size: 24px;
+}
+.location-space {
+    font-family: airbnb;
+    font-size: 1rem;
+}

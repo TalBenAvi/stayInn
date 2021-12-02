@@ -9,8 +9,15 @@
 @import 'basics/helpers';
 @import 'basics/base';
 @import 'basics/layout';
+@import 'basics/layouthome';
 
 //CMPS
 @import 'cmps/app-header';
-@import 'cmps/imgs-layout';
+@import 'cmps/stay-details';
 @import 'cmps/stay-app';
+
+
+
+//VIEWS
+
+@import 'views/home'
