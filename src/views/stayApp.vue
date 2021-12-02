@@ -11,10 +11,10 @@
       <button class="filter-btn">Washer</button>
       <button class="filter-btn">Free parking</button>
       <button class="filter-btn">Dryer</button>
-      <!-- <button class="filter-btn">Dedicated workspace</button>
-      <button class="filter-btn">Iron</button> -->
+      <button class="filter-btn">Dedicated workspace</button>
+      <button class="filter-btn">Iron</button>
       <button class="filter-btn">Gym</button>
-      <!-- <button class="filter-btn">Pool</button> -->
+      <button class="filter-btn">Pool</button>
       <button class="filter-btn">Filters</button>
     </section>
     <!-- Card Grid Display -->
