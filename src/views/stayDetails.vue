@@ -1,16 +1,41 @@
 <template>
-  <div class="stay-app">
-    <div>
-      {{ this.stay.name }}
+  <div class="stay-details">
+    <div class="location-details">
+      <div class="name">{{ this.stay.name }}</div>
+      <div class="location-name">
+        {{ this.stay.reviews[0].rate }}({{ this.stay.reviews.length }} reviews)
+        · {{ this.stay.loc.address }},{{ this.stay.loc.country }}
+      </div>
     </div>
     <div class="imgs-layout">
-        <img class="img1" :src="require(`@/assets/${this.stay.imgUrls[4]}`)" />
-        <img  class="img2" :src="require(`@/assets/${this.stay.imgUrls[1]}`)" />
-        <img class="img3" :src="require(`@/assets/${this.stay.imgUrls[3]}`)" />
-        <img class="img4" :src="require(`@/assets/${this.stay.imgUrls[4]}`)" />
-        <img class="img5" :src="require(`@/assets/${this.stay.imgUrls[3]}`)" />
+      <img class="img1" :src="require(`@/assets/${this.stay.imgUrls[5]}`)" />
+      <div class="first-row">
+        <img class="img2" :src="require(`@/assets/${this.stay.imgUrls[4]}`)" />
+        <img class="img3" :src="require(`@/assets/${this.stay.imgUrls[0]}`)" />
+      </div>
+      <div class="second-row">
+        <img class="img4" :src="require(`@/assets/${this.stay.imgUrls[2]}`)" />
+        <img class="img5" :src="require(`@/assets/${this.stay.imgUrls[1]}`)" />
+      </div>
     </div>
-  </div>
+    <div class="res-details-layout">
+      <div class="stay-info">
+        <div class="minimal-details">{{ this.stay.name }}</div>
+        <div class="location-space">
+          {{ this.stay.accommodates }} guests ·
+          {{ this.stay.bedrooms }} bedrooms · {{ this.stay.beds }} beds ·
+          {{ this.stay.bath }} baths
+        </div>
+      </div>
+      <div class="stay-reserve">
+          <div class="price-reviews">
+              <div class="stay-price">${{ this.stay.price}} </div> <div class="night"> / night</div>
+               <div class="rate">{{this.stay.reviews[0].rate}}</div>
+                <div class="reviews"> ({{this.stay.reviews.length}} reviews)</div>
+          </div>
+        </div>
+      </div>
+    </div>
 </template>
 
 <script>
@@ -36,7 +61,7 @@ export default {
         TypeOfPlace: "Entire Place",
         HouseRules: ["Pets Allowed", "Children Allowed"],
         accommodates: 8,
-        beds: 1,
+        beds: 4,
         bedrooms: 2,
         bath: 1,
         amenities: ["TV", "Wifi"],
@@ -48,7 +73,7 @@ export default {
         loc: {
           country: "Portugal",
           countryCode: "PT",
-          address: "Porto, Portugal",
+          address: "Porto",
           lat: -8.61308,
           lng: 41.1413,
         },
@@ -57,7 +82,7 @@ export default {
           {
             id: "madeId",
             txt: "Very helpful hosts. Cooked traditional...",
-            rate: 4,
+            rate: 4.93,
             by: {
               _id: "u102",
               fullName: "user2",
