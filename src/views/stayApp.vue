@@ -11,10 +11,10 @@
       <button class="filter-btn">Washer</button>
       <button class="filter-btn">Free parking</button>
       <button class="filter-btn">Dryer</button>
-      <button class="filter-btn">Dedicated workspace</button>
-      <button class="filter-btn">Iron</button>
+      <!-- <button class="filter-btn">Dedicated workspace</button>
+      <button class="filter-btn">Iron</button> -->
       <button class="filter-btn">Gym</button>
-      <button class="filter-btn">Pool</button>
+      <!-- <button class="filter-btn">Pool</button> -->
       <button class="filter-btn">Filters</button>
     </section>
     <!-- Card Grid Display -->
@@ -27,7 +27,7 @@
           {{ staysForDisplay[0].name }}, {{ staysForDisplay[0].loc.address }}
         </p>
         <p class="stay-details-display">
-          {{ staysForDisplay[0].accommodates }} guestts ∙
+          {{ staysForDisplay[0].accommodates }} guests ∙
           {{ staysForDisplay[0].bedrooms }} bedrooms ∙
           {{ staysForDisplay[0].beds }} bed ∙ {{ staysForDisplay[0].bath }} bath
         </p>
@@ -40,7 +40,7 @@
           {{ staysForDisplay[0].name }}, {{ staysForDisplay[0].loc.address }}
         </p>
         <p class="stay-details-display">
-          {{ staysForDisplay[0].accommodates }} guestts ∙
+          {{ staysForDisplay[0].accommodates }} guests ∙
           {{ staysForDisplay[0].bedrooms }} bedrooms ∙
           {{ staysForDisplay[0].beds }} bed ∙ {{ staysForDisplay[0].bath }} bath
         </p>
@@ -53,7 +53,7 @@
           {{ staysForDisplay[0].name }}, {{ staysForDisplay[0].loc.address }}
         </p>
         <p class="stay-details-display">
-          {{ staysForDisplay[0].accommodates }} guestts ∙
+          {{ staysForDisplay[0].accommodates }} guests ∙
           {{ staysForDisplay[0].bedrooms }} bedrooms ∙
           {{ staysForDisplay[0].beds }} bed ∙ {{ staysForDisplay[0].bath }} bath
         </p>
@@ -66,7 +66,7 @@
           {{ staysForDisplay[0].name }}, {{ staysForDisplay[0].loc.address }}
         </p>
         <p class="stay-details-display">
-          {{ staysForDisplay[0].accommodates }} guestts ∙
+          {{ staysForDisplay[0].accommodates }} guests ∙
           {{ staysForDisplay[0].bedrooms }} bedrooms ∙
           {{ staysForDisplay[0].beds }} bed ∙ {{ staysForDisplay[0].bath }} bath
         </p>
@@ -79,7 +79,7 @@
           {{ staysForDisplay[0].name }}, {{ staysForDisplay[0].loc.address }}
         </p>
         <p class="stay-details-display">
-          {{ staysForDisplay[0].accommodates }} guestts ∙
+          {{ staysForDisplay[0].accommodates }} guests ∙
           {{ staysForDisplay[0].bedrooms }} bedrooms ∙
           {{ staysForDisplay[0].beds }} bed ∙ {{ staysForDisplay[0].bath }} bath
         </p>
@@ -92,7 +92,7 @@
           {{ staysForDisplay[0].name }}, {{ staysForDisplay[0].loc.address }}
         </p>
         <p class="stay-details-display">
-          {{ staysForDisplay[0].accommodates }} guestts ∙
+          {{ staysForDisplay[0].accommodates }} guests ∙
           {{ staysForDisplay[0].bedrooms }} bedrooms ∙
           {{ staysForDisplay[0].beds }} bed ∙ {{ staysForDisplay[0].bath }} bath
         </p>

@@ -35,7 +35,7 @@
           </div>
         </div>
 
-        <div class="first-banner">
+        <div class="banner">
           <h1>Quarantine the right way</h1>
           <button>Explore Homes</button>
           <img src="~@/assets/imgs/home-page/banners/1.jpg">
@@ -62,6 +62,13 @@
             <img class="location-img" src="~@/assets/imgs/home-page/homes/camper/1.jpeg"/>
             <h4>Camper</h4>
           </div>
+        </div>
+
+        <div class="banner">
+          <h1>Become a host</h1>
+          <h4 class="sub-header">Unlock new opportunities by sharing your space.</h4>
+          <button class="learn-btn">Learn More</button>
+          <img src="~@/assets/imgs/home-page/banners/3.jpg">
         </div>
 
       </div>
