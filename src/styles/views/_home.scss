@@ -63,12 +63,7 @@
 .bottom-fold {
     margin-top: 100px;
     background-color: white;
-
-    h1:not(:first-child) {
-        margin-top: 105px;
-        margin-bottom: 30px;
-    }
-
+    
     .locations-section {
         margin-top: 50px;
         font-family: airbnb-medium;
@@ -100,9 +95,10 @@
     
         }
 
-        .first-banner {
+        .banner {
             position: relative;
             margin-top: 105px;
+            margin-bottom: 105px;
 
             h1 {
                 font-family: airbnb-book;
@@ -114,6 +110,21 @@
                 position: absolute;
             }
 
+
+            .sub-header {
+                font-size: 18px;
+                font-family: airbnb;
+                color: white;
+                margin-left: 50px;
+                margin-top: 170px;
+                position: absolute;
+            }
+
+            .learn-btn {
+                margin-top: 230px;
+            }
+
+            
             img {
                 height: 550px;
                 object-fit: cover;

@@ -15,53 +15,60 @@
         <h1>Live anywhere</h1>
         <div class="location-cards">
           <div class="location-card">
-            <img class="location-img" src="~@/assets/imgs/home-page/locations/amsterdam.jpg"/>
+            <img class="location-img" src="~@/assets/imgs/home-page/locations/amsterdam.webp"/>
             <h4>Amsterdam</h4>
           </div>
 
           <div class="location-card">
-            <img class="location-img" src="~@/assets/imgs/home-page/locations/paris.jpg"/>
+            <img class="location-img" src="~@/assets/imgs/home-page/locations/paris.webp"/>
             <h4>Paris</h4>
           </div>
 
           <div class="location-card">
-            <img class="location-img" src="~@/assets/imgs/home-page/locations/lisbon.jpg"/>
+            <img class="location-img" src="~@/assets/imgs/home-page/locations/lisbon.webp"/>
             <h4>Lisbon</h4>
           </div>
 
           <div class="location-card">
-            <img class="location-img" src="~@/assets/imgs/home-page/locations/london.jpg"/>
+            <img class="location-img" src="~@/assets/imgs/home-page/locations/london.webp"/>
             <h4>London</h4>
           </div>
         </div>
 
-        <div class="first-banner">
+        <div class="banner">
           <h1>Quarantine the right way</h1>
           <button>Explore Homes</button>
-          <img src="~@/assets/imgs/home-page/banners/1.jpg">
+          <img src="~@/assets/imgs/home-page/banners/1.webp">
         </div>
 
         <h1>Unique Stays</h1>
           <div class="location-cards">
           <div class="location-card">
-            <img class="location-img" src="~@/assets/imgs/home-page/homes/cabin/1.jpeg"/>
+            <img class="location-img" src="~@/assets/imgs/home-page/homes/cabin/1.webp"/>
             <h4>Carpathian Log Home</h4>
           </div>
 
           <div class="location-card">
-            <img class="location-img" src="~@/assets/imgs/home-page/homes/kezhan/1.jpeg"/>
+            <img class="location-img" src="~@/assets/imgs/home-page/homes/kezhan/1.webp"/>
             <h4>Kezhan</h4>
           </div>
 
           <div class="location-card">
-            <img class="location-img" src="~@/assets/imgs/home-page/homes/trullo/1.jpeg"/>
+            <img class="location-img" src="~@/assets/imgs/home-page/homes/trullo/1.webp"/>
             <h4>Trullo</h4>
           </div>
 
           <div class="location-card">
-            <img class="location-img" src="~@/assets/imgs/home-page/homes/camper/1.jpeg"/>
+            <img class="location-img" src="~@/assets/imgs/home-page/homes/camper/1.webp"/>
             <h4>Camper</h4>
           </div>
+        </div>
+
+        <div class="banner">
+          <h1>Become a host</h1>
+          <h4 class="sub-header">Unlock new opportunities by sharing your space.</h4>
+          <button class="learn-btn">Learn More</button>
+          <img src="~@/assets/imgs/home-page/banners/3.webp">
         </div>
 
       </div>
