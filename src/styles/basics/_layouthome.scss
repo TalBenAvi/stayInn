@@ -1,0 +1,24 @@
+.home-layout {
+    display: grid;
+    grid-template-columns: $layoutPaddingHome 1fr $layoutPaddingHome;
+
+    > * {
+        grid-column: 2;
+    }
+
+    > *.full {
+        grid-column: 1 / -1;
+    }
+
+    @include for-narrow-layout {
+        @include layoutGTCHome($break-narrow);
+    }
+    
+    @include for-normal-layout {
+        @include layoutGTCHome($break-normal);
+    }
+    
+    @include for-wide-layout {
+        @include layoutGTCHome($break-wide);
+    }
+}
