@@ -93,9 +93,15 @@
     padding: 24px;
     box-shadow: rgb(0 0 0 / 12%) 0px 6px 16px;
 }
+.price-reviews{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
 .stay-price{
     font-family: airbnb-medium;
     font-size: 24px;
+    margin-left: 20px;
     margin-right: 3px;
 }
 .night{
@@ -116,9 +122,12 @@
     text-decoration: underline;
     font-family: airbnb;
 }
-.price-reviews{
-    display: flex;
-    flex-direction: row;
+.checking{
+margin: 0 auto;    
+width: 86.48%;
+height: 112px;
+border:solid 1px $gray;
+border-radius: 10px;
 }
 .minimal-details {
     margin-bottom: 5px;
