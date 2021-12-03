@@ -50,7 +50,7 @@
               <div class="exsplnation">Guests often search for this popular amenity</div>
             </div>
          </div>
-        <div class="stay-info-desc"><div class="padding">{{this.stay.summary}} Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum similique, suscipit ea recusandae facilis laborum necessitatibus veniam id voluptas eligendi at praesentium distinctio nam perspiciatis, cupiditate et dolores. Praesentium, quaerat.
+        <div class="stay-info-desc"><div class="padding vibrous">{{this.stay.summary}} Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum similique, suscipit ea recusandae facilis laborum necessitatibus veniam id voluptas eligendi at praesentium distinctio nam perspiciatis, cupiditate et dolores. Praesentium, quaerat.
         Expedita neque ipsum quas culpa veritatis ipsam, quisquam, dolores illo fuga repellat maxime unde officia incidunt sint accusamus exercitationem. Deserunt maxime soluta veniam qui non quo distinctio. Sit, tenetur. Non?
         Rerum rem omnis eaque commodi aliquid, mollitia alias sit deserunt animi minus vel error quisquam excee voluptatum dicta obcaecati, rem minus iusto, maiores corrupti dolorum et.
         Sint vel ratione omnis doloremias nam. Officia, assumenda expedita earum commodi qui aut quas sed est dicta ullam eius debitis fugiat culpa sunt, obcaecati, ipsum sapiente molestias a id ratione!</div> </div> 

@@ -16,9 +16,9 @@
     font-family: airbnb-medium;
     font-size: 27px;
 }
-.star{
-width: 15px;
-height:15px;
+.star {
+    width: 15px;
+    height: 15px;
 }
 .location-name {
     color: $gray;
@@ -82,13 +82,13 @@ height:15px;
 .stay-info {
     width: 59.02%;
 }
-.head-flex{
+.head-flex {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
     height: 80px;
-    border-bottom: $gray solid 0.5px;
+    border-bottom: $separate solid 1px;
 }
 .stay-info-heder {
     display: flex;
@@ -116,30 +116,33 @@ height:15px;
     font-family: airbnb;
     font-size: 1rem;
 }
-.stay-info-desc{
+.stay-info-desc {
     padding-top: 32px;
     padding-bottom: 14px;
     font-family: airbnb-book;
     font-size: 0.95rem;
-    border-bottom: $gray solid 0.5px;
+    border-bottom: $separate solid 1px;
 }
-.short-exmple{
-font-family: airbnb-medium;
-padding-bottom: 4px;
+.vibrous{
+line-height: 1.25;
 }
-.exsplnation{
+.short-exmple {
+    font-family: airbnb-medium;
+    padding-bottom: 4px;
+}
+.exsplnation {
     padding-left: 35px;
     padding-bottom: 25px;
     font-family: airbnb;
     color: $gray;
 }
-.spacing{
-padding-bottom: 25px;
+.spacing {
+    padding-bottom: 25px;
 }
-.padding{
-padding-bottom: 32px;
+.padding {
+    padding-bottom: 32px;
 }
-.show-more-amenities{
+.show-more-amenities {
     height: 45px;
     width: 200px;
     border: #222222 solid 0.2px;
@@ -147,29 +150,31 @@ padding-bottom: 32px;
     font-size: 0.85rem;
     background-color: white;
 }
-.icon{
-width: 35px;
-height:15px;
-padding-right: 20px;
+.icon {
+    // display: flex;
+    // align-items: center;
+    width: 40px;
+    height: 20px;
+    padding-right: 20px;
 }
-.icon-bed{
+.icon-bed {
     width: 20px;
-    height:38px;
+    height: 38px;
     padding-bottom: 10px;
 }
-.bed-card{
-    height:140px;
+.bed-card {
+    height: 140px;
     width: 205px;
     border: 1px solid rgb(221, 221, 221);
     border-radius: 12px;
     padding: 24px;
 }
-.offeres-layout{
-display: flex;
-flex-direction: row;
+.offeres-layout {
+    display: flex;
+    flex-direction: row;
 }
-.houseRules-layout{
-    padding-right:150px ;
+.houseRules-layout {
+    padding-right: 150px;
 }
 .stay-reserve {
     width: 33.03%;
@@ -180,10 +185,10 @@ flex-direction: row;
     box-shadow: rgb(0 0 0 / 12%) 0px 6px 16px;
 }
 .price-reviews {
-    display: flex;    
+    display: flex;
     flex-direction: row;
     justify-content: space-around;
-    padding-bottom:28px ;
+    padding-bottom: 28px;
 }
 .stay-price {
     font-family: airbnb-medium;
@@ -253,32 +258,32 @@ flex-direction: row;
     color: white;
     margin-bottom: 14px;
 }
-.charged{
-   text-align: center;
-   color: $gray;
+.charged {
+    text-align: center;
+    color: $gray;
     font-family: airbnb-book;
     font-size: 0.95rem;
     margin-bottom: 20px;
 }
-.underline{
+.underline {
     text-decoration: underline;
 }
-.priceing{
-display: flex;
-flex-direction: row;
-justify-content: space-between;
-color: $gray;
-font-family: airbnb-book;
-padding-bottom:10px ;
+.priceing {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: $gray;
+    font-family: airbnb-book;
+    padding-bottom: 10px;
 }
-.total{
-    padding-top:20px ;
+.total {
+    padding-top: 20px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     font-family: airbnb-book;
-    border-top:opacify($color: $gray, $amount: 0.5) solid 0.5px ;
-    }
+    border-top: opacify($color: $gray, $amount: 0.5) solid 0.5px;
+}
 .report-stay {
     text-align: center;
     color: $gray;

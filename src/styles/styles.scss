@@ -13,12 +13,10 @@
 
 //CMPS
 @import 'cmps/app-header';
-@import 'cmps/stay-details';
-@import 'cmps/stay-app';
 @import 'cmps/app-footer';
-// @import 'cmps/app-footer';
 
 
 //VIEWS
-
+@import 'views/stay-details';
+@import 'views/stay-app';
 @import 'views/home'
