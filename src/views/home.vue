@@ -2,7 +2,7 @@
   <section class="home home-layout">
     <div class="top-fold">
       <div class="home-img">
-        <img src="~@/assets/imgs/home-page/main.webp" />
+        <img src="~@/assets/imgs/home-page/main.jpg" />
         <div class="slogan">
           <p>Not sure where to go? Perfect.</p>
         </div>
@@ -15,7 +15,7 @@
         <h1>Live anywhere</h1>
         <div class="location-cards">
           <div v-for="location in locations" :key="location" class="location-card" @click="showStays(location)">
-            <img class="location-img" :src="require(`@/assets/imgs/home-page/locations/${location}.webp`)"/>
+            <img class="location-img" :src="require(`@/assets/imgs/home-page/locations/${location}.jpg`)"/>
             <h4>{{location}}</h4>
           </div>
         </div>

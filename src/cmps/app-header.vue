@@ -1,7 +1,11 @@
 <template>
-  <header class="app-header" >
+  <header class="app-header" :style="navColor">
     <div class="logo">
-      <img :class="logo" :src="require(`@/assets/imgs/branding/${imgSrc}.png`)"  @click="toHome"/>
+      <img
+        :class="logo"
+        :src="require(`@/assets/imgs/branding/${imgSrc}.png`)"
+        @click="toHome"
+      />
     </div>
 
     <div class="initial-search-bar">
@@ -11,19 +15,18 @@
       </div>
     </div>
 
-    <div class="host-options">
+    <div class="host-options" :style="textColor">
       <p class="become">Become a Host</p>
     </div>
 
     <div class="global">
-      <img src="../assets/imgs/icons/global.png" />
+      <img :src="require(`@/assets/imgs/icons/${globalSrc}.png`)" />
     </div>
 
     <div class="user-options">
       <div class="burger">☰</div>
       <img class="avatar" src="../assets/imgs/icons/avatar.png" />
     </div>
-    
   </header>
 </template>
 <script>
@@ -32,62 +35,98 @@ export default {
     return {
       windowWidth: window.innerWidth,
       isTop: true,
-      imgSrc: 'airbnb-logo',
-    }
-
+      imgSrc: "logo-white",
+      globalSrc: "global-white",
+      currPage: "",
+    };
   },
   created() {
-    window.addEventListener('scroll', this.handleScroll);
-
+    this.setCurrPage();
+    window.addEventListener("scroll", this.handleScroll);
   },
   mounted() {
     this.$nextTick(() => {
-      window.addEventListener('resize', this.onResize)
-
-    })
-
+      window.addEventListener("resize", this.onResize);
+    });
   },
   methods: {
     onResize() {
-      this.windowWidth = window.innerWidth
-      if(this.windowWidth <=980 && this.isTop) {
-        console.log('here')
-          this.imgSrc = 'airbnb-white'
-      } else if (this.windowWidth <=980 && !this.isTop) {
-        this.imgSrc = 'airbnb'
-      }
-      else if (this.windowWidth >980 && this.isTop){
-        this.imgSrc ='logo-white'
-      } else {
-        this.imgSrc ='airbnb-logo'
+      this.windowWidth = window.innerWidth;
+
+      if (this.windowWidth <= 980) {
+        if (this.currPage === "home") {
+          this.imgSrc = this.isTop ? "airbnb-white" : "airbnb";
+        } else if (this.currPage === "all") {
+          this.imgSrc = "airbnb";
+        }
+      } else if (this.windowWidth > 980) {
+        if (this.currPage === "home") {
+          this.imgSrc = this.isTop ? "logo-white" : "airbnb-logo";
+        } else if (this.currPage === "all") {
+          this.imgSrc = "airbnb-logo";
+        }
       }
     },
     toHome() {
-      this.$router.push('/')
+      this.$router.push("/");
     },
-    handleScroll (event) {
-      console.log(element.scrollTop)
-      // console.log(event.target.body.clientHeight)
-     this.isTop = false
-    }
-  },
-  computed: {
-    logo() {
-      if (this.imgSrc === 'airbnb') {
-        return 'logo-icon'
+    handleScroll() {
+      let scrollBarPos = window.top.scrollY;
+      if (!scrollBarPos) this.topMode();
+      else this.scrollMode();
+    },
+    
+    topMode() {
+      this.isTop = this.currPage === "all" ? false : true;
+      this.imgSrc = this.currPage === "all" ? "airbnb-logo" : "logo-white";
+      this.globalSrc = this.currPage === "all" ? "global" : "global-white";
+    },
+    scrollMode() {
+      this.isTop = false;
+      this.imgSrc = "airbnb-logo";
+      this.globalSrc = "global";
+    },
+    setCurrPage() {
+      if (this.$route.name !== "home") {
+        this.isTop = false;
+        this.currPage = "all";
       } else {
-        return 'logo-img'
+        this.isTop = true;
+        this.currPage = "home";
       }
-    }
+    },
   },
 
-  watch: {
-    windowWidth(newWidth, oldWidth) {
-      // console.log(`changed from ${oldWidth} to ${newWidth} `)
-    }
+  computed: {
+    logo() {
+      if (this.imgSrc === "airbnb") {
+        return "logo-icon";
+      } else {
+        return "logo-img";
+      }
+    },
+    navColor() {
+      if (this.currPage === "all") return;
+      else if (this.imgSrc === "logo-white" || this.imgSrc === "airbnb-white") {
+        return { backgroundColor: "black" };
+      } else {
+        return { backgroundColor: "white" };
+      }
+    },
+    textColor() {
+      if (this.currPage === "all") return;
+      if (this.imgSrc === "logo-white") {
+        return { color: "white" };
+      }
+    },
   },
   destroyed() {
-     window.removeEventListener('scroll', this.handleScroll);
-  }
+    window.removeEventListener("scroll", this.handleScroll);
+  },
+  watch: {
+    $route() {
+      this.setCurrPage()
+    },
+  },
 };
 </script>
