@@ -108,9 +108,9 @@ export default {
     navColor() {
       if (this.currPage === "all") return;
       else if (this.imgSrc === "logo-white" || this.imgSrc === "airbnb-white") {
-        return { backgroundColor: "black" };
+        return { backgroundColor: "transparent",position:'fixed', width: 100+'%' };
       } else {
-        return { backgroundColor: "white" };
+        return { backgroundColor: "white" ,position:'fixed', width: 100+'%','z-index':200};
       }
     },
     textColor() {

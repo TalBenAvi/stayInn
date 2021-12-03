@@ -1,10 +1,11 @@
 .app-header{
     display: flex;
-    position: sticky;
     transition: background-color .5s ease-out,height .4s ease-out,box-shadow .3s ease-out;
 
+    .home-nav{ 
+        position: fixed;
+    }
     >* {
-        cursor: pointer;
         display: flex;
         align-items: center;
     }
@@ -15,14 +16,14 @@
             transition: .5s;
             object-fit: contain;
             cursor: pointer;
-            margin-inline-start: $layoutPadding;
+            margin-inline-start: $layoutPaddingHome;
             width: 123px;
             height: 37px;
         }
 
         .logo-icon {
             cursor: pointer;
-            margin-inline-start: $layoutPadding;
+            margin-inline-start: $layoutPaddingHome;
             width: 37px;
             height: 37px;
         }
@@ -89,7 +90,7 @@
             width: 75px;
             height: 40px;
             border-radius: 40px;
-            margin-inline-end:$layoutPadding+20px ;
+            margin-inline-end:$layoutPaddingHome ;
 
             .avatar {
                 
