@@ -2,6 +2,8 @@
   <div class="stay-details">
       <div class="name">{{ this.stay.name }}</div>
       <div class="location-name">
+        <!-- because yaniv is the best! -->
+        <img class="star" src="../assets/imgs/icons/star.jpg" />
         {{ this.stay.reviews[0].rate }}({{ this.stay.reviews.length }} reviews)
         · {{ this.stay.loc.address }},{{ this.stay.loc.country }}
       </div>
@@ -28,31 +30,53 @@
           {{ this.stay.bath }} baths
         </div>
        </div>
-          <div><img class="baner" :src="require(`@/assets/imgs/stays/${stay.initials}/${stay.imgUrls[0]}`)" /></div>
+          <div><img class="baner" src="../assets/imgs/icons/host.png" /></div>
        </div>
-         <div class="stay-info-desc">{{this.stay.summary}}</div>
-        <div class="stay-info-desc">{{this.stay.summary}} Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum similique, suscipit ea recusandae facilis laborum necessitatibus veniam id voluptas eligendi at praesentium distinctio nam perspiciatis, cupiditate et dolores. Praesentium, quaerat.
+         <div class="stay-info-desc">
+            <div>
+              <div class="short-exmple"><img class="icon" src="../assets/imgs/icons/home.png" />Entire home</div>
+              <div class="exsplnation">You’ll have the house to yourself.</div>
+            </div>
+            <div>
+              <div class="short-exmple"><img class="icon" src="../assets/imgs/icons/location.png" />Great location</div>
+              <div class="exsplnation">90% of recent guests gave the location a 5-star rating.</div>
+            </div>
+            <div>
+              <div class="short-exmple"><img class="icon" src="../assets/imgs/icons/key.png" />Great check-in experience</div>
+              <div class="exsplnation">90% of recent guests gave the check-in process a 5-star rating.</div>
+            </div>
+            <div>
+              <div class="short-exmple"><img class="icon" src="../assets/imgs/icons/pool.png" />Pool</div>
+              <div class="exsplnation">Guests often search for this popular amenity</div>
+            </div>
+         </div>
+        <div class="stay-info-desc"><div class="padding vibrous">{{this.stay.summary}} Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum similique, suscipit ea recusandae facilis laborum necessitatibus veniam id voluptas eligendi at praesentium distinctio nam perspiciatis, cupiditate et dolores. Praesentium, quaerat.
         Expedita neque ipsum quas culpa veritatis ipsam, quisquam, dolores illo fuga repellat maxime unde officia incidunt sint accusamus exercitationem. Deserunt maxime soluta veniam qui non quo distinctio. Sit, tenetur. Non?
         Rerum rem omnis eaque commodi aliquid, mollitia alias sit deserunt animi minus vel error quisquam excee voluptatum dicta obcaecati, rem minus iusto, maiores corrupti dolorum et.
-        Sint vel ratione omnis doloremque non quisquam voluptatem rerum tempora, cumque similique expedita architecto distinctio! Sunt possimus adipisci harum a earum alias asperiores, molestias expedita explicabo ex quia quos suscipit.
-        Minus reprehenderit voluptatibus quis alias nam. Officia, assumenda expedita earum commodi qui aut quas sed est dicta ullam eius debitis fugiat culpa sunt, obcaecati, ipsum sapiente molestias a id ratione! </div> 
+        Sint vel ratione omnis doloremias nam. Officia, assumenda expedita earum commodi qui aut quas sed est dicta ullam eius debitis fugiat culpa sunt, obcaecati, ipsum sapiente molestias a id ratione!</div> </div> 
            <div class="stay-info-desc">
              <h3>Where you'll sleep</h3>
-             {{this.stay.summary}}</div>
+             <div class="bed-card">
+               <div><img class="icon-bed" src="../assets/imgs/icons/king-size-bed.png" /></div>
+               <div class="airbnb-medium spacing-15px">Bedroom</div>
+               <div class="airbnb">1 double bed</div>
+               </div>
+               </div>
           <div class="stay-info-desc">
             <h3>What this place offers</h3>
             <div class="offeres-layout">
             <div class="houseRules-layout">
             <div class="spacing">{{this.stay.HouseRules[1]}}</div>
             <div class="spacing">{{this.stay.HouseRules[0]}}</div>
-             <div>{{this.stay.HouseRules[2]}}</div>
+             <div><img class="star" src="../assets/imgs/icons/no-smoking.png" /> {{this.stay.HouseRules[2]}}</div>
             </div>
             <div class="amenities-layout">
-            <div class="spacing">{{this.stay.amenities[1]}}</div>
-            <div class="spacing">{{this.stay.amenities[0]}}</div>
-            <div>{{this.stay.amenities[2]}}</div>
+            <div class="spacing"><img class="star" src="../assets/imgs/icons/Wifi.png" /> {{this.stay.amenities[1]}}</div>
+            <div class="spacing"><img class="star" src="../assets/imgs/icons/TV.png" /> {{this.stay.amenities[0]}}</div>
+            <div class="spacing-44px"><img class="star" src="../assets/imgs/icons/pool.png" /> {{this.stay.amenities[2]}}</div>
             </div>
             </div>
+            <div class="padding-50px"><button class="show-more-amenities airbnb-medium">show all 6 amenities</button></div>
             </div>
             <div class="stay-info-desc">{{this.stay.summary}}</div>
       </div>
@@ -60,7 +84,7 @@
         <div class="price-reviews">
           <div class="stay-price">${{ this.stay.price }}</div>
           <div class="night">/ night</div>
-          <div class="rate">{{ this.stay.reviews[0].rate }}</div>
+          <div class="rate"><img class="star" src="../assets/imgs/icons/star.jpg" />{{ this.stay.reviews[0].rate }}</div>
           <div class="reviews">({{ this.stay.reviews.length }} reviews)</div>
         </div>
         <div>
@@ -103,6 +127,9 @@
       </div> -->
       </div>
       
+    </div>
+    <div class="reviews-display">
+      {{ this.stay.reviews[0].txt }}
     </div>
   </div>
 </template>

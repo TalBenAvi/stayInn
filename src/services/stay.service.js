@@ -138,7 +138,7 @@ function _createStay(id,name,initials,imgUrls,country='Germany',countryCode='GR'
             {
                 id: 'madeId',
                 txt: 'Very helpful hosts. Cooked traditional...',
-                rate: 4,
+                rate: 4.7,
                 by: {
                     _id: 'u102',
                     fullName: 'user2',
