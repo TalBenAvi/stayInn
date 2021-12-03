@@ -13,6 +13,9 @@
         <p>$</p>
         <p>USD</p>
         <div class="socials">
+          <img src="../assets/imgs/icons/fb.png">
+          <img src="../assets/imgs/icons/twitter.png">
+          <img src="../assets/imgs/icons/insta.png">
         </div>
       </div>
     </section>

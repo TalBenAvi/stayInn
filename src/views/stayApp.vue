@@ -43,31 +43,40 @@ export default {
   data() {
     return {
       stay: null,
+      staysForDisplay : null
     };
   },
   created() {
     this.$store.dispatch({ type: "loadStays" });
+    this.setFilter()
   },
   computed: {
-    staysForDisplay() {
-         return this.$store.getters.stays;
-    },
+    // staysForDisplay() {
+    //      return this.$store.getters.staysForDisplay;
+    // },
   },
   methods : {
     showDetails(stayId) {
       this.$router.push({path: `/stay/details/${stayId}`})
+    },
+    async setFilter() {
+                const filterBy  = this.$route.query.filter;
+                console.log("----yaniv----", filterBy)
+                await this.$store.dispatch({ type: "setCurrFilter", filterBy });
+                this.staysForDisplay = this.$store.getters.staysForDisplay
     }
   },
   watch: {
-        '$route.query.filter': {
-            handler() {
-                const filterBy  = this.$route.query.filter;
-                console.log("----yaniv----", filterBy)
-                this.$store.dispatch({ type: "setCurrFilter", filterBy });
-            },
-            immediate: true
+        // '$route.query.filter': {
+        //     async handler() {
+        //         const filterBy  = this.$route.query.filter;
+        //         console.log("----yaniv----", filterBy)
+        //         await this.$store.dispatch({ type: "setCurrFilter", filterBy });
+        //         this.staysForDisplay = this.$store.getters.staysForDisplay
+        //     },
+        //     immediate: true
       }
-  }
+  
 };
 </script>
 

@@ -1,5 +1,6 @@
 <template>
-  <header class="app-header" :style="navColor">
+  <header :class="{'app-header': !this.isTop, 'app-header-expanded': this.isTop}" :style="navColor">
+  
     <div class="logo">
       <img
         :class="logo"
@@ -8,9 +9,42 @@
       />
     </div>
 
-    <div class="initial-search-bar">
+    <div @click="expandToSearch()" v-if="!isTop" class="initial-search-bar" >
       <p>Start your search</p>
       <div class="circle">
+        <img class="search-icon" src="../assets/imgs/icons/search-circle.png" />
+      </div>
+    </div>
+    
+    <div v-if="isTop" class="nav-link">
+      <span>Places to stay</span>
+      <span>Experiences</span>
+      <span>Online Experiences</span>
+    </div>
+
+    <div v-if="expandedSearch" class="expty-space"></div>
+    <div v-if="isTop" class="secondary-search-bar">
+        <!-- <el-input-number v-model="num" @change="handleChange" :min="1" :max="10"></el-input-number> -->
+        <!-- <datepicker /> -->
+      <form>
+        <label>
+          <span>Location</span>
+          <input placeholder="Where are you going?"/>
+        </label>
+        <label>
+          <span>Check in</span>
+          <input placeholder="Add dates"/>
+        </label>
+        <label>
+          <span>Check out</span>
+           <input placeholder="Add dates"/>
+        </label>
+        <label>
+          <span>Guests</span>
+          <input placeholder="Add guests"/>
+        </label>
+      </form>
+       <div class="expanded circle">
         <img class="search-icon" src="../assets/imgs/icons/search-circle.png" />
       </div>
     </div>
@@ -29,15 +63,25 @@
     </div>
   </header>
 </template>
+
+
 <script>
+import datepicker from './date-picker.vue'
+
 export default {
+  components: {
+    datepicker
+
+  },
   data() {
     return {
+      num: 1,
       windowWidth: window.innerWidth,
       isTop: true,
       imgSrc: "logo-white",
       globalSrc: "global-white",
       currPage: "",
+      expandedSearch: false
     };
   },
   created() {
@@ -95,6 +139,13 @@ export default {
         this.currPage = "home";
       }
     },
+    expandToSearch() {
+      this.isTop = true
+      this.expandedSearch
+    },
+    handleChange() {
+
+    }
   },
 
   computed: {
