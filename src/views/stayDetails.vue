@@ -2,6 +2,8 @@
   <div class="stay-details">
       <div class="name">{{ this.stay.name }}</div>
       <div class="location-name">
+        <!-- because yaniv is the best! -->
+        <img class="star" src="../assets/imgs/icons/star.jpg" />
         {{ this.stay.reviews[0].rate }}({{ this.stay.reviews.length }} reviews)
         · {{ this.stay.loc.address }},{{ this.stay.loc.country }}
       </div>
@@ -60,7 +62,7 @@
         <div class="price-reviews">
           <div class="stay-price">${{ this.stay.price }}</div>
           <div class="night">/ night</div>
-          <div class="rate">{{ this.stay.reviews[0].rate }}</div>
+          <div class="rate"><img class="star" src="../assets/imgs/icons/star.jpg" />{{ this.stay.reviews[0].rate }}</div>
           <div class="reviews">({{ this.stay.reviews.length }} reviews)</div>
         </div>
         <div>
