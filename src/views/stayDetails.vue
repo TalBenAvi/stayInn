@@ -1,12 +1,10 @@
 <template>
   <div class="stay-details">
-    <div class="location-details">
       <div class="name">{{ this.stay.name }}</div>
       <div class="location-name">
         {{ this.stay.reviews[0].rate }}({{ this.stay.reviews.length }} reviews)
         · {{ this.stay.loc.address }},{{ this.stay.loc.country }}
       </div>
-    </div>
     <div v-if="stay" class="imgs-layout">
  
       <img class="img1" :src="require(`@/assets/imgs/stays/${stay.initials}/${stay.imgUrls[5]}`)" />
@@ -21,12 +19,42 @@
     </div>
     <div class="res-details-layout">
       <div class="stay-info">
+          <div class="head-flex">
+        <div class="stay-info-heder">
         <div class="minimal-details">{{ this.stay.name }}</div>
         <div class="location-space">
           {{ this.stay.accommodates }} guests ·
           {{ this.stay.bedrooms }} bedrooms · {{ this.stay.beds }} beds ·
           {{ this.stay.bath }} baths
         </div>
+       </div>
+          <div><img class="baner" :src="require(`@/assets/imgs/stays/${stay.initials}/${stay.imgUrls[0]}`)" /></div>
+       </div>
+         <div class="stay-info-desc">{{this.stay.summary}}</div>
+        <div class="stay-info-desc">{{this.stay.summary}} Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum similique, suscipit ea recusandae facilis laborum necessitatibus veniam id voluptas eligendi at praesentium distinctio nam perspiciatis, cupiditate et dolores. Praesentium, quaerat.
+        Expedita neque ipsum quas culpa veritatis ipsam, quisquam, dolores illo fuga repellat maxime unde officia incidunt sint accusamus exercitationem. Deserunt maxime soluta veniam qui non quo distinctio. Sit, tenetur. Non?
+        Rerum rem omnis eaque commodi aliquid, mollitia alias sit deserunt animi minus vel error quisquam excee voluptatum dicta obcaecati, rem minus iusto, maiores corrupti dolorum et.
+        Sint vel ratione omnis doloremque non quisquam voluptatem rerum tempora, cumque similique expedita architecto distinctio! Sunt possimus adipisci harum a earum alias asperiores, molestias expedita explicabo ex quia quos suscipit.
+        Minus reprehenderit voluptatibus quis alias nam. Officia, assumenda expedita earum commodi qui aut quas sed est dicta ullam eius debitis fugiat culpa sunt, obcaecati, ipsum sapiente molestias a id ratione! </div> 
+           <div class="stay-info-desc">
+             <h3>Where you'll sleep</h3>
+             {{this.stay.summary}}</div>
+          <div class="stay-info-desc">
+            <h3>What this place offers</h3>
+            <div class="offeres-layout">
+            <div class="houseRules-layout">
+            <div class="spacing">{{this.stay.HouseRules[1]}}</div>
+            <div class="spacing">{{this.stay.HouseRules[0]}}</div>
+             <div>{{this.stay.HouseRules[2]}}</div>
+            </div>
+            <div class="amenities-layout">
+            <div class="spacing">{{this.stay.amenities[1]}}</div>
+            <div class="spacing">{{this.stay.amenities[0]}}</div>
+            <div>{{this.stay.amenities[2]}}</div>
+            </div>
+            </div>
+            </div>
+            <div class="stay-info-desc">{{this.stay.summary}}</div>
       </div>
       <div class="stay-reserve">
         <div class="price-reviews">
@@ -53,10 +81,28 @@
         <div class="check-available" style="background-position: calc((100 - var(--mouse-x, 0)) * 1%) calc((100 - var(--mouse-y, 0)) * 1%); --mouse-x:81.7031; --mouse-y:0;">
             <span class="text-avilable">Check availability</span></div>
       </div>
-      <div class="report-stay">
+      <div class="charged">You won't be charged yet</div>
+      <div class="priceing">
+      <div class="underline">${{ this.stay.price }}x 7 nights</div>
+      <div>${{ this.stay.price*7 }}</div> 
+      </div>
+      <div class="priceing">
+      <div class="underline">Cleaning fee</div>
+      <div>$100</div> 
+      </div>
+      <div class="priceing">
+      <div class="underline">Service fee</div>
+      <div>$50</div> 
+      </div>
+      <div class="total">
+      <div>Total</div>
+      <div>$710</div> 
+      </div>
+      <!-- <div class="report-stay">
        <img :src="require(`@/assets/imgs/branding/Capture.png`)">   <span class="report-text">Report this listing</span>
+      </div> -->
       </div>
-      </div>
+      
     </div>
   </div>
 </template>
