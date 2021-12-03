@@ -37,5 +37,16 @@ export const stayStore = {
                 throw err;
             }
         }
+        // async setCurrFilter({commit}, {stayCity}) {
+        //     console.log("stay store:", stayCity)
+        //     try {
+        //         var city = await stayService.setCurrFilter(stayCity)
+        //         return city
+
+        //     } catch {
+        //         console.log('Had Error getting city in store', err)
+        //         throw err;
+        //     }
+        // }
     }
 }
