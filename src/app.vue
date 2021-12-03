@@ -11,7 +11,6 @@ import appHeader from './cmps/app-header.vue'
 import appFooter from './cmps/app-footer.vue'
 export default{
   created() {
-
   },
   components: {
     appHeader,

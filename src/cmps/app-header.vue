@@ -1,5 +1,5 @@
 <template>
-  <header class="app-header">
+  <header class="app-header" >
     <div class="logo">
       <img :class="logo" :src="require(`@/assets/imgs/branding/${imgSrc}.png`)"  @click="toHome"/>
     </div>
@@ -31,11 +31,15 @@ export default {
   data() {
     return {
       windowWidth: window.innerWidth,
+      isTop: true,
       imgSrc: 'airbnb-logo',
     }
 
   },
+  created() {
+    window.addEventListener('scroll', this.handleScroll);
 
+  },
   mounted() {
     this.$nextTick(() => {
       window.addEventListener('resize', this.onResize)
@@ -46,14 +50,25 @@ export default {
   methods: {
     onResize() {
       this.windowWidth = window.innerWidth
-      if(this.windowWidth <=980) {
-          this.imgSrc = 'airbnb'
+      if(this.windowWidth <=980 && this.isTop) {
+        console.log('here')
+          this.imgSrc = 'airbnb-white'
+      } else if (this.windowWidth <=980 && !this.isTop) {
+        this.imgSrc = 'airbnb'
+      }
+      else if (this.windowWidth >980 && this.isTop){
+        this.imgSrc ='logo-white'
       } else {
         this.imgSrc ='airbnb-logo'
       }
     },
     toHome() {
       this.$router.push('/')
+    },
+    handleScroll (event) {
+      // console.log(this.isTop)
+      // console.log(event.target.body.clientHeight)
+     this.isTop = false
     }
   },
   computed: {
@@ -68,8 +83,11 @@ export default {
 
   watch: {
     windowWidth(newWidth, oldWidth) {
-      console.log(`changed from ${oldWidth} to ${newWidth} `)
+      // console.log(`changed from ${oldWidth} to ${newWidth} `)
     }
+  },
+  destroyed() {
+     window.removeEventListener('scroll', this.handleScroll);
   }
 };
 </script>
