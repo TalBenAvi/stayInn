@@ -18,14 +18,14 @@
       <button class="filter-btn">Filters</button>
     </section>
     <!-- Card Grid Display -->
-
     <section v-if="staysForDisplay" class="grid-card-container">
       <div v-for="stay in staysForDisplay" :key="stay.id" class="grid-card-item" @click="showDetails(stay.id)">
         <div class="grid-img">
           <img :src="require(`@/assets/imgs/stays/${stay.initials}/${stay.imgUrls[0]}`)" />
         </div>
-        <p class="stay-name">
-          {{ stay.name }}, {{ stay.loc.address }}
+        <p class="stay-name flex">
+         {{ stay.name }}, {{ stay.loc.country }} ${{ stay.price }}
+          <span class="stay-details-display">/ night</span>
         </p>
         <p class="stay-details-display">
           {{stay.accommodates}} guests ∙
@@ -50,8 +50,7 @@ export default {
   },
   computed: {
     staysForDisplay() {
-      
-      return this.$store.getters.stays;
+         return this.$store.getters.stays;
     },
   },
   methods : {
@@ -63,7 +62,8 @@ export default {
         '$route.query.filter': {
             handler() {
                 const filterBy  = this.$route.query.filter;
-                console.log(filterBy)
+                console.log("----yaniv----", filterBy)
+                this.$store.dispatch({ type: "setCurrFilter", filterBy });
             },
             immediate: true
       }
