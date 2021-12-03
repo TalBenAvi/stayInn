@@ -62,14 +62,32 @@ function _createStays() {
         stays.push(_createStay("16319346","Bright & cozy 1 bedroom 4p near Canal St Martin",'BCB',['1.jpg', '2.jpg', '3.jpg', '4.jpg', '5.jpg','6.jpg'],'Paris','PR',48.864716,2.349014));
 
          //LISBON
-         stays.push(_createStay("14435345","Story Flat Lisbon - Alfama",'SFL',['1.jpg', '2.jpg', '3.jpg', '4.jpg', '5.jpg','6.jpg'],'Lisbon','PT',38.736946, -9.142685));
-         stays.push(_createStay("12348790","Alfama - Historic Center",'AHC',['1.jpg', '2.jpg', '3.jpg', '4.jpg', '5.jpg','6.jpg'],'Lisbon','PT',38.736946, -9.142685));
-         stays.push(_createStay("12368900","Stylish 1BR apt in Lisbon Downtown* Baixa",'SAL',['1.jpg', '2.jpg', '3.jpg', '4.jpg', '5.jpg','6.jpg'],'Lisbon','PT',38.736946, -9.142685));
-         stays.push(_createStay("44568907","Chiado Loft 17 Charm Boutique Apartment",'CLC',['1.jpg', '2.jpg', '3.jpg', '4.jpg', '5.jpg','6.jpg'],'Lisbon','PT',38.736946, -9.142685));
-         stays.push(_createStay("23426887","Remodeled Historic Apartment in Bairro Alto",'RHA',['1.jpg', '2.jpg', '3.jpg', '4.jpg', '5.jpg','6.jpg'],'Lisbon','PT',38.736946, -9.142685));
-         stays.push(_createStay("12325466","Lisbon Baronesa Historic Center Apartaments",'LBH',['1.jpg', '2.jpg', '3.jpg', '4.jpg', '5.jpg','6.jpg'],'Lisbon','PT',38.736946, -9.142685));
-         stays.push(_createStay("55566878","Apartment in the heart of Lisbon",'AIT',['1.jpg', '2.jpg', '3.jpg', '4.jpg', '5.jpg','6.jpg'],'Lisbon','PT',38.736946, -9.142685));
+         stays.push(_createStay("14435345","Story Flat Lisbon - Alfama",'SFL',['1.jpg', '2.jpg', '3.jpg', '4.jpg', '5.jpg','6.jpg'],'Lisbon','LSB',38.736946, -9.142685));
+         stays.push(_createStay("12348790","Alfama - Historic Center",'AHC',['1.jpg', '2.jpg', '3.jpg', '4.jpg', '5.jpg','6.jpg'],'Lisbon','LSB',38.736946, -9.142685));
+         stays.push(_createStay("12368900","Stylish 1BR apt in Lisbon Downtown* Baixa",'SAL',['1.jpg', '2.jpg', '3.jpg', '4.jpg', '5.jpg','6.jpg'],'Lisbon','LSB',38.736946, -9.142685));
+         stays.push(_createStay("44568907","Chiado Loft 17 Charm Boutique Apartment",'CLC',['1.jpg', '2.jpg', '3.jpg', '4.jpg', '5.jpg','6.jpg'],'Lisbon','LSB',38.736946, -9.142685));
+         stays.push(_createStay("23426887","Remodeled Historic Apartment in Bairro Alto",'RHA',['1.jpg', '2.jpg', '3.jpg', '4.jpg', '5.jpg','6.jpg'],'Lisbon','LSB',38.736946, -9.142685));
+         stays.push(_createStay("12325466","Lisbon Baronesa Historic Center Apartaments",'LBH',['1.jpg', '2.jpg', '3.jpg', '4.jpg', '5.jpg','6.jpg'],'Lisbon','LSB',38.736946, -9.142685));
+         stays.push(_createStay("55566878","Apartment in the heart of Lisbon",'AIT',['1.jpg', '2.jpg', '3.jpg', '4.jpg', '5.jpg','6.jpg'],'Lisbon','LSB',38.736946, -9.142685));
        
+        //LONDON
+        stays.push(_createStay("1A4156JF","Stunning Mews House in South Kensington",'SMH',['1.jpg', '2.jpg', '3.jpg', '4.jpg', '5.jpg','6.jpg'],'London','LND',51.509865,-0.118092));
+        stays.push(_createStay("1A4159BA","Lovely studio in Earls Court!",'LSI',['1.jpg', '2.jpg', '3.jpg', '4.jpg', '5.jpg','6.jpg'],'London','LND',51.509865,-0.118092));
+        stays.push(_createStay("1A5859CA","Unique & Welcoming 2BD Flat in Limehouse",'UWF',['1.jpg', '2.jpg', '3.jpg', '4.jpg', '5.jpg','6.jpg'],'London','LND',51.509865,-0.118092));
+        stays.push(_createStay("1B4959CB","Stay&Co Classic Studio Apartment",'SCC',['1.jpg', '2.jpg', '3.jpg', '4.jpg', '5.jpg','6.jpg'],'London','LND',51.509865,-0.118092));
+        stays.push(_createStay("1449594F","Spacious and Quiet Studio near Kings Cross Station",'SAQ',['1.jpg', '2.jpg', '3.jpg', '4.jpg', '5.jpg','6.jpg'],'London','LND',51.509865,-0.118092));
+        stays.push(_createStay("1499554D","A pocket full of pearls in the heart of London",'PFO',['1.jpg', '2.jpg', '3.jpg', '4.jpg', '5.jpg','6.jpg'],'London','LND',51.509865,-0.118092));
+        stays.push(_createStay("14F95B4A","Stunning Shoreditch Loft Conversion + Movie Screen",'SSL',['1.jpg', '2.jpg', '3.jpg', '4.jpg', '5.jpg','6.jpg'],'London','LND',51.509865,-0.118092));
+
+        //AMSTERDAM
+        stays.push(_createStay("29B83CA5","Luxury, Design, Garden, Vondelpark & Free Bikes!",'LDG',['1.jpg', '2.jpg', '3.jpg', '4.jpg', '5.jpg','6.jpg'],'Amsterdam','AMS',52.377956,4.897070));
+        stays.push(_createStay("29A83DA6","Amsterdam Special Watervilla",'ASW',['1.jpg', '2.jpg', '3.jpg', '4.jpg', '5.jpg','6.jpg'],'Amsterdam','AMS',52.377956,4.897070));
+        stays.push(_createStay("27A84DA6","Design house with wellness & sauna",'DHW',['1.jpg', '2.jpg', '3.jpg', '4.jpg', '5.jpg','6.jpg'],'Amsterdam','AMS',52.377956,4.897070));
+        stays.push(_createStay("29863CA6","Central & Modern Eco-houseboat at the IJ water",'CME',['1.jpg', '2.jpg', '3.jpg', '4.jpg', '5.jpg','6.jpg'],'Amsterdam','AMS',52.377956,4.897070));
+        stays.push(_createStay("2983BA67","Great Houseboat in Amsterdam Centrum",'GHI',['1.jpg', '2.jpg', '3.jpg', '4.jpg', '5.jpg','6.jpg'],'Amsterdam','AMS',52.377956,4.897070));
+        stays.push(_createStay("2943FA68","Amazing houseboat in Amsterdam city center",'AHI',['1.jpg', '2.jpg', '3.jpg', '4.jpg', '5.jpg','6.jpg'],'Amsterdam','AMS',52.377956,4.897070));
+        stays.push(_createStay("2589BG27","New Appt: Perfect for family in great location",'NAP',['1.jpg', '2.jpg', '3.jpg', '4.jpg', '5.jpg','6.jpg'],'Amsterdam','AMS',52.377956,4.897070));
+
         utilService.saveToStorage(STAY_KEY, stays);
     }
     return stays;
