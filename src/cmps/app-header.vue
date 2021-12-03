@@ -66,7 +66,7 @@ export default {
       this.$router.push('/')
     },
     handleScroll (event) {
-      // console.log(this.isTop)
+      console.log(element.scrollTop)
       // console.log(event.target.body.clientHeight)
      this.isTop = false
     }
