@@ -1,8 +1,10 @@
 .app-header{
     display: flex;
     position: sticky;
+    transition: background-color .5s ease-out,height .4s ease-out,box-shadow .3s ease-out;
 
     >* {
+        cursor: pointer;
         display: flex;
         align-items: center;
     }
@@ -10,6 +12,7 @@
     height: 80px;
     box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
         .logo-img {
+            transition: .5s;
             object-fit: contain;
             cursor: pointer;
             margin-inline-start: $layoutPadding;
@@ -79,6 +82,7 @@
 
 
         .user-options {
+            background-color: white;
             cursor: pointer;
             position: relative;
             box-shadow: rgb(46 47 48 / 27%) 0px 0px 0.1em 0.04em, rgb(90 125 188 / 5%) 0px 0.25em 1em;
