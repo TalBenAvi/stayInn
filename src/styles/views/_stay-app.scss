@@ -1,4 +1,4 @@
-.stay-app{
+.stay-app {
     display: grid;
     grid-template-columns: 150px 1fr 150px;
 
@@ -13,6 +13,15 @@
 
 .stay-filter-container {
     margin-top: 30px;
+    display: flex;
+}
+
+.separete-line {
+    border-right: solid 0.5px rgb(221, 221, 221);
+    padding: 1px;
+    height: 20px;
+    // margin-bottom: 50px;
+    // justify-content: center;
 }
 
 .filter-btn {
@@ -39,12 +48,19 @@
     padding: 3px;
     margin-inline-start: 5px;
     margin-bottom: 2px;
-  }
+}
 
 .down {
     transform: rotate(45deg);
     -webkit-transform: rotate(45deg);
-  }
+}
+
+.filter-icon {
+    width: 35%;
+    // margin-inline-start: 5px;
+    // margin-bottom: 2px;
+    // margin-top: 8px;
+}
 
 .grid-card-container {
     margin-top: 38px;
@@ -60,21 +76,28 @@
     flex-direction: column;
 }
 
-.grid-img img{
+.grid-img img {
     aspect-ratio: 1 / 1;
     object-fit: cover;
     border-radius: 15px;
 }
 
-.stay-name{
+.stay-name {
     margin-top: 7px;
-    font-family:airbnb-medium;
+    font-family: airbnb-medium;
     justify-content: space-between;
     display: flex;
 }
 
-.stay-details-display{
+.stay-details-display {
     color: $gray;
-    font-family:airbnb;
+    font-family: airbnb;
     font-size: 16.5px;
+}
+
+.left-details-display {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    width:210px; // some width
 }

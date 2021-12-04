@@ -84,7 +84,7 @@ function _createStays() {
        
         //LONDON
         stays.push(_createStay("1A4156JF","Stunning Mews House in South Kensington",'SMH',['1.jpg', '2.jpg', '3.jpg', '4.jpg', '5.jpg','6.jpg'],'London','LND',51.509865,-0.118092));
-        stays.push(_createStay("1A4159BA","Lovely studio in Earls Court!",'LSI',['1.jpg', '2.jpg', '3.jpg', '4.jpg', '5.jpg','6.jpg'],'London','LND',51.509865,-0.118092));
+        // stays.push(_createStay("1A4159BA","Lovely studio in Earls Court!",'LSI',['1.jpg', '2.jpg', '3.jpg', '4.jpg', '5.jpg','6.jpg'],'London','LND',51.509865,-0.118092));
         stays.push(_createStay("1A5859CA","Unique & Welcoming 2BD Flat in Limehouse",'UWF',['1.jpg', '2.jpg', '3.jpg', '4.jpg', '5.jpg','6.jpg'],'London','LND',51.509865,-0.118092));
         stays.push(_createStay("1B4959CB","Stay&Co Classic Studio Apartment",'SCC',['1.jpg', '2.jpg', '3.jpg', '4.jpg', '5.jpg','6.jpg'],'London','LND',51.509865,-0.118092));
         stays.push(_createStay("1449594F","Spacious and Quiet Studio near Kings Cross Station",'SAQ',['1.jpg', '2.jpg', '3.jpg', '4.jpg', '5.jpg','6.jpg'],'London','LND',51.509865,-0.118092));
@@ -106,8 +106,8 @@ function _createStays() {
 }
 
 
-function _createStay(id,name,initials,imgUrls,country='TBD',countryCode='TBD',address='TBD',lat=0,lng=0,summary='TBD',amenities=['Wifi','Kitchen','Air conditioning','Washer','Free parking','Dryer','Dedicated workspace','Iron','Gym','Pool']
-, TypeOfPlace='TBD', fullName='TBD', accommodates=4, bedrooms=2, beds=2, bath=2, price=80,HouseRules=['Pets Allowed', 'Children Allowed','No Smoking'],propertyType='House',txt='Very helpful hosts. Cooked traditional...',rate=4.5) {
+function _createStay(id,name,initials,imgUrls,country='Germany',countryCode='GR',address='Berlin',lat=51.1657,lng=10.4515,summary='Bright and beautiful top-floor studio with large balcony.One large, bright room with a kitchen area, large dining table and comfortable couch/bed with futon mattress.',amenities=['Wifi','Kitchen','Air conditioning','Washer','Free parking','Dryer','Dedicated workspace','Iron','Gym','Pool']
+, TypeOfPlace='Entire Place', fullName='Jhon Lennon', accommodates=14, bedrooms=2, beds=2, bath=2, price=255,HouseRules=['Pets Allowed', 'Children Allowed','No Smoking'],propertyType='House',txt='Very helpful hosts. Cooked traditional...',rate=4.5) {
     return {
         id,
         name,
