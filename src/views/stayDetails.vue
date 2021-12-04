@@ -9,14 +9,14 @@
       </div>
     <div v-if="stay" class="imgs-layout">
  
-      <img class="img1" :src="require(`@/assets/imgs/stays/${stay.initials}/${stay.imgUrls[5]}`)" />
+      <img class="img1" :src="require(`@/assets/imgs/stays/${stay.initials}/${stay.imgUrls[0]}`)" />
       <div class="first-row">
-        <img class="img2" :src="require(`@/assets/imgs/stays/${stay.initials}/${stay.imgUrls[4]}`)" />
-        <img class="img3" :src="require(`@/assets/imgs/stays/${stay.initials}/${stay.imgUrls[0]}`)" />
+        <img class="img2" :src="require(`@/assets/imgs/stays/${stay.initials}/${stay.imgUrls[1]}`)" />
+        <img class="img3" :src="require(`@/assets/imgs/stays/${stay.initials}/${stay.imgUrls[2]}`)" />
       </div>
       <div class="second-row">
-        <img class="img4" :src="require(`@/assets/imgs/stays/${stay.initials}/${stay.imgUrls[2]}`)" />
-        <img class="img5" :src="require(`@/assets/imgs/stays/${stay.initials}/${stay.imgUrls[1]}`)" />
+        <img class="img4" :src="require(`@/assets/imgs/stays/${stay.initials}/${stay.imgUrls[3]}`)" />
+        <img class="img5" :src="require(`@/assets/imgs/stays/${stay.initials}/${stay.imgUrls[4]}`)" />
       </div>
     </div>
     <div class="res-details-layout">
@@ -50,10 +50,7 @@
               <div class="exsplnation">Guests often search for this popular amenity</div>
             </div>
          </div>
-        <div class="stay-info-desc"><div class="padding vibrous">{{this.stay.summary}} Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum similique, suscipit ea recusandae facilis laborum necessitatibus veniam id voluptas eligendi at praesentium distinctio nam perspiciatis, cupiditate et dolores. Praesentium, quaerat.
-        Expedita neque ipsum quas culpa veritatis ipsam, quisquam, dolores illo fuga repellat maxime unde officia incidunt sint accusamus exercitationem. Deserunt maxime soluta veniam qui non quo distinctio. Sit, tenetur. Non?
-        Rerum rem omnis eaque commodi aliquid, mollitia alias sit deserunt animi minus vel error quisquam excee voluptatum dicta obcaecati, rem minus iusto, maiores corrupti dolorum et.
-        Sint vel ratione omnis doloremias nam. Officia, assumenda expedita earum commodi qui aut quas sed est dicta ullam eius debitis fugiat culpa sunt, obcaecati, ipsum sapiente molestias a id ratione!</div> </div> 
+        <div class="stay-info-desc"><div class="padding vibrous">{{this.stay.summary}} </div> </div> 
            <div class="stay-info-desc">
              <h3>Where you'll sleep</h3>
              <div class="bed-card">

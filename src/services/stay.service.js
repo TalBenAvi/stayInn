@@ -50,8 +50,8 @@ function _createStays() {
     if (!stays || !stays.length) {
         stays = [];
         //miscellaneous
-        stays.push(_createStay("10016546","Sunflower House",'SH',['1.jpg', '2.jpg', '3.jpg', '4.jpg', '5.jpg','6.jpg']));
-        stays.push(_createStay("10006566","Carapathian Log Home",'CLH',['1.jpg', '2.jpg', '3.jpg', '4.jpg', '5.jpg','6.jpg']));
+        stays.push(_createStay("10016546","Sunflower House",'SH',['1.jpg', '2.jpg', '3.jpg', '4.jpg', '5.jpg','6.jpg'],'Spain','SP','El Port de la Selva, Catalonia',40.416775,-3.703790,'Beautiful 4 bedroom architecturally designed villa, with infinity pool and floor to ceiling views in almost every room of the sea and Cap de Creus national park, in beautiful working fishing village in Northern Spain.The space The house has been featured in the New York Times and in Wallpaper.',['Wifi','Kitchen','Washer','Free parking','Dryer','Dedicated workspace','Iron','Pool'],'Entire residential home','Geoff',10,4,5,3,339,['No Smoking', 'No pets','No parties or events'],'Villa','A magnific house with a perfect view. We had a great time at this place. Recommend for family with children',4.8));
+        stays.push(_createStay("10006566","Carapathian Log Home",'CLH',['1.jpg', '2.jpg', '3.jpg', '4.jpg', '5.jpg','6.jpg'],'Romania','RM','Predeluț, Județul Brașov',46.568825,26.916025,'Carpathian Log Home is a complex of two identical wooden villas settled on a 2 acres property filled with apple trees, meadows and so close to the forest! Carpathian Log Home is situated on the outskirts of the forest, near the legendary Bran Castle. This villa is a five bedrooms with ensuite bathrooms, amazing high ceiling livingroom with fireplace and glass wall facing the mountains, gourmet kitchen, sauna & jacuzzi, amazing surrounding nature:- this is your perfect holiday home in Romania. The space Carpathian Log Home2 will comfortably accommodate 10 people in the 5 double bedrooms, with space for 4 extra persons on the sleeping sofas in the livingroom.',['Wifi','Kitchen','Washer','Free parking','Dedicated workspace','Iron'],'Entire chalet','Emanuela',12,5,7,5,355,['No Smoking', 'Pets are allowed','No parties or events'],'House','We had a great time in Emanuela’s villa. The communication was great and everything went smoothly. Would definitely recommend! Thank you!!!',4.9));
         stays.push(_createStay("10306576","Shuhe Arcade Ancient Town",'SAT',['1.jpg', '2.jpg', '3.jpg', '4.jpg', '5.jpg','6.jpg']));
         stays.push(_createStay("10706536","Stylish Trullo with pool & terrace",'STP',['1.jpg', '2.jpg', '3.jpg', '4.jpg', '5.jpg','6.jpg']));
         stays.push(_createStay("10602146","Tiny house Zhorec nearby Bezdružic",'THZ',['1.jpg', '2.jpg', '3.jpg', '4.jpg', '5.jpg','6.jpg']));
@@ -84,7 +84,7 @@ function _createStays() {
        
         //LONDON
         stays.push(_createStay("1A4156JF","Stunning Mews House in South Kensington",'SMH',['1.jpg', '2.jpg', '3.jpg', '4.jpg', '5.jpg','6.jpg'],'London','LND',51.509865,-0.118092));
-        // stays.push(_createStay("1A4159BA","Lovely studio in Earls Court!",'LSI',['1.jpg', '2.jpg', '3.jpg', '4.jpg', '5.jpg','6.jpg'],'London','LND',51.509865,-0.118092));
+        stays.push(_createStay("1A4159BA","Lovely studio in Earls Court!",'LSI',['1.jpg', '2.jpg', '3.jpg', '4.jpg', '5.jpg','6.jpg'],'London','LND',51.509865,-0.118092));
         stays.push(_createStay("1A5859CA","Unique & Welcoming 2BD Flat in Limehouse",'UWF',['1.jpg', '2.jpg', '3.jpg', '4.jpg', '5.jpg','6.jpg'],'London','LND',51.509865,-0.118092));
         stays.push(_createStay("1B4959CB","Stay&Co Classic Studio Apartment",'SCC',['1.jpg', '2.jpg', '3.jpg', '4.jpg', '5.jpg','6.jpg'],'London','LND',51.509865,-0.118092));
         stays.push(_createStay("1449594F","Spacious and Quiet Studio near Kings Cross Station",'SAQ',['1.jpg', '2.jpg', '3.jpg', '4.jpg', '5.jpg','6.jpg'],'London','LND',51.509865,-0.118092));
@@ -106,39 +106,40 @@ function _createStays() {
 }
 
 
-function _createStay(id,name,initials,imgUrls,country='Germany',countryCode='GR',lat=11,lng=-12) {
+function _createStay(id,name,initials,imgUrls,country='TBD',countryCode='TBD',address='TBD',lat=0,lng=0,summary='TBD',amenities=['Wifi','Kitchen','Air conditioning','Washer','Free parking','Dryer','Dedicated workspace','Iron','Gym','Pool']
+, TypeOfPlace='TBD', fullName='TBD', accommodates=4, bedrooms=2, beds=2, bath=2, price=80,HouseRules=['Pets Allowed', 'Children Allowed','No Smoking'],propertyType='House',txt='Very helpful hosts. Cooked traditional...',rate=4.5) {
     return {
         id,
         name,
         initials,
         imgUrls,
-        price: 80.00,
-        summary: "Fantastic duplex apartment with three bedrooms, located in...",
-        propertyType: 'House',
-        TypeOfPlace: 'Entire Place',
-        HouseRules: ['Pets Allowed', 'Children Allowed','No Smoking'],
-        accommodates: 8,
-        beds: 1,
-        bedrooms: 2,
-        bath: 1,
-        amenities: ['TV', 'Wifi','pool'],
+        price,
+        summary,
+        propertyType,
+        TypeOfPlace,
+        HouseRules,
+        accommodates,
+        beds,
+        bedrooms,
+        bath,
+        amenities,
         host: {
             _id: '51399391',
-            fullName: 'Davit Pok',
+            fullName,
             imgUrl: 'https://x.com/pic.jpg',
         },
         loc: {
             country,
             countryCode,
-            address: 'Catalonia',
+            address,
             lat,
             lng
         },
         reviews: [ //*all reviews are pushed here
             {
                 id: 'madeId',
-                txt: 'Very helpful hosts. Cooked traditional...',
-                rate: 4.7,
+                txt,
+                rate,
                 by: {
                     _id: 'u102',
                     fullName: 'user2',
