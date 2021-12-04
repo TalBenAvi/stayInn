@@ -1,8 +1,8 @@
 <template>
   <div class="stay-app">
     <section class="stay-filter-container">
-      <button class="filter-btn">Price</button>
-      <button class="filter-btn border">Type of place</button>
+      <button class="filter-btn">Price <i class="arrow down"></i></button>
+      <button class="filter-btn border">Type of place <i class="arrow down"></i></button>
       <button class="filter-btn">Free cancellation</button>
       <button class="filter-btn">Wifi</button>
       <button class="filter-btn">Kitchen</button>
@@ -15,7 +15,7 @@
       <button class="filter-btn">Iron</button>
       <button class="filter-btn">Gym</button>
       <button class="filter-btn">Pool</button>
-      <button class="filter-btn">Filters</button>
+      <button class="filter-btn">🚬 Filters</button>
     </section>
     <!-- Card Grid Display -->
     <section v-if="staysForDisplay" class="grid-card-container">
@@ -24,13 +24,13 @@
           <img :src="require(`@/assets/imgs/stays/${stay.initials}/${stay.imgUrls[0]}`)" />
         </div>
         <p class="stay-name flex">
-         {{ stay.name }}, {{ stay.loc.country }} ${{ stay.price }}
-          <span class="stay-details-display">/ night</span>
+         {{ stay.name }}, {{ stay.loc.country }}<span class="right-details-display">${{ stay.price }}
+          <span class="stay-details-display">/ night</span> </span>
         </p>
         <p class="stay-details-display">
           {{stay.accommodates}} guests ∙
           {{ stay.bedrooms }} bedrooms ∙
-          {{ stay.beds }} bed ∙ {{ stay.bath }} bath
+          {{ stay.beds }} beds ∙ {{ stay.bath }} baths
         </p>
       </div>
     </section>
