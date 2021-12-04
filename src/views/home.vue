@@ -23,7 +23,7 @@
       <div class="banner">
         <h1>Quarantine the right way</h1>
         <button>Explore Homes</button>
-        <img src="~@/assets/imgs/home-page/banners/1.webp">
+        <img src="~@/assets/imgs/home-page/banners/2.jpg">
       </div>
 
       <h1>Unique Stays</h1>
@@ -53,7 +53,7 @@
         <h1>Become a host</h1>
         <h4 class="sub-header">Unlock new opportunities by sharing your space.</h4>
         <button class="learn-btn">Learn More</button>
-        <img src="~@/assets/imgs/home-page/banners/3.webp">
+        <img src="~@/assets/imgs/home-page/banners/1.jpg">
       </div>
 
     </div>

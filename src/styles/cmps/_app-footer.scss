@@ -1,12 +1,15 @@
 .footer-container {
-    height: 70px;
+    padding-top: 71px;
+    height: 159px;
     font-family: airbnb;
     color: $black;
-    border-top: 1px solid #ddd;
     background-color: #F7F7F7;
     bottom: 0;
 
     .main-footer {
+        padding-top: 15px;
+        padding-bottom: 15px;
+        border-top: 1px solid #ddd;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -34,15 +37,23 @@
             p:first-of-type {
                 font-family: airbnb-medium;
                 text-decoration: underline;
+                margin-inline-end: 27px;
             }
 
             p:nth-of-type(3) {
                 font-family: airbnb-medium;
                 text-decoration: underline;
+                padding-inline-end: 67px;
             }
 
             span {
                 margin-inline-start: 10px;
+            }
+        }
+
+        .socials {
+            img:not(:last-of-type) {
+                margin-inline-end: 30px;
             }
         }
     }
