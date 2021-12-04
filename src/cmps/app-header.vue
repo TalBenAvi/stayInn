@@ -27,22 +27,28 @@
         <!-- <el-input-number v-model="num" @change="handleChange" :min="1" :max="10"></el-input-number> -->
         <!-- <datepicker /> -->
       <form>
-        <label>
+        <label class="main-search-label" @click="openModal('location')">
           <span>Location</span>
           <input placeholder="Where are you going?"/>
+
         </label>
-        <label>
+        <label class="main-search-label" @click="openModal('checkin')">
           <span>Check in</span>
           <input placeholder="Add dates"/>
+          <!-- <dynamic-modal :clicked="'checkin'"/> -->
         </label>
-        <label>
+        <label class="main-search-label" @click="openModal('checkout')">
           <span>Check out</span>
            <input placeholder="Add dates"/>
+           <!-- <dynamic-modal :clicked="'checkout'"/> -->
         </label>
-        <label>
+        <label class="main-search-label" @click="openModal('guests')">
           <span>Guests</span>
           <input placeholder="Add guests"/>
+          <!-- <dynamic-modal :clicked="'guests'"/> -->
         </label>
+
+        <dynamic-modal :clicked="this.clickedOn"/>
       </form>
        <div class="expanded circle">
         <img class="search-icon" src="../assets/imgs/icons/search-circle.png" />
@@ -67,11 +73,12 @@
 
 <script>
 import datepicker from './date-picker.vue'
+import dynamicModal from './dynamic-modal.vue'
 
 export default {
   components: {
-    datepicker
-
+    datepicker,
+    dynamicModal
   },
   data() {
     return {
@@ -81,7 +88,8 @@ export default {
       imgSrc: "logo-white",
       globalSrc: "global-white",
       currPage: "",
-      expandedSearch: false
+      expandedSearch: false,
+      clickedOn: ''
     };
   },
   created() {
@@ -145,6 +153,10 @@ export default {
     },
     handleChange() {
 
+    },
+    openModal(of) {
+      this.clickedOn = of
+      console.log(this.clickedOn)
     }
   },
 

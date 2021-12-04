@@ -193,7 +193,7 @@
                 
                 display: flex;
             }
-            label {
+            .main-search-label {
                 cursor: pointer;
                 padding-top:14px;
                 padding-bottom: 14px;
@@ -227,11 +227,11 @@
                 }
             }
 
-            label:not(:last-of-type) {
+            .main-search-label:not(:last-of-type) {
                 border-right: 1px solid hsla(0,0%,56.1%,.2196078431372549);
             }
 
-            label:hover {
+            .main-search-label:hover {
                 border-radius: 40px;
                 background-color: #ebebeb;
 

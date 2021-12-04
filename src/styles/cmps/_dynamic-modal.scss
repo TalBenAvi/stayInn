@@ -1,0 +1,150 @@
+.dynamicModal {
+
+    position: absolute;
+    
+
+    .location-modal {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
+        height: 170px;
+        width: 500px;
+        position: absolute;
+        left: 0px;
+        top: 63px;
+        background: #FFFFFF;
+        border-radius: 32px;
+        box-shadow: 0px 6px 20px rgb(0 0 0 / 20%) !important;
+        margin-top: 12px;
+        overflow-x: hidden;
+        overflow-y: auto;
+        padding: 16px 37px;
+
+        span {
+            color: $black;
+            margin-inline-start: 5px;
+            margin-bottom: 15px;
+            font-size: 12px;
+            font-family: airbnb-medium;
+        }
+
+        button {
+            position: relative;
+            background-color: white;
+            display: flex;
+            width: 100%;
+            flex-direction: row;
+            align-items: center;
+            padding: 8px 24px;
+            margin-top: 8px;
+            box-shadow: rgb(0 0 0 / 12%) 0px 6px 16px;
+            border-radius: 32px;
+            height: 58px;
+            border: 1px solid rgb(221, 221, 221);
+            
+            p {
+                -webkit-text-fill-color: transparent;
+                background: linear-gradient(90deg, rgb(111, 1, 156) 0%, rgb(198, 1, 126) 320.12%);
+                background-clip: text;
+                font-family: airbnb-medium;
+                font-size: 18px;
+                max-height: 120px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+
+        }
+
+        img {
+            position: absolute;
+            right:60px ;
+            bottom: 55px;
+            width: 25px;
+            height: 25px;
+        }
+
+    }
+
+    .checkin-modal {
+        width: 300px;
+        height: 500px;
+        background-color: pink;
+    }
+
+    .checkout-modal {
+        width: 300px;
+        height: 500px;
+        background-color: rgb(9, 247, 88);
+    }
+
+    .guests-modal {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        position: absolute;
+        width: 400px;
+        height: 375px;
+        padding-left: 5px;
+        padding-top: 15px;
+        background: #FFFFFF;
+        left: 410px;
+        top: 63px;
+        margin-top: 12px;
+        box-shadow: rgb(0 0 0 / 12%) 0px 6px 16px;
+        border-radius: 32px;
+
+        form {
+            display: flex;
+            position: relative;
+            flex-direction: column;
+            
+        }
+        .expanded-search-label {
+            margin-inline-start: 20px;
+            padding-top: 16px;
+            padding-bottom: 16px;
+            padding-right: 4px;
+            padding-left: 15px;
+            display: flex;
+            flex-direction: column;
+            border-bottom: 1px solid rgb(235, 235, 235);
+            
+            span:first-of-type {
+                font-family: airbnb-book;
+                font-size: 16px;
+                
+            }
+
+            span:nth-of-type(2) {
+                font-family: airbnb;
+                font-size: 14px;
+                font-weight: 400;
+                color: $gray;
+            }
+
+            // span:nth-of-type(2) {
+               
+            // }
+
+
+            input {
+                position: absolute;
+                left: 200px;
+
+            }
+  
+        }
+
+        .bottom-text {
+            width: 306px;
+            margin-inline-start: 34px;
+            font-family: airbnb;
+            font-size: 14px;
+            line-height: 18px;
+            color: rgb(113, 113, 113);
+            margin-top: 8px;
+            margin-bottom: 16px;
+        }
+    }
+}
