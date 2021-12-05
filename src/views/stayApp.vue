@@ -5,19 +5,19 @@
       <button class="filter-btn">Price <i class="arrow down"></i></button>
       <button class="filter-btn border">Type of place <i class="arrow down"></i></button>
       <!-- </div> -->
-      <button class="filter-btn">Free cancellation</button>
-      <button class="filter-btn">Wifi</button>
-      <button class="filter-btn">Kitchen</button>
-      <button class="filter-btn">Air conditioning</button>
-      <button class="filter-btn">Self check-in</button>
-      <button class="filter-btn">Washer</button>
-      <button class="filter-btn">Free parking</button>
-      <button class="filter-btn">Dryer</button>
-      <button class="filter-btn">Dedicated workspace</button>
-      <button class="filter-btn">Iron</button>
-      <button class="filter-btn">Gym</button>
-      <button class="filter-btn">Pool</button>
-      <button class="filter-btn"><img class="filter-icon" src="@/assets/imgs/icons/filter.png">Filters</button>
+      <button class="filter-btn btn-1">Free cancellation</button>
+      <button class="filter-btn btn-2">Wifi</button>
+      <button class="filter-btn btn-3">Kitchen</button>
+      <button class="filter-btn btn-4">Air conditioning</button>
+      <button class="filter-btn btn-5">Self check-in</button>
+      <button class="filter-btn btn-6">Washer</button>
+      <button class="filter-btn btn-7">Free parking</button>
+      <button class="filter-btn btn-8">Dryer</button>
+      <button class="filter-btn btn-9">Dedicated workspace</button>
+      <button class="filter-btn btn-10">Iron</button>
+      <button class="filter-btn btn-11">Gym</button>
+      <button class="filter-btn btn-12">Pool</button>
+      <button class="filter-btn filter"><img class="filter-icon" src="@/assets/imgs/icons/filter.png">Filters</button>
     </section>
     <!-- Card Grid Display -->
     <section v-if="staysForDisplay" class="grid-card-container">
@@ -26,7 +26,7 @@
           <img :src="require(`@/assets/imgs/stays/${stay.initials}/${stay.imgUrls[0]}`)" />
         </div>
         <p class="stay-name flex">
-         <span class="left-details-display">{{ stay.name }}, {{ stay.loc.country }}</span><span class="stay-details-display">${{ stay.price }}
+         <span class="left-details-display">{{ stay.name }}, {{ stay.loc.country }}</span><span class="price-details-display">${{ stay.price }}
           / night</span>
         </p>
         <p class="stay-details-display">

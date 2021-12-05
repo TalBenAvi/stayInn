@@ -13,7 +13,7 @@
 
 .stay-filter-container {
     margin-top: 30px;
-    display: flex;
+    // display: flex;
 }
 
 .separete-line {
@@ -25,6 +25,7 @@
 }
 
 .filter-btn {
+    position: relative;
     cursor: pointer;
     text-align: center;
     border: 1px solid rgb(221, 221, 221);
@@ -35,6 +36,10 @@
     font-size: 14px;
     font-family: airbnb-book;
     margin-left: 8px;
+}
+
+.filter {
+    padding-inline-start: 30px;
 }
 
 .filter-btn:hover {
@@ -56,10 +61,14 @@
 }
 
 .filter-icon {
-    width: 35%;
-    // margin-inline-start: 5px;
-    // margin-bottom: 2px;
-    // margin-top: 8px;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    left: 6px;
+    // display: inline-block;
+    // padding: 3px;
+    // margin-inline-end: 1px;
+    // margin-top: 10px;
 }
 
 .grid-card-container {
@@ -89,6 +98,12 @@
     display: flex;
 }
 
+.price-details-display {
+    color: $black;
+    font-family: airbnb;
+    font-size: 16.5px;
+}
+
 .stay-details-display {
     color: $gray;
     font-family: airbnb;
@@ -99,5 +114,151 @@
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
-    width:210px; // some width
+    width: 210px; // some width
 }
+
+
+@media (max-width: 1919px) {
+    .btn-12 {
+        display: none;
+    }
+}
+
+@media (min-width: 1920px) {
+    .btn-12 {
+        display:flexbox;
+    }
+}
+
+@media (max-width: 1849px) {
+    .btn-11 {
+        display: none;
+    }
+}
+
+@media (min-width: 1850px) {
+    .btn-11 {
+        display:flexbox;
+    }
+}
+
+@media (max-width: 1775px) {
+    .btn-10 {
+        display: none;
+    }
+}
+
+@media (min-width: 1776px) {
+    .btn-10 {
+        display:flexbox;
+    }
+}
+
+@media (max-width: 1708px) {
+    .btn-9 {
+        display: none;
+    }
+}
+
+@media (min-width: 1709px) {
+    .btn-9 {
+        display:flexbox;
+    }
+}
+
+@media (max-width: 1516px) {
+    .btn-8 {
+        display: none;
+    }
+}
+
+@media (min-width: 1517px) {
+    .btn-8 {
+        display:flexbox;
+    }
+}
+
+@media (max-width: 1439px) {
+    .btn-7 {
+        display: none;
+    }
+}
+
+@media (min-width: 1438px) {
+    .btn-7 {
+        display:flexbox;
+    }
+}
+
+@media (max-width: 1317px) {
+    .btn-6 {
+        display: none;
+    }
+}
+
+@media (min-width: 1316px) {
+    .btn-6 {
+        display:flexbox;
+    }
+}
+
+@media (max-width: 1226px) {
+    .btn-5 {
+        display: none;
+    }
+}
+
+@media (min-width: 1225px) {
+    .btn-5 {
+        display:flexbox;
+    }
+}
+
+@media (max-width: 1102px) {
+    .btn-4 {
+        display: none;
+    }
+}
+
+@media (min-width: 1101px) {
+    .btn-4 {
+        display:flexbox;
+    }
+}
+
+@media (max-width: 958px) {
+    .btn-3 {
+        display: none;
+    }
+}
+
+@media (min-width: 957px) {
+    .btn-3 {
+        display:flexbox;
+    }
+}
+
+@media (max-width: 866px) {
+    .btn-2 {
+        display: none;
+    }
+}
+
+@media (min-width: 865px) {
+    .btn-2 {
+        display:flexbox;
+    }
+}
+
+@media (max-width: 799px) {
+    .btn-1 {
+        display: none;
+    }
+}
+
+@media (min-width: 798px) {
+    .btn-1 {
+        display:flexbox;
+    }
+}
+
