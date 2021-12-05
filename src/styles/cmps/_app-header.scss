@@ -279,14 +279,16 @@
             background-color: white;
 
             form {
+ 
                 display: flex;
             }
+
             .main-search-label {
-                cursor: pointer;
-                padding-top:14px;
+                padding-top: 14px;
                 padding-bottom: 14px;
+                cursor: pointer;
                 padding-inline-start: 14px;
-                padding-inline-end: 24px;
+                padding-inline-end: 20px;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
@@ -319,6 +321,7 @@
 
             .main-search-label:not(:last-of-type) {
                 border-right: 1px solid hsla(0,0%,56.1%,.2196078431372549);
+           
             }
 
             .main-search-label:hover {
@@ -347,7 +350,7 @@
         .nav-link {
             margin: 0 auto;
             font-size: 17px;
-            color: white;
+            color: $black;
             font-family: airbnb;
 
             span {
