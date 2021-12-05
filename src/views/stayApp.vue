@@ -25,15 +25,17 @@
         <div class="grid-img">
           <img :src="require(`@/assets/imgs/stays/${stay.initials}/${stay.imgUrls[0]}`)" />
         </div>
+        <div class="all-txt"> 
         <p class="stay-name flex">
-         <span class="left-details-display">{{ stay.name }}, {{ stay.loc.country }}</span><span class="price-details-display">${{ stay.price }}
-          / night</span>
+         <span class="left-details-display">{{ stay.name }}, {{ stay.loc.country }}</span>
+         <span class="price-details-display">${{ stay.price }}/ night</span>
         </p>
         <p class="stay-details-display">
           {{stay.accommodates}} guests ∙
           {{ stay.bedrooms }} bedrooms ∙
           {{ stay.beds }} beds ∙ {{ stay.bath }} baths
         </p>
+        </div>
       </div>
     </section>
   </div>
