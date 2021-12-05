@@ -168,7 +168,7 @@ export default {
     },
     openModal(of) {
       this.clickedOn = of
-      console.log(this.clickedOn)
+      // console.log(this.clickedOn)
     }
   },
 
@@ -206,7 +206,7 @@ export default {
              handler() {
               this.setCurrPage()
               if(this.currPage === 'all') {
-                console.log('not at home anymore')
+                // console.log('not at home anymore')
                 this.globalSrc = 'global'
                 this.imgSrc = 'airbnb-logo'
               } else if (this.currPage=== 'home' && this.isTop) {

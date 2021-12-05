@@ -73,7 +73,7 @@ export default {
   },
   methods: {
     showStays(filterBy) {
-      console.log(filterBy)
+      // console.log(filterBy)
       if (filterBy === 'all') {
         this.$router.push('/stay')
       } else {

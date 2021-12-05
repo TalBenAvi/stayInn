@@ -106,7 +106,7 @@ function _createStays() {
 }
 
 
-function _createStay(id,name,initials,imgUrls,country='Germany',countryCode='GR',address='Berlin',lat=51.1657,lng=10.4515,summary='Bright and beautiful top-floor studio with large balcony.One large, bright room with a kitchen area, large dining table and comfortable couch/bed with futon mattress.',amenities=['Wifi','Kitchen','Air conditioning','Washer','Free parking','Dryer','Dedicated workspace','Iron','Gym','Pool']
+function _createStay(id,name,initials,imgUrls,country='Germany',countryCode='GR',address='Berlin',lat=51.1657,lng=10.4515,summary='Bright and beautiful top-floor studio with large balcony.One large, bright room with a kitchen area, large dining table and comfortable couch/bed with futon mattress.',amenities=['Kitchen','Air conditioning','Washer','Free parking','Dryer','Dedicated workspace','Iron','Gym','Pool']
 , TypeOfPlace='Entire Place', fullName='Jhon Lennon', accommodates=14, bedrooms=2, beds=2, bath=2, price=255,HouseRules=['Pets Allowed', 'Children Allowed','No Smoking'],propertyType='House',txt='Very helpful hosts. Cooked traditional...',rate=4.5) {
     return {
         id,

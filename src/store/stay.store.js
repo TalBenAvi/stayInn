@@ -10,15 +10,24 @@ export const stayStore = {
         stays(state) {return state.stays},
         
         staysForDisplay(state) {
+            console.log(state.filterBy)
             let stays =  JSON.parse(JSON.stringify(state.stays))
-            if (!state.filterBy) return state.stays
+            // console.log(state.filterBy.amenities.length)
+            if (!state.filterBy.amenities.length && !state.filterBy.location) return state.stays
 
-            let filteredStays = []
-            filteredStays = stays.filter((stay) => stay.loc.country.toLowerCase() === state.filterBy)
+            if (state.filterBy.location) {
+                stays = stays.filter((stay) => stay.loc.country.toLowerCase() === state.filterBy.location)
+            }
 
-            return filteredStays
+            if (state.filterBy.amenities.length) {
+                // stays = stays.filter((stay) => stay.amenities.includes(state.filterBy.amenities[0]))
+                stays = stays.filter((stay) => stay.amenities.every((emenitie) => {
+                    console.log(emenitie)
+                    state.filterBy.amenities.includes(emenitie)
+                }))
+            }
 
-            
+            return stays
         }
 
     },
@@ -54,7 +63,6 @@ export const stayStore = {
             }
         },
         setCurrFilter({commit}, {filterBy}) {
-            console.log(filterBy, 'from store')
             commit({type:'setFilter', filterBy})
         }
         // async setCurrFilter({commit}, {stayCity}) {

@@ -5,18 +5,18 @@
       <button class="filter-btn">Price <i class="arrow down"></i></button>
       <button class="filter-btn border">Type of place <i class="arrow down"></i></button>
       <!-- </div> -->
-      <button class="filter-btn btn-1">Free cancellation</button>
-      <button class="filter-btn btn-2">Wifi</button>
-      <button class="filter-btn btn-3">Kitchen</button>
-      <button class="filter-btn btn-4">Air conditioning</button>
-      <button class="filter-btn btn-5">Self check-in</button>
-      <button class="filter-btn btn-6">Washer</button>
-      <button class="filter-btn btn-7">Free parking</button>
-      <button class="filter-btn btn-8">Dryer</button>
-      <button class="filter-btn btn-9">Dedicated workspace</button>
-      <button class="filter-btn btn-10">Iron</button>
-      <button class="filter-btn btn-11">Gym</button>
-      <button class="filter-btn btn-12">Pool</button>
+      <button @click="setFilter('free cancellation')" class="filter-btn btn-1">Free cancellation</button>
+      <button @click="setFilter('Wifi')" class="filter-btn btn-2">Wifi</button>
+      <button @click="setFilter('Kitchen')" class="filter-btn btn-3">Kitchen</button>
+      <button @click="setFilter('Air conditioning')" class="filter-btn btn-4">Air conditioning</button>
+      <button @click="setFilter('Self check-in')" class="filter-btn btn-5">Self check-in</button>
+      <button @click="setFilter('Washer')" class="filter-btn btn-6">Washer</button>
+      <button @click="setFilter('Free parking')" class="filter-btn btn-7">Free parking</button>
+      <button @click="setFilter('Dryer')" class="filter-btn btn-8">Dryer</button>
+      <button @click="setFilter('Dedicated workspace')" class="filter-btn btn-9">Dedicated workspace</button>
+      <button @click="setFilter('Iron')" class="filter-btn btn-10">Iron</button>
+      <button @click="setFilter('Gym')" class="filter-btn btn-11">Gym</button>
+      <button @click="setFilter('Pool')" class="filter-btn btn-12">Pool</button>
       <button class="filter-btn filter"><img class="filter-icon" src="@/assets/imgs/icons/filter.png">Filters</button>
     </section>
     <!-- Card Grid Display -->
@@ -49,6 +49,8 @@ export default {
       stay: null,
       staysForDisplay : null,
       filterBy: {
+        location: null,
+        amenities:[]
         
       }
     };
@@ -66,22 +68,32 @@ export default {
     showDetails(stayId) {
       this.$router.push({path: `/stay/details/${stayId}`})
     },
-    async setFilter() {
-                const filterBy  = this.$route.query.filter;
-                await this.$store.dispatch({ type: "setCurrFilter", filterBy });
-                this.staysForDisplay = this.$store.getters.staysForDisplay
+    async setFilter(fromBtns) {
+
+                if (this.$route.query.filter) {
+                  const {filter} = this.$route.query
+                  this.filterBy.location = filter
+                  // console.log(this.filterBy)
+                } if (fromBtns) {
+                  this.filterBy.amenities.push(fromBtns) 
+                }
+                  await this.$store.dispatch({ type: "setCurrFilter", filterBy:this.filterBy});
+                  this.staysForDisplay = this.$store.getters.staysForDisplay
+
+                // console.log(this.filterBy)
+                // if (!fromBtns) {
+                //     const {filter}  = this.$route.query;
+                //     this.filterBy.location = filter
+                //     await this.$store.dispatch({ type: "setCurrFilter", filterBy:this.filterBy });
+                //     this.staysForDisplay = this.$store.getters.staysForDisplay
+                // } else {
+                //   this.filterBy.amenities.push(fromBtns) 
+                //   await this.$store.dispatch({ type: "setCurrFilter", filterBy:this.filterBy});
+                //   this.staysForDisplay = this.$store.getters.staysForDisplay
+                // }
+
     }
-  },
-  watch: {
-        // '$route.query.filter': {
-        //     async handler() {
-        //         const filterBy  = this.$route.query.filter;
-        //         console.log("----yaniv----", filterBy)
-        //         await this.$store.dispatch({ type: "setCurrFilter", filterBy });
-        //         this.staysForDisplay = this.$store.getters.staysForDisplay
-        //     },
-        //     immediate: true
-      }
+  }
   
 };
 </script>
