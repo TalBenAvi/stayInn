@@ -591,7 +591,7 @@ export default {
     determinePos() {
       console.log(this.scrollBar)
       if (this.scrollBar >= 580 && this.scrollBar <= 1350) {
-        return {position: 'fixed', 'margin-top': -580+'px', width: 24.25+'%'}
+        return {position: 'fixed', 'margin-top': -580+'px', width: 23.5+'%'}
       }else{
         console.log('i should stop here')
         return {position: 'relative'}

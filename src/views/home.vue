@@ -40,7 +40,7 @@
 
       <div @click="showDetails('10706536')" class="location-card">
         <img class="location-img" src="~@/assets/imgs/home-page/homes/trullo/1.webp"/>
-        <h4>Trullo</h4>
+        <h4>Trulli</h4>
       </div>
 
       <div @click="showDetails('10602146')" class="location-card">
