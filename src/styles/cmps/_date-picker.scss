@@ -1,0 +1,38 @@
+.mx-input {
+    border: none;
+    padding: 0;
+    box-shadow: none;
+    height: 12px;
+}
+
+.mx-datepicker-range {
+    width: 200px;
+}
+
+.mx-datepicker svg {
+    display: none;
+}
+
+
+.mx-datepicker-main {
+    position: absolute;
+    top: 162px!important;
+    left: 50%!important;
+    transform: translateX(-50%)!important;
+    width: 100%;
+    height: 393px!important;
+    max-width: 880px;
+    border-radius: 20px;
+    padding: 0.8rem 1.6rem!important;
+}
+
+.mx-calendar-content .cell.active{
+    background-color: $black  !important;
+    color: white;
+    border-radius: 50%;
+}
+
+.mx-calendar {
+    width: 50%!important;
+    padding: 44px 61px;
+}

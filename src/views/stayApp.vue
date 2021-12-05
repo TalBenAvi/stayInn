@@ -43,7 +43,10 @@ export default {
   data() {
     return {
       stay: null,
-      staysForDisplay : null
+      staysForDisplay : null,
+      filterBy: {
+        
+      }
     };
   },
   created() {
