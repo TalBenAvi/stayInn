@@ -4,12 +4,70 @@
 .airbnb{
     font-family: airbnb;
 }
+.spacing-10px-right{
+    margin-right: 10px;
+}
+.spacing-20px-right{
+    margin-right: 20px;
+}
+.spacing-120px-right{
+    margin-right: 120px;
+}
 .spacing-15px{
     padding-bottom: 15px;
+}
+.spacing-25px{
+    padding-bottom: 25px;
 }
 .spacing-44px{
     padding-bottom: 44px;
 }
 .padding-50px{
     padding-bottom: 35px;
+}
+.h-13px{
+    height: 15px;
+}
+.w-13px{
+   width: 13px;
+}
+.padding-2px{
+    padding-top: 2px;
+}
+.flex-center{
+    display: flex;
+    flex-direction: row;
+}
+.center-1px{
+    margin-top: 1px;
+}
+.center{
+    margin-top: 3px;
+}
+.underline {
+    text-decoration: underline;
+}
+.font-size-19px{
+    font-size: 19px;
+}
+.flex-row{
+    display: flex;
+    flex-direction: row;
+}
+.flex-column{
+    display: flex;
+    flex-direction: column;
+}
+.width-50{
+    width: 50%;
+}
+.space-bettwen{
+    justify-content: space-between;
+}
+.black{
+color:$black;
+}
+.fixed{
+    position: fixed;
+    width: 100%;
 }

@@ -14,6 +14,7 @@
     margin-top: 19px;
     margin-bottom: 13px;
     font-family: airbnb-medium;
+    color: $black;
     font-size: 27px;
 }
 .star {
@@ -21,6 +22,10 @@
     height: 15px;
 }
 .location-name {
+    width: 1120px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     color: $gray;
     font-family: airbnb-medium;
     font-size: 0.85rem;
@@ -77,7 +82,9 @@
     flex-direction: row;
     justify-content: space-between;
     height: 1924px;
-    border-bottom: $gray solid 1px;
+    color: $black;
+    border-bottom: $separate solid 1px;
+    margin-bottom:50px ; 
 }
 .stay-info {
     width: 59.02%;
@@ -88,6 +95,7 @@
     flex-wrap: wrap;
     justify-content: space-between;
     height: 80px;
+    color: $black;
     border-bottom: $separate solid 1px;
 }
 .stay-info-heder {
@@ -123,15 +131,14 @@
     font-size: 0.95rem;
     border-bottom: $separate solid 1px;
 }
-.vibrous{
-line-height: 1.25;
+.vibrous {
+    line-height: 1.25;
 }
 .short-exmple {
     font-family: airbnb-medium;
     padding-bottom: 4px;
 }
 .exsplnation {
-    padding-left: 35px;
     padding-bottom: 25px;
     font-family: airbnb;
     color: $gray;
@@ -148,14 +155,21 @@ line-height: 1.25;
     border: #222222 solid 0.2px;
     border-radius: 8px;
     font-size: 0.85rem;
+    color: $black;
     background-color: white;
 }
+.show-more-amenities :hover{
+    cursor: pointer;
+}
 .icon {
-    // display: flex;
-    // align-items: center;
     width: 40px;
     height: 20px;
     padding-right: 20px;
+}
+.icons {
+    width: 30px;
+    height: 25px;
+    padding-right:5px;
 }
 .icon-bed {
     width: 20px;
@@ -176,8 +190,11 @@ line-height: 1.25;
 .houseRules-layout {
     padding-right: 150px;
 }
-.stay-reserve {
+.stay-reserve-layout{
     width: 33.03%;
+}
+.stay-reserve {
+    width:19.5%;
     height: 472px;
     border: 1px solid rgb(221, 221, 221);
     border-radius: 12px;
@@ -197,21 +214,21 @@ line-height: 1.25;
 }
 .night {
     width: 43.5%;
-    margin-top: 5px;
-    font-size: 1rem;
+    margin-top: 7px;
+    font-size: 14px;
     font-family: airbnb;
 }
 .rate {
-    margin-top: 5px;
-    font-size: 1rem;
-    font-family: airbnb;
+    margin-top: 7px;
+    font-size: 13px;
+    font-family: airbnb-medium;
 }
 .reviews {
     color: $gray;
-    margin-top: 5px;
-    font-size: 1rem;
+    margin-top: 9px;
+    font-size: 13px;
+    font-family: airbnb-medium;
     text-decoration: underline;
-    font-family: airbnb;
 }
 .checking {
     display: grid;
@@ -240,6 +257,8 @@ line-height: 1.25;
 }
 .add {
     font-family: airbnb;
+    color: $gray;
+    font-size: 14px;
     margin-left: 5px;
     margin-top: 5px;
 }
@@ -265,9 +284,7 @@ line-height: 1.25;
     font-size: 0.95rem;
     margin-bottom: 20px;
 }
-.underline {
-    text-decoration: underline;
-}
+
 .priceing {
     display: flex;
     flex-direction: row;
@@ -282,9 +299,11 @@ line-height: 1.25;
     flex-direction: row;
     justify-content: space-between;
     font-family: airbnb-book;
-    border-top: opacify($color: $gray, $amount: 0.5) solid 0.5px;
+    border-top: opacify($color: $separate, $amount: 0.5) solid 0.5px;
 }
 .report-stay {
+    width:19.5%;
+    margin-top: 30px;
     text-align: center;
     color: $gray;
 }
@@ -297,4 +316,56 @@ line-height: 1.25;
 }
 .text-avilable {
     margin-top: 15px;
+}
+.reviews-display{
+    width: 1120px;
+    border-bottom: $separate solid 1px;
+    margin-bottom:50px ;
+}
+.reviews-rating-data{
+    display: grid;
+    row-gap:24px ;
+    column-gap: 90px;
+    grid-template-columns: 46% 46%;
+    grid-template-rows: 33% 33% 33% ;
+    padding-bottom: 75px;
+}
+.reviews-display-data{
+    display: grid;
+    row-gap:50px ;
+    column-gap: 90px;
+    grid-template-columns: 46% 46%;
+    grid-template-rows: 33% 33% 33% ;
+    padding-bottom: 100px;
+}
+.user-review-avatar{
+    height: 50px;
+    width: 50px;
+}
+.review-date{
+    font-size: 13px;
+    padding-bottom: 25px;
+    font-family: airbnb;
+    color: $gray;
+}
+.location-name-map {
+    color: $black;
+    font-family: airbnb;
+    font-size: 0.85rem;
+    margin-bottom: 30px;
+}
+.stay-location-map{
+    width: 1120px;
+    border-bottom: $separate solid 1px;
+    margin-bottom:50px ; 
+}
+.contact-host{
+    height: 45px;
+    width: 150px;
+    border: #222222 solid 0.2px;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    color: $black;
+    font-family: airbnb-medium;
+    background-color: white;
 }
