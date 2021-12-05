@@ -202,8 +202,8 @@
         </div>
         <div class="stay-info-desc">{{ this.stay.summary }}</div>
       </div>
-      <div class="stay-reserve-layout">
-        <div class="fixed">
+      <div class="stay-reserve-layout" >
+        <div :style="determinePos">
           <div class="stay-reserve">
             <div class="price-reviews">
               <div class="stay-price">${{ this.stay.price }}</div>
@@ -573,13 +573,31 @@ export default {
   data() {
     return {
       stay: null,
-      pos:{ lat: 41.5912, lng:1.5209 } 
+      pos:{ lat: 41.5912, lng:1.5209 },
+      scrollBar: 0
     };
   },
-  //   created() {
-  //     this.$store.dispatch({ type: "loadStay" });
-  //   },
+  created() {
+        window.addEventListener("scroll", this.handlingScroll);
+  },
+  methods: {
+    handlingScroll() {
+      let scrollBarPos = window.top.scrollY;
+      this.scrollBar = scrollBarPos
+      // console.log(scrollBarPos)
+    }
+  },
   computed: {
+    determinePos() {
+      console.log(this.scrollBar)
+      if (this.scrollBar >= 580 && this.scrollBar <= 1972) {
+        return {position: 'fixed', 'margin-top': -580+'px', width: 16.5+'%'}
+      }else{
+        console.log('i should stop here')
+        return {position: 'relative'}
+
+      }
+    }
   },
   watch: {
     "$route.params.stayId": {
