@@ -17,7 +17,7 @@
       </div>
     </div>
     
-    <div v-if="isTop" class="nav-link">
+    <div v-if="isTop" class="nav-link" :style="navLinkColor">
       <span>Places to stay</span>
       <span>Experiences</span>
       <span>Online Experiences</span>
@@ -25,7 +25,7 @@
 
     <div v-if="expandedSearch" class="expty-space"></div>
     <div v-if="isTop" class="secondary-search-bar">
-      <form>
+      <form @submit.prevent="">
         <label class="main-search-label" @click="openModal('location')">
           <span>Location</span>
           <input placeholder="Where are you going?"/>
@@ -37,18 +37,19 @@
         </label>
         <label class="main-search-label" @click="openModal()">
           <span>Check out</span>
-           <date-picker placeholder="Add dates" v-model="time3" range></date-picker>
+          <input   v-model="time3"  placeholder="Add dates">
+           <!-- <date-picker placeholder="Add dates" v-model="time3" range></date-picker> -->
         </label>
         <label class="main-search-label" @click="openModal('guests')">
           <span>Guests</span>
           <input placeholder="Add guests"/>
         </label>
-
+        <div class="expanded circle">
+        <img @click="openModal()" class="search-icon" src="../assets/imgs/icons/search-circle.png" />
+        </div>
         <dynamic-modal :clicked="this.clickedOn"/>
       </form>
-       <div class="expanded circle">
-        <img class="search-icon" src="../assets/imgs/icons/search-circle.png" />
-      </div>
+
     </div>
 
     <div class="host-options" :style="textColor">
@@ -75,6 +76,13 @@ import dynamicModal from './dynamic-modal.vue'
 import DatePicker from 'vue2-datepicker';
 import 'vue2-datepicker/index.css';
 
+DatePicker.methods.displayPopup = function () {
+  this.position = {
+    left: 0,
+    bottom: '100%'
+  }
+}
+
 
 export default {
   components: {
@@ -96,6 +104,7 @@ export default {
   },
   created() {
     this.setCurrPage();
+    
     window.addEventListener("scroll", this.handleScroll);
   },
   mounted() {
@@ -175,9 +184,12 @@ export default {
       if (this.currPage === "all") return;
       else if (this.imgSrc === "logo-white" || this.imgSrc === "airbnb-white" &&this.isTop) {
         return { backgroundColor: "transparent",position:'fixed', width: 100+'%' };
-      } else if (!this.top) {
+      } else  {
         return { backgroundColor: "white" ,position:'fixed', width: 100+'%','z-index':200};
       }
+    },
+    navLinkColor() {
+      if (this.imgSrc === "logo-white") return {color: "white"}
     },
     textColor() {
       if (this.currPage === "all") return;
@@ -195,9 +207,12 @@ export default {
               this.setCurrPage()
               if(this.currPage === 'all') {
                 console.log('not at home anymore')
+                this.globalSrc = 'global'
                 this.imgSrc = 'airbnb-logo'
               } else if (this.currPage=== 'home' && this.isTop) {
+                this.openModal()
                 this.imgSrc = 'logo-white'
+                this.globalSrc = 'global-white'
               }
             },
             immediate: true
