@@ -1,34 +1,43 @@
 .app-header{
-    display: flex;
+    display: grid;
+    grid-template-columns: $layoutPaddingHome auto $layoutPaddingHome;
+    grid-template-rows: 80px;  //.full : add another 80px
+    z-index: 99;
     transition: background-color .5s ease-out,height .4s ease-out,box-shadow .3s ease-out;
 
     .home-nav{ 
         position: fixed;
     }
-    >* {
+
+    .main-nav {
+        grid-column: 2;
+        grid-row: 1;
         display: flex;
         align-items: center;
+        justify-content: space-between;
+
     }
-    align-items: center;
-    height: 80px;
+    // height: 80px;
     box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
         .logo-img {
             transition: .5s;
             object-fit: contain;
             cursor: pointer;
-            margin-inline-start: $layoutPaddingHome;
+            // margin-inline-start: $layoutPaddingHome;
             width: 123px;
             height: 37px;
         }
 
         .logo-icon {
             cursor: pointer;
-            margin-inline-start: $layoutPaddingHome;
+            // margin-inline-start: $layoutPaddingHome;
             width: 37px;
             height: 37px;
         }
 
         .initial-search-bar{
+            display: flex;
+            align-items: center;
             margin:0 auto;
             cursor: pointer;
             position: relative;
@@ -54,9 +63,7 @@
                     right: 7px;
                     width: 32px;
                     height: 32px;
-
                 }
-
             }
         }   
 
@@ -101,6 +108,7 @@
             .become {
                 letter-spacing: 0.1px;
                 margin-inline-end: 25px;
+                // margin-inline-start: 900px;
                 font-family: airbnb-medium;
                 font-size: 14px;
             }
@@ -108,6 +116,8 @@
         }
 
         .global img{
+            display: flex;
+            // margin-inline-start: 1050px;
             margin-inline-end: 25px;
             cursor: pointer;
             width: 18px;
@@ -117,6 +127,7 @@
 
 
         .user-options {
+            // margin-inline-start: 1200px;
             background-color: white;
             cursor: pointer;
             position: relative;
@@ -124,11 +135,11 @@
             width: 75px;
             height: 40px;
             border-radius: 40px;
-            margin-inline-end:$layoutPaddingHome ;
+            // margin-inline-end:$layoutPaddingHome ;
 
             .avatar {
-                
                 position: absolute;
+                top: 5px;
                 right: 6px;
                 width: 30px;
                 height: 30px;
@@ -136,6 +147,7 @@
 
             .burger {
                 position: absolute;
+                top: 9px;
                 color: $black;
                 left: 13px;
             }
@@ -144,41 +156,121 @@
         }
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .app-header-expanded {
-    display: flex;
+    display: grid;
+    grid-template-columns: $layoutPaddingHome auto $layoutPaddingHome;
+    grid-template-rows: 80px 100px;  //.full : add another 80px
+    z-index: 99;
     transition: background-color .5s ease-out,height .4s ease-out,box-shadow .3s ease-out;
 
     .home-nav{ 
         position: fixed;
-        
     }
-    >* {
+
+    .main-nav {
+        grid-column: 2;
+        grid-row: 1;
         display: flex;
         align-items: center;
+        justify-content: space-between;
+
     }
-    align-items: center;
-    height: 80px;
+    // height: 80px;
     box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
         .logo-img {
             transition: .5s;
             object-fit: contain;
             cursor: pointer;
-            margin-inline-start: $layoutPaddingHome;
+            // margin-inline-start: $layoutPaddingHome;
             width: 123px;
             height: 37px;
         }
 
         .logo-icon {
             cursor: pointer;
-            margin-inline-start: $layoutPaddingHome;
+            // margin-inline-start: $layoutPaddingHome;
             width: 37px;
             height: 37px;
         }
 
-        .secondary-search-bar{
-           
+        .initial-search-bar{
+            display: flex;
+            align-items: center;
+            margin:0 auto;
             cursor: pointer;
-            top: 150%;
+            position: relative;
+            box-shadow: rgb(46 47 48 / 27%) 0px 0px 0.1em 0.04em, rgb(90 125 188 / 5%) 0px 0.25em 1em;
+            border-radius: 40px;
+            background-color: white;
+            width: 300px;
+            height: 47px;
+
+            p {
+                font-family: airbnb-medium;
+                letter-spacing: 0.1px;
+                font-size: 14px;
+                color: $black;
+                padding-inline-start: 25px;
+            }
+
+            .circle{
+                cursor: pointer;
+                .search-icon {
+                    position: absolute;
+                    top: 7px;
+                    right: 7px;
+                    width: 32px;
+                    height: 32px;
+                }
+            }
+        }   
+
+        .host-options {
+            cursor: pointer;
+ 
+
+            .become {
+                letter-spacing: 0.1px;
+                margin-inline-end: 25px;
+                // margin-inline-start: 900px;
+                font-family: airbnb-medium;
+                font-size: 14px;
+            }
+
+        }
+
+        .global img{
+            display: flex;
+            // margin-inline-start: 1050px;
+            margin-inline-end: 25px;
+            cursor: pointer;
+            width: 18px;
+            height: 18px;
+        }
+
+        .secondary-search-bar{
+            cursor: pointer;
+            grid-row: 2;
+            top: 40%;
             left: 50%;
             transform: translate(-50%, -50%);
             position: absolute;
@@ -186,11 +278,7 @@
             border-radius: 40px;
             background-color: white;
 
-
-
-
             form {
-                
                 display: flex;
             }
             .main-search-label {
@@ -225,7 +313,9 @@
 
                     
                 }
+
             }
+            
 
             .main-search-label:not(:last-of-type) {
                 border-right: 1px solid hsla(0,0%,56.1%,.2196078431372549);
@@ -298,11 +388,12 @@
             width: 75px;
             height: 40px;
             border-radius: 40px;
-            margin-inline-end:$layoutPaddingHome ;
+            // margin-inline-end:$layoutPaddingHome ;
 
             .avatar {
                 
                 position: absolute;
+                top: 5px;
                 right: 6px;
                 width: 30px;
                 height: 30px;
@@ -310,6 +401,8 @@
 
             .burger {
                 position: absolute;
+                position: absolute;
+                top: 9px;
                 color: $black;
                 left: 13px;
             }
@@ -319,12 +412,4 @@
 
 }
 
-.expty-space {
-    z-index: -1;
-    top:0;
-    width: 100%;
-    position: absolute;
-    height: 25vh;
-    background-color: white;
 
-}

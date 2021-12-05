@@ -1,7 +1,8 @@
 <template>
   <header :class="{'app-header': !this.isTop, 'app-header-expanded': this.isTop}" :style="navColor">
   
-    <div class="logo">
+  <section class="main-nav">
+     <div class="logo">
       <img
         :class="logo"
         :src="require(`@/assets/imgs/branding/${imgSrc}.png`)"
@@ -24,28 +25,23 @@
 
     <div v-if="expandedSearch" class="expty-space"></div>
     <div v-if="isTop" class="secondary-search-bar">
-        <!-- <el-input-number v-model="num" @change="handleChange" :min="1" :max="10"></el-input-number> -->
-        <!-- <datepicker /> -->
       <form>
         <label class="main-search-label" @click="openModal('location')">
           <span>Location</span>
           <input placeholder="Where are you going?"/>
 
         </label>
-        <label class="main-search-label" @click="openModal('checkin')">
+        <label class="main-search-label" @click="openModal()">
           <span>Check in</span>
-          <input placeholder="Add dates"/>
-          <!-- <dynamic-modal :clicked="'checkin'"/> -->
+          <date-picker  placeholder="Add dates" v-model="time3" range></date-picker>
         </label>
-        <label class="main-search-label" @click="openModal('checkout')">
+        <label class="main-search-label" @click="openModal()">
           <span>Check out</span>
-           <input placeholder="Add dates"/>
-           <!-- <dynamic-modal :clicked="'checkout'"/> -->
+           <date-picker placeholder="Add dates" v-model="time3" range></date-picker>
         </label>
         <label class="main-search-label" @click="openModal('guests')">
           <span>Guests</span>
           <input placeholder="Add guests"/>
-          <!-- <dynamic-modal :clicked="'guests'"/> -->
         </label>
 
         <dynamic-modal :clicked="this.clickedOn"/>
@@ -67,17 +63,22 @@
       <div class="burger">☰</div>
       <img class="avatar" src="../assets/imgs/icons/avatar.png" />
     </div>
+
+  </section>
+   
   </header>
 </template>
 
 
 <script>
-import datepicker from './date-picker.vue'
 import dynamicModal from './dynamic-modal.vue'
+import DatePicker from 'vue2-datepicker';
+import 'vue2-datepicker/index.css';
+
 
 export default {
   components: {
-    datepicker,
+    DatePicker,
     dynamicModal
   },
   data() {
@@ -89,7 +90,8 @@ export default {
       globalSrc: "global-white",
       currPage: "",
       expandedSearch: false,
-      clickedOn: ''
+      clickedOn: '',
+      time3: null,
     };
   },
   created() {
@@ -97,6 +99,7 @@ export default {
     window.addEventListener("scroll", this.handleScroll);
   },
   mounted() {
+    
     this.$nextTick(() => {
       window.addEventListener("resize", this.onResize);
     });
@@ -170,9 +173,9 @@ export default {
     },
     navColor() {
       if (this.currPage === "all") return;
-      else if (this.imgSrc === "logo-white" || this.imgSrc === "airbnb-white") {
+      else if (this.imgSrc === "logo-white" || this.imgSrc === "airbnb-white" &&this.isTop) {
         return { backgroundColor: "transparent",position:'fixed', width: 100+'%' };
-      } else {
+      } else if (!this.top) {
         return { backgroundColor: "white" ,position:'fixed', width: 100+'%','z-index':200};
       }
     },
@@ -187,9 +190,18 @@ export default {
     window.removeEventListener("scroll", this.handleScroll);
   },
   watch: {
-    $route() {
-      this.setCurrPage()
-    },
+    '$route.params': {
+             handler() {
+              this.setCurrPage()
+              if(this.currPage === 'all') {
+                console.log('not at home anymore')
+                this.imgSrc = 'airbnb-logo'
+              } else if (this.currPage=== 'home' && this.isTop) {
+                this.imgSrc = 'logo-white'
+              }
+            },
+            immediate: true
+      }
   },
 };
 </script>
