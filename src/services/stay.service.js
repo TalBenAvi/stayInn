@@ -132,6 +132,8 @@ function _createStay(id,name,initials,imgUrls,country='Germany',countryCode='GR'
             country,
             countryCode,
             address,
+            lat,
+            lng,
             position: { lat, lng }
         },
         reviews: [ //*all reviews are pushed here
