@@ -294,3 +294,78 @@
     }
 }
 
+.isSelected {
+    top: -1px;
+    right: -1px;
+    border: 2px solid $black;
+    background-color: rgba(243, 243, 243, 0.685);
+}
+
+
+
+//modals
+
+.typeof-modal {
+    top: 160px;
+    left: 250px;
+    position: absolute;
+    overflow: hidden auto;
+    width: 330px;
+    height: 350px;
+    padding: 20px;
+    background: rgb(255, 255, 255);
+    border: 0.5px solid rgba(118, 118, 118, 0.28);
+    border-radius: 12px;
+    box-shadow: rgb(0 0 0 / 15%) 0px 10px 37px;
+
+    .option-container {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        display: flex;
+
+        align-items: center;
+
+        .option-text {
+            display: flex;
+            flex-direction: column;
+            font-family: airbnb;
+
+            span {
+                color: $black;
+
+            }
+
+            small {
+                color: $gray;
+            }
+        }
+
+        .checkbox {
+            cursor: pointer;
+            border-width: 1px;
+            border-style: solid;
+            border-color: rgb(176, 176, 176);
+            height: 24px;
+            width: 24px;
+            background: rgb(255, 255, 255);
+            text-align: center;
+            overflow: hidden;
+            vertical-align: top;
+            border-radius: 4px;
+            margin-inline-end: 20px;
+        }
+
+        .checked {
+            background-color: $black;
+        }
+        .checked::after {
+            background-color: $black;
+            content: 'V';
+            color: white;
+        }
+    }
+}
+
+.filters {
+    display: flex;
+}
