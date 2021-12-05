@@ -1,132 +1,475 @@
 <template>
   <div class="stay-details">
-      <div class="name">{{ this.stay.name }}</div>
-      <div class="location-name">
-        <!-- because yaniv is the best! -->
+    <div class="name">{{ this.stay.name }}</div>
+    <div class="location-name">
+      <!-- because yaniv is the best! -->
+      <div>
         <img class="star" src="../assets/imgs/icons/star.jpg" />
-        {{ this.stay.reviews[0].rate }}({{ this.stay.reviews.length }} reviews)
+        {{ this.stay.reviews[0].rate }} ({{ this.stay.reviews.length }} reviews)
         · {{ this.stay.loc.address }},{{ this.stay.loc.country }}
       </div>
+      <div class="flex-center">
+        <div class="flex-center">
+          <div class="spacing-10px-right center-1px">
+            <img class="star" src="../assets/imgs/icons/share.png" />
+          </div>
+          <div class="spacing-20px-right">share</div>
+        </div>
+        <div class="flex-center">
+          <div class="spacing-10px-right center-1px">
+            <img class="star" src="../assets/imgs/icons/heart.png" />
+          </div>
+          <div>save</div>
+        </div>
+      </div>
+    </div>
     <div v-if="stay" class="imgs-layout">
- 
-      <img class="img1" :src="require(`@/assets/imgs/stays/${stay.initials}/${stay.imgUrls[0]}`)" />
+      <img
+        class="img1"
+        :src="
+          require(`@/assets/imgs/stays/${stay.initials}/${stay.imgUrls[0]}`)
+        "
+      />
       <div class="first-row">
-        <img class="img2" :src="require(`@/assets/imgs/stays/${stay.initials}/${stay.imgUrls[1]}`)" />
-        <img class="img3" :src="require(`@/assets/imgs/stays/${stay.initials}/${stay.imgUrls[2]}`)" />
+        <img
+          class="img2"
+          :src="
+            require(`@/assets/imgs/stays/${stay.initials}/${stay.imgUrls[1]}`)
+          "
+        />
+        <img
+          class="img3"
+          :src="
+            require(`@/assets/imgs/stays/${stay.initials}/${stay.imgUrls[2]}`)
+          "
+        />
       </div>
       <div class="second-row">
-        <img class="img4" :src="require(`@/assets/imgs/stays/${stay.initials}/${stay.imgUrls[3]}`)" />
-        <img class="img5" :src="require(`@/assets/imgs/stays/${stay.initials}/${stay.imgUrls[4]}`)" />
+        <img
+          class="img4"
+          :src="
+            require(`@/assets/imgs/stays/${stay.initials}/${stay.imgUrls[3]}`)
+          "
+        />
+        <img
+          class="img5"
+          :src="
+            require(`@/assets/imgs/stays/${stay.initials}/${stay.imgUrls[4]}`)
+          "
+        />
       </div>
     </div>
     <div class="res-details-layout">
       <div class="stay-info">
-          <div class="head-flex">
-        <div class="stay-info-heder">
-        <div class="minimal-details">{{ this.stay.name }}</div>
-        <div class="location-space">
-          {{ this.stay.accommodates }} guests ·
-          {{ this.stay.bedrooms }} bedrooms · {{ this.stay.beds }} beds ·
-          {{ this.stay.bath }} baths
-        </div>
-       </div>
+        <div class="head-flex">
+          <div class="stay-info-heder">
+            <div class="minimal-details">
+              {{ this.stay.TypeOfPlace }} hosted by
+              {{ this.stay.host.fullName }}
+            </div>
+            <div class="location-space">
+              {{ this.stay.accommodates }} guests ·
+              {{ this.stay.bedrooms }} bedrooms · {{ this.stay.beds }} beds ·
+              {{ this.stay.bath }} baths
+            </div>
+          </div>
           <div><img class="baner" src="../assets/imgs/icons/host.png" /></div>
-       </div>
-         <div class="stay-info-desc">
+        </div>
+        <div class="stay-info-desc">
+          <div class="flex-row">
+            <div class="center">
+              <img class="icon" src="../assets/imgs/icons/home.png" />
+            </div>
             <div>
-              <div class="short-exmple"><img class="icon" src="../assets/imgs/icons/home.png" />Entire home</div>
+              <div class="short-exmple">Entire home</div>
               <div class="exsplnation">You’ll have the house to yourself.</div>
             </div>
-            <div>
-              <div class="short-exmple"><img class="icon" src="../assets/imgs/icons/location.png" />Great location</div>
-              <div class="exsplnation">90% of recent guests gave the location a 5-star rating.</div>
+          </div>
+          <div class="flex-row">
+            <div class="center">
+              <img class="icon" src="../assets/imgs/icons/location.png" />
             </div>
             <div>
-              <div class="short-exmple"><img class="icon" src="../assets/imgs/icons/key.png" />Great check-in experience</div>
-              <div class="exsplnation">90% of recent guests gave the check-in process a 5-star rating.</div>
+              <div class="short-exmple">Great location</div>
+              <div class="exsplnation">
+                90% of recent guests gave the location a 5-star rating.
+              </div>
+            </div>
+          </div>
+          <div class="flex-row">
+            <div class="center">
+              <img class="icon" src="../assets/imgs/icons/key.png" />
             </div>
             <div>
-              <div class="short-exmple"><img class="icon" src="../assets/imgs/icons/pool.png" />Pool</div>
-              <div class="exsplnation">Guests often search for this popular amenity</div>
+              <div class="short-exmple">Great check-in experience</div>
+              <div class="exsplnation">
+                90% of recent guests gave the check-in process a 5-star rating.
+              </div>
             </div>
-         </div>
-        <div class="stay-info-desc"><div class="padding vibrous">{{this.stay.summary}} </div> </div> 
-           <div class="stay-info-desc">
-             <h3>Where you'll sleep</h3>
-             <div class="bed-card">
-               <div><img class="icon-bed" src="../assets/imgs/icons/king-size-bed.png" /></div>
-               <div class="airbnb-medium spacing-15px">Bedroom</div>
-               <div class="airbnb">1 double bed</div>
-               </div>
-               </div>
-          <div class="stay-info-desc">
-            <h3>What this place offers</h3>
-            <div class="offeres-layout">
+          </div>
+          <div class="flex-row">
+            <div class="center">
+              <img class="icon" src="../assets/imgs/icons/Pool.png" />
+            </div>
+            <div>
+              <div class="short-exmple">Pool</div>
+              <div class="exsplnation">
+                Guests often search for this popular amenity
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="stay-info-desc">
+          <div class="padding vibrous">{{ this.stay.summary }}</div>
+        </div>
+        <div class="stay-info-desc">
+          <h3>Where you'll sleep</h3>
+          <div class="bed-card">
+            <div>
+              <img
+                class="icon-bed"
+                src="../assets/imgs/icons/king-size-bed.png"
+              />
+            </div>
+            <div class="airbnb-medium spacing-15px">Bedroom</div>
+            <div class="airbnb">1 double bed</div>
+          </div>
+        </div>
+        <div class="stay-info-desc">
+          <h3>What this place offers</h3>
+          <div class="offeres-layout">
             <div class="houseRules-layout">
-            <div class="spacing">{{this.stay.HouseRules[1]}}</div>
+              <!-- <div class="spacing">{{this.stay.HouseRules[1]}}</div>
             <div class="spacing">{{this.stay.HouseRules[0]}}</div>
-             <div><img class="star" src="../assets/imgs/icons/no-smoking.png" /> {{this.stay.HouseRules[2]}}</div>
+             <div><img class="star" src="../assets/imgs/icons/no-smoking.png" /> {{this.stay.HouseRules[2]}}</div> -->
+              <div class="spacing flex-center">
+                <div class="spacing-10px-right">
+                  <img class="icons" src="../assets/imgs/icons/Pool.png" />
+                </div>
+                <div class="center">{{ this.stay.amenities[7] }}</div>
+              </div>
+              <div class="spacing flex-center">
+                <div class="spacing-10px-right">
+                  <img class="icons" src="../assets/imgs/icons/Dryer.png" />
+                </div>
+                <div class="center">{{ this.stay.amenities[4] }}</div>
+              </div>
+              <div class="spacing flex-center">
+                <div class="spacing-10px-right">
+                  <img class="icons" src="../assets/imgs/icons/TV.png" />
+                </div>
+                <div class="center">{{ this.stay.amenities[5] }}</div>
+              </div>
+              <div class="spacing-44px flex-center">
+                <div class="spacing-10px-right">
+                  <img class="icons" src="../assets/imgs/icons/car.png" />
+                </div>
+                <div class="center">{{ this.stay.amenities[3] }}</div>
+              </div>
             </div>
             <div class="amenities-layout">
-            <div class="spacing"><img class="star" src="../assets/imgs/icons/Wifi.png" /> {{this.stay.amenities[1]}}</div>
-            <div class="spacing"><img class="star" src="../assets/imgs/icons/TV.png" /> {{this.stay.amenities[0]}}</div>
-            <div class="spacing-44px"><img class="star" src="../assets/imgs/icons/pool.png" /> {{this.stay.amenities[2]}}</div>
+              <div class="spacing flex-center">
+                <div class="spacing-10px-right">
+                  <img class="icons" src="../assets/imgs/icons/Kitchen.png" />
+                </div>
+                <div class="center">{{ this.stay.amenities[1] }}</div>
+              </div>
+              <div class="spacing flex-center">
+                <div class="spacing-10px-right">
+                  <img class="icons" src="../assets/imgs/icons/Iron.png" />
+                </div>
+                <div class="center">{{ this.stay.amenities[6] }}</div>
+              </div>
+              <div class="spacing flex-center">
+                <div class="spacing-10px-right">
+                  <img class="icons" src="../assets/imgs/icons/Wifi.png" />
+                </div>
+                <div class="center">{{ this.stay.amenities[0] }}</div>
+              </div>
+              <div class="spacing-44px flex-center">
+                <div class="spacing-10px-right">
+                  <img class="icons" src="../assets/imgs/icons/Washer.png" />
+                </div>
+                <div class="center">{{ this.stay.amenities[2] }}</div>
+              </div>
             </div>
-            </div>
-            <div class="padding-50px"><button class="show-more-amenities airbnb-medium">show all 6 amenities</button></div>
-            </div>
-            <div class="stay-info-desc">{{this.stay.summary}}</div>
-      </div>
-      <div class="stay-reserve">
-        <div class="price-reviews">
-          <div class="stay-price">${{ this.stay.price }}</div>
-          <div class="night">/ night</div>
-          <div class="rate"><img class="star" src="../assets/imgs/icons/star.jpg" />{{ this.stay.reviews[0].rate }}</div>
-          <div class="reviews">({{ this.stay.reviews.length }} reviews)</div>
-        </div>
-        <div>
-        <div class="checking">
-          <div class="check-in">
-            <div class="category-stay-label">CHECK-IN</div>
-            <div class="add">Add date</div>
           </div>
-          <div class="check-out">
-            <div class="category-stay-label">CHECK-OUT</div>
-            <div class="add">Add date</div>
+          <div class="padding-50px">
+            <button class="show-more-amenities airbnb-medium">
+              show all {{ this.stay.amenities.length }} amenities
+            </button>
           </div>
-          <div class="guests-num">
-              <div class="category-stay-label">GUESTS</div>
-            <div class="add">1 guest</div>
-            </div>
         </div>
-        <div class="check-available" style="background-position: calc((100 - var(--mouse-x, 0)) * 1%) calc((100 - var(--mouse-y, 0)) * 1%); --mouse-x:81.7031; --mouse-y:0;">
-            <span class="text-avilable">Check availability</span></div>
+        <div class="stay-info-desc">{{ this.stay.summary }}</div>
       </div>
-      <div class="charged">You won't be charged yet</div>
-      <div class="priceing">
-      <div class="underline">${{ this.stay.price }}x 7 nights</div>
-      <div>${{ this.stay.price*7 }}</div> 
+      <div class="stay-reserve-layout">
+        <div class="fixed">
+        <div class="stay-reserve">
+          <div class="price-reviews">
+            <div class="stay-price">${{ this.stay.price }}</div>
+            <div class="night">/ night</div>
+            <div class="rate">
+              <img
+                class="h-13px w-13px padding-2px"
+                src="../assets/imgs/icons/star.jpg"
+              />{{ this.stay.reviews[0].rate }}
+            </div>
+            <div class="reviews">({{ this.stay.reviews.length }} reviews)</div>
+          </div>
+          <div>
+            <div class="checking">
+              <div class="check-in">
+                <div class="category-stay-label">CHECK-IN</div>
+                <div class="add">Add date</div>
+              </div>
+              <div class="check-out">
+                <div class="category-stay-label">CHECK-OUT</div>
+                <div class="add">Add date</div>
+              </div>
+              <div class="guests-num">
+                <div class="category-stay-label">GUESTS</div>
+                <div class="add">1 guest</div>
+              </div>
+            </div>
+            <div
+              class="check-available"
+              style="
+                background-position: calc((100 - var(--mouse-x, 0)) * 1%)
+                  calc((100 - var(--mouse-y, 0)) * 1%);
+                --mouse-x: 81.7031;
+                --mouse-y: 0;
+              "
+            >
+              <span class="text-avilable">Check availability</span>
+            </div>
+          </div>
+          <div class="charged">You won't be charged yet</div>
+          <div class="priceing">
+            <div class="underline">${{ this.stay.price }}x 7 nights</div>
+            <div>${{ this.stay.price * 7 }}</div>
+          </div>
+          <div class="priceing">
+            <div class="underline">Cleaning fee</div>
+            <div>$100</div>
+          </div>
+          <div class="priceing">
+            <div class="underline">Service fee</div>
+            <div>$50</div>
+          </div>
+          <div class="total">
+            <div class="airbnb-medium">Total</div>
+            <div class="airbnb-medium">
+              ${{ this.stay.price * 7 + 50 + 100 }}
+            </div>
+          </div>
+        </div>
+        <div class="report-stay">
+          <img :src="require(`@/assets/imgs/branding/Capture.png`)" />
+          <span class="report-text">Report this listing</span>
+        </div>
       </div>
-      <div class="priceing">
-      <div class="underline">Cleaning fee</div>
-      <div>$100</div> 
       </div>
-      <div class="priceing">
-      <div class="underline">Service fee</div>
-      <div>$50</div> 
-      </div>
-      <div class="total">
-      <div>Total</div>
-      <div>$710</div> 
-      </div>
-      <!-- <div class="report-stay">
-       <img :src="require(`@/assets/imgs/branding/Capture.png`)">   <span class="report-text">Report this listing</span>
-      </div> -->
-      </div>
-      
     </div>
     <div class="reviews-display">
-      {{ this.stay.reviews[0].txt }}
+      <div class="airbnb-medium font-size-19px spacing-44px">
+        <img class="star" src="../assets/imgs/icons/star.jpg" />
+        {{ this.stay.reviews[0].rate }} · {{ this.stay.reviews.length }} reviews
+      </div>
+      <div class="reviews-rating-data airbnb">
+        <div class="flex-center space-bettwen">
+          <div>Cleanliness</div>
+          <div class="rate-score">
+            <div>{{ this.stay.reviews[0].rate }}</div>
+          </div>
+        </div>
+        <div class="flex-center space-bettwen">
+          <div>Communication</div>
+          <div class="rate-score">
+            <div>{{ this.stay.reviews[0].rate }}</div>
+          </div>
+        </div>
+        <div class="flex-center space-bettwen">
+          <div>Check-in</div>
+          <div class="rate-score">
+            <div>{{ this.stay.reviews[0].rate }}</div>
+          </div>
+        </div>
+        <div class="flex-center space-bettwen">
+          <div>Accuracy</div>
+          <div class="rate-score">
+            <div>{{ this.stay.reviews[0].rate }}</div>
+          </div>
+        </div>
+        <div class="flex-center space-bettwen">
+          <div>Location</div>
+          <div class="rate-score">
+            <div>{{ this.stay.reviews[0].rate }}</div>
+          </div>
+        </div>
+        <div class="flex-center space-bettwen">
+          <div>Value</div>
+          <div class="rate-score">
+            <div>{{ this.stay.reviews[0].rate }}</div>
+          </div>
+        </div>
+      </div>
+      <div class="reviews-display-data airbnb">
+        <div>
+          <div class="flex-row">
+            <div class="center spacing-10px-right">
+              <img
+                class="user-review-avatar"
+                src="../assets/imgs/icons/avatar.png"
+              />
+            </div>
+            <div class="center">
+              <div class="short-exmple">
+                {{ this.stay.reviews[0].by.fullName }}
+              </div>
+              <div class="review-date">March 2021</div>
+            </div>
+          </div>
+          <div>{{ this.stay.reviews[1].txt }}</div>
+        </div>
+        <div>
+          <div class="flex-row">
+            <div class="center spacing-10px-right">
+              <img
+                class="user-review-avatar"
+                src="../assets/imgs/icons/avatar.png"
+              />
+            </div>
+            <div class="center">
+              <div class="short-exmple">
+                {{ this.stay.reviews[1].by.fullName }}
+              </div>
+              <div class="review-date">October 2019</div>
+            </div>
+          </div>
+          <div>{{ this.stay.reviews[1].txt }}</div>
+        </div>
+        <div>
+          <div class="flex-row">
+            <div class="center spacing-10px-right">
+              <img
+                class="user-review-avatar"
+                src="../assets/imgs/icons/avatar.png"
+              />
+            </div>
+            <div class="center">
+              <div class="short-exmple">
+                {{ this.stay.reviews[2].by.fullName }}
+              </div>
+              <div class="review-date">November 2020</div>
+            </div>
+          </div>
+          <div>{{ this.stay.reviews[1].txt }}</div>
+        </div>
+        <div>
+          <div class="flex-row">
+            <div class="center spacing-10px-right">
+              <img
+                class="user-review-avatar"
+                src="../assets/imgs/icons/avatar.png"
+              />
+            </div>
+            <div class="center">
+              <div class="short-exmple">
+                {{ this.stay.reviews[3].by.fullName }}
+              </div>
+              <div class="review-date">July 2020</div>
+            </div>
+          </div>
+          <div>{{ this.stay.reviews[1].txt }}</div>
+        </div>
+        <div>
+          <div class="flex-row">
+            <div class="center spacing-10px-right">
+              <img
+                class="user-review-avatar"
+                src="../assets/imgs/icons/avatar.png"
+              />
+            </div>
+            <div class="center">
+              <div class="short-exmple">
+                {{ this.stay.reviews[4].by.fullName }}
+              </div>
+              <div class="review-date">October 2020</div>
+            </div>
+          </div>
+          <div>{{ this.stay.reviews[1].txt }}</div>
+        </div>
+        <div>
+          <div class="flex-row">
+            <div class="center spacing-10px-right">
+              <img
+                class="user-review-avatar"
+                src="../assets/imgs/icons/avatar.png"
+              />
+            </div>
+            <div class="center">
+              <div class="short-exmple">
+                {{ this.stay.reviews[5].by.fullName }}
+              </div>
+              <div class="review-date">January 2021</div>
+            </div>
+          </div>
+          <div>{{ this.stay.reviews[1].txt }}</div>
+        </div>
+      </div>
+      <div>
+        <div>
+          <span class="underline airbnb-medium spacing-44px">Show more</span>
+        </div>
+        <div class="spacing-44px">
+          <button class="show-more-amenities airbnb-medium">
+            show all {{ this.stay.reviews.length }} reviews
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="stay-location-map">
+      <h3 class="airbnb">Where you’ll be</h3>
+      <div class="location-name-map">
+        {{ this.stay.loc.address }},{{ this.stay.loc.country }}
+      </div>
+    </div>
+    <div>
+      <div class="stay-location-map">
+        <div class="flex-row ">
+          <div class="width-50 spacing-120px-right">
+            <div class="flex-row ">
+              <div class="center spacing-10px-right">
+                <img
+                  class="user-review-avatar"
+                  src="../assets/imgs/icons/host.png"
+                />
+              </div>
+              <div class="center ">
+                <div class="short-exmple">
+                  Hosted by {{ this.stay.host.fullName }}
+                </div>
+                <div class="review-date">Joined in August 2013</div>
+              </div>
+            </div>
+            <div class="airbnb ">
+              I'm British but I work in The Hague with my Australian wife and
+              two children. I've studied, lived and worked in various countries
+              but now call El Port de la Selva home where we come whenever we
+              can.
+            </div>
+          </div>
+        <div class="airbnb">
+          <div class="spacing-15px">Policy number: HUTG-014398</div>
+          <div class="spacing-15px">Languages: English, Français, Español</div>
+          <div class="spacing-15px">Response rate: 100%</div>
+          <div class="spacing-25px">Response time: within an hour</div>
+           <div class="spacing-44px">
+          <button class="contact-host airbnb-medium">Contact Host</button>
+        </div>
+        </div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -137,54 +480,6 @@ export default {
   data() {
     return {
       stay: null,
-      // testStay: {
-      //   id: "10006546",
-      //   name: "Ribeira Charming Duplex",
-      //   imgUrls: [
-      //     "imgs/1.jpg",
-      //     "imgs/2.jpg",
-      //     "imgs/3.jpg",
-      //     "imgs/4.jpg",
-      //     "imgs/5.jpg",
-      //     "imgs/6.jpg",
-      //   ],
-      //   price: 80.0,
-      //   summary:
-      //     "Fantastic duplex apartment with three bedrooms, located in...",
-      //   propertyType: "House",
-      //   TypeOfPlace: "Entire Place",
-      //   HouseRules: ["Pets Allowed", "Children Allowed"],
-      //   accommodates: 8,
-      //   beds: 4,
-      //   bedrooms: 2,
-      //   bath: 1,
-      //   amenities: ["TV", "Wifi"],
-      //   host: {
-      //     _id: "51399391",
-      //     fullName: "Davit Pok",
-      //     imgUrl: "https://x.com/pic.jpg",
-      //   },
-      //   loc: {
-      //     country: "Portugal",
-      //     countryCode: "PT",
-      //     address: "Porto",
-      //     lat: -8.61308,
-      //     lng: 41.1413,
-      //   },
-      //   reviews: [
-      //     //*all reviews are pushed here
-      //     {
-      //       id: "madeId",
-      //       txt: "Very helpful hosts. Cooked traditional...",
-      //       rate: 4.93,
-      //       by: {
-      //         _id: "u102",
-      //         fullName: "user2",
-      //         imgUrl: "/img/img2.jpg",
-      //       },
-      //     },
-      //   ],
-      // },
     };
   },
   //   created() {
@@ -194,24 +489,26 @@ export default {
     // stayForDisplay() {
     //   return this.stay;
     // },
-  }, watch: {
-        '$route.params.stayId': {
-            async handler() {
-              
-                const { stayId } = this.$route.params;
-                console.log(stayId)
-                try {
-                  var stay = await this.$store.dispatch({type: 'getStayById', stayId: stayId})
-                  this.stay = stay
-                  console.log(stay)
-                } catch (err){
-                  console.log('had error', err)
-                  throw err;
-
-                }
-            },
-            immediate: true
-      }
-  }
+  },
+  watch: {
+    "$route.params.stayId": {
+      async handler() {
+        const { stayId } = this.$route.params;
+        console.log(stayId);
+        try {
+          var stay = await this.$store.dispatch({
+            type: "getStayById",
+            stayId: stayId,
+          });
+          this.stay = stay;
+          console.log(stay);
+        } catch (err) {
+          console.log("had error", err);
+          throw err;
+        }
+      },
+      immediate: true,
+    },
+  },
 };
 </script>

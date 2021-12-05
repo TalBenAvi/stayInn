@@ -142,7 +142,58 @@ function _createStay(id,name,initials,imgUrls,country='TBD',countryCode='TBD',ad
                 rate,
                 by: {
                     _id: 'u102',
-                    fullName: 'user2',
+                    fullName: 'Erin',
+                    imgUrl: '/img/img2.jpg'
+                }
+            },
+            {
+                id: 'madeId',
+                txt,
+                rate,
+                by: {
+                    _id: 'u103',
+                    fullName: 'Kiersta',
+                    imgUrl: '/img/img2.jpg'
+                }
+            },
+            {
+                id: 'madeId',
+                txt,
+                rate,
+                by: {
+                    _id: 'u104',
+                    fullName: 'Ludovic',
+                    imgUrl: '/img/img2.jpg'
+                }
+            },
+            {
+                id: 'madeId',
+                txt,
+                rate,
+                by: {
+                    _id: 'u105',
+                    fullName: 'Emile',
+                    imgUrl: '/img/img2.jpg'
+                }
+            }
+            ,
+            {
+                id: 'madeId',
+                txt,
+                rate,
+                by: {
+                    _id: 'u104',
+                    fullName: 'Maria',
+                    imgUrl: '/img/img2.jpg'
+                }
+            },
+            {
+                id: 'madeId',
+                txt,
+                rate,
+                by: {
+                    _id: 'u105',
+                    fullName: 'Konstantin',
                     imgUrl: '/img/img2.jpg'
                 }
             }
