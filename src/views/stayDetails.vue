@@ -204,70 +204,72 @@
       </div>
       <div class="stay-reserve-layout">
         <div class="fixed">
-        <div class="stay-reserve">
-          <div class="price-reviews">
-            <div class="stay-price">${{ this.stay.price }}</div>
-            <div class="night">/ night</div>
-            <div class="rate">
-              <img
-                class="h-13px w-13px padding-2px"
-                src="../assets/imgs/icons/star.jpg"
-              />{{ this.stay.reviews[0].rate }}
-            </div>
-            <div class="reviews">({{ this.stay.reviews.length }} reviews)</div>
-          </div>
-          <div>
-            <div class="checking">
-              <div class="check-in">
-                <div class="category-stay-label">CHECK-IN</div>
-                <div class="add">Add date</div>
+          <div class="stay-reserve">
+            <div class="price-reviews">
+              <div class="stay-price">${{ this.stay.price }}</div>
+              <div class="night">/ night</div>
+              <div class="rate">
+                <img
+                  class="h-13px w-13px padding-2px"
+                  src="../assets/imgs/icons/star.jpg"
+                />{{ this.stay.reviews[0].rate }}
               </div>
-              <div class="check-out">
-                <div class="category-stay-label">CHECK-OUT</div>
-                <div class="add">Add date</div>
-              </div>
-              <div class="guests-num">
-                <div class="category-stay-label">GUESTS</div>
-                <div class="add">1 guest</div>
+              <div class="reviews">
+                ({{ this.stay.reviews.length }} reviews)
               </div>
             </div>
-            <div
-              class="check-available"
-              style="
-                background-position: calc((100 - var(--mouse-x, 0)) * 1%)
-                  calc((100 - var(--mouse-y, 0)) * 1%);
-                --mouse-x: 81.7031;
-                --mouse-y: 0;
-              "
-            >
-              <span class="text-avilable">Check availability</span>
+            <div>
+              <div class="checking">
+                <div class="check-in">
+                  <div class="category-stay-label">CHECK-IN</div>
+                  <div class="add">Add date</div>
+                </div>
+                <div class="check-out">
+                  <div class="category-stay-label">CHECK-OUT</div>
+                  <div class="add">Add date</div>
+                </div>
+                <div class="guests-num">
+                  <div class="category-stay-label">GUESTS</div>
+                  <div class="add">1 guest</div>
+                </div>
+              </div>
+              <div
+                class="check-available"
+                style="
+                  background-position: calc((100 - var(--mouse-x, 0)) * 1%)
+                    calc((100 - var(--mouse-y, 0)) * 1%);
+                  --mouse-x: 81.7031;
+                  --mouse-y: 0;
+                "
+              >
+                <span class="text-avilable">Check availability</span>
+              </div>
+            </div>
+            <div class="charged">You won't be charged yet</div>
+            <div class="priceing">
+              <div class="underline">${{ this.stay.price }}x 7 nights</div>
+              <div>${{ this.stay.price * 7 }}</div>
+            </div>
+            <div class="priceing">
+              <div class="underline">Cleaning fee</div>
+              <div>$100</div>
+            </div>
+            <div class="priceing">
+              <div class="underline">Service fee</div>
+              <div>$50</div>
+            </div>
+            <div class="total">
+              <div class="airbnb-medium">Total</div>
+              <div class="airbnb-medium">
+                ${{ this.stay.price * 7 + 50 + 100 }}
+              </div>
             </div>
           </div>
-          <div class="charged">You won't be charged yet</div>
-          <div class="priceing">
-            <div class="underline">${{ this.stay.price }}x 7 nights</div>
-            <div>${{ this.stay.price * 7 }}</div>
-          </div>
-          <div class="priceing">
-            <div class="underline">Cleaning fee</div>
-            <div>$100</div>
-          </div>
-          <div class="priceing">
-            <div class="underline">Service fee</div>
-            <div>$50</div>
-          </div>
-          <div class="total">
-            <div class="airbnb-medium">Total</div>
-            <div class="airbnb-medium">
-              ${{ this.stay.price * 7 + 50 + 100 }}
-            </div>
+          <div class="report-stay">
+            <img :src="require(`@/assets/imgs/branding/Capture.png`)" />
+            <span class="report-text">Report this listing</span>
           </div>
         </div>
-        <div class="report-stay">
-          <img :src="require(`@/assets/imgs/branding/Capture.png`)" />
-          <span class="report-text">Report this listing</span>
-        </div>
-      </div>
       </div>
     </div>
     <div class="reviews-display">
@@ -433,45 +435,136 @@
       <div class="location-name-map">
         {{ this.stay.loc.address }},{{ this.stay.loc.country }}
       </div>
+      <div>
+        <GmapMap :center="pos" :zoom="12" map-type-id="terrain" style="width: 1120px; height: 480px; margin-bottom:80px">
+          <GmapMarker :position="pos" :clickable="true"/>
+        </GmapMap>
+      </div>
     </div>
     <div>
       <div class="stay-location-map">
-        <div class="flex-row ">
+        <div class="flex-row">
           <div class="width-50 spacing-120px-right">
-            <div class="flex-row ">
+            <div class="flex-row">
               <div class="center spacing-10px-right">
                 <img
                   class="user-review-avatar"
                   src="../assets/imgs/icons/host.png"
                 />
               </div>
-              <div class="center ">
+              <div class="center">
                 <div class="short-exmple">
                   Hosted by {{ this.stay.host.fullName }}
                 </div>
                 <div class="review-date">Joined in August 2013</div>
               </div>
             </div>
-            <div class="airbnb ">
+            <div class="airbnb">
               I'm British but I work in The Hague with my Australian wife and
               two children. I've studied, lived and worked in various countries
               but now call El Port de la Selva home where we come whenever we
               can.
             </div>
           </div>
-        <div class="airbnb">
-          <div class="spacing-15px">Policy number: HUTG-014398</div>
-          <div class="spacing-15px">Languages: English, Français, Español</div>
-          <div class="spacing-15px">Response rate: 100%</div>
-          <div class="spacing-25px">Response time: within an hour</div>
-           <div class="spacing-44px">
-          <button class="contact-host airbnb-medium">Contact Host</button>
-        </div>
-        </div>
+          <div class="airbnb">
+            <div class="spacing-15px">Policy number: HUTG-014398</div>
+            <div class="spacing-15px">
+              Languages: English, Français, Español
+            </div>
+            <div class="spacing-15px">Response rate: 100%</div>
+            <div class="spacing-25px">Response time: within an hour</div>
+            <div class="spacing-44px">
+              <button class="contact-host airbnb-medium">Contact Host</button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
+    <div class="full-width"> <h3 class="airbnb ">Things to know</h3></div>
+      <div class="flex-row full-width">
+      <div class="width-33">
+       <div>
+         <div class="airbnb-medium spacing-15px">House rules</div>
+            <div class="flex-row spacing-15px">
+            <div class="center">
+              <img class="icon" src="../assets/imgs/icons/clock.png" />
+            </div>
+            <div>
+              <div class="airbnb">Check-in: After 5:00 PM</div>
+            </div>
+          </div>
+            <div class="flex-row spacing-15px">
+            <div class="center">
+              <img class="icon" src="../assets/imgs/icons/clock.png" />
+            </div>
+            <div>
+              <div class="airbnb">Checkout: 11:00 AM</div>
+            </div>
+          </div>
+                    <div class="flex-row spacing-15px">
+            <div class="center">
+              <img class="icon" src="../assets/imgs/icons/No-smoking.png" />
+            </div>
+            <div>
+              <div class="airbnb">No smoking</div>
+            </div>
+          </div>
+                    <div class="flex-row spacing-15px">
+            <div class="center">
+              <img class="icon" src="../assets/imgs/icons/home.png" />
+            </div>
+            <div>
+              <div class="airbnb">No pets</div>
+            </div>
+          </div>
+                    <div class="flex-row spacing-15px">
+            <div class="center">
+              <img class="icon" src="../assets/imgs/icons/home.png" />
+            </div>
+            <div>
+              <div class="airbnb">No parties or events</div>
+            </div>
+            </div>
+          </div>
+          
+       </div>
+         <div class="width-33">
+           <div class="airbnb-medium spacing-15px">Health & safety</div>
+            <div class="flex-row spacing-15px">
+            <div class="center">
+              <img class="icon" src="../assets/imgs/icons/clock.png" />
+            </div>
+            <div>
+              <div class="airbnb width-75">Airbnb's social-distancing and other COVID-19-related guidelines apply</div>
+            </div>
+          </div>
+            <div class="flex-row spacing-15px">
+            <div class="center">
+              <img class="icon" src="../assets/imgs/icons/clock.png" />
+            </div>
+            <div>
+              <div class="airbnb">No carbon monoxide alarm</div>
+            </div>
+          </div>
+                    <div class="flex-row spacing-15px">
+            <div class="center">
+              <img class="icon" src="../assets/imgs/icons/No-smoking.png" />
+            </div>
+            <div>
+              <div class="airbnb">No smoke alarm</div>
+            </div>
+          </div>
+       </div>
+         <div class="width-33">
+           <div class="airbnb-medium spacing-15px">Cancellation policy</div>
+            <div class="flex-row spacing-15px">
+            <div>
+              <div class="airbnb">Cancel before Dec 6 and get a 50% refund, minus the first night and service fee.</div>
+            </div>
+          </div>
+       </div>
+       </div>
+      </div>
 </template>
 
 <script>
@@ -480,15 +573,13 @@ export default {
   data() {
     return {
       stay: null,
+      pos:{ lat: 41.5912, lng:1.5209 } 
     };
   },
   //   created() {
   //     this.$store.dispatch({ type: "loadStay" });
   //   },
   computed: {
-    // stayForDisplay() {
-    //   return this.stay;
-    // },
   },
   watch: {
     "$route.params.stayId": {
