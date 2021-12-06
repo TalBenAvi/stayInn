@@ -22,6 +22,9 @@
 .spacing-25px{
     padding-bottom: 25px;
 }
+.marging-bottom-25{
+margin-bottom: 25px;
+}
 .spacing-44px{
     padding-bottom: 44px;
 }
@@ -50,6 +53,12 @@
 .center{
     margin-top: 3px;
 }
+.center-5px{
+    margin-top: 5px;
+}
+.center-20{
+margin-top: 20px;
+}
 .underline {
     text-decoration: underline;
 }
@@ -64,6 +73,9 @@
     display: flex;
     flex-direction: column;
 }
+.height-50{
+    height:50%
+}
 .width-75{
     width: 80%;
 }
@@ -76,6 +88,12 @@
 .space-bettwen{
     justify-content: space-between;
 }
+.space-around{
+    justify-content: space-around;
+}
+.space-evenly{
+    justify-content: space-evenly;
+}
 .black{
 color:$black;
 }
@@ -83,7 +101,9 @@ color:$black;
     position:fixed;
     width: 25%
 }
-
+.border-bottom{
+    border-bottom: solid 0.5px $separate;
+}
 .hidden {
     display: none;
 }
