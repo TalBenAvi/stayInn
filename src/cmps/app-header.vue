@@ -64,7 +64,7 @@
       </div>
 
       <div class="host-options" :style="textColor">
-        <p class="become" @click="onHost">Become a Host</p>
+        <p class="become" @click="toHost">Become a Host</p>
       </div>
 
       <div class="global">
