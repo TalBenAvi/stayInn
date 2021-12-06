@@ -34,8 +34,11 @@ grid-column: 2;
 .menu-bar-button{
     border: none;
     background: white;
+    width: 150px;
     font-size: 17px;
     padding-bottom: 20px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 .display-bar{
     width: 84%;
@@ -59,13 +62,13 @@ grid-column: 2;
     font-size: 22px;
     font-family: airbnb-medium;
 }
-.editing-layout{
+.creating-stay-layout{
     background-color: #fff;
     min-width: 200px;
     border-radius: 13px;
     padding: 20px;
 }
-.stay-name{
+.stay-name-host{
     font-family: airbnb-medium;
     font-size: 1.46875rem;
     line-height: 1.6875rem;
@@ -76,7 +79,7 @@ grid-column: 2;
     margin: 0;
     margin-bottom: 25px;
 }
-.stay-address{
+.stay-address-host{
     font-family: airbnb;
     font-size: 1rem;
     width: 200px;
@@ -85,7 +88,7 @@ grid-column: 2;
     border-bottom:solid 0.5px $separate;
     color: $gray;
 }
-.stay-capacity{
+.stay-capacity-host{
     font-family: airbnb;
     font-size: 1rem;
     width: 50px;
@@ -94,7 +97,7 @@ grid-column: 2;
     border-bottom:solid 0.5px $separate;
     color: $gray;
 }
-.stay-typeof-select{
+.stay-typeof-select-host{
     font-family: airbnb;
     font-size: 1rem;
     width: 120px;
@@ -127,4 +130,29 @@ grid-column: 2;
 .img3-host {
     height: 48%;
     object-fit: cover;
+}
+.description{
+    width: 89.3%;
+    height: 150px;
+    border-radius: 8px;
+    margin-bottom: 40px;
+    text-align:inherit;
+}
+.add-stay-save-btn{
+    margin-left: 350px;
+    background-color: #ff385c;
+    padding: 7px 40px;
+    border-radius: 5px;
+    color: #fff;
+    font-family: airbnb-medium;
+    font-size: 1.2rem;
+    margin-top: 20px;
+    border: none;
+}
+.menu-bar-button:hover{
+    cursor: pointer;
+    background: $separate;
+}
+.create-stay{
+    display: none;
 }

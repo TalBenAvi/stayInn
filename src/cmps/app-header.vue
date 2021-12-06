@@ -3,10 +3,7 @@
   
   <section class="main-nav">
      <div class="logo">
-      <img
-        :class="logo"
-        :src="require(`@/assets/imgs/branding/${imgSrc}.png`)"
-        @click="toHome"
+      <img :class="logo" :src="require(`@/assets/imgs/branding/${imgSrc}.png`)" @click="toHome"
       />
     </div>
 
