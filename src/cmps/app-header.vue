@@ -64,7 +64,7 @@
       </div>
 
       <div class="host-options" :style="textColor">
-        <p class="become">Become a Host</p>
+        <p class="become" @click="onHost">Become a Host</p>
       </div>
 
       <div class="global">
@@ -227,6 +227,9 @@ export default {
     },
     toHome() {
       this.$router.push("/");
+    },
+    toHost() {
+      this.$router.push("/host");
     },
     handleScroll() {
       let scrollBarPos = window.top.scrollY;
