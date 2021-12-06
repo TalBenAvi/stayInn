@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 import home from '../views/home.vue'
 import stayApp from '../views/stayApp.vue'
 import stayDetails from '../views/stayDetails.vue'
+import hostPage from '../views/host.vue'
 Vue.use(VueRouter)
 
 const routes = [
@@ -20,6 +21,11 @@ const routes = [
     path: '/stay/details/:stayId?',
     name: 'stayDetails',
     component: stayDetails
+  },
+  {
+    path: '/host',
+    name: 'host',
+    component: hostPage
   },
 
 ]
