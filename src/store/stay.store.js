@@ -11,7 +11,7 @@ export const stayStore = {
         staysForDisplay(state) {
             console.log(state.filterBy)
             let stays =  JSON.parse(JSON.stringify(state.stays))
-            if (!state.filterBy.amenities.length && !state.filterBy.location && !state.filterBy.typeOfPlace) return state.stays
+            if (!state.filterBy.amenities.length && !state.filterBy.location && !state.filterBy.typeOfPlace && !state.filterBy.price.minPrice && !state.filterBy.price.maxPrice) return state.stays
 
             if (state.filterBy.location) {
                 stays = stays.filter((stay) => stay.loc.country.toLowerCase() === state.filterBy.location)
@@ -27,6 +27,13 @@ export const stayStore = {
                 }  )
 
                 console.log(stays)
+            }
+
+            if(state.filterBy.price.minPrice) {
+                console.log('yep')
+                stays = stays.filter(stay => {
+                    return stay.price >= state.filterBy.price.minPrice && stay.price <= state.filterBy.price.maxPrice
+                })
             }
 
             return stays

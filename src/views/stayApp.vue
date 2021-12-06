@@ -1,13 +1,35 @@
 <template>
   <div class="stay-app">
-    <section class="stay-filter-container" :style="determinePos">
+    <section class="stay-filter-container " :style="determinePos">
       <!-- <div class="separete-line"> -->
-      <button class="filter-btn">Price <i class="arrow down"></i></button>
+      <button  @click="toggleModal('price')" class="filter-btn">Price <i class="arrow down"></i></button>
 
-      <button @click="toggleModal()" class="filter-btn border">
+      <div  ref="price" class="price-range hidden">
+        <form @submit.prevent="setPriceRange()" class="price-range-input">
+          <el-slider v-model="value" range show-stops :max="600"> </el-slider>
+          <div class="min-max-price">
+            <div class="min-price">
+              <span>min price</span>
+              <div>{{minPrice}}</div>
+            </div>
+            -
+            <div class="max-price">
+              <span>max price</span>
+              <div>{{maxPrice}}</div>
+            </div>
+          </div>
+                 <div class="save-price">
+          <button>save</button>
+          <p @click="resetPriceRange()">clear</p>
+        </div>
+        </form>
+ 
+      </div>
+
+      <button @click="toggleModal('filter')" class="filter-btn border">
         Type of place <i class="arrow down"></i>
       </button>
-      <div ref="typeof" class="typeof-modal">
+      <div ref="typeof" class="typeof-modal hidden">
         <form class="typeof">
           <label for="Entire">
             <div class="option-container">
@@ -42,7 +64,7 @@
               <button
                 ref="three"
                 class="checkbox"
-                @click="toggleBtn3($event,'Hotel room')"
+                @click="toggleBtn3($event, 'Hotel room')"
               ></button>
               <div class="option-text">
                 <span>Hotel room</span>
@@ -70,8 +92,8 @@
         </form>
       </div>
       <!-- </div> -->
-    
-           <button
+
+      <button
         @click="setFilter($event, 'free cancellation')"
         class="filter-btn btn-1"
       >
@@ -125,8 +147,6 @@
       <button class="filter-btn filter">
         <img class="filter-icon" src="@/assets/imgs/icons/filter.png" />Filters
       </button>
-
-   
     </section>
     <!-- Card Grid Display -->
     <section v-if="staysForDisplay" class="grid-card-container">
@@ -168,12 +188,17 @@ export default {
       stay: null,
       staysForDisplay: null,
       filterBy: {
+        price: {
+          minPrice :0,
+          maxPrice :0
+        },
         location: null,
         amenities: [],
         typeOfPlace: null,
       },
-      scrollBar: 0
-      
+      scrollBar: 0,
+       value: [100, 400],
+       modalOpen: true
     };
   },
   created() {
@@ -182,16 +207,34 @@ export default {
 
     this.setFilter();
   },
+  mounted() {
+  },
   computed: {
-      determinePos() {
-      console.log(this.scrollBar)
+    determinePos() {
+      console.log(this.scrollBar);
       if (this.scrollBar >= 85) {
-        return {position: 'fixed',top: 0, width: 100+'%', padding: '54px 147px 58px' ,'padding-bottom': 58+'px', backgroundColor: 'white', 'margin-top': 0, 'box-shadow': 'rgb(0 0 0 / 12%) 0px 6px 16px', 'padding-inline-end': 200+'px' , transition: 'opacity 0.1s cubic-bezier(0.35, 0, 0.65, 1) 0s'}
-      }else{
-        console.log('i should stop here')
-        return {backgroundColor: 'transparent'}
-
+        return {
+          position: "fixed",
+          top: 0,
+          width: 100 + "%",
+          padding: "54px 147px 58px",
+          "padding-bottom": 58 + "px",
+          backgroundColor: "white",
+          "margin-top": 0,
+          "box-shadow": "rgb(0 0 0 / 12%) 0px 6px 16px",
+          "padding-inline-end": 200 + "px",
+          transition: "opacity 0.1s cubic-bezier(0.35, 0, 0.65, 1) 0s",
+        };
+      } else {
+        console.log("i should stop here");
+        return { backgroundColor: "transparent" };
       }
+    },
+    minPrice() {
+     return +this.value[0]
+    },
+    maxPrice() {
+     return +this.value[1]
     }
   },
   methods: {
@@ -221,8 +264,18 @@ export default {
       });
       this.staysForDisplay = this.$store.getters.staysForDisplay;
     },
-    toggleModal() {
-      this.$refs.typeof.classList.toggle("hidden");
+    toggleModal(type) {
+      if (type === 'filter') this.$refs.typeof.classList.toggle("hidden");
+      if (!this.$refs.typeof.classList.contains("hidden")) {
+        this.$refs.price.classList.add("hidden")
+
+      }
+      if (!this.$refs.price.classList.contains("hidden")) {
+        this.$refs.typeof.classList.add("hidden")
+
+      }
+      if (type === 'price')   this.$refs.price.classList.toggle("hidden");
+      
     },
     async toggleBtn1(event, by) {
       this.$refs.one.classList.toggle("checked");
@@ -236,10 +289,9 @@ export default {
         });
         this.staysForDisplay = this.$store.getters.staysForDisplay;
       } else {
-          this.filterBy.typeOfPlace = null
+        this.filterBy.typeOfPlace = null;
       }
       this.staysForDisplay = this.$store.getters.staysForDisplay;
-       
     },
     async toggleBtn2(event, by) {
       this.$refs.two.classList.toggle("checked");
@@ -253,7 +305,7 @@ export default {
         });
         this.staysForDisplay = this.$store.getters.staysForDisplay;
       } else {
-          this.filterBy.typeOfPlace = null
+        this.filterBy.typeOfPlace = null;
       }
       this.staysForDisplay = this.$store.getters.staysForDisplay;
     },
@@ -269,7 +321,7 @@ export default {
         });
         this.staysForDisplay = this.$store.getters.staysForDisplay;
       } else {
-          this.filterBy.typeOfPlace = null
+        this.filterBy.typeOfPlace = null;
       }
       this.staysForDisplay = this.$store.getters.staysForDisplay;
     },
@@ -285,14 +337,35 @@ export default {
         });
         this.staysForDisplay = this.$store.getters.staysForDisplay;
       } else {
-          this.filterBy.typeOfPlace = null
+        this.filterBy.typeOfPlace = null;
       }
       this.staysForDisplay = this.$store.getters.staysForDisplay;
     },
-      handlingScroll() {
+    handlingScroll() {
       let scrollBarPos = window.top.scrollY;
-      this.scrollBar = scrollBarPos
-      console.log(this.scrollBar)
+      this.scrollBar = scrollBarPos;
+      console.log(this.scrollBar);
+    },
+    async setPriceRange() {
+      this.filterBy.price.minPrice = this.value[0]
+      this.filterBy.price.maxPrice = this.value[1]
+         await this.$store.dispatch({
+          type: "setCurrFilter",
+          filterBy: this.filterBy,
+        });
+        this.staysForDisplay = this.$store.getters.staysForDisplay;
+        this.modalOpen = false
+    },
+    async resetPriceRange() {
+      this.filterBy.price.minPrice =0
+      this.filterBy.price.maxPrice =0
+               await this.$store.dispatch({
+          type: "setCurrFilter",
+          filterBy: this.filterBy,
+        });
+        this.staysForDisplay = this.$store.getters.staysForDisplay;
+
+
     }
   },
 };

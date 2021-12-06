@@ -369,3 +369,107 @@
 .filters {
     display: flex;
 }
+
+.price-range {
+
+    top: 160px;
+    left: 150px;
+    position: absolute;
+    overflow: hidden auto;
+    width: 350px;
+    height: 250px;
+    padding: 0px;
+    background: rgb(255, 255, 255);
+    border: 0.5px solid rgba(118, 118, 118, 0.28);
+    border-radius: 12px;
+    box-shadow: rgb(0 0 0 / 15%) 0px 10px 37px;
+}
+
+.min-max-price {
+    -webkit-box-pack: center !important;
+    -webkit-box-align: center !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin-top: 28px !important;
+}
+
+.min-price, .max-price {
+    padding: 30px;
+    -webkit-box-pack: center !important;
+    -webkit-box-align: center !important;
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center !important;
+    margin-top: 28px !important;
+    position: relative !important;
+    cursor: text !important;
+    display: flex !important;
+    height: 56px !important;
+    width: 170 px!important;
+    margin: 20px !important;
+    border: none !important;
+    color: rgb(34, 34, 34) !important;
+    background-color: rgb(255, 255, 255) !important;
+    border-radius: 8px !important;
+    box-shadow: rgb(176 176 176) 0px 0px 0px 1px inset !important;
+    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif !important;
+    font-size: 16px !important;
+    line-height: 20px !important;
+    font-weight: 400 !important;
+
+    span {
+        color: $gray;
+        font-family: airbnb;
+        font-size: 13px
+    }
+
+    div {
+        font-family: airbnb;
+        color: $black;
+    }
+}
+
+
+.save-price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row-reverse;
+    width: 100%;
+    bottom: 0px;
+    position: absolute;
+    padding: 12px 14px !important;
+    border-top: 1px solid rgb(235, 235, 235) !important;
+
+    button {
+    margin-left: 200px;
+    cursor: pointer !important;
+    margin: 0px !important;
+    position: relative !important;
+    text-align: center !important;
+    text-decoration: none !important;
+    touch-action: manipulation !important;
+    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif !important;
+    font-size: 14px !important;
+    line-height: 18px !important;
+    font-weight: 600 !important;
+    border-radius: 8px !important;
+    outline: none !important;
+    padding: 8px 16px !important;
+    transition: box-shadow 0.2s ease 0s, -ms-transform 0.1s ease 0s, -webkit-transform 0.1s ease 0s, transform 0.1s ease 0s !important;
+    -webkit-tap-highlight-color: transparent !important;
+    border: none !important;
+    background: $black;
+    color: rgb(255, 255, 255) !important;
+    }
+
+    p {
+        font-family: airbnb-medium;
+        color: $black;
+        text-decoration: underline;
+        text-transform: capitalize;
+        cursor: pointer;
+    }
+
+}
