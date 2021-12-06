@@ -60,7 +60,7 @@
       <img :src="require(`@/assets/imgs/icons/${globalSrc}.png`)" />
     </div>
 
-    <div class="user-options">
+    <div class="user-options"  >
       <div class="burger">☰</div>
       <img class="avatar" src="../assets/imgs/icons/avatar.png" />
     </div>
