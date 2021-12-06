@@ -92,7 +92,10 @@
           </form>
           <div class="move-signup-button">
             <small
-              >Dont have a user? click here to <button class="x-close" @click="openSigninCloseLogin">sign up</button></small
+              >Dont have a user? click here to
+              <button class="x-close" @click="openSigninCloseLogin">
+                sign up
+              </button></small
             >
           </div>
         </div>
@@ -132,7 +135,10 @@
           </form>
           <div class="move-signup-button">
             <small
-              >Dont have a user? click here to <button class="x-close" @click="openLoginCloseSignin">login</button></small
+              >Dont have a user? click here to
+              <button class="x-close" @click="openLoginCloseSignin">
+                login
+              </button></small
             >
           </div>
         </div>
@@ -214,6 +220,9 @@ export default {
     toHome() {
       this.$router.push("/");
     },
+    toHost(){
+      this.$router.push("/host");
+    },
     handleScroll() {
       let scrollBarPos = window.top.scrollY;
       if (!scrollBarPos) this.topMode();
@@ -248,7 +257,7 @@ export default {
       // console.log(this.clickedOn)
     },
     openCloseMenu() {
-      console.log()
+      console.log();
       if (this.isMenuOpen === false) {
         this.isMenuOpen = true;
       } else {
@@ -267,7 +276,7 @@ export default {
     closeSignin() {
       this.isSigninOpen = false;
     },
-    openSigninCloseLogin(){
+    openSigninCloseLogin() {
       this.isSigninOpen = true;
       this.isLoginOpen = false;
     },
