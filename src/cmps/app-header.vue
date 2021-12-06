@@ -60,7 +60,7 @@
         </form>
       </div>
       <div class="host-options" :style="textColor">
-        <p class="become">Become a Host</p>
+        <p class="become" @click="toHost">Become a Host</p>
       </div>
       <div class="global">
         <img :src="require(`@/assets/imgs/icons/${globalSrc}.png`)" />
