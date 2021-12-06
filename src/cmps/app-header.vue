@@ -11,7 +11,6 @@
           @click="toHome"
         />
       </div>
-
       <div @click="expandToSearch()" v-if="!isTop" class="initial-search-bar">
         <p>Start your search</p>
         <div class="circle">
@@ -21,13 +20,11 @@
           />
         </div>
       </div>
-
       <div v-if="isTop" class="nav-link" :style="navLinkColor">
         <span>Places to stay</span>
         <span>Experiences</span>
         <span>Online Experiences</span>
       </div>
-
       <div v-if="expandedSearch" class="expty-space"></div>
       <div v-if="isTop" class="secondary-search-bar">
         <form @submit.prevent="">
@@ -62,15 +59,12 @@
           <dynamic-modal :clicked="this.clickedOn" />
         </form>
       </div>
-
       <div class="host-options" :style="textColor">
-        <p class="become" @click="onHost">Become a Host</p>
+        <p class="become">Become a Host</p>
       </div>
-
       <div class="global">
         <img :src="require(`@/assets/imgs/icons/${globalSrc}.png`)" />
       </div>
-
       <div @click="openCloseMenu" class="user-options">
         <div class="burger">☰</div>
         <img class="avatar" src="../assets/imgs/icons/avatar.png" />
@@ -79,7 +73,6 @@
           <button @click="openSignin">Signup</button>
         </div>
       </div>
-
       <section v-if="isLoginOpen" class="login-modal">
         <div class="login-header">
           <button class="x-close" @click="closeLogin">
@@ -118,7 +111,6 @@
           </button>
         </div>
       </section>
-
       <section v-if="isSigninOpen" class="signin-modal">
         <div class="login-header">
           <button class="x-close" @click="closeSignin">
@@ -162,20 +154,16 @@
     </section>
   </header>
 </template>
-
-
 <script>
 import dynamicModal from "./dynamic-modal.vue";
 import DatePicker from "vue2-datepicker";
 import "vue2-datepicker/index.css";
-
 DatePicker.methods.displayPopup = function () {
   this.position = {
     left: 0,
     bottom: "100%",
   };
 };
-
 export default {
   components: {
     DatePicker,
@@ -199,7 +187,6 @@ export default {
   },
   created() {
     this.setCurrPage();
-
     window.addEventListener("scroll", this.handleScroll);
   },
   mounted() {
@@ -210,7 +197,6 @@ export default {
   methods: {
     onResize() {
       this.windowWidth = window.innerWidth;
-
       if (this.windowWidth <= 980) {
         if (this.currPage === "home") {
           this.imgSrc = this.isTop ? "airbnb-white" : "airbnb";
@@ -228,15 +214,11 @@ export default {
     toHome() {
       this.$router.push("/");
     },
-    toHost() {
-      this.$router.push("/host");
-    },
     handleScroll() {
       let scrollBarPos = window.top.scrollY;
       if (!scrollBarPos) this.topMode();
       else this.scrollMode();
     },
-
     topMode() {
       this.isTop = this.currPage === "all" ? false : true;
       this.imgSrc = this.currPage === "all" ? "airbnb-logo" : "logo-white";
@@ -294,7 +276,6 @@ export default {
       this.isSigninOpen = false;
     },
   },
-
   computed: {
     logo() {
       if (this.imgSrc === "airbnb") {
