@@ -11,7 +11,7 @@ export const stayStore = {
         staysForDisplay(state) {
             console.log(state.filterBy)
             let stays =  JSON.parse(JSON.stringify(state.stays))
-            if (!state.filterBy.amenities.length && !state.filterBy.location && !state.filterBy.typeOfPlace && !state.filterBy.price.minPrice && !state.filterBy.price.maxPrice) return state.stays
+            if (!state.filterBy.amenities.length && !state.filterBy.location && !state.filterBy.typeOfPlace.length && !state.filterBy.price.minPrice && !state.filterBy.price.maxPrice &&!state.filterBy.beds && state.filterBy.bath && state.filterBy.bedrooms && !state.filterBy.propertyType.length && !state.filterBy.HouseRules.length) return state.stays
 
             if (state.filterBy.location) {
                 stays = stays.filter((stay) => stay.loc.country.toLowerCase() === state.filterBy.location)
@@ -21,20 +21,42 @@ export const stayStore = {
                 stays = stays.filter(stay => state.filterBy.amenities.every(amenitie => stay.amenities.includes(amenitie)))
             }
 
-            if (state.filterBy.typeOfPlace) {
-                stays = stays.filter(stay => {
-                    return stay.typeOfPlace === state.filterBy.typeOfPlace
-                }  )
-
-                console.log(stays)
+            if (state.filterBy.typeOfPlace.length) {
+                stays = stays.filter(stay => state.filterBy.typeOfPlace.some(type => stay.typeOfPlace.includes(type)))
             }
 
             if(state.filterBy.price.minPrice) {
-                console.log('yep')
                 stays = stays.filter(stay => {
                     return stay.price >= state.filterBy.price.minPrice && stay.price <= state.filterBy.price.maxPrice
                 })
             }
+
+            if(state.filterBy.beds) {
+                stays = stays.filter(stay => {
+                    return stay.beds >= state.filterBy.beds
+                })
+            }
+            if(state.filterBy.bath) {
+                stays = stays.filter(stay => {
+                    return stay.bath >= state.filterBy.bath
+                })
+            }
+
+            if(state.filterBy.bedrooms) {
+                stays = stays.filter(stay => {
+                    return stay.bedrooms >= state.filterBy.bedrooms
+                })
+            }
+
+            if (state.filterBy.propertyType.length) {
+                stays = stays.filter(stay => state.filterBy.propertyType.some(property => stay.propertyType.includes(property)))
+            }
+
+
+            if (state.filterBy.HouseRules.length) {
+                stays = stays.filter(stay => state.filterBy.HouseRules.some(rule => stay.HouseRules.includes(rule)))
+            }
+
 
             return stays
         }

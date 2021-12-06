@@ -63,6 +63,17 @@
     <div class="user-options">
       <div class="burger">☰</div>
       <img class="avatar" src="../assets/imgs/icons/avatar.png" />
+      <!-- <div class="user-menu">
+          <div class="loggin">
+            <span class="login"></span>
+            <span class="signup"></span>
+          </div>
+          <div class="user-actions">
+            <span class="host-your">Host your home</span>
+            <span class="host-exp">Host an Experience</span>
+            <span class="user-help">Help</span>
+          </div>
+      </div> -->
     </div>
 
   </section>
