@@ -386,37 +386,37 @@
 }
 
 .min-max-price {
-    -webkit-box-pack: center !important;
-    -webkit-box-align: center !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    margin-top: 28px !important;
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 12px;
 }
 
 .min-price, .max-price {
     padding: 30px;
-    -webkit-box-pack: center !important;
-    -webkit-box-align: center !important;
-    display: flex !important;
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+    display: flex;
     flex-direction: column;
-    justify-content: center !important;
-    margin-top: 28px !important;
-    position: relative !important;
-    cursor: text !important;
-    display: flex !important;
-    height: 56px !important;
-    width: 170 px!important;
-    margin: 20px !important;
-    border: none !important;
-    color: rgb(34, 34, 34) !important;
-    background-color: rgb(255, 255, 255) !important;
-    border-radius: 8px !important;
-    box-shadow: rgb(176 176 176) 0px 0px 0px 1px inset !important;
-    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif !important;
-    font-size: 16px !important;
-    line-height: 20px !important;
-    font-weight: 400 !important;
+    justify-content: center;
+    margin-top: 28px;
+    position: relative;
+    cursor: text;
+    display: flex;
+    height: 56px;
+    width: 170 px;
+    margin: 20px;
+    border: none;
+    color: rgb(34, 34, 34);
+    background-color: rgb(255, 255, 255);
+    border-radius: 8px;
+    box-shadow: rgb(176 176 176) 0px 0px 0px 1px inset;
+    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 400;
 
     span {
         color: $gray;
@@ -428,8 +428,35 @@
         font-family: airbnb;
         color: $black;
     }
+
+
 }
 
+.el-slider {
+    padding-top: 35px;
+    margin: 0 auto;
+    width: 318px;
+}
+.el-slider__stop {
+    height: 6px;
+    width: 6px;
+    border-radius: 100%;
+    background-color: rgb(235, 235, 235) !important;
+}
+
+.el-slider__bar {
+    height: 6px;
+    background-color: $gray !important;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    position: absolute;
+}
+
+.el-slider__button {
+    border: 2px solid $gray !important;
+    width: 30px !important;
+    height: 30px  !important;
+}
 
 .save-price {
     display: flex;
@@ -439,29 +466,29 @@
     width: 100%;
     bottom: 0px;
     position: absolute;
-    padding: 12px 14px !important;
-    border-top: 1px solid rgb(235, 235, 235) !important;
+    padding: 12px 14px;
+    border-top: 1px solid rgb(235, 235, 235);
 
     button {
     margin-left: 200px;
-    cursor: pointer !important;
-    margin: 0px !important;
-    position: relative !important;
-    text-align: center !important;
-    text-decoration: none !important;
-    touch-action: manipulation !important;
-    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif !important;
-    font-size: 14px !important;
-    line-height: 18px !important;
-    font-weight: 600 !important;
-    border-radius: 8px !important;
-    outline: none !important;
-    padding: 8px 16px !important;
-    transition: box-shadow 0.2s ease 0s, -ms-transform 0.1s ease 0s, -webkit-transform 0.1s ease 0s, transform 0.1s ease 0s !important;
-    -webkit-tap-highlight-color: transparent !important;
-    border: none !important;
+    cursor: pointer;
+    margin: 0px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    touch-action: manipulation;
+    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif '';
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 600;
+    border-radius: 8px;
+    outline: none;
+    padding: 8px 16px;
+    transition: box-shadow 0.2s ease 0s, -ms-transform 0.1s ease 0s, -webkit-transform 0.1s ease 0s, transform 0.1s ease 0s '';
+    -webkit-tap-highlight-color: transparent;
+    border: none ;
     background: $black;
-    color: rgb(255, 255, 255) !important;
+    color: rgb(255, 255, 255) ;
     }
 
     p {
@@ -472,4 +499,188 @@
         cursor: pointer;
     }
 
+}
+
+.filter-modal {
+    top: 160px;
+    right: 150px;
+    position: absolute;
+    overflow: hidden auto;
+    width: 390px;
+    height: 556px;
+    padding: 35px;
+    background: rgb(255, 255, 255);
+    border: 0.5px solid rgba(118, 118, 118, 0.28);
+    border-radius: 12px;
+    box-shadow: rgb(0 0 0 / 15%) 0px 10px 37px;
+    h1 {
+        color: $black;
+        font-size: 19px;
+        font-family: airbnb-book;
+    }
+    h1:not(first-of-type) {
+        margin-top: 15px;
+    }
+
+
+
+    span {
+        color: $black;
+        font-size: 15px;
+        font-family: airbnb;
+    }
+
+    .checkbox {
+        cursor: pointer;
+        border-width: 1px;
+        border-style: solid;
+        border-color: rgb(176, 176, 176);
+        height: 24px;
+        width: 24px;
+        background: rgb(255, 255, 255);
+        text-align: center;
+        overflow: hidden;
+        vertical-align: top;
+        border-radius: 4px;
+    }
+
+}
+
+.input-filter {
+    .el-input-number {
+        position: absolute;
+    
+    }
+    
+    .el-input-number__increase, .el-input-number__decrease {
+        width: 32px !important;
+        height: 32px !important;
+        cursor: pointer;
+        display: inline-flex;
+        margin: 0px ;
+        padding: 10px;
+        text-align: center;
+        text-decoration: none;
+        border-width: 1px;
+        border-style: solid;
+        border-color: rgb(176, 176, 176) !important;
+        color: rgb(113, 113, 113) !important;
+        touch-action: manipulation;
+        align-items: center;
+        justify-content: center;
+        background: white;
+        border-radius: 50% !important;
+    }
+        .el-input-number__decrease.is-disabled, .el-input-number__increase.is-disabled {
+    
+            color:rgb(235, 235, 235) !important;
+            border-color: rgb(235, 235, 235) !important;
+            cursor: not-allowed;
+        }
+        .el-input-number__increase {
+            height: 35px;
+            width: 35px
+        }
+        
+        .el-input-number__decrease {
+            left: 70px;
+            height: 35px;
+            width: 35px
+        }
+        
+        
+        .el-icon-plus:before, .el-icon-minus:before {
+            font-weight: 900 !important;
+        }
+
+        input.el-input__inner {
+            
+            text-align: center;
+            font-family: airbnb-book;
+            background: transparent;
+            border: none;
+            color: $black;
+            font-size: 16px;
+            padding-left: 115px !important;
+
+        }
+
+        
+
+}
+
+
+
+.rooms {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-bottom: 6px;
+    border-bottom: 1px solid rgb(235, 235, 235);
+
+
+    .beds-container, .bathrooms-container, .bedrooms-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+.property-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-row: 1fr 1fr;
+    column-gap: 20px;
+    padding-bottom: 18px;
+    border-bottom: 1px solid rgb(235, 235, 235);
+
+    .house-contaier{
+        grid-column: 1;
+    }
+
+    .house-contaier,.apartment-contaier, .guesthouse-contaier,  .hotel-contaier {
+        margin-bottom: 15px;
+    }
+    .checked {
+        background-color: $black;
+    }
+    .checked::after {
+        background-color: $black;
+        content: 'V';
+        color: white;
+    }
+
+    span {
+        margin-left: 5px;
+    }
+
+}
+
+.rules-container {
+    margin-top: 20px;
+    display: grid;
+    column-gap: 20px;
+    grid-template-columns: 1fr 1fr;
+    grid-row: 1fr 1fr;
+    padding-bottom: 6px;
+
+    .smoking-contaier {
+        grid-column: 1;
+    }
+
+    .smoking-contaier, .pets-container, .children-container {
+        margin-bottom: 15px;
+    }
+
+    .checked {
+        background-color: $black;
+    }
+    .checked::after {
+        background-color: $black;
+        content: 'V';
+        color: white;
+    }
+
+    span {
+        margin-left: 5px;
+    }
 }
