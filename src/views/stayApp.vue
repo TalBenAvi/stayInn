@@ -149,7 +149,7 @@
         <img class="filter-icon" src="@/assets/imgs/icons/filter.png" />Filters
       </button>
 
-           <div ref="filter" class="filter-modal hidden">
+      <div ref="filter" class="filter-modal hidden">
         <div class="filter-modal-container">
           <div @click="setRoomFilters()" class="rooms">
             <h1>Rooms and beds</h1>
@@ -224,23 +224,33 @@
             <h1>House rules</h1>
             <div class="rules-container">
               <div class="smoking-container">
-                <button ref="smoking" @click="toggleRule1($event, 'Smoking allowed')" class="checkbox"></button>
+                <button
+                  ref="smoking"
+                  @click="toggleRule1($event, 'Smoking allowed')"
+                  class="checkbox"
+                ></button>
                 <span>Smoking allowed</span>
               </div>
               <div class="pets-container">
-                <button ref="pets" @click="toggleRule2($event, 'Pets allowed')" class="checkbox"></button>
+                <button
+                  ref="pets"
+                  @click="toggleRule2($event, 'Pets allowed')"
+                  class="checkbox"
+                ></button>
                 <span>Pets allowed</span>
               </div>
               <div class="children-container">
-                <button ref="children" @click="toggleRule3($event, 'Children allowed')" class="checkbox" ></button>
+                <button
+                  ref="children"
+                  @click="toggleRule3($event, 'Children allowed')"
+                  class="checkbox"
+                ></button>
                 <span>Children allowed</span>
               </div>
             </div>
           </div>
         </div>
       </div>
-
-
     </section>
     <!-- Card Grid Display -->
     <section v-if="staysForDisplay" class="grid-card-container">
@@ -283,8 +293,8 @@ export default {
       staysForDisplay: null,
       filterBy: {
         price: {
-          minPrice :0,
-          maxPrice :0
+          minPrice: 0,
+          maxPrice: 0,
         },
         location: null,
         amenities: [],
@@ -293,21 +303,23 @@ export default {
         bath: 0,
         bedrooms: 0,
         propertyType: [],
-        HouseRules:[]
+        HouseRules: [],
       },
       scrollBar: 0,
-       value: [100, 400],
-       modalOpen: true
+      value: [100, 400],
+      modalOpen: true,
     };
   },
-  created() {
-    this.$store.dispatch({ type: "loadStays" });
+  async created() {
+    await this.$store.dispatch({ type: "loadStays" });
     window.addEventListener("scroll", this.handlingScroll);
-
+       await this.$store.dispatch({
+          type: "setCurrFilter",
+          filterBy: "",
+        });
     this.setFilter();
   },
-  mounted() {
-  },
+  mounted() {},
   computed: {
     determinePos() {
       if (this.scrollBar >= 85) {
@@ -328,29 +340,42 @@ export default {
       }
     },
     minPrice() {
-     return +this.value[0]
+      return +this.value[0];
     },
     maxPrice() {
-     return +this.value[1]
-    }
+      return +this.value[1];
+    },
   },
   methods: {
     showDetails(stayId) {
       this.$router.push({ path: `/stay/details/${stayId}` });
     },
     async setFilter(ev, fromBtns) {
-      if(this.$route.query.trip) {
-        const {trip} = this.$route.query
-         await this.$store.dispatch({
-        type: "setFilterByTrip",
-        trip
+      if (!this.$route.query.trip && !this.$route.query.filter) {
+        //should display all stays in data
+        await this.$store.dispatch({
+          type: "setCurrFilter",
+          filterBy: "",
+        });
+        await this.$store.dispatch({
+          type: "setFilterByTrip",
+          trip :''
         });
         this.staysForDisplay = this.$store.getters.staysForDisplay;
-        return;
+      }
+      if (this.$route.query.trip) {
+        const { trip } = this.$route.query;
+        await this.$store.dispatch({
+          type: "setFilterByTrip",
+          trip,
+        });
+        this.staysForDisplay = this.$store.getters.staysForDisplay;
+        console.log("after trip:", this.staysForDisplay);
       }
       if (this.$route.query.filter) {
         const { filter } = this.$route.query;
         this.filterBy.location = filter;
+        this._updateStays();
       }
       if (fromBtns) {
         if (ev.target.classList.contains("isSelected")) {
@@ -362,103 +387,96 @@ export default {
           this.filterBy.amenities.push(fromBtns);
         }
         ev.target.classList.toggle("isSelected");
+        this._updateStays();
       }
-
-      await this.$store.dispatch({
-        type: "setCurrFilter",
-        filterBy: this.filterBy,
-      });
-      this.staysForDisplay = this.$store.getters.staysForDisplay;
     },
     toggleModal(type) {
-      if (type === 'filter') this.$refs.typeof.classList.toggle("hidden");
-      if (type === 'price')   this.$refs.price.classList.toggle("hidden");
-       if (type === 'filters')   this.$refs.filter.classList.toggle("hidden");
-      
+      if (type === "filter") this.$refs.typeof.classList.toggle("hidden");
+      if (type === "price") this.$refs.price.classList.toggle("hidden");
+      if (type === "filters") this.$refs.filter.classList.toggle("hidden");
     },
-    async _filteringBy(event,by,key) {
+    async _filteringBy(event, by, key) {
       if (event.target.classList.contains("checked")) {
-        this.filterBy[key].push(by)
+        this.filterBy[key].push(by);
         await this.$store.dispatch({
           type: "setCurrFilter",
           filterBy: this.filterBy,
         });
         this.staysForDisplay = this.$store.getters.staysForDisplay;
       } else {
-        var idx = this.filterBy[key].findIndex(k => k === by)
-        this.filterBy[key].splice(idx,1)
+        var idx = this.filterBy[key].findIndex((k) => k === by);
+        this.filterBy[key].splice(idx, 1);
       }
       this.staysForDisplay = this.$store.getters.staysForDisplay;
-
     },
     async _updateStays() {
-        await this.$store.dispatch({
-          type: "setCurrFilter",
-          filterBy: this.filterBy,
-        });
-        this.staysForDisplay = this.$store.getters.staysForDisplay;
+      await this.$store.dispatch({
+        type: "setCurrFilter",
+        filterBy: this.filterBy,
+      });
+      this.staysForDisplay = this.$store.getters.staysForDisplay;
     },
     toggleBtn1(event, by) {
       this.$refs.one.classList.toggle("checked");
-      this._filteringBy(event,by,'typeOfPlace')
+      this._filteringBy(event, by, "typeOfPlace");
     },
     toggleBtn2(event, by) {
       this.$refs.two.classList.toggle("checked");
-      this._filteringBy(event,by,'typeOfPlace')
+      this._filteringBy(event, by, "typeOfPlace");
     },
     toggleBtn3(event, by) {
       this.$refs.three.classList.toggle("checked");
-      this._filteringBy(event,by,'typeOfPlace')
+      this._filteringBy(event, by, "typeOfPlace");
     },
     toggleBtn4(event, by) {
       this.$refs.four.classList.toggle("checked");
-      this._filteringBy(event,by,'typeOfPlace')
+      this._filteringBy(event, by, "typeOfPlace");
     },
     handlingScroll() {
       let scrollBarPos = window.top.scrollY;
       this.scrollBar = scrollBarPos;
     },
     async setPriceRange() {
-      this.filterBy.price.minPrice = this.value[0]
-      this.filterBy.price.maxPrice = this.value[1]
-      this._updateStays()
+      this.filterBy.price.minPrice = this.value[0];
+      this.filterBy.price.maxPrice = this.value[1];
+      this._updateStays();
     },
     async resetPriceRange() {
-      this.filterBy.price.minPrice =0
-      this.filterBy.price.maxPrice =0
-      this._updateStays()
+      this.filterBy.price.minPrice = 0;
+      this.filterBy.price.maxPrice = 0;
+      this._updateStays();
     },
     setRoomFilters() {
-      this._updateStays()
+      this._updateStays();
     },
     toggleProperty1(event, by) {
-        this.$refs.house.classList.toggle("checked");
-        this._filteringBy(event,by,'propertyType')
+      this.$refs.house.classList.toggle("checked");
+      this._filteringBy(event, by, "propertyType");
     },
     toggleProperty2(event, by) {
-      this.$refs.apartment.classList.toggle("checked")
-      this._filteringBy(event,by,'propertyType')
+      this.$refs.apartment.classList.toggle("checked");
+      this._filteringBy(event, by, "propertyType");
     },
     toggleProperty3(event, by) {
-      this.$refs.hotel.classList.toggle("checked")
-      this._filteringBy(event,by,'propertyType')
+      this.$refs.hotel.classList.toggle("checked");
+      this._filteringBy(event, by, "propertyType");
     },
     toggleProperty4(event, by) {
-      this.$refs.villa.classList.toggle("checked")
-      this._filteringBy(event,by,'propertyType')
+      this.$refs.villa.classList.toggle("checked");
+      this._filteringBy(event, by, "propertyType");
     },
     toggleRule1(event, by) {
       this.$refs.smoking.classList.toggle("checked");
-      this._filteringBy(event,by,'HouseRules')
+      this._filteringBy(event, by, "HouseRules");
     },
     toggleRule2(event, by) {
       this.$refs.pets.classList.toggle("checked");
-      this._filteringBy(event,by,'HouseRules')
+      this._filteringBy(event, by, "HouseRules");
     },
     toggleRule3(event, by) {
       this.$refs.children.classList.toggle("checked");
-      this._filteringBy(event,by,'HouseRules')
-    }
+      this._filteringBy(event, by, "HouseRules");
+    },
   },
 };
 </script>

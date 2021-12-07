@@ -74,7 +74,11 @@ export default {
   methods: {
     showStays(filterBy) {
       // console.log(filterBy)
+      this.$store.dispatch({type:'updateTrip', trip: ''})
+      console.log(this.$store.getters.currentTrip)
       if (filterBy === 'all') {
+        
+
         this.$router.push('/stay')
       } else {
         this.$router.push( {path: '/stay' , query: {filter: filterBy}})

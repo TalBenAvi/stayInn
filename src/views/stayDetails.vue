@@ -1,5 +1,5 @@
 <template>
-  <div class="stay-details">
+  <div v-if="stay" class="stay-details">
     <div class="name">{{ this.stay.name }}</div>
     <div class="location-name">
       <!-- because yaniv is the best! -->
@@ -23,7 +23,7 @@
         </div>
       </div>
     </div>
-    <div v-if="stay" class="imgs-layout">
+    <div class="imgs-layout">
       <img
         class="img1"
         :src="
@@ -578,6 +578,7 @@ export default {
     };
   },
   created() {
+        console.log(this.$store.getters.currentTrip)
         window.addEventListener("scroll", this.handlingScroll);
   },
   methods: {
@@ -589,11 +590,9 @@ export default {
   },
   computed: {
     determinePos() {
-      console.log(this.scrollBar)
       if (this.scrollBar >= 580 && this.scrollBar <= 1925) {
         return {position: 'fixed', 'margin-top': -580+'px', width: 24.5+'%'}
       }else{
-        console.log('i should stop here')
         return {position: 'relative'}
 
       }
@@ -603,7 +602,6 @@ export default {
     "$route.params.stayId": {
       async handler() {
         const { stayId } = this.$route.params;
-        console.log(stayId);
         try {
           var stay = await this.$store.dispatch({
             type: "getStayById",
