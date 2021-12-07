@@ -149,7 +149,7 @@
         <img class="filter-icon" src="@/assets/imgs/icons/filter.png" />Filters
       </button>
 
-           <div ref="filter" class="filter-modal hidden">
+      <div ref="filter" class="filter-modal hidden">
         <div class="filter-modal-container">
           <div @click="setRoomFilters()" class="rooms">
             <h1>Rooms and beds</h1>
@@ -224,23 +224,33 @@
             <h1>House rules</h1>
             <div class="rules-container">
               <div class="smoking-container">
-                <button ref="smoking" @click="toggleRule1($event, 'Smoking allowed')" class="checkbox"></button>
+                <button
+                  ref="smoking"
+                  @click="toggleRule1($event, 'Smoking allowed')"
+                  class="checkbox"
+                ></button>
                 <span>Smoking allowed</span>
               </div>
               <div class="pets-container">
-                <button ref="pets" @click="toggleRule2($event, 'Pets allowed')" class="checkbox"></button>
+                <button
+                  ref="pets"
+                  @click="toggleRule2($event, 'Pets allowed')"
+                  class="checkbox"
+                ></button>
                 <span>Pets allowed</span>
               </div>
               <div class="children-container">
-                <button ref="children" @click="toggleRule3($event, 'Children allowed')" class="checkbox" ></button>
+                <button
+                  ref="children"
+                  @click="toggleRule3($event, 'Children allowed')"
+                  class="checkbox"
+                ></button>
                 <span>Children allowed</span>
               </div>
             </div>
           </div>
         </div>
       </div>
-
-
     </section>
     <!-- Card Grid Display -->
     <section v-if="staysForDisplay" class="grid-card-container">
@@ -315,10 +325,13 @@ export default {
       // isHeartRed: false
     };
   },
-  created() {
-    this.$store.dispatch({ type: "loadStays" });
+  async created() {
+    await this.$store.dispatch({ type: "loadStays" });
     window.addEventListener("scroll", this.handlingScroll);
-
+       await this.$store.dispatch({
+          type: "setCurrFilter",
+          filterBy: "",
+        });
     this.setFilter();
   },
   mounted() {},
@@ -355,9 +368,31 @@ export default {
       this.$router.push({ path: `/stay/details/${stayId}` });
     },
     async setFilter(ev, fromBtns) {
+      if (!this.$route.query.trip && !this.$route.query.filter) {
+        //should display all stays in data
+        await this.$store.dispatch({
+          type: "setCurrFilter",
+          filterBy: "",
+        });
+        await this.$store.dispatch({
+          type: "setFilterByTrip",
+          trip :''
+        });
+        this.staysForDisplay = this.$store.getters.staysForDisplay;
+      }
+      if (this.$route.query.trip) {
+        const { trip } = this.$route.query;
+        await this.$store.dispatch({
+          type: "setFilterByTrip",
+          trip,
+        });
+        this.staysForDisplay = this.$store.getters.staysForDisplay;
+        console.log("after trip:", this.staysForDisplay);
+      }
       if (this.$route.query.filter) {
         const { filter } = this.$route.query;
         this.filterBy.location = filter;
+        this._updateStays();
       }
       if (fromBtns) {
         if (ev.target.classList.contains("isSelected")) {
@@ -369,13 +404,8 @@ export default {
           this.filterBy.amenities.push(fromBtns);
         }
         ev.target.classList.toggle("isSelected");
+        this._updateStays();
       }
-
-      await this.$store.dispatch({
-        type: "setCurrFilter",
-        filterBy: this.filterBy,
-      });
-      this.staysForDisplay = this.$store.getters.staysForDisplay;
     },
     toggleModal(type) {
       if (type === "filter") this.$refs.typeof.classList.toggle("hidden");

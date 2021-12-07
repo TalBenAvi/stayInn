@@ -1,71 +1,137 @@
 <template>
-    <div>
-    <div class="block">
-    <span class="demonstration">Default</span>
-    <el-date-picker
-      v-model="value1"
-      type="daterange"
-      range-separator="To"
-      start-placeholder="Start date"
-      end-placeholder="End date">
-    </el-date-picker>
-  </div>
-  <div class="block">
-    <span class="demonstration">With quick options</span>
-    <el-date-picker
-      v-model="value2"
-      type="daterange"
-      align="right"
-      unlink-panels
-      range-separator="To"
-      start-placeholder="Start date"
-      end-placeholder="End date"
-      :picker-options="pickerOptions">
-    </el-date-picker>
-  </div>
-  </div>
+  <form class="bg-white shadow-md rounded px-8 pt-6 pb-8" @submit.prevent >
+    <div class="mb-4">
+      <v-date-picker
+        v-model="range"
+        mode="date"
+        :columns="2"
+        :masks="masks"
+        is-expanded
+        color="gray"
+        is-range
+      >
+        <template v-slot="{ inputValue, inputEvents, isDragging }">
+          <div class="flex flex-col sm:flex-row justify-start items-center dates-container">
+            <div class="relative flex-grow">
+              <svg
+                class="
+                  text-gray-600
+                  w-4
+                  h-full
+                  mx-2
+                  absolute
+                  pointer-events-none
+                "
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+                ></path>
+              </svg>
+              <input
+                class="
+                  flex-grow
+                  pl-8
+                  pr-2
+                  py-1
+                  bg-gray-100
+                  border
+                  rounded
+                  w-full
+                "
+                :class="isDragging ? 'text-gray-600' : 'text-gray-900'"
+                :value="inputValue.start"
+                v-on="inputEvents.start"
+              />
+            </div>
+            <div class="relative flex-grow">
+              <svg
+                class="
+                  text-gray-600
+                  w-4
+                  h-full
+                  mx-2
+                  absolute
+                  pointer-events-none
+                "
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+                ></path>
+              </svg>
+              <input
+                class="
+                  flex-grow
+                  pl-8
+                  pr-2
+                  py-1
+                  bg-gray-100
+                  border
+                  rounded
+                  w-full
+                "
+                :class="isDragging ? 'text-gray-600' : 'text-gray-900'"
+                :value="inputValue.end"
+                v-on="inputEvents.end"
+              />
+            </div>
+          </div>
+        </template>
+      </v-date-picker>
+    </div>
+  </form>
 </template>
 
 <script>
-
+import {eventBus} from '../services/eventBus.js'
 export default {
+  props:['tripdate'],
   data() {
-      return {
-        pickerOptions: {
-          shortcuts: [{
-            text: 'Last week',
-            onClick(picker) {
-              const end = new Date();
-              const start = new Date();
-              start.setTime(start.getTime() - 3600 * 1000 * 24 * 7);
-              picker.$emit('pick', [start, end]);
-            }
-          }, {
-            text: 'Last month',
-            onClick(picker) {
-              const end = new Date();
-              const start = new Date();
-              start.setTime(start.getTime() - 3600 * 1000 * 24 * 30);
-              picker.$emit('pick', [start, end]);
-            }
-          }, {
-            text: 'Last 3 months',
-            onClick(picker) {
-              const end = new Date();
-              const start = new Date();
-              start.setTime(start.getTime() - 3600 * 1000 * 24 * 90);
-              picker.$emit('pick', [start, end]);
-            }
-          }]
-        },
-        value1: '',
-        value2: ''
-      };
+    
+    return {
+      range: {
+        start: new Date(2020, 0, 6),
+        end: new Date(2020, 0, 23),
+      },
+      masks: {
+        input: "DD/MM/YYYY",
+      },
+    };
+  },
+  created() {
+    if (this.tripdate) {
+        this.range.start = new Date(+this.tripdate.start[2] , +this.tripdate.start[1]-1, +this.tripdate.start[0])
+        this.range.end = new Date(+this.tripdate.end[2], +this.tripdate.end[1]-1 , +this.tripdate.end[0])
+    } else {
+       this.range.start =  new Date(2020, 0, 6)
+        this.range.end = new Date(2020, 0, 23)
     }
+   
+  },
+  methods: {
 
+  },
+    watch: {
+     range: {
+        handler: function () {
+            eventBus.$emit('dateUpdated', this.range)
+        },
+        deep: true
+     }
+  }
 }
 </script>
 
 <style>
-
 </style>
