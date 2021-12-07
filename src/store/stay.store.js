@@ -4,14 +4,16 @@ import {stayService } from "../services/stay.service.js"
 export const stayStore = {
     state: {
         stays: [],
-        filterBy: ''
+        filterBy: '',
+        filterByTrip: ''
     },
     getters: {
         stays(state) {return state.stays},
         staysForDisplay(state) {
-            console.log(state.filterBy)
+
+
             let stays =  JSON.parse(JSON.stringify(state.stays))
-            if (!state.filterBy.amenities.length && !state.filterBy.location && !state.filterBy.typeOfPlace.length && !state.filterBy.price.minPrice && !state.filterBy.price.maxPrice &&!state.filterBy.beds && state.filterBy.bath && state.filterBy.bedrooms && !state.filterBy.propertyType.length && !state.filterBy.HouseRules.length) return state.stays
+            if (!state.filterBy || !state.filterBy.amenities.length && !state.filterBy.location && !state.filterBy.typeOfPlace.length && !state.filterBy.price.minPrice && !state.filterBy.price.maxPrice &&!state.filterBy.beds && state.filterBy.bath && state.filterBy.bedrooms && !state.filterBy.propertyType.length && !state.filterBy.HouseRules.length && !state.filterByTrip ) return state.stays
 
             if (state.filterBy.location) {
                 stays = stays.filter((stay) => stay.loc.country.toLowerCase() === state.filterBy.location)
@@ -57,7 +59,19 @@ export const stayStore = {
                 stays = stays.filter(stay => state.filterBy.HouseRules.some(rule => stay.HouseRules.includes(rule)))
             }
 
+            if(state.filterByTrip) {
+                
+                console.log(state.filterByTrip.guests.adults, state.filterByTrip.guests.children, state.filterByTrip.guests.infants)
+                let accommodates = state.filterByTrip.guests.adults + state.filterByTrip.guests.children + state.filterByTrip.guests.infants
+                console.log(accommodates)
+                stays = stays.filter(stay => {
+                    console.log(stay.loc.countryCode, state.filterByTrip.dest.countryCode)
+                    return stay.accommodates >= accommodates && stay.loc.countryCode === state.filterByTrip.dest.countryCode
+                    
+                })
+            }
 
+            state.filterByTrip = ''
             return stays
         }
 
@@ -71,6 +85,9 @@ export const stayStore = {
         },
         setFilter(state,{filterBy}) {
             state.filterBy = filterBy
+        },
+        setFilterByTrip(state,{trip}) {
+            state.filterByTrip = trip
         }
     },
     actions: {
@@ -95,6 +112,9 @@ export const stayStore = {
         },
         setCurrFilter({commit}, {filterBy}) {
             commit({type:'setFilter', filterBy})
+        },
+        setFilterByTrip({commit}, {trip}) {
+            commit({type:'setFilterByTrip', trip})
         }
         // async setCurrFilter({commit}, {stayCity}) {
         //     console.log("stay store:", stayCity)
