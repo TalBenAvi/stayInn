@@ -1,5 +1,5 @@
 <template>
-  <form class="bg-white shadow-md rounded px-8 pt-6 pb-8" @submit.prevent>
+  <form class="bg-white shadow-md rounded px-8 pt-6 pb-8" @submit.prevent >
     <div class="mb-4">
       <v-date-picker
         v-model="range"
@@ -94,8 +94,11 @@
 </template>
 
 <script>
+import {eventBus} from '../services/eventBus.js'
 export default {
+  props:['tripdate'],
   data() {
+    
     return {
       range: {
         start: new Date(2020, 0, 6),
@@ -106,7 +109,28 @@ export default {
       },
     };
   },
-};
+  created() {
+    if (this.tripdate) {
+        this.range.start = new Date(+this.tripdate.start[2] , +this.tripdate.start[1]-1, +this.tripdate.start[0])
+        this.range.end = new Date(+this.tripdate.end[2], +this.tripdate.end[1]-1 , +this.tripdate.end[0])
+    } else {
+       this.range.start =  new Date(2020, 0, 6)
+        this.range.end = new Date(2020, 0, 23)
+    }
+   
+  },
+  methods: {
+
+  },
+    watch: {
+     range: {
+        handler: function () {
+            eventBus.$emit('dateUpdated', this.range)
+        },
+        deep: true
+     }
+  }
+}
 </script>
 
 <style>

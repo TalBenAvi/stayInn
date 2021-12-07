@@ -200,6 +200,11 @@
     border-radius: 12px;
     padding: 24px;
     box-shadow: rgb(0 0 0 / 12%) 0px 6px 16px;
+
+     .details  {
+         position: absolute;
+         right:40px;
+     }
 }
 .price-reviews {
     display: flex;
@@ -283,10 +288,12 @@
     margin-top: 5px;
 }
 .guests-num {
+    cursor: pointer;
     grid-row: 2;
     grid-column: span 2;
 }
 .check-available {
+    cursor: pointer;
     display: flex;
     justify-content: center;
     font-family: airbnb-medium;
@@ -390,3 +397,123 @@
     background-color: white;
 }
 
+
+
+//GUESTS MODAL//
+.guests-options {
+    top: 198px;
+    right: 0px;
+    position: absolute;
+    overflow: hidden auto;
+    width: 390px;
+    height: 210px;
+    padding: 35px;
+    background: rgb(255, 255, 255);
+    border: 0.5px solid rgba(118, 118, 118, 0.28);
+    border-radius: 12px;
+    box-shadow: rgb(0 0 0 / 15%) 0px 10px 37px;
+    h1 {
+        color: $black;
+        font-size: 19px;
+        font-family: airbnb-book;
+    }
+    h1:not(first-of-type) {
+        margin-top: 15px;
+    }
+
+
+
+    span {
+        color: $black;
+        font-size: 15px;
+        font-family: airbnb;
+    }
+}
+
+.input-filter {
+    .el-input-number {
+        position: absolute;
+    
+    }
+    
+    .el-input-number__increase, .el-input-number__decrease {
+        width: 32px !important;
+        height: 32px !important;
+        cursor: pointer;
+        display: inline-flex;
+        margin: 0px ;
+        padding: 10px;
+        text-align: center;
+        text-decoration: none;
+        border-width: 1px;
+        border-style: solid;
+        border-color: rgb(176, 176, 176) !important;
+        color: rgb(113, 113, 113) !important;
+        touch-action: manipulation;
+        align-items: center;
+        justify-content: center;
+        background: white;
+        border-radius: 50% !important;
+    }
+        .el-input-number__decrease.is-disabled, .el-input-number__increase.is-disabled {
+    
+            color:rgb(235, 235, 235) !important;
+            border-color: rgb(235, 235, 235) !important;
+            cursor: not-allowed;
+        }
+        .el-input-number__increase {
+            height: 35px;
+            width: 35px
+        }
+        
+        .el-input-number__decrease {
+            left: 70px;
+            height: 35px;
+            width: 35px
+        }
+        
+        
+        .el-icon-plus:before, .el-icon-minus:before {
+            font-weight: 900 !important;
+        }
+
+        input.el-input__inner {
+            
+            text-align: center;
+            font-family: airbnb-book;
+            background: transparent;
+            border: none;
+            color: $black;
+            font-size: 16px;
+            padding-left: 115px !important;
+
+        }
+
+        
+
+}
+
+
+
+.guests-selection {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-bottom: 6px;
+    border-bottom: 1px solid rgb(235, 235, 235);
+
+
+    .adults-container, .children-container, .infants-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.hidden {
+    display: none;
+}
+
+.shown {
+    display: block;
+}

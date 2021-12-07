@@ -15,11 +15,29 @@ export const tripStore = {
                 countryCode: "",
                 address: ""
             }
+        },
+        emptytrip: {
+            startDate: "",
+            endDate: "",
+            guests: {
+                adults: 0,
+                children: 0,
+                infants: 0,
+                pets: 0
+            },
+            dest: {
+                country:"",
+                countryCode: "",
+                address: ""
+            }
         }
     },
     getters: {
         currentTrip(state) {
             return state.trip
+        },
+        emptytrip(state) {
+            return state.emptytrip
         }
     },
     mutations: {

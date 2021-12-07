@@ -219,29 +219,67 @@
               </div>
             </div>
             <div>
-             
               <div class="checking">
-                 
                 <div class="check-in">
-                  
                   <div class="category-stay-label">CHECK-IN</div>
-                  <div v-if="!currentTrip" class="add">Add date</div>
-                  <div v-else class="add">{{ currentTrip.startDate }}</div>
-                  <date-picker/>
+                  <!-- <div v-if="!currentTrip" class="add">Add date</div> -->
+                  <!-- <div class="add">{{ currentTrip.startDate }}</div> -->
+                  <date-picker v-if="currentTrip" :tripdate="tripDates" />
+                  <date-picker v-else />
                 </div>
                 <div class="check-out">
                   <div class="category-stay-label">CHECK-OUT</div>
-                  <div v-if="!currentTrip" class="add">Add date</div>
-                  <div v-else class="add">{{ currentTrip.endDate }}</div>
+                  <!-- <div v-if="!currentTrip" class="add">Add date</div>
+                  <div v-else class="add">{{ currentTrip.endDate }}</div> -->
                 </div>
-                <div class="guests-num">
+                <div class="guests-num" @click="show = !show">
                   <div class="category-stay-label">GUESTS</div>
-
+                  <i class="arrow down details"></i>
                   <div v-if="!currentTrip" class="add">1 guest</div>
                   <div v-else class="add">{{ numOfGuests }} guests</div>
                 </div>
               </div>
+
               <div
+                ref="guestModal"
+                class="guests-options"
+                :class="{ shown: show, hidden: !show }"
+              >
+                <div v-if="currentTrip" class="guests-options-container">
+                  <div class="guests-selection">
+                    <div class="adults-container">
+                      <span>Adults</span>
+                      <el-input-number
+                        class="input-filter"
+                        v-model="currentTrip.guests.adults"
+                        :min="0"
+                        :max="10"
+                      ></el-input-number>
+                    </div>
+                    <div class="children-container">
+                      <span>Children</span>
+                      <el-input-number
+                        class="input-filter"
+                        v-model="currentTrip.guests.children"
+                        :min="0"
+                        :max="10"
+                      ></el-input-number>
+                    </div>
+                    <div class="infants-container">
+                      <span>Infants</span>
+                      <el-input-number
+                        class="input-filter"
+                        v-model="currentTrip.guests.infants"
+                        :min="0"
+                        :max="10"
+                      ></el-input-number>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                @click="reserveStay()"
                 class="check-available"
                 style="
                   background-position: calc((100 - var(--mouse-x, 0)) * 1%)
@@ -586,34 +624,62 @@
 </template>
 
 <script>
- import datePicker from '../cmps/date-picker.vue'
+import datePicker from "../cmps/date-picker.vue";
+import { eventBus } from "../services/eventBus.js";
 export default {
- components: {
-   datePicker
- },
+  components: {
+    datePicker,
+  },
   name: "stay-details",
   data() {
     return {
       stay: null,
       pos: { lat: 41.5912, lng: 1.5209 },
       scrollBar: 0,
-      currentTrip: null,
-      time1: 0,
+      currentTrip: this.$store.getters.currentTrip,
+      show: false,
     };
   },
   created() {
-    if (this.$store.getters.currentTrip) {
-      this.currentTrip = this.$store.getters.currentTrip;
-      console.log(this.currentTrip);
+    if (!this.currentTrip) {
+      this.currentTrip = {
+        startDate: "",
+        endDate: "",
+        guests: {
+          adults: 0,
+          children: 0,
+          infants: 0,
+          pets: 0,
+        },
+        dest: {
+          country: "",
+          countryCode: "",
+          address: "",
+        },
+      };
     }
-
+    eventBus.$on("dateUpdated", this.dateUpdated);
     window.addEventListener("scroll", this.handlingScroll);
   },
   methods: {
     handlingScroll() {
       let scrollBarPos = window.top.scrollY;
       this.scrollBar = scrollBarPos;
-      // console.log(scrollBarPos)
+    },
+    dateUpdated(dates) {
+      if (!this.currentTrip) return;
+      this.currentTrip.startDate = `${new Date(dates.start).getDate()}/${
+        new Date(dates.start).getMonth() + 1
+      }/${new Date(dates.start).getFullYear()}`;
+      this.currentTrip.endDate = `${new Date(dates.end).getDate()}/${
+        new Date(dates.end).getMonth() + 1
+      }/${new Date(dates.end).getFullYear()}`;
+    },
+    reserveStay() {
+      this.currentTrip.dest.country = this.stay.loc.country;
+      this.currentTrip.dest.countryCode = this.stay.loc.countryCode;
+      this.currentTrip.dest.address = this.stay.loc.address;
+      console.log("an Order!!!", this.currentTrip);
     },
   },
   computed: {
@@ -635,6 +701,20 @@ export default {
         this.currentTrip.guests.infants +
         this.currentTrip.guests.pets;
       return amount;
+    },
+    tripDates() {
+      if (this.currentTrip.startDate) {
+        var dates = {
+          start: this.currentTrip.startDate.split("/"),
+          end: this.currentTrip.endDate.split("/"),
+        };
+        return dates;
+      } else {
+        return "";
+      }
+    },
+    setNewTrip(dates) {
+      console.log(dates);
     },
   },
   watch: {
