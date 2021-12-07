@@ -114,7 +114,11 @@
 
 <script>
 import { userService } from "../services/user.service.js";
+<<<<<<< HEAD
 
+=======
+import {eventBus} from '../services/eventBus.js'
+>>>>>>> 98054325da725541f19f1d5dfc70e3d7964eb3a3
 export default {
   data() {
     return {
@@ -165,15 +169,15 @@ export default {
     login() {
       userService.login(this.user).then(() => {
         // myBus.$emit("logged");
-        this.$router.push("/#/");
+        this.$router.push("/");
       });
     },
     signup() {
       console.log(this.newUser);
       userService.signup(this.newUser).then(() => {
-        // myBus.$emit("logged");
+        eventBus.$emit("logged");
         console.log(this.newUser);
-        this.$router.push("/#/");
+        this.$router.push("/");
       });
     },
   },

@@ -30,19 +30,24 @@
         <form @submit.prevent="">
           <label class="main-search-label" @click="openModal('location')">
             <span>Location</span>
-            <input placeholder="Where are you going?" />
+            <input placeholder="Where are you going?" @input="openModal('s-location')" />
           </label>
           <label class="main-search-label" @click="openModal()">
             <span>Check in</span>
             <date-picker
               placeholder="Add dates"
-              v-model="time3"
+              v-model="dates"
               range
             ></date-picker>
           </label>
           <label class="main-search-label" @click="openModal()">
             <span>Check out</span>
-            <input v-model="time3" placeholder="Add dates" />
+            <input
+            placeholder="Add dates"
+              v-model="dates"
+              ref="myDatePicker"
+              range
+            />
             <!-- <date-picker placeholder="Add dates" v-model="time3" range></date-picker> -->
           </label>
           <label class="main-search-label" @click="openModal('guests')">
@@ -51,7 +56,7 @@
           </label>
           <div class="expanded circle">
             <img
-              @click="openModal()"
+              @click="openModal('submit')"
               class="search-icon"
               src="../assets/imgs/icons/search-circle.png"
             />
@@ -73,7 +78,9 @@
 import dynamicModal from "./dynamic-modal.vue";
 import DatePicker from "vue2-datepicker";
 import "vue2-datepicker/index.css";
-import login from './login.vue'
+import login from "./login.vue";
+import { eventBus } from '../services/eventBus.js'
+
 DatePicker.methods.displayPopup = function () {
   this.position = {
     left: 0,
@@ -84,7 +91,7 @@ export default {
   components: {
     DatePicker,
     dynamicModal,
-    login
+    login,
   },
   data() {
     return {
@@ -96,10 +103,11 @@ export default {
       currPage: "",
       expandedSearch: false,
       clickedOn: "",
-      time3: null,
+      dates: "",
     };
   },
   created() {
+
     this.setCurrPage();
     window.addEventListener("scroll", this.handleScroll);
   },
@@ -128,7 +136,7 @@ export default {
     toHome() {
       this.$router.push("/");
     },
-    toHost(){
+    toHost() {
       this.$router.push("/host");
     },
     handleScroll() {
@@ -161,7 +169,17 @@ export default {
     },
     handleChange() {},
     openModal(of) {
+      console.log('clicked search')
       this.clickedOn = of;
+      if (of === 'submit') {
+        if (this.dates) {
+          const dates = [this.dates[0], this.dates[1]]
+           eventBus.$emit('setDates', dates)
+        }
+        
+
+      }
+      
       // console.log(this.clickedOn)
     },
   },
