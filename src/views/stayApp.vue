@@ -367,7 +367,6 @@ export default {
       this.$router.push({ path: `/stay/details/${stayId}` });
     },
     async setFilter(ev, fromBtns) {
-<<<<<<< HEAD
       if (!this.$route.query.trip && !this.$route.query.filter) {
         //should display all stays in data
         await this.$store.dispatch({
@@ -389,8 +388,6 @@ export default {
         this.staysForDisplay = this.$store.getters.staysForDisplay;
         console.log("after trip:", this.staysForDisplay);
       }
-=======
->>>>>>> e5c87111ccbc4279b7f03a892d709716b4c0078f
       if (this.$route.query.filter) {
         const { filter } = this.$route.query;
         this.filterBy.location = filter;
