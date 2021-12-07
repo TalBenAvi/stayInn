@@ -261,12 +261,26 @@
         @click="showDetails(stay.id)"
       >
         <div class="grid-img">
-          <img
+          <span class="material-icons-outlined heart-icon">favorite</span>
+    <span class="demonstration"></span>
+    <el-carousel         trigger="click"
+        height="262.250px"
+        width="362px"
+        :autoplay="false"
+        :loop="false">
+      <el-carousel-item v-for="(item, idx) in stay.imgUrls" :key="idx">
+          <img 
             :src="
-              require(`@/assets/imgs/stays/${stay.initials}/${stay.imgUrls[0]}`)
+              require(`@/assets/imgs/stays/${stay.initials}/${stay.imgUrls[idx]}`)
             "
-          />
+          /> 
+        <!-- <h3 class="small">{{ idx }}</h3> -->
+      </el-carousel-item>
+    </el-carousel>
+  <!-- </div> -->
+          
         </div>
+        
         <div class="all-txt">
           <p class="stay-name flex">
             <span class="left-details-display"
@@ -327,8 +341,10 @@ export default {
           position: "fixed",
           top: 0,
           width: 100 + "%",
-          padding: "54px 147px 58px",
-          "padding-bottom": 58 + "px",
+          // padding: "54px 147px 54px",
+          //  "padding-bottom": 58 + "px",
+          padding: "20px",
+          paddingLeft: "105px",
           backgroundColor: "white",
           "margin-top": 0,
           "box-shadow": "rgb(0 0 0 / 12%) 0px 6px 16px",
@@ -351,6 +367,7 @@ export default {
       this.$router.push({ path: `/stay/details/${stayId}` });
     },
     async setFilter(ev, fromBtns) {
+<<<<<<< HEAD
       if (!this.$route.query.trip && !this.$route.query.filter) {
         //should display all stays in data
         await this.$store.dispatch({
@@ -372,6 +389,8 @@ export default {
         this.staysForDisplay = this.$store.getters.staysForDisplay;
         console.log("after trip:", this.staysForDisplay);
       }
+=======
+>>>>>>> e5c87111ccbc4279b7f03a892d709716b4c0078f
       if (this.$route.query.filter) {
         const { filter } = this.$route.query;
         this.filterBy.location = filter;

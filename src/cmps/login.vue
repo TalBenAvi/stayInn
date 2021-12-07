@@ -164,7 +164,7 @@ export default {
     },
     login() {
       userService.login(this.user).then(() => {
-        // myBus.$emit("logged");
+        // eventBus.$emit("logged");
         this.$router.push("/");
       });
     },
