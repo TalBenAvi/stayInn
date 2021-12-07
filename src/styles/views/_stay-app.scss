@@ -14,6 +14,7 @@
 .stay-filter-container {
     margin-top: 30px;
     // display: flex;
+    z-index: 1;
 }
 
 .separete-line {
@@ -89,6 +90,19 @@
     aspect-ratio: 1 / 1;
     object-fit: cover;
     border-radius: 15px;
+}
+
+.heart-icon{
+    position:absolute;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    color: white;
+    // width: 100%;
+    // bottom:10px;
+    // z-index: 0;
+    // height: fit-content;
+    // left: 1000;
 }
 
 .all-txt {
