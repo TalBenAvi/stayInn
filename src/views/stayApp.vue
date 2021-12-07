@@ -312,6 +312,7 @@ export default {
       scrollBar: 0,
       value: [100, 400],
       modalOpen: true,
+      // isHeartRed: false
     };
   },
   created() {
@@ -463,7 +464,13 @@ export default {
       this.$refs.children.classList.toggle("checked");
       this._filteringBy(event, by, "HouseRules");
     },
+    // toggleHeartColor() {
+    //   isHeartRed=!isHeartRed
+    //   console.log('isHeartRed:', isHeartRed)
+    // }
+
   },
 };
 </script>
 
+    // color: #FF385C;
