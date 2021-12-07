@@ -141,20 +141,19 @@ export default {
         this.newTrip.dest.country = 'PARIS'
         this.newTrip.dest.countryCode = 'PR'
         this.newTrip.dest.address = 'Paris'
-      } else if (location === 'lisbon') {
+      } else if (location === 'lsb') {
         this.newTrip.dest.country = 'LISBON'
         this.newTrip.dest.countryCode = 'LSB'
         this.newTrip.dest.address = 'Lisbon'
-      } else if (location === 'london') {
+      } else if (location === 'ldn') {
         this.newTrip.dest.country = 'LONDON'
-        this.newTrip.dest.countryCode = 'LDN'
+        this.newTrip.dest.countryCode = 'LND'
         this.newTrip.dest.address = 'London'
         
       }
     },
     setNewTrip() {
       this.$store.dispatch({type:'updateTrip', trip:this.newTrip})
-      console.log(this.$store.getters.currentTrip)
       this.$router.push( {path: '/stay' , query: {trip: this.newTrip}})
     }
   },

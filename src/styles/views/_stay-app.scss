@@ -14,7 +14,7 @@
 .stay-filter-container {
     margin-top: 30px;
     // display: flex;
-    z-index: 1;
+    z-index: 5;
 }
 
 .separete-line {
@@ -86,6 +86,10 @@
     flex-direction: column;
 }
 
+.grid-img{
+    position:relative ;
+}
+
 .grid-img img {
     aspect-ratio: 1 / 1;
     object-fit: cover;
@@ -93,16 +97,34 @@
 }
 
 .heart-icon{
-    position:absolute;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    color: white;
-    // width: 100%;
-    // bottom:10px;
-    // z-index: 0;
-    // height: fit-content;
-    // left: 1000;
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    color: #00000080;
+    -webkit-text-stroke: white;
+    -webkit-text-stroke-width: 1px;
+    height: 24px;
+    width: 24px;
+    z-index: 3;
+}
+
+.el-carousel__button {
+    height: 6px !important;
+    width: 6px !important;
+    background-color: white;
+    border-radius: 50% !important;
+}
+.el-carousel__arrow {
+    border-radius: 50% !important;
+    border: 1px solid rgba(0, 0, 0, 0.08) !important;
+    outline: none !important;
+    margin: 0px !important;
+    padding: 0px !important;
+    color: rgb(34, 34, 34) !important;
+    background-color: rgba(255, 255, 255, 0.9) !important;
+    box-shadow: transparent 0px 0px 0px 1px, transparent 0px 0px 0px 4px, rgb(0 0 0 / 18%) 0px 2px 4px !important;
+    width: 32px !important;
+    height: 32px !important;
 }
 
 .all-txt {

@@ -79,7 +79,7 @@ import dynamicModal from "./dynamic-modal.vue";
 import DatePicker from "vue2-datepicker";
 import "vue2-datepicker/index.css";
 import login from "./login.vue";
-import { eventBus } from '../services/eventBus.js'
+import {eventBus} from '../services/eventBus.js'
 
 DatePicker.methods.displayPopup = function () {
   this.position = {
@@ -135,6 +135,7 @@ export default {
     },
     toHome() {
       this.$router.push("/");
+      this.$store.dispatch({type:'updateTrip', trip: ''})
     },
     toHost() {
       this.$router.push("/host");
@@ -169,12 +170,11 @@ export default {
     },
     handleChange() {},
     openModal(of) {
-      console.log('clicked search')
       this.clickedOn = of;
       if (of === 'submit') {
         if (this.dates) {
           const dates = [this.dates[0], this.dates[1]]
-           eventBus.$emit('setDates', dates)
+          eventBus.$emit('setDates', dates)
         }
         
 

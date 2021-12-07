@@ -1,5 +1,5 @@
 <template>
-  <div class="stay-details">
+  <div v-if="stay" class="stay-details">
     <div class="name">{{ this.stay.name }}</div>
     <div class="location-name">
       <!-- because yaniv is the best! -->
@@ -23,7 +23,7 @@
         </div>
       </div>
     </div>
-    <div v-if="stay" class="imgs-layout">
+    <div class="imgs-layout">
       <img
         class="img1"
         :src="
@@ -202,7 +202,7 @@
         </div>
         <div class="stay-info-desc">{{ this.stay.summary }}</div>
       </div>
-      <div class="stay-reserve-layout" >
+      <div class="stay-reserve-layout">
         <div :style="determinePos">
           <div class="stay-reserve">
             <div class="price-reviews">
@@ -222,18 +222,64 @@
               <div class="checking">
                 <div class="check-in">
                   <div class="category-stay-label">CHECK-IN</div>
-                  <div class="add">Add date</div>
+                  <!-- <div v-if="!currentTrip" class="add">Add date</div> -->
+                  <!-- <div class="add">{{ currentTrip.startDate }}</div> -->
+                  <date-picker v-if="currentTrip" :tripdate="tripDates" />
+                  <date-picker v-else />
                 </div>
                 <div class="check-out">
                   <div class="category-stay-label">CHECK-OUT</div>
-                  <div class="add">Add date</div>
+                  <!-- <div v-if="!currentTrip" class="add">Add date</div>
+                  <div v-else class="add">{{ currentTrip.endDate }}</div> -->
                 </div>
-                <div class="guests-num">
+                <div class="guests-num" @click="show = !show">
                   <div class="category-stay-label">GUESTS</div>
-                  <div class="add">1 guest</div>
+                  <i class="arrow down details"></i>
+                  <div v-if="!currentTrip" class="add">1 guest</div>
+                  <div v-else class="add">{{ numOfGuests }} guests</div>
                 </div>
               </div>
+
               <div
+                ref="guestModal"
+                class="guests-options"
+                :class="{ shown: show, hidden: !show }"
+              >
+                <div v-if="currentTrip" class="guests-options-container">
+                  <div class="guests-selection">
+                    <div class="adults-container">
+                      <span>Adults</span>
+                      <el-input-number
+                        class="input-filter"
+                        v-model="currentTrip.guests.adults"
+                        :min="0"
+                        :max="10"
+                      ></el-input-number>
+                    </div>
+                    <div class="children-container">
+                      <span>Children</span>
+                      <el-input-number
+                        class="input-filter"
+                        v-model="currentTrip.guests.children"
+                        :min="0"
+                        :max="10"
+                      ></el-input-number>
+                    </div>
+                    <div class="infants-container">
+                      <span>Infants</span>
+                      <el-input-number
+                        class="input-filter"
+                        v-model="currentTrip.guests.infants"
+                        :min="0"
+                        :max="10"
+                      ></el-input-number>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                @click="reserveStay()"
                 class="check-available"
                 style="
                   background-position: calc((100 - var(--mouse-x, 0)) * 1%)
@@ -436,8 +482,13 @@
         {{ this.stay.loc.address }},{{ this.stay.loc.country }}
       </div>
       <div>
-        <GmapMap :center="pos" :zoom="12" map-type-id="terrain" style="width: 1120px; height: 480px; margin-bottom:80px">
-          <GmapMarker :position="pos" :clickable="true"/>
+        <GmapMap
+          :center="pos"
+          :zoom="12"
+          map-type-id="terrain"
+          style="width: 1120px; height: 480px; margin-bottom: 80px"
+        >
+          <GmapMarker :position="pos" :clickable="true" />
         </GmapMap>
       </div>
     </div>
@@ -480,12 +531,12 @@
         </div>
       </div>
     </div>
-    <div class="full-width"> <h3 class="airbnb ">Things to know</h3></div>
-      <div class="flex-row full-width">
+    <div class="full-width"><h3 class="airbnb">Things to know</h3></div>
+    <div class="flex-row full-width">
       <div class="width-33">
-       <div>
-         <div class="airbnb-medium spacing-15px">House rules</div>
-            <div class="flex-row spacing-15px">
+        <div>
+          <div class="airbnb-medium spacing-15px">House rules</div>
+          <div class="flex-row spacing-15px">
             <div class="center">
               <img class="icon" src="../assets/imgs/icons/clock.png" />
             </div>
@@ -493,7 +544,7 @@
               <div class="airbnb">Check-in: After 5:00 PM</div>
             </div>
           </div>
-            <div class="flex-row spacing-15px">
+          <div class="flex-row spacing-15px">
             <div class="center">
               <img class="icon" src="../assets/imgs/icons/clock.png" />
             </div>
@@ -501,7 +552,7 @@
               <div class="airbnb">Checkout: 11:00 AM</div>
             </div>
           </div>
-                    <div class="flex-row spacing-15px">
+          <div class="flex-row spacing-15px">
             <div class="center">
               <img class="icon" src="../assets/imgs/icons/No-smoking.png" />
             </div>
@@ -509,7 +560,7 @@
               <div class="airbnb">No smoking</div>
             </div>
           </div>
-                    <div class="flex-row spacing-15px">
+          <div class="flex-row spacing-15px">
             <div class="center">
               <img class="icon" src="../assets/imgs/icons/home.png" />
             </div>
@@ -517,93 +568,159 @@
               <div class="airbnb">No pets</div>
             </div>
           </div>
-                    <div class="flex-row spacing-15px">
+          <div class="flex-row spacing-15px">
             <div class="center">
               <img class="icon" src="../assets/imgs/icons/home.png" />
             </div>
             <div>
               <div class="airbnb">No parties or events</div>
             </div>
-            </div>
           </div>
-          
-       </div>
-         <div class="width-33">
-           <div class="airbnb-medium spacing-15px">Health & safety</div>
-            <div class="flex-row spacing-15px">
-            <div class="center">
-              <img class="icon" src="../assets/imgs/icons/clock.png" />
-            </div>
-            <div>
-              <div class="airbnb width-75">Airbnb's social-distancing and other COVID-19-related guidelines apply</div>
-            </div>
-          </div>
-            <div class="flex-row spacing-15px">
-            <div class="center">
-              <img class="icon" src="../assets/imgs/icons/clock.png" />
-            </div>
-            <div>
-              <div class="airbnb">No carbon monoxide alarm</div>
-            </div>
-          </div>
-                    <div class="flex-row spacing-15px">
-            <div class="center">
-              <img class="icon" src="../assets/imgs/icons/No-smoking.png" />
-            </div>
-            <div>
-              <div class="airbnb">No smoke alarm</div>
-            </div>
-          </div>
-       </div>
-         <div class="width-33">
-           <div class="airbnb-medium spacing-15px">Cancellation policy</div>
-            <div class="flex-row spacing-15px">
-            <div>
-              <div class="airbnb">Cancel before Dec 6 and get a 50% refund, minus the first night and service fee.</div>
-            </div>
-          </div>
-       </div>
-       </div>
+        </div>
       </div>
+      <div class="width-33">
+        <div class="airbnb-medium spacing-15px">Health & safety</div>
+        <div class="flex-row spacing-15px">
+          <div class="center">
+            <img class="icon" src="../assets/imgs/icons/clock.png" />
+          </div>
+          <div>
+            <div class="airbnb width-75">
+              Airbnb's social-distancing and other COVID-19-related guidelines
+              apply
+            </div>
+          </div>
+        </div>
+        <div class="flex-row spacing-15px">
+          <div class="center">
+            <img class="icon" src="../assets/imgs/icons/clock.png" />
+          </div>
+          <div>
+            <div class="airbnb">No carbon monoxide alarm</div>
+          </div>
+        </div>
+        <div class="flex-row spacing-15px">
+          <div class="center">
+            <img class="icon" src="../assets/imgs/icons/No-smoking.png" />
+          </div>
+          <div>
+            <div class="airbnb">No smoke alarm</div>
+          </div>
+        </div>
+      </div>
+      <div class="width-33">
+        <div class="airbnb-medium spacing-15px">Cancellation policy</div>
+        <div class="flex-row spacing-15px">
+          <div>
+            <div class="airbnb">
+              Cancel before Dec 6 and get a 50% refund, minus the first night
+              and service fee.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>
+import datePicker from "../cmps/date-picker.vue";
+import { eventBus } from "../services/eventBus.js";
 export default {
+  components: {
+    datePicker,
+  },
   name: "stay-details",
   data() {
     return {
       stay: null,
-      pos:{ lat: 41.5912, lng:1.5209 },
-      scrollBar: 0
+      pos: { lat: 41.5912, lng: 1.5209 },
+      scrollBar: 0,
+      currentTrip: this.$store.getters.currentTrip,
+      show: false,
     };
   },
   created() {
-        window.addEventListener("scroll", this.handlingScroll);
+    if (!this.currentTrip) {
+      this.currentTrip = {
+        startDate: "",
+        endDate: "",
+        guests: {
+          adults: 0,
+          children: 0,
+          infants: 0,
+          pets: 0,
+        },
+        dest: {
+          country: "",
+          countryCode: "",
+          address: "",
+        },
+      };
+    }
+    eventBus.$on("dateUpdated", this.dateUpdated);
+    window.addEventListener("scroll", this.handlingScroll);
   },
   methods: {
     handlingScroll() {
       let scrollBarPos = window.top.scrollY;
-      this.scrollBar = scrollBarPos
-      // console.log(scrollBarPos)
-    }
+      this.scrollBar = scrollBarPos;
+    },
+    dateUpdated(dates) {
+      if (!this.currentTrip) return;
+      this.currentTrip.startDate = `${new Date(dates.start).getDate()}/${
+        new Date(dates.start).getMonth() + 1
+      }/${new Date(dates.start).getFullYear()}`;
+      this.currentTrip.endDate = `${new Date(dates.end).getDate()}/${
+        new Date(dates.end).getMonth() + 1
+      }/${new Date(dates.end).getFullYear()}`;
+    },
+    reserveStay() {
+      this.currentTrip.dest.country = this.stay.loc.country;
+      this.currentTrip.dest.countryCode = this.stay.loc.countryCode;
+      this.currentTrip.dest.address = this.stay.loc.address;
+      console.log("an Order!!!", this.currentTrip);
+    },
   },
   computed: {
     determinePos() {
-      console.log(this.scrollBar)
       if (this.scrollBar >= 580 && this.scrollBar <= 1925) {
-        return {position: 'fixed', 'margin-top': -580+'px', width: 24.5+'%'}
-      }else{
-        console.log('i should stop here')
-        return {position: 'relative'}
-
+        return {
+          position: "fixed",
+          "margin-top": -580 + "px",
+          width: 24.5 + "%",
+        };
+      } else {
+        return { position: "relative" };
       }
-    }
+    },
+    numOfGuests() {
+      let amount =
+        this.currentTrip.guests.adults +
+        this.currentTrip.guests.children +
+        this.currentTrip.guests.infants +
+        this.currentTrip.guests.pets;
+      return amount;
+    },
+    tripDates() {
+      if (this.currentTrip.startDate) {
+        var dates = {
+          start: this.currentTrip.startDate.split("/"),
+          end: this.currentTrip.endDate.split("/"),
+        };
+        return dates;
+      } else {
+        return "";
+      }
+    },
+    setNewTrip(dates) {
+      console.log(dates);
+    },
   },
   watch: {
     "$route.params.stayId": {
       async handler() {
         const { stayId } = this.$route.params;
-        console.log(stayId);
         try {
           var stay = await this.$store.dispatch({
             type: "getStayById",
