@@ -208,4 +208,72 @@
             margin-bottom: 16px;
         }
     }
+
+    .more-locations-modal {
+        height: 285px;
+        width: 500px;
+        position: absolute;
+        left: 0px;
+        top: 63px;
+        background: #FFFFFF;
+        border-radius: 32px;
+        box-shadow: 0px 6px 20px rgb(0 0 0 / 20%) !important;
+        margin-top: 12px;
+        overflow-x: hidden;
+        overflow-y: auto;
+        padding: 16px 37px;
+
+        .s-location-container {
+            display: flex;
+            flex-direction: column;
+
+            .location-btn {
+            font-size: 17px;
+            background-color: rgb(241, 241, 241);
+            border: 1px solid rgba(176, 176, 176, 0.2);
+            border-radius: 8px;
+            width: 48px;
+            height: 48px ;
+            margin-right: 16px ;
+            display: flex ;
+            align-items: center;
+            justify-content: center;
+
+            }
+
+
+           
+        }
+
+        .location-option-container {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin-top: 15px;
+
+            span {
+                font-size: 16px;
+                font-family: airbnb;
+            }
+
+            img {
+                height: 22px;
+                width: 22px;
+            }
+        }
+
+        .location-option-container:hover {
+            width: 100%;
+            background-color: rgb(241, 241, 241);
+
+        }
+    }
+}
+
+.hidden {
+    display: none;
+}
+
+.shown {
+    display: block;
 }
