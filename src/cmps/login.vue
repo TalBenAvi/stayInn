@@ -17,11 +17,18 @@
       </div>
       <div class="login-input">
         <div class="input-txt"><h2>Welcome to stayinn</h2></div>
-        <form action="">
-          <input type="text" placeholder="Enter email or username" /><input
+        <form @submit.prevent="login">
+          <input
+            type="text"
+            placeholder="Enter username"
+            v-model="user.nickname"
+          />
+          <input
             type="password"
             placeholder="Enter password"
-          /><button class="checkout-btn" style="--x: 394px; --y: 47px">
+            v-model="user.password"
+          />
+          <button class="checkout-btn" style="--x: 394px; --y: 47px">
             <span>Continue</span>
           </button>
         </form>
@@ -40,10 +47,11 @@
       </div>
       <div class="login-socials">
         <button>
-          <span class="material-icons" style="color: rgb(66, 103, 178)">
-            facebook </span
-          >Continue with Facebook</button
-        ><button>
+          <span class="material-icons" style="color: rgb(66, 103, 178)"
+            >facebook </span
+          >Continue with Facebook
+        </button>
+        <button>
           <img src="@/assets/imgs/icons/google.png" alt="" /> Continue with
           Google
         </button>
@@ -58,13 +66,22 @@
       </div>
       <div class="login-input">
         <div class="input-txt"><h2>Welcome to stayinn</h2></div>
-        <form action="">
-          <input type="text" placeholder="Enter email or username" />
-          <input type="text" placeholder="Enter full name" />
-          <input type="password" placeholder="Enter password" /><button
-            class="checkout-btn"
-            style="--x: 394px; --y: 47px"
-          >
+        <form @submit.prevent="signup">
+          <input
+            v-model="newUser.email"
+            type="text"
+            placeholder="Enter email or username"
+          />
+          <input
+            v-model="newUser.nickname"
+            type="text"
+            placeholder="Enter full name"
+          />
+          <input
+            v-model="newUser.password"
+            type="password"
+            placeholder="Enter password"
+          /><button class="checkout-btn" style="--x: 394px; --y: 47px">
             <span>Continue</span>
           </button>
         </form>
@@ -96,12 +113,23 @@
 </template>
 
 <script>
+import { userService } from "../services/user.service.js";
 export default {
   data() {
     return {
       isMenuOpen: false,
       isLoginOpen: false,
       isSigninOpen: false,
+      // isSignedUp: true,
+      user: {
+        nickname: "",
+        password: null,
+      },
+      newUser: {
+        email: "",
+        nickname: "",
+        password: null,
+      },
     };
   },
   methods: {
@@ -132,6 +160,20 @@ export default {
     openLoginCloseSignin() {
       this.isLoginOpen = true;
       this.isSigninOpen = false;
+    },
+    login() {
+      userService.login(this.user).then(() => {
+        // myBus.$emit("logged");
+        this.$router.push("/#/");
+      });
+    },
+    signup() {
+      console.log(this.newUser);
+      userService.signup(this.newUser).then(() => {
+        myBus.$emit("logged");
+        console.log(this.newUser);
+        this.$router.push("/#/");
+      });
     },
   },
 };

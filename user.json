@@ -1,0 +1,53 @@
+[
+  {
+    "email": "asd@asd.com",
+    "nickname": "admin",
+    "password": "admin",
+    "bugsCount": 7,
+    "_id": "MZgGvnXHS9",
+    "isAdmin": true
+  },
+  {
+    "email": "asd@asd.com",
+    "nickname": "puki",
+    "password": "123",
+    "bugsCount": 0,
+    "_id": "MZgGvnXHR9"
+  },
+  {
+    "email": "asd@asd.com",
+    "nickname": "lala",
+    "password": "123",
+    "bugsCount": 0,
+    "_id": "MZgGvnXHP5"
+  },
+  {
+    "email": "puka@asd",
+    "nickname": "poopy",
+    "password": "123",
+    "bugsCount": 0,
+    "_id": "VTMo2sdifH"
+  },
+  {
+    "email": "asd@asd",
+    "nickname": "mochi",
+    "password": "123",
+    "bugsCount": 0,
+    "_id": "MYJiOqi7sn"
+  },
+  {
+    "email": "matan@gmail.com",
+    "nickname": "matan12",
+    "password": "1234",
+    "score": 100,
+    "_id": "dTMUIW4soN",
+    "bugsCount": null
+  },
+  {
+    "email": "tal@ben.com",
+    "nickname": "dsdsd",
+    "password": "adsds",
+    "score": 100,
+    "_id": "nNx8tDRVPB"
+  }
+]
