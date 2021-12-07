@@ -17,16 +17,16 @@
       </div>
       <div class="login-input">
         <div class="input-txt"><h2>Welcome to stayinn</h2></div>
-        <form @submit.prevent="login">
+        <form @submit.prevent="doLogin">
           <input
             type="text"
             placeholder="Enter username"
-            v-model="user.nickname"
+            v-model="loginCred.username"
           />
           <input
             type="password"
             placeholder="Enter password"
-            v-model="user.password"
+            v-model="loginCred.password"
           />
           <button class="checkout-btn" style="--x: 394px; --y: 47px">
             <span>Continue</span>
@@ -37,8 +37,7 @@
             >Dont have a user? click here to
             <button class="x-close" @click="openSigninCloseLogin">
               sign up
-            </button></small
-          >
+            </button></small>
         </div>
       </div>
       <div class="login-divider">
@@ -66,19 +65,19 @@
       </div>
       <div class="login-input">
         <div class="input-txt"><h2>Welcome to stayinn</h2></div>
-        <form @submit.prevent="signup">
+        <form @submit.prevent="doSignup">
           <input
-            v-model="newUser.email"
+            v-model="signupCred.email"
             type="text"
             placeholder="Enter email or username"
           />
           <input
-            v-model="newUser.nickname"
+            v-model="signupCred.username"
             type="text"
             placeholder="Enter full name"
           />
           <input
-            v-model="newUser.password"
+            v-model="signupCred.password"
             type="password"
             placeholder="Enter password"
           /><button class="checkout-btn" style="--x: 394px; --y: 47px">
@@ -113,8 +112,6 @@
 </template>
 
 <script>
-import { userService } from "../services/user.service.js";
-import {eventBus} from '../services/eventBus.js'
 export default {
   data() {
     return {
@@ -122,16 +119,27 @@ export default {
       isLoginOpen: false,
       isSigninOpen: false,
       // isSignedUp: true,
-      user: {
-        nickname: "",
+      loginCred: {
+        username: "",
         password: null,
       },
-      newUser: {
+      signupCred: {
         email: "",
-        nickname: "",
+        username: "",
         password: null,
       },
     };
+  },
+  //  created() {
+  //   this.loadUsers()
+  // },
+   computed: {
+    users() {
+      return this.$store.getters.users;
+    },
+    loggedinUser() {
+      return this.$store.getters.loggedinUser;
+    },
   },
   methods: {
     openCloseMenu() {
@@ -162,19 +170,38 @@ export default {
       this.isLoginOpen = true;
       this.isSigninOpen = false;
     },
-    login() {
-      userService.login(this.user).then(() => {
-        // eventBus.$emit("logged");
-        this.$router.push("/");
-      });
+     async doLogin() {
+      if (!this.loginCred.username  || !this.loginCred.password) {
+        this.msg = "Please enter username/password"
+        console.log(this.msg );
+        return;
+      }
+      try {
+        await this.$store.dispatch({ type: "login", userCred: this.loginCred });
+        // this.$router.push("/admin").catch(()=>{});
+        // this.$router.push('/')
+         this.isLoginOpen = false;
+         console.log('mission succeded');
+      } catch(err) {
+          console.log(err)
+          this.msg = "Failed to login"
+      }
     },
-    signup() {
-      console.log(this.newUser);
-      userService.signup(this.newUser).then(() => {
-        eventBus.$emit("logged");
-        console.log(this.newUser);
-        this.$router.push("/");
-      });
+    doLogout() {
+      this.$store.dispatch({ type: "logout" });
+    },
+    async doSignup() {
+      if (!this.signupCred.email || !this.signupCred.password || !this.signupCred.username) {
+        this.msg = "Please fill up the form"
+        console.log(this.msg);
+        return
+      }
+      console.log(this.signupCred);
+      await this.$store.dispatch({ type: "signup", userCred: this.signupCred });
+       this.isSigninOpen = false;
+      // this.$router.push("/admin").catch(()=>{});
+      // this.$router.push('/')
+      
     },
   },
 };

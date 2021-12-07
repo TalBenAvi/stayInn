@@ -5,7 +5,7 @@ const session = require('express-session');
 const userService = require('./services/user.service');
 
 const app = express();
-const port = 3000;
+const port = 8081;
 
 // Express App Configuration:
 app.use(express.static('public'));
@@ -28,13 +28,13 @@ app.get('/', (req, res) => {
 // User API (CRUDL)
 
 // LIST
-app.get('/', (req, res) => {
+app.get('/host', (req, res) => {
     userService.query().then((users) => {
         res.send(users);
     });
 });
 // DELETE
-app.delete('/', (req, res) => {
+app.delete('/host', (req, res) => {
     const { userId } = req.params;
     userService
         .remove(userId, user)
@@ -47,7 +47,7 @@ app.delete('/', (req, res) => {
 });
 
 // SIGNUP
-app.post('/#/', (req, res) => {
+app.post('/host', (req, res) => {
     const newUser = req.body;
     console.log('Signup req from:', newUser);
     userService.signup(newUser).then((user) => {
@@ -59,7 +59,7 @@ app.post('/#/', (req, res) => {
     });
 });
 // LOGIN
-app.post('/#/', (req, res) => {
+app.post('/host', (req, res) => {
     const exUser = req.body;
     userService
         .checkLogin(exUser)
