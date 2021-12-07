@@ -202,7 +202,7 @@
         </div>
         <div class="stay-info-desc">{{ this.stay.summary }}</div>
       </div>
-      <div class="stay-reserve-layout" >
+      <div class="stay-reserve-layout">
         <div :style="determinePos">
           <div class="stay-reserve">
             <div class="price-reviews">
@@ -219,18 +219,26 @@
               </div>
             </div>
             <div>
+             
               <div class="checking">
+                 
                 <div class="check-in">
+                  
                   <div class="category-stay-label">CHECK-IN</div>
-                  <div class="add">Add date</div>
+                  <div v-if="!currentTrip" class="add">Add date</div>
+                  <div v-else class="add">{{ currentTrip.startDate }}</div>
+                  <date-picker/>
                 </div>
                 <div class="check-out">
                   <div class="category-stay-label">CHECK-OUT</div>
-                  <div class="add">Add date</div>
+                  <div v-if="!currentTrip" class="add">Add date</div>
+                  <div v-else class="add">{{ currentTrip.endDate }}</div>
                 </div>
                 <div class="guests-num">
                   <div class="category-stay-label">GUESTS</div>
-                  <div class="add">1 guest</div>
+
+                  <div v-if="!currentTrip" class="add">1 guest</div>
+                  <div v-else class="add">{{ numOfGuests }} guests</div>
                 </div>
               </div>
               <div
@@ -436,8 +444,13 @@
         {{ this.stay.loc.address }},{{ this.stay.loc.country }}
       </div>
       <div>
-        <GmapMap :center="pos" :zoom="12" map-type-id="terrain" style="width: 1120px; height: 480px; margin-bottom:80px">
-          <GmapMarker :position="pos" :clickable="true"/>
+        <GmapMap
+          :center="pos"
+          :zoom="12"
+          map-type-id="terrain"
+          style="width: 1120px; height: 480px; margin-bottom: 80px"
+        >
+          <GmapMarker :position="pos" :clickable="true" />
         </GmapMap>
       </div>
     </div>
@@ -480,12 +493,12 @@
         </div>
       </div>
     </div>
-    <div class="full-width"> <h3 class="airbnb ">Things to know</h3></div>
-      <div class="flex-row full-width">
+    <div class="full-width"><h3 class="airbnb">Things to know</h3></div>
+    <div class="flex-row full-width">
       <div class="width-33">
-       <div>
-         <div class="airbnb-medium spacing-15px">House rules</div>
-            <div class="flex-row spacing-15px">
+        <div>
+          <div class="airbnb-medium spacing-15px">House rules</div>
+          <div class="flex-row spacing-15px">
             <div class="center">
               <img class="icon" src="../assets/imgs/icons/clock.png" />
             </div>
@@ -493,7 +506,7 @@
               <div class="airbnb">Check-in: After 5:00 PM</div>
             </div>
           </div>
-            <div class="flex-row spacing-15px">
+          <div class="flex-row spacing-15px">
             <div class="center">
               <img class="icon" src="../assets/imgs/icons/clock.png" />
             </div>
@@ -501,7 +514,7 @@
               <div class="airbnb">Checkout: 11:00 AM</div>
             </div>
           </div>
-                    <div class="flex-row spacing-15px">
+          <div class="flex-row spacing-15px">
             <div class="center">
               <img class="icon" src="../assets/imgs/icons/No-smoking.png" />
             </div>
@@ -509,7 +522,7 @@
               <div class="airbnb">No smoking</div>
             </div>
           </div>
-                    <div class="flex-row spacing-15px">
+          <div class="flex-row spacing-15px">
             <div class="center">
               <img class="icon" src="../assets/imgs/icons/home.png" />
             </div>
@@ -517,86 +530,112 @@
               <div class="airbnb">No pets</div>
             </div>
           </div>
-                    <div class="flex-row spacing-15px">
+          <div class="flex-row spacing-15px">
             <div class="center">
               <img class="icon" src="../assets/imgs/icons/home.png" />
             </div>
             <div>
               <div class="airbnb">No parties or events</div>
             </div>
-            </div>
           </div>
-          
-       </div>
-         <div class="width-33">
-           <div class="airbnb-medium spacing-15px">Health & safety</div>
-            <div class="flex-row spacing-15px">
-            <div class="center">
-              <img class="icon" src="../assets/imgs/icons/clock.png" />
-            </div>
-            <div>
-              <div class="airbnb width-75">Airbnb's social-distancing and other COVID-19-related guidelines apply</div>
-            </div>
-          </div>
-            <div class="flex-row spacing-15px">
-            <div class="center">
-              <img class="icon" src="../assets/imgs/icons/clock.png" />
-            </div>
-            <div>
-              <div class="airbnb">No carbon monoxide alarm</div>
-            </div>
-          </div>
-                    <div class="flex-row spacing-15px">
-            <div class="center">
-              <img class="icon" src="../assets/imgs/icons/No-smoking.png" />
-            </div>
-            <div>
-              <div class="airbnb">No smoke alarm</div>
-            </div>
-          </div>
-       </div>
-         <div class="width-33">
-           <div class="airbnb-medium spacing-15px">Cancellation policy</div>
-            <div class="flex-row spacing-15px">
-            <div>
-              <div class="airbnb">Cancel before Dec 6 and get a 50% refund, minus the first night and service fee.</div>
-            </div>
-          </div>
-       </div>
-       </div>
+        </div>
       </div>
+      <div class="width-33">
+        <div class="airbnb-medium spacing-15px">Health & safety</div>
+        <div class="flex-row spacing-15px">
+          <div class="center">
+            <img class="icon" src="../assets/imgs/icons/clock.png" />
+          </div>
+          <div>
+            <div class="airbnb width-75">
+              Airbnb's social-distancing and other COVID-19-related guidelines
+              apply
+            </div>
+          </div>
+        </div>
+        <div class="flex-row spacing-15px">
+          <div class="center">
+            <img class="icon" src="../assets/imgs/icons/clock.png" />
+          </div>
+          <div>
+            <div class="airbnb">No carbon monoxide alarm</div>
+          </div>
+        </div>
+        <div class="flex-row spacing-15px">
+          <div class="center">
+            <img class="icon" src="../assets/imgs/icons/No-smoking.png" />
+          </div>
+          <div>
+            <div class="airbnb">No smoke alarm</div>
+          </div>
+        </div>
+      </div>
+      <div class="width-33">
+        <div class="airbnb-medium spacing-15px">Cancellation policy</div>
+        <div class="flex-row spacing-15px">
+          <div>
+            <div class="airbnb">
+              Cancel before Dec 6 and get a 50% refund, minus the first night
+              and service fee.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>
+ import datePicker from '../cmps/date-picker.vue'
 export default {
+ components: {
+   datePicker
+ },
   name: "stay-details",
   data() {
     return {
       stay: null,
-      pos:{ lat: 41.5912, lng:1.5209 },
-      scrollBar: 0
+      pos: { lat: 41.5912, lng: 1.5209 },
+      scrollBar: 0,
+      currentTrip: null,
+      time1: 0,
     };
   },
   created() {
-        console.log(this.$store.getters.currentTrip)
-        window.addEventListener("scroll", this.handlingScroll);
+    if (this.$store.getters.currentTrip) {
+      this.currentTrip = this.$store.getters.currentTrip;
+      console.log(this.currentTrip);
+    }
+
+    window.addEventListener("scroll", this.handlingScroll);
   },
   methods: {
     handlingScroll() {
       let scrollBarPos = window.top.scrollY;
-      this.scrollBar = scrollBarPos
+      this.scrollBar = scrollBarPos;
       // console.log(scrollBarPos)
-    }
+    },
   },
   computed: {
     determinePos() {
       if (this.scrollBar >= 580 && this.scrollBar <= 1925) {
-        return {position: 'fixed', 'margin-top': -580+'px', width: 24.5+'%'}
-      }else{
-        return {position: 'relative'}
-
+        return {
+          position: "fixed",
+          "margin-top": -580 + "px",
+          width: 24.5 + "%",
+        };
+      } else {
+        return { position: "relative" };
       }
-    }
+    },
+    numOfGuests() {
+      let amount =
+        this.currentTrip.guests.adults +
+        this.currentTrip.guests.children +
+        this.currentTrip.guests.infants +
+        this.currentTrip.guests.pets;
+      return amount;
+    },
   },
   watch: {
     "$route.params.stayId": {

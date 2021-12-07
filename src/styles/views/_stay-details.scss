@@ -241,11 +241,31 @@
     font-family: airbnb-medium;
     font-size: 0.65rem;
     margin-bottom: 10px;
+
+    input {
+        font-size: 14px;
+        font-family: airbnb;
+        color: $gray;
+        border:none;
+        background: transparent;
+
+    }
+
+    input:first-of-type{
+        margin-inline-start: 5px;
+        margin-right: 1px;
+    }
+
+
 }
 .check-in {
     grid-column: 1;
     border-right: solid 1px $gray;
     border-bottom: solid 1px $gray;
+    .mx-datepicker-main{
+        width: 20000px;
+        background-color: aqua !important;
+    }
 }
 .check-out {
     grid-column: 2;
@@ -369,3 +389,4 @@
     font-family: airbnb-medium;
     background-color: white;
 }
+

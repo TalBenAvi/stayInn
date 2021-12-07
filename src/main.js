@@ -7,7 +7,13 @@ import './styles/styles.scss'
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 import * as VueGoogleMaps from 'vue2-google-maps'; 
-Vue.config.productionTip = false
+import VCalendar from 'v-calendar';
+
+// Use v-calendar & v-date-picker components
+Vue.use(VCalendar)
+
+
+
 Vue.use(ElementUI)
 
 Vue.use(VueGoogleMaps, {
