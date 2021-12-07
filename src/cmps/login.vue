@@ -114,6 +114,7 @@
 
 <script>
 import { userService } from "../services/user.service.js";
+
 export default {
   data() {
     return {
@@ -170,7 +171,7 @@ export default {
     signup() {
       console.log(this.newUser);
       userService.signup(this.newUser).then(() => {
-        myBus.$emit("logged");
+        // myBus.$emit("logged");
         console.log(this.newUser);
         this.$router.push("/#/");
       });
