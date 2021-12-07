@@ -251,12 +251,14 @@
         @click="showDetails(stay.id)"
       >
         <div class="grid-img">
-          <img
+          <span class="material-icons-outlined heart-icon">favorite_border</span><img 
             :src="
               require(`@/assets/imgs/stays/${stay.initials}/${stay.imgUrls[0]}`)
             "
-          />
+          /> 
+          
         </div>
+        
         <div class="all-txt">
           <p class="stay-name flex">
             <span class="left-details-display"
@@ -315,8 +317,10 @@ export default {
           position: "fixed",
           top: 0,
           width: 100 + "%",
-          padding: "54px 147px 58px",
-          "padding-bottom": 58 + "px",
+          // padding: "54px 147px 54px",
+          //  "padding-bottom": 58 + "px",
+          padding: "20px",
+          paddingLeft: "105px",
           backgroundColor: "white",
           "margin-top": 0,
           "box-shadow": "rgb(0 0 0 / 12%) 0px 6px 16px",
