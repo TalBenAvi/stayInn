@@ -155,6 +155,7 @@ export default {
     setNewTrip() {
       this.$store.dispatch({type:'updateTrip', trip:this.newTrip})
       console.log(this.$store.getters.currentTrip)
+      this.$router.push( {path: '/stay' , query: {trip: this.newTrip}})
     }
   },
 };

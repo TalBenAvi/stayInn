@@ -251,14 +251,12 @@
         @click="showDetails(stay.id)"
       >
         <div class="grid-img">
-          <span class="material-icons-outlined heart-icon">favorite_border</span><img 
+          <img
             :src="
               require(`@/assets/imgs/stays/${stay.initials}/${stay.imgUrls[0]}`)
             "
-          /> 
-          
+          />
         </div>
-        
         <div class="all-txt">
           <p class="stay-name flex">
             <span class="left-details-display"
@@ -317,10 +315,8 @@ export default {
           position: "fixed",
           top: 0,
           width: 100 + "%",
-          // padding: "54px 147px 54px",
-          //  "padding-bottom": 58 + "px",
-          padding: "20px",
-          paddingLeft: "105px",
+          padding: "54px 147px 58px",
+          "padding-bottom": 58 + "px",
           backgroundColor: "white",
           "margin-top": 0,
           "box-shadow": "rgb(0 0 0 / 12%) 0px 6px 16px",
@@ -343,6 +339,15 @@ export default {
       this.$router.push({ path: `/stay/details/${stayId}` });
     },
     async setFilter(ev, fromBtns) {
+      if(this.$route.query.trip) {
+        const {trip} = this.$route.query
+         await this.$store.dispatch({
+        type: "setFilterByTrip",
+        trip
+        });
+        this.staysForDisplay = this.$store.getters.staysForDisplay;
+        return;
+      }
       if (this.$route.query.filter) {
         const { filter } = this.$route.query;
         this.filterBy.location = filter;
