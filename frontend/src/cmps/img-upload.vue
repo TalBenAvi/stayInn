@@ -22,12 +22,3 @@ methods: {
 }
 }
 </script>
-
-<style>
-.clickable {
-    cursor: pointer;
-}
-img {
-    height: 200px;
-}
-</style>
