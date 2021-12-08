@@ -1,6 +1,7 @@
 
 import { storageService } from "./async-storage.service.js";
 import { utilService } from "./utils.service.js";
+import {httpService} from "./http.service.js"
 const STAY_KEY = 'staysDB'
 _createStays()
 
@@ -12,7 +13,9 @@ export const stayService = {
 
 async function query() {
     try {
-        var stays = await storageService.query(STAY_KEY)
+        // var stays = await storageService.query(STAY_KEY)
+        var stays = await httpService.get('stay')
+        console.log('stays from quary' , stays)
         return stays
     } catch (err) {
         console.log('had trouble loading stays :', err)
@@ -22,7 +25,8 @@ async function query() {
 
 async function getStayById(stayId) {
     try {
-        var stay = await storageService.get(STAY_KEY, stayId);
+        // var stay = await storageService.get(STAY_KEY, stayId);
+        var stay = await httpService.get(`stay/${stayId}`)
         return stay
     } catch (err) {
         console.log('Had an error getting stay by id (in front-service)', err)
