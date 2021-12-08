@@ -248,9 +248,9 @@
     <section v-if="staysForDisplay" class="grid-card-container">
       <div
         v-for="stay in staysForDisplay"
-        :key="stay.id"
+        :key="stay._id"
         class="grid-card-item"
-        @click="showDetails(stay.id)"
+        @click="showDetails(stay._id)"
       >
         <div class="grid-img">
           <span class="material-icons-outlined heart-icon">favorite</span>
@@ -357,6 +357,7 @@ export default {
   },
   methods: {
     showDetails(stayId) {
+      console.log('showDetails stayId' , stayId);
       this.$router.push({ path: `/stay/details/${stayId}` });
     },
     async setFilter(ev, fromBtns) {
