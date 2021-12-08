@@ -1,5 +1,7 @@
 <template>
+  
   <div v-if="stay" class="stay-details">
+  
     <div class="name">{{ this.stay.name }}</div>
     <div class="location-name">
       <!-- because yaniv is the best! -->
@@ -277,11 +279,8 @@
                 </div>
               </div>
 
-              <div
-                @click="reserveStay()"
-                class="check-available"
-                style="background-position: calc((100 - var(--mouse-x, 0)) * 1%)calc((100 - var(--mouse-y, 0)) * 1%);--mouse-x: 81.7031;--mouse-y: 0;">
-                <span class="text-avilable">Check availability</span>
+              <div>
+                  <gardient-btn @click="reserveStay()"></gardient-btn>
               </div>
             </div>
             <div class="charged">You won't be charged yet</div>
@@ -300,7 +299,7 @@
             <div class="total">
               <div class="airbnb-medium">Total</div>
               <div class="airbnb-medium">
-                ${{Number(this.stay.price * 7 + 50 + 100).toLocaleString()}} 
+              ${{ Number(this.stay.price * 7 + 50 + 100).toLocaleString() }}
               </div>
             </div>
           </div>
@@ -619,9 +618,11 @@
 <script>
 import datePicker from "../cmps/date-picker.vue";
 import { eventBus } from "../services/eventBus.js";
+import gardientBtn from '../cmps/gardient-btn.vue';
 export default {
   components: {
     datePicker,
+    gardientBtn
   },
   name: "stay-details",
   data() {

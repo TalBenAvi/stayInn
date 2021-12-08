@@ -8,25 +8,25 @@
 
     <div v-if="clicked === 's-location'"  class="more-locations-modal">
       <div class="s-location-container">
-        <div @click="setLocation('ams')" class="location-option-container">
+        <div @click="setLocation('Amsterdam, Netherlands')" class="location-option-container">
           <div class="location-btn">
             <img src="~@/assets/imgs/icons/location-black.png" />
           </div>
           <span>Amsterdam, Netherlands</span>
         </div>
-        <div @click="setLocation('prs')" class="location-option-container">
+        <div @click="setLocation('Paris, France')" class="location-option-container">
           <div  class="location-btn">
             <img src="~@/assets/imgs/icons/location-black.png" />
           </div>
           <span>Paris, France</span>
         </div>
-        <div @click="setLocation('lsb')" class="location-option-container">
+        <div @click="setLocation('Lisbon, Portugal')" class="location-option-container">
           <div class="location-btn">
             <img src="~@/assets/imgs/icons/location-black.png" />
           </div>
           <span>Lisbon, Portugal</span>
         </div>
-        <div @click="setLocation('ldn')" class="location-option-container">
+        <div @click="setLocation('London, England')" class="location-option-container">
           <div class="location-btn">
             <img src="~@/assets/imgs/icons/location-black.png" />
           </div>
@@ -117,40 +117,38 @@ export default {
   },
   methods: {
     handleChange(value) {
-      console.log(value);
+      console.log(value)
+      eventBus.$emit('setGuests', value)
     },
     showStays() {
       this.$router.push("/stay");
     },
     setDates(dates) {
-      this.newTrip.startDate = `${new Date(dates[0]).getDate()}/${
-        new Date(dates[0]).getMonth() + 1
-      }/${new Date(dates[0]).getFullYear()}`;
-      this.newTrip.endDate = `${new Date(dates[1]).getDate()}/${
-        new Date(dates[1]).getMonth() + 1
-      }/${new Date(dates[0]).getFullYear()}`;
+      this.newTrip.startDate = dates[0]
+      this.newTrip.endDate = dates[1]
       console.log(this.newTrip)
       this.setNewTrip()
     },
     setLocation(location) {
-      if (location === 'ams') {
+      if (location === 'Amsterdam, Netherlands') {
         this.newTrip.dest.country = 'AMSTERDAM'
         this.newTrip.dest.countryCode = 'AMS'
         this.newTrip.dest.address = 'Amsterdam'
-      } else if (location === 'prs') {
+      } else if (location === 'Paris, France') {
         this.newTrip.dest.country = 'PARIS'
         this.newTrip.dest.countryCode = 'PR'
         this.newTrip.dest.address = 'Paris'
-      } else if (location === 'lsb') {
+      } else if (location === 'Lisbon, Portugal') {
         this.newTrip.dest.country = 'LISBON'
         this.newTrip.dest.countryCode = 'LSB'
         this.newTrip.dest.address = 'Lisbon'
-      } else if (location === 'ldn') {
+      } else if (location === 'London, England') {
         this.newTrip.dest.country = 'LONDON'
         this.newTrip.dest.countryCode = 'LND'
         this.newTrip.dest.address = 'London'
         
       }
+      eventBus.$emit('selectedLocation', location)
     },
     setNewTrip() {
       this.$store.dispatch({type:'updateTrip', trip:this.newTrip})
