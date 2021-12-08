@@ -1,10 +1,10 @@
 <template>
   <div class="host-view">
-    <div class="main-area">
+    <div class="user-trip-main">
       <div class="user-display airbnb">
        <h1 class="airbnb-medium">Trips</h1>
        <div class="flex-row underline-border">
-      <div><button class="airbnb-medium font-size-19px spacing-20px-right">Upcoming</button></div>
+      <div><button class="airbnb-medium font-size-19px spacing-70px-right">Upcoming</button></div>
       <div><button class="airbnb-medium font-size-19px">Past</button></div>
        </div>
        <div class="order-container">
