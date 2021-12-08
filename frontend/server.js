@@ -5,7 +5,7 @@ const session = require('express-session');
 const userService = require('./services/user.service');
 
 const app = express();
-const port = 8081;
+
 
 // Express App Configuration:
 app.use(express.static('public'));

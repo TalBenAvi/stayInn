@@ -23,9 +23,9 @@
         white-space: nowrap;
         max-width: 100%;
         font-family: airbnb-medium;
-        font-size: 35px;
-        top: 65%;
-        left: 48%;
+        font-size: 37px;
+        top: 55%;
+        left: 47.5%;
         transform: translate( -50%, -50% );
         text-align: center;
         color: white;
@@ -33,7 +33,7 @@
     }
 
     .flexible-btn {
-        top:70%;
+        top:60%;
         position: absolute;
         left: 42%;
         padding: 16px 32px;
@@ -64,8 +64,8 @@
     
     .locations-section {
         margin-top: 50px;
-        font-family: airbnb-medium;
-        font-size: 23px;
+        font-family: airbnb-book;
+        font-size: 25px;
         letter-spacing: -0.02em;
 
         h1 {
@@ -76,10 +76,10 @@
             cursor: pointer;
             display: grid;
             grid-template-columns: repeat(4, minmax(0, 1fr));
-            column-gap: 12px;
+            column-gap: 20px;
     
             .location-img {
-                height: 100%;
+                height: 90%;
                 border-radius: 10px;
                 aspect-ratio: 1 / 1;
                 object-fit: cover;
@@ -88,13 +88,14 @@
             h4 {
                 text-transform: capitalize;
                 font-family: airbnb;
-                font-size: 16px;
+                font-size: 22px;
                 color: $black;
             }
     
         }
 
         .banner {
+            
             position: relative;
             margin-top: 105px;
             margin-bottom: 105px;
@@ -111,6 +112,7 @@
 
 
             .sub-header {
+                
                 font-size: 18px;
                 font-family: airbnb;
                 color: white;
@@ -125,6 +127,7 @@
 
             
             img {
+                border-radius: 10px;
                 height: 550px;
                 object-fit: cover;
             }

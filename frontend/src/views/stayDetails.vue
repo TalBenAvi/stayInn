@@ -1,5 +1,7 @@
 <template>
+  
   <div v-if="stay" class="stay-details">
+  
     <div class="name">{{ this.stay.name }}</div>
     <div class="location-name">
       <!-- because yaniv is the best! -->
@@ -278,17 +280,8 @@
                 </div>
               </div>
 
-              <div
-                @click="reserveStay()"
-                class="check-available"
-                style="
-                  background-position: calc((100 - var(--mouse-x, 0)) * 1%)
-                    calc((100 - var(--mouse-y, 0)) * 1%);
-                  --mouse-x: 81.7031;
-                  --mouse-y: 0;
-                "
-              >
-                <span class="text-avilable">Check availability</span>
+              <div>
+                  <gardient-btn @click="reserveStay()"></gardient-btn>
               </div>
             </div>
             <div class="charged">You won't be charged yet</div>
@@ -626,9 +619,11 @@
 <script>
 import datePicker from "../cmps/date-picker.vue";
 import { eventBus } from "../services/eventBus.js";
+import gardientBtn from '../cmps/gardient-btn.vue';
 export default {
   components: {
     datePicker,
+    gardientBtn
   },
   name: "stay-details",
   data() {
@@ -691,7 +686,7 @@ export default {
           width: 24.5 + "%",
         };
       } else {
-        return { position: "relative" };
+        return {position: 'relative'}
       }
     },
     numOfGuests() {
