@@ -245,6 +245,7 @@
       </div>
     </section>
     <!-- Card Grid Display -->
+    <div v-if="staysForDisplay" class="center-20 airbnb underline gray-color">Number of stays : {{this.staysForDisplay.length}}</div>
     <section v-if="staysForDisplay" class="grid-card-container">
       <div
         v-for="stay in staysForDisplay"
@@ -274,16 +275,18 @@
         </div>
         
         <div class="all-txt">
-          <p class="stay-name flex">
-            <span class="left-details-display"
-              >{{ stay.loc.country }}, {{ stay.name }}</span
-            >
-            <span class="price-details-display">${{ stay.price }}/ night</span>
-          </p>
-          <p class="stay-details-display">
-            {{ stay.accommodates }} guests ∙ {{ stay.bedrooms }} bedrooms ∙
-            {{ stay.beds }} beds ∙ {{ stay.bath }} baths
-          </p>
+          <!-- <p class="stay-name flex"> -->
+            <div class="flex-row">
+              <div> <img class="star center-5px spacing-10px-right" src="../assets/imgs/icons/star.jpg" /></div>
+              <div class="airbnb center gray-color"> {{stay.reviews[0].rate }} ({{stay.reviews.length}})</div>
+            </div>
+            <div class="left-details-display airbnb">{{ stay.loc.country }}, {{ stay.name }}</div>
+          <!-- </p> -->
+          <!-- <p class="stay-details-display"> -->
+           <div class="stay-details-display  airbnb"> {{ stay.accommodates }} guests ∙ {{ stay.bedrooms }} bedrooms ∙
+            {{ stay.beds }} beds ∙ {{ stay.bath }} baths</div>
+            <div class="price-details-display flex-row"><div class="airbnb-medium">${{ stay.price }}</div><div class="airbnb">/ night</div></div>
+          <!-- </p> -->
         </div>
       </div>
     </section>
@@ -482,4 +485,3 @@ export default {
 };
 </script>
 
-    // color: #FF385C;

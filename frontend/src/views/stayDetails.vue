@@ -283,7 +283,9 @@
                   <gardient-btn @click="reserveStay()"></gardient-btn>
               </div>
             </div>
-            <div class="charged">You won't be charged yet</div>
+            <div class="charged">
+              You won't be charged yet
+              </div>
             <div class="priceing">
               <div class="underline">${{ this.stay.price }}x 7 nights</div>
               <div>${{ Number(this.stay.price * 7).toLocaleString() }}</div>
@@ -316,38 +318,44 @@
         {{ this.stay.reviews[0].rate }} · {{ this.stay.reviews.length }} reviews
       </div>
       <div class="reviews-rating-data airbnb">
-        <div class="flex-center space-bettwen">
-          <div>Cleanliness</div>
+        <div class="flex-center space-end">
+          <div class="spacing-10px-right">Cleanliness</div>
+          <div class="gray review-rate-bar"><div  :style="rateReview"></div></div>
           <div class="rate-score">
             <div>{{ this.stay.reviews[0].rate }}</div>
           </div>
         </div>
-        <div class="flex-center space-bettwen">
-          <div>Communication</div>
+        <div class="flex-center space-end">
+          <div class="spacing-10px-right">Communication</div>
+           <div class="gray review-rate-bar"><div  :style="rateReview"></div></div>
           <div class="rate-score">
             <div>{{ this.stay.reviews[0].rate }}</div>
           </div>
         </div>
-        <div class="flex-center space-bettwen">
-          <div>Check-in</div>
+        <div class="flex-center space-end">
+          <div class="spacing-10px-right">Check-in</div>
+           <div class="gray review-rate-bar"><div  :style="rateReview"></div></div>
           <div class="rate-score">
             <div>{{ this.stay.reviews[0].rate }}</div>
           </div>
         </div>
-        <div class="flex-center space-bettwen">
-          <div>Accuracy</div>
+        <div class="flex-center space-end">
+          <div class="spacing-20px-right">Accuracy</div>
+           <div class="gray review-rate-bar"><div  :style="rateReview"></div></div>
           <div class="rate-score">
             <div>{{ this.stay.reviews[0].rate }}</div>
           </div>
         </div>
-        <div class="flex-center space-bettwen">
-          <div>Location</div>
+        <div class="flex-center space-end">
+          <div class="spacing-20px-right">Location</div>
+           <div class="gray review-rate-bar"><div  :style="rateReview"></div></div>
           <div class="rate-score">
             <div>{{ this.stay.reviews[0].rate }}</div>
           </div>
         </div>
-        <div class="flex-center space-bettwen">
-          <div>Value</div>
+        <div class="flex-center space-end">
+          <div class="spacing-20px-right">Value</div>
+           <div class="gray review-rate-bar"><div  :style="rateReview"></div></div>
           <div class="rate-score">
             <div>{{ this.stay.reviews[0].rate }}</div>
           </div>
@@ -523,7 +531,9 @@
         </div>
       </div>
     </div>
-    <div class="full-width"><h3 class="airbnb">Things to know</h3></div>
+    <div class="full-width">
+      <h3 class="airbnb">Things to know</h3>
+      </div>
     <div class="flex-row full-width">
       <div class="width-33">
         <div>
@@ -678,24 +688,16 @@ export default {
   },
   computed: {
     determinePos() {
-      if (this.scrollBar >= 580 && this.scrollBar <= 1200) {
-        return {
-          position: "relative",
-          "margin-top": this.scrollBar-580 + "px",
-          width: 100 + "%",
-        };
-        
+      if (this.scrollBar < 580 ) return { position: "relative"};
+      else  if (this.scrollBar >= 580 && this.scrollBar <= 1200) {
+        return {position: "relative","margin-top": this.scrollBar-580 + "px"};
       } 
-      else if (this.scrollBar < 580 ) {
-        return {
-          position: "relative",
-           width: 100 + "%",
-          
-        };
-      }
-      else {
-        return { position: "relative", "margin-top":640 + "px" };
-      }
+      else return {position: "relative","margin-top":640 + "px" };
+    },
+    rateReview(){
+      let length=(this.stay.reviews[0].rate)/(5/100);
+      console.log(length);
+      return {width:length + "%"};
     },
     numOfGuests() {
       let amount =

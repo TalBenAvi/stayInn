@@ -1,0 +1,61 @@
+.user-trips {
+    padding-top: 120px;
+    background-image: url();
+    h1 {
+        font-size: rem(32px);
+        line-height: rem(36px);
+        color: #222222;
+        margin-bottom: 50px;
+    }
+    button{
+        background-color: inherit;
+        border: none;
+        outline: none;
+        cursor: pointer;
+    }
+    main {
+        border-top: 1px solid rgb(235, 235, 235);
+        padding: 16px;
+    }
+    .order-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 15px;
+
+        .order-card {
+            width: 100%;
+            margin-bottom: 20px;
+            box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.12);
+            border-radius: 12px;
+            .card-img {
+                width: 100%;
+                max-height: 220px;
+                object-fit: cover;
+                border-radius: 12px 12px 0px 0px;
+                padding-bottom: 25px;
+            }
+            .order-dates {
+                font-size: 14px;
+                line-height: 16px;
+                color: rgb(113, 113, 113);
+                padding-left: 10px;
+            }
+            .card-bottom {
+                padding: 10px;
+                display: flex;
+                align-items: center;
+                .order-picture {
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 5px;
+                }
+                .order-name {
+                    font-size: rem(14px);
+                    padding-left: 10px;
+                    font-family: Circular;
+                    text-align: start;
+                }
+            }
+        }
+    }
+}

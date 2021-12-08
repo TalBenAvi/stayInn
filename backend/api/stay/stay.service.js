@@ -15,19 +15,6 @@ async function query(filterBy) {
         throw err
     }
 }
-// async function labelQuery(filterBy) {
-//     try {
-//         // const criteria = _buildCriteria(filterBy)
-//         const criteria = {}
-
-//         const collection = await dbService.getCollection('label')
-//         var label = await collection.find(criteria).toArray()
-//         return label
-//     } catch (err) {
-//         logger.error('cannot find labels', err)
-//         throw err
-//     }
-// }
 
 async function getById(stayId) {
     try {

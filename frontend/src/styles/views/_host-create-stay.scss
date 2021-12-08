@@ -36,6 +36,7 @@ grid-column: 2;
     background: white;
     width: 150px;
     font-size: 17px;
+    text-align: start;
     padding-bottom: 20px;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
@@ -123,11 +124,28 @@ grid-column: 2;
     gap:10px;
     width: 25%;
 }
+.img1-host {
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    width: 49.82%;
+    height: 100%;
+    object-fit: cover;
+}
 .img2-host {
     height: 49.94%;
 }
 .img3-host {
     height: 47.7%;
+    object-fit: cover;
+}
+.img4-host {
+    border-top-right-radius: 15px;
+    height: 50%;
+    object-fit: cover;
+}
+.img5-host {
+    border-bottom-right-radius: 15px;
+    height: 47.94%;
     object-fit: cover;
 }
 .description{
@@ -157,5 +175,5 @@ grid-column: 2;
 }
 .h3-center{
     text-align: center;
-    margin-top: 150px;
+    margin-top: 25%;
 }

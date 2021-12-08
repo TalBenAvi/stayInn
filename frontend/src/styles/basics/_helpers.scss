@@ -100,9 +100,15 @@ margin-top: 20px;
 .space-evenly{
     justify-content: space-evenly;
 }
+.space-end{
+    justify-content: end;
+}
 .black{
 color:$black;
 }
+.gray-color{
+    color:$gray;
+    }
 .fixed{
     position:fixed;
     width: 25%

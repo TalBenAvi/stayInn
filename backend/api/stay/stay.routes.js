@@ -9,7 +9,6 @@ const router = express.Router()
 // router.use(requireAdmin)
 
 router.get('/', getStays)
-router.get('/label', getLabels)
 router.get('/:id', getStayById)
 // router.post('/', addStay)
 // router.put('/:id', updateStay)

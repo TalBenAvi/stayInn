@@ -76,36 +76,37 @@
             </div>
             <div class="imgs-layout-host marging-bottom-25">
               <div class="img1 gray">
-                <label lass="clickable" v-if="!isLoading">
-                  <input type="file" id="myFile" name="filename" @change="onUploadImg" hidden/>
+                <label>
+                  <input type="file" id="myFile" name="filename" hidden/>
                   <h3 class="h3-center">Upload Image</h3>
                   </label>
               </div>
               <div class="row1">
-
+                <div>
                   <div class="img2-host gray ">
-                    <label lass="clickable" v-if="!isLoading">
-                  <input type="file" id="myFile" name="filename" @change="onUploadImg" hidden/>
+                    <label>
+                  <input type="file" id="myFile" name="filename" hidden/>
                   <h3 >Upload Image</h3>
                   </label>
                   </div>
                   <div class="img3-host gray">
-                    <label lass="clickable" v-if="!isLoading">
-                  <input type="file" id="myFile" name="filename" @change="onUploadImg" hidden/>
+                    <label>
+                  <input type="file" id="myFile" name="filename" hidden/>
                   <h3>Upload Image</h3>
                   </label>
                   </div>
+                </div>
               </div>
               <div class="second-row">
                 <div class="img4 gray">
-                   <label lass="clickable" v-if="!isLoading">
-                  <input type="file" id="myFile" name="filename" @change="onUploadImg" hidden />
+                   <label>
+                  <input type="file" id="myFile" name="filename" hidden/>
                   <h3>Upload Image</h3>
                   </label>
                 </div>
                 <div class="img5 gray">
-                  <label lass="clickable" v-if="!isLoading">
-                  <input type="file" id="myFile" name="filename" @change="onUploadImg" hidden/>
+                  <label>
+                  <input type="file" id="myFile" name="filename" hidden/>
                   <h3>Upload Image</h3>
                   </label>
                 </div>
@@ -362,8 +363,7 @@ export default {
       main: true,
       status:false,
       orders:false,
-      rates:false,
-      isLoading: false
+      rates:false
     };
   },
   methods:{
