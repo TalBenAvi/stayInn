@@ -17,7 +17,7 @@
              <div class="flex-row spacing-15px">
                <div class="spacing-10px-left" > <img class="small-icon" src="../assets/imgs/1.jpg"/> </div>
               <div class="width-90 flex-row space-bettwen">
-                <div class="airbnb center-5px">New Luxury  </div>
+                <div class="airbnb center-5px">New Luxury  Authentic Amsterdam center...</div>
                <div><img class="smallest-icon center-5px" src="../assets/imgs/icons/next.png" ></div></div>
              </div>
           </div>
