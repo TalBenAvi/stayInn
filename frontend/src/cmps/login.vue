@@ -29,7 +29,7 @@
         <form @submit.prevent="doLogin">
           <input
             type="text"
-            placeholder="Enter username"
+            placeholder="Enter email"
             v-model="loginCred.username"
           />
           <input
@@ -78,7 +78,7 @@
           <input
             v-model="signupCred.email"
             type="text"
-            placeholder="Enter email or username"
+            placeholder="Enter email"
           />
           <input
             v-model="signupCred.username"

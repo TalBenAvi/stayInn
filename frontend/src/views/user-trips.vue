@@ -12,11 +12,11 @@
         <div class="order-card">
           <img class="card-img" src="../assets/imgs/1.jpg"/>
           <div class="flex-column">
-           <div class="airbnb font-12 gray-color">15/21/21-01/12/21</div>
-          <div class="airbnb-medium border-bottom">hello</div>
+           <div class="airbnb font-12 gray-color spacing-20px-left center-5px font-size-19px">15/21/21-01/12/21</div>
+          <div class="airbnb-medium spacing-20px-left center-5px spacing-15px font-size-25px">location address</div>
              <div class="flex-row">
-               <div class="center-5"> <img class="small-icon" src="../assets/imgs/1.jpg"/> </div>
-               <div class="airbnb-medium">location name </div>
+               <div class="spacing-10px-left" > <img class="small-icon" src="../assets/imgs/1.jpg"/> </div>
+              <div class="width-90 flex-row space-bettwen"><div class="airbnb-medium center-5px">location name </div> <div><img class="smallest-icon center-5px" src="../assets/imgs/icons/next.png" ></div></div>
              </div>
           </div>
         </div>
