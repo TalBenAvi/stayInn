@@ -125,7 +125,12 @@ export default {
     watch: {
      range: {
         handler: function () {
-            eventBus.$emit('dateUpdated', this.range)
+
+          var diffInMilliseconds = Math.abs(new Date(this.range.end) - new Date(this.range.start));
+            const days = Math.floor(diffInMilliseconds / 86400);
+            diffInMilliseconds -= days * 86400;
+
+            eventBus.$emit('dateUpdated', this.range, days/1000)
         },
         deep: true
      }

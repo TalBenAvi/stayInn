@@ -208,7 +208,7 @@
           <div class="stay-reserve">
             <div class="price-reviews">
               <div class="stay-price">${{ this.stay.price }}</div>
-              <div class="night">/ night</div>
+              <div class="night">/night </div>
               <div class="rate">
                 <img
                   class="h-13px w-13px padding-2px"
@@ -280,13 +280,13 @@
               </div>
 
               <div>
-                  <gardient-btn @click="reserveStay()"></gardient-btn>
+                  <gardient-btn @reserveStay="reserveStay()"></gardient-btn>
               </div>
             </div>
             <div class="charged">You won't be charged yet</div>
             <div class="priceing">
-              <div class="underline">${{ this.stay.price }}x 7 nights</div>
-              <div>${{ Number(this.stay.price * 7).toLocaleString() }}</div>
+              <div class="underline">${{ this.stay.price }} x {{nightsCount}} nights</div>
+              <div>${{ Number(this.stay.price * nightsCount ).toLocaleString() }}</div>
             </div>
             <div class="priceing">
               <div class="underline">Cleaning fee</div>
@@ -299,7 +299,7 @@
             <div class="total">
               <div class="airbnb-medium">Total</div>
               <div class="airbnb-medium">
-              ${{ Number(this.stay.price * 7 + 50 + 100).toLocaleString() }}
+              ${{ Number(this.stay.price * nightsCount + 50 + 100).toLocaleString() }}
               </div>
             </div>
           </div>
@@ -632,6 +632,9 @@ export default {
       scrollBar: 0,
       currentTrip: this.$store.getters.currentTrip,
       show: false,
+      newOrder: this.$store.getters.emptyOrder,
+      nightsAmount : 0
+  
     };
   },
   created() {
@@ -660,7 +663,8 @@ export default {
       let scrollBarPos = window.top.scrollY;
       this.scrollBar = scrollBarPos;
     },
-    dateUpdated(dates) {
+    dateUpdated(dates, amount) {
+      
       if (!this.currentTrip) return;
       this.currentTrip.startDate = `${new Date(dates.start).getDate()}/${
         new Date(dates.start).getMonth() + 1
@@ -668,13 +672,30 @@ export default {
       this.currentTrip.endDate = `${new Date(dates.end).getDate()}/${
         new Date(dates.end).getMonth() + 1
       }/${new Date(dates.end).getFullYear()}`;
+      this.nightsAmount = amount
+   
     },
     reserveStay() {
-      this.currentTrip.dest.country = this.stay.loc.country;
-      this.currentTrip.dest.countryCode = this.stay.loc.countryCode;
-      this.currentTrip.dest.address = this.stay.loc.address;
-      console.log("an Order!!!", this.currentTrip);
+      let user = this.$store.getters.loggedinUser
+      if (!user) {
+        prompt('please sign in ')
+      } else {
+        this.sendOrderRequest()
+      }
     },
+    sendOrderRequest() {
+      this.newOrder.createdAt = Date.now()
+      this.newOrder.startDate = this.currentTrip.startDate
+      this.newOrder.endDate = this.currentTrip.endDate
+      this.newOrder.hostId= this.stay.host._id
+      this.newOrder.guests = this.currentTrip.guests
+      this.newOrder.stay.name = this.stay.name
+      this.newOrder.stay.price = this.stay.price //**
+      this.newOrder.stay._id = this.stay._id
+      this.newOrder.stay.totalPrice = this.calcultedPrice
+      console.log('Hello, order!', this.newOrder)
+      this.$store.dispatch({type:'addOrder', order: this.newOrder})
+    }
   },
   computed: {
     determinePos() {
@@ -716,9 +737,13 @@ export default {
         return "";
       }
     },
-    setNewTrip(dates) {
-      console.log(dates);
+    nightsCount() {
+      return parseInt(this.nightsAmount)
+
     },
+    calcultedPrice() {
+      return this.stay.price * this.nightsAmount
+    }
   },
   watch: {
     "$route.params.stayId": {
@@ -730,7 +755,6 @@ export default {
             stayId: stayId,
           });
           this.stay = stay;
-          console.log(stay);
         } catch (err) {
           console.log("had error", err);
           throw err;

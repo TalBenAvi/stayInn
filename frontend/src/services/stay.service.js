@@ -22,9 +22,7 @@ async function query() {
 
 async function getStayById(stayId) {
     try {
-        console.log(stayId)
         var stay = await storageService.get(STAY_KEY, stayId);
-        console.log(stay)
         return stay
     } catch (err) {
         console.log('Had an error getting stay by id (in front-service)', err)

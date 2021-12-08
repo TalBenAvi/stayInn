@@ -71,7 +71,7 @@
       <div class="global">
         <img :src="require(`@/assets/imgs/icons/${globalSrc}.png`)" />
       </div>
-      <login />
+      <login/>
     </section>
   </header>
 </template>
