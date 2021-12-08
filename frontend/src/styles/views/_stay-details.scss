@@ -411,6 +411,7 @@
 
 //GUESTS MODAL//
 .guests-options {
+    z-index: 5;
     top: 198px;
     right: 0px;
     position: absolute;
@@ -503,6 +504,7 @@
 
 
 .guests-selection {
+   
     display: flex;
     flex-direction: column;
     justify-content: space-around;
