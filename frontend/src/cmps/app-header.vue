@@ -11,7 +11,7 @@
           @click="toHome"
         />
       </div>
-      <div @click="expandToSearch()" v-if="!isTop" class="initial-search-bar">
+      <div v-if="!isTop " @click="expandToSearch()" class="initial-search-bar">
         <p>Start your search</p>
         <div class="circle">
           <img
@@ -20,13 +20,13 @@
           />
         </div>
       </div>
-      <div v-if="isTop" class="nav-link" :style="navLinkColor">
+      <!-- <div v-if="isTop" class="nav-link" :style="navLinkColor">
         <span>Explore</span>
         <span>Experiences</span>
         <span>Online Experiences</span>
-      </div>
+      </div> -->
       <div v-if="expandedSearch" class="expty-space"></div>
-      <div v-if="isTop" class="secondary-search-bar">
+      <div v-if="isTop" class="secondary-search-bar" :style="determineStyle">
         <form @submit.prevent="">
           <label class="main-search-label" @click="openModal('location')">
             <span>Location</span>
@@ -65,13 +65,18 @@
           <dynamic-modal :clicked="this.clickedOn" />
         </form>
       </div>
-      <div class="host-options" :style="textColor">
+      <div class="right-nav">
+                <div class="host-options" :style="textColor">
+        <p class="become" @click="toHost">Explore</p>
         <p class="become" @click="toHost">Become a Host</p>
+
       </div>
       <div class="global">
         <img :src="require(`@/assets/imgs/icons/${globalSrc}.png`)" />
       </div>
       <login/>
+      </div>
+
     </section>
   </header>
 </template>
@@ -248,6 +253,11 @@ export default {
     getGuestsAmount() {
       if (!this.guests) return 'Add guests'
       return this.guests
+    },
+    determineStyle() {
+      if (this.currPage !== 'home') {
+        return {top: 13+'%'}
+      } 
     }
   },
   destroyed() {
