@@ -76,44 +76,38 @@
             </div>
             <div class="imgs-layout-host marging-bottom-25">
               <div class="img1 gray">
-                <form action="/action_page.php">
-                  <input
-                    type="file"
-                    id="myFile"
-                    name="filename"
-                    placeholder="Upload Image"
-                  />
-                  <input type="submit" />
-                </form>
+                <label lass="clickable" v-if="!isLoading">
+                  <input type="file" id="myFile" name="filename" @change="onUploadImg" hidden/>
+                  <h3 class="h3-center">Upload Image</h3>
+                  </label>
               </div>
               <div class="row1">
-                <div>
-                  <div class="img2-host gray">
-                    <form action="/action_page.php">
-                      <input type="file" id="myFile" name="filename" />
-                      <input type="submit" />
-                    </form>
+
+                  <div class="img2-host gray ">
+                    <label lass="clickable" v-if="!isLoading">
+                  <input type="file" id="myFile" name="filename" @change="onUploadImg" hidden/>
+                  <h3 >Upload Image</h3>
+                  </label>
                   </div>
                   <div class="img3-host gray">
-                    <form action="/action_page.php">
-                      <input type="file" id="myFile" name="filename" />
-                      <input type="submit" />
-                    </form>
+                    <label lass="clickable" v-if="!isLoading">
+                  <input type="file" id="myFile" name="filename" @change="onUploadImg" hidden/>
+                  <h3>Upload Image</h3>
+                  </label>
                   </div>
-                </div>
               </div>
               <div class="second-row">
-                <div class="img5 gray">
-                  <form action="/action_page.php">
-                    <input type="file" id="myFile" name="filename" />
-                    <input type="submit" />
-                  </form>
+                <div class="img4 gray">
+                   <label lass="clickable" v-if="!isLoading">
+                  <input type="file" id="myFile" name="filename" @change="onUploadImg" hidden />
+                  <h3>Upload Image</h3>
+                  </label>
                 </div>
                 <div class="img5 gray">
-                  <form action="/action_page.php">
-                    <input type="file" id="myFile" name="filename" />
-                    <input type="submit" />
-                  </form>
+                  <label lass="clickable" v-if="!isLoading">
+                  <input type="file" id="myFile" name="filename" @change="onUploadImg" hidden/>
+                  <h3>Upload Image</h3>
+                  </label>
                 </div>
               </div>
             </div>
@@ -361,13 +355,15 @@
 </template>
 
 <script>
+import { uploadImg } from '@/services/imgUpload.service.js'
 export default {
   data() {
     return {
       main: true,
       status:false,
       orders:false,
-      rates:false
+      rates:false,
+      isLoading: false
     };
   },
   methods:{
@@ -395,6 +391,13 @@ export default {
         this.orders=false;
          this.rates=true;
     },
+    async onUploadImg(ev) {
+        this.isLoading = true
+        let res = await uploadImg(ev);
+        // console.log(res);
+        this.$emit('onSaveImg', res.url)
+        this.isLoading = false
+    }
   }
 };
 </script>

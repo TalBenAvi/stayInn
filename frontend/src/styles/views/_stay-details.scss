@@ -81,7 +81,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    height: 1924px;
+    height: 1177px;
     color: $black;
     border-bottom: $separate solid 1px;
     margin-bottom:50px ; 
@@ -420,9 +420,6 @@
     h1:not(first-of-type) {
         margin-top: 15px;
     }
-
-
-
     span {
         color: $black;
         font-size: 15px;

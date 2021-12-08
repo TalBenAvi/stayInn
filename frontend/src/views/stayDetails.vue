@@ -200,7 +200,6 @@
             </button>
           </div>
         </div>
-        <div class="stay-info-desc">{{ this.stay.summary }}</div>
       </div>
       <div class="stay-reserve-layout">
         <div :style="determinePos">
@@ -281,20 +280,14 @@
               <div
                 @click="reserveStay()"
                 class="check-available"
-                style="
-                  background-position: calc((100 - var(--mouse-x, 0)) * 1%)
-                    calc((100 - var(--mouse-y, 0)) * 1%);
-                  --mouse-x: 81.7031;
-                  --mouse-y: 0;
-                "
-              >
+                style="background-position: calc((100 - var(--mouse-x, 0)) * 1%)calc((100 - var(--mouse-y, 0)) * 1%);--mouse-x: 81.7031;--mouse-y: 0;">
                 <span class="text-avilable">Check availability</span>
               </div>
             </div>
             <div class="charged">You won't be charged yet</div>
             <div class="priceing">
               <div class="underline">${{ this.stay.price }}x 7 nights</div>
-              <div>${{ this.stay.price * 7 }}</div>
+              <div>${{ Number(this.stay.price * 7).toLocaleString() }}</div>
             </div>
             <div class="priceing">
               <div class="underline">Cleaning fee</div>
@@ -307,7 +300,7 @@
             <div class="total">
               <div class="airbnb-medium">Total</div>
               <div class="airbnb-medium">
-                ${{ this.stay.price * 7 + 50 + 100 }}
+                ${{Number(this.stay.price * 7 + 50 + 100).toLocaleString()}} 
               </div>
             </div>
           </div>
@@ -684,14 +677,23 @@ export default {
   },
   computed: {
     determinePos() {
-      if (this.scrollBar >= 580 && this.scrollBar <= 1925) {
+      if (this.scrollBar >= 580 && this.scrollBar <= 1200) {
         return {
-          position: "fixed",
-          "margin-top": -580 + "px",
-          width: 24.5 + "%",
+          position: "relative",
+          "margin-top": this.scrollBar-580 + "px",
+          width: 100 + "%",
         };
-      } else {
-        return { position: "relative" };
+        
+      } 
+      else if (this.scrollBar < 580 ) {
+        return {
+          position: "relative",
+           width: 100 + "%",
+          
+        };
+      }
+      else {
+        return { position: "relative", "margin-top":640 + "px" };
       }
     },
     numOfGuests() {
