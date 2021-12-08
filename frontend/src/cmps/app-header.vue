@@ -21,7 +21,7 @@
         </div>
       </div>
       <div v-if="isTop" class="nav-link" :style="navLinkColor">
-        <span>Places to stay</span>
+        <span>Explore</span>
         <span>Experiences</span>
         <span>Online Experiences</span>
       </div>
@@ -30,21 +30,22 @@
         <form @submit.prevent="">
           <label class="main-search-label" @click="openModal('location')">
             <span>Location</span>
-            <input placeholder="Where are you going?" @input="openModal('s-location')" />
+            <input placeholder="Where are you going?" @input="openModal('s-location')"  v-model="location" />
           </label>
           <label class="main-search-label" @click="openModal()">
             <span>Check in</span>
             <date-picker
-              placeholder="Add dates"
-              v-model="dates"
+              :placeholder="getCheckinDate"
+              @input="renderDates($event)"
+              v-model="checkinDate"
               range
             ></date-picker>
           </label>
           <label class="main-search-label" @click="openModal()">
             <span>Check out</span>
             <input
-            placeholder="Add dates"
-              v-model="dates"
+            :placeholder="getCheckoutDate"
+              v-model="checkoutDate"
               ref="myDatePicker"
               range
             />
@@ -52,7 +53,7 @@
           </label>
           <label class="main-search-label" @click="openModal('guests')">
             <span>Guests</span>
-            <input placeholder="Add guests" />
+            <input :placeholder="getGuestsAmount" />
           </label>
           <div class="expanded circle">
             <img
@@ -103,11 +104,15 @@ export default {
       currPage: "",
       expandedSearch: false,
       clickedOn: "",
-      dates: "",
+      checkinDate: 'Add dates',
+      checkoutDate: 'Add dates',
+      location: '',
+      guests: 'Add guests'
     };
   },
   created() {
-
+    eventBus.$on('selectedLocation', this.setLocation)
+    eventBus.$on('setGuests', this.setGuests)
     this.setCurrPage();
     window.addEventListener("scroll", this.handleScroll);
   },
@@ -172,16 +177,30 @@ export default {
     openModal(of) {
       this.clickedOn = of;
       if (of === 'submit') {
-        if (this.dates) {
-          const dates = [this.dates[0], this.dates[1]]
+        if (this.checkinDate && this.checkoutDate) {
+          const dates = [this.checkinDate, this.checkoutDate]
           eventBus.$emit('setDates', dates)
         }
-        
-
       }
-      
-      // console.log(this.clickedOn)
     },
+      setLocation(location) {
+        this.location = location
+        this.openModal()
+        
+      },
+      renderDates(event) {
+      this.checkinDate = `${new Date(event[0]).getDate()}/${
+        new Date(event[0]).getMonth() + 1
+      }/${new Date(event[0]).getFullYear()}`
+
+      this.checkoutDate = `${new Date(event[1]).getDate()}/${
+        new Date(event[1]).getMonth() + 1
+      }/${new Date(event[1]).getFullYear()}`
+
+      },
+      setGuests(amount) {
+       this.guests = amount
+      }
   },
   computed: {
     logo() {
@@ -220,6 +239,16 @@ export default {
         return { color: "white" };
       }
     },
+    getCheckinDate() {
+      return this.checkinDate
+    },
+        getCheckoutDate() {
+      return this.checkoutDate
+    },
+    getGuestsAmount() {
+      if (!this.guests) return 'Add guests'
+      return this.guests
+    }
   },
   destroyed() {
     window.removeEventListener("scroll", this.handleScroll);
@@ -239,7 +268,7 @@ export default {
         }
       },
       immediate: true,
-    },
+    }
   },
 };
 </script>

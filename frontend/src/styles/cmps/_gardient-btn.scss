@@ -1,0 +1,41 @@
+.mouse-tracking {
+    position: relative;
+    background: linear-gradient(45deg, rgb(189, 30, 89), rgb(189, 30, 89));
+    width: 100%;
+    font-size: 15px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: airbnb-medium;
+    border-radius: 10px;
+    margin: 0 auto;
+    height: 50px;
+    background-color: $brand;
+    margin-bottom: 14px;
+    border: none;
+    border-radius: 25px;
+    color: white;
+    cursor: pointer;
+    outline: none;
+    overflow: hidden;
+}
+.mouse-tracking span {
+    
+    position: relative;
+}
+.mouse-tracking:before {
+    --size: 0;
+    content: '';
+    position: absolute;
+    left: var(--x);
+    top: var(--y);
+    width: var(--size);
+    height: var(--size);
+    background: radial-gradient(circle at center center, rgb(255, 56, 92) 0%, rgb(230, 30, 77) 27.5%, rgb(227, 28, 95) 40%, rgb(215, 4, 102) 57.5%, rgb(189, 30, 89) 75%, rgb(189, 30, 89) 100%) !important;
+    transform: translate(-50%, -50%);
+    transition: width 0.2s ease, height 0.2s ease;
+}
+.mouse-tracking:hover:before {
+    --size: 120px;
+}

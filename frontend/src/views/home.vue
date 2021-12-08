@@ -7,7 +7,7 @@
           <p>Not sure where to go? Perfect.</p>
         </div>
       </div>
-      <button @click="showStays('all')" class="flexible-btn"><span>i'm flexible</span></button>
+      <button @click="showStays('all')" class="flexible-btn"><span>I'm flexible</span></button>
     </div>
 
     <div class="bottom-fold full">
