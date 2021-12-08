@@ -123,3 +123,8 @@ color:$black;
 input {
     outline: 0px solid transparent;
 }
+.underline-border{
+width: 100%;
+border-bottom: $separate solid 0.5px;
+margin-bottom: 50px;
+}

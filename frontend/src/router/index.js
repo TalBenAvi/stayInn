@@ -4,7 +4,10 @@ import home from '../views/home.vue'
 import stayApp from '../views/stayApp.vue'
 import stayDetails from '../views/stayDetails.vue'
 import hostPage from '../views/host.vue'
-// import userTrips from '../views/user-trips.vue'
+import userTrips from '../views/user-trips.vue'
+import accountPage from '../views/user-account.vue'
+import userNotifications from '../views/user-notifications.vue'
+import userWishlist from '../views/user-wishlist.vue'
 Vue.use(VueRouter)
 
 const routes = [
@@ -28,26 +31,26 @@ const routes = [
     name: 'host',
     component: hostPage
   },
-  // {
-  //   path: '/user',
-  //   name: 'user',
-  //   component: userTrips
-  // },
-  // {
-  //   path: '/user/wishlist',
-  //   name: 'user',
-  //   component: userTrips
-  // },
-  // {
-  //   path: '/user/notifications',
-  //   name: 'user',
-  //   component: userTrips
-  // },
-  // {
-  //   path: '/user/trip',
-  //   name: 'user',
-  //   component: userTrips
-  // },
+  {
+    path: '/account',
+    name: 'account',
+    component: accountPage
+  },
+  {
+    path: '/wishlist',
+    name: 'wishlist',
+    component: userWishlist
+  },
+  {
+    path: '/notifications',
+    name: 'notifications',
+    component: userNotifications
+  },
+  {
+    path: '/trip',
+    name: 'trip',
+    component: userTrips
+  },
 
 ]
 
