@@ -18,7 +18,7 @@
 
     }
     // height: 80px;
-    box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
+    box-shadow: rgb(0 0 0 / 8%) 0px 1px 1px;
         .logo-img {
             transition: .5s;
             object-fit: contain;
@@ -60,8 +60,8 @@
                 cursor: pointer;
                 .search-icon {
                     position: absolute;
-                    top: 7px;
-                    right: 7px;
+                    top: 8px;
+                    right: 5px;
                     width: 32px;
                     height: 32px;
                 }
@@ -92,8 +92,8 @@
                 cursor: pointer;
                 .search-icon {
                     position: absolute;
-                    top: 7px;
-                    right: 7px;
+                    top: 8px;
+                    right: 5px;
                     width: 32px;
                     height: 32px;
 
@@ -103,6 +103,7 @@
         }   
 
         .host-options {
+            display: flex;
             cursor: pointer;
  
 
@@ -237,21 +238,25 @@
                 cursor: pointer;
                 .search-icon {
                     position: absolute;
-                    top: 7px;
-                    right: 7px;
+                    top: 8px;
+                    right: 5px;
                     width: 32px;
                     height: 32px;
                 }
             }
         }   
 
+  
+
         .host-options {
+       
+            display: flex;
             cursor: pointer;
  
 
             .become {
                 letter-spacing: 0.1px;
-                margin-inline-end: 25px;
+                // margin-inline-end: 25px;
                 // margin-inline-start: 900px;
                 font-family: airbnb-medium;
                 font-size: 14px;
@@ -262,7 +267,7 @@
         .global img{
             display: flex;
             // margin-inline-start: 1050px;
-            margin-inline-end: 25px;
+            // margin-inline-end: 25px;
             cursor: pointer;
             width: 18px;
             height: 18px;
@@ -272,7 +277,7 @@
             cursor: pointer;
             grid-row: 2;
             top: 40%;
-            left: 50%;
+            left: 48.5%;
             transform: translate(-50%, -50%);
             position: absolute;
             box-shadow: rgb(46 47 48 / 27%) 0px 0px 0.1em 0.04em, rgb(90 125 188 / 5%) 0px 0.25em 1em;
@@ -338,8 +343,8 @@
                 cursor: pointer;
                 .search-icon {
                     position: absolute;
-                    top: 7px;
-                    right: 7px;
+                    top: 8px;
+                    right: 5px;
                     width: 50px;
                     height: 50px;
 
@@ -363,6 +368,7 @@
             }
         }
         .host-options {
+            display: flex;
             cursor: pointer;
  
 
@@ -672,6 +678,11 @@ cursor: pointer;
     transform: translateY(-50%);
     max-width: 25px;
     height: 25px;
+}
+
+.right-nav {
+    display: flex;
+    align-items: center;
 }
 
 
