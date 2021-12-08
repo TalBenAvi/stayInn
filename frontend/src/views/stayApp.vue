@@ -276,7 +276,7 @@
         <div class="all-txt">
           <p class="stay-name flex">
             <span class="left-details-display"
-              >{{ stay.name }}, {{ stay.loc.country }}</span
+              >{{ stay.loc.country }}, {{ stay.name }}</span
             >
             <span class="price-details-display">${{ stay.price }}/ night</span>
           </p>

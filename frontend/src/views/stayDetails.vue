@@ -300,7 +300,7 @@
             <div class="total">
               <div class="airbnb-medium">Total</div>
               <div class="airbnb-medium">
-                ${{ this.stay.price * 7 + 50 + 100 }}
+              ${{ Number(this.stay.price * 7 + 50 + 100).toLocaleString() }}
               </div>
             </div>
           </div>
