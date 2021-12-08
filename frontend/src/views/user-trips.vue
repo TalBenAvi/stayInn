@@ -1,29 +1,27 @@
 <template>
   <div class="host-view">
-    <div class="main-area">
+    <div class="user-trip-main">
       <div class="user-display airbnb">
-       <h1 class="airbnb-medium">Trips</h1>
-       <ul v-if="ordersForDisplay" class="order-container">
-       <li v-for="order in ordersForDisplay" :key="order._id">
+       <h1 class="airbnb-medium header-user-trips">Trips</h1>
+       <div class="flex-row underline-border">
+      <div><button class="button-user-host airbnb-medium font-size-19px spacing-70px-right">Upcoming</button></div>
+      <div><button class="button-user-host airbnb-medium font-size-19px">Past</button></div>
+       </div>
+       <div class="order-container">
+       <div v-for="order in ordersForDisplay" :key="order._id">
         <div class="order-card">
-          <!-- order imgUrl -->
-          <img class="card-img" src=""/>
-          <small class="order-dates">{{ datesForDisplay(
-            //order checkIn
-            ) }}-{{datesForDisplay(
-               //order checkOut
-            )}}</small>
-          <h3 class="order-address">{{
-            //order address
-          <div class="card-bottom">
-              <img class="" src="" />
-              <h3 class="order-name">{{
-                //order stayName
-                  }}</h3>
+          <img class="card-img" src="../assets/imgs/1.jpg"/>
+          <div class="flex-column">
+           <div class="airbnb font-12 gray-color">15/21/21-01/12/21</div>
+          <div class="airbnb-medium border-bottom">hello</div>
+             <div class="flex-row">
+               <div class="center-5"> <img class="small-icon" src="../assets/imgs/1.jpg"/> </div>
+               <div class="airbnb-medium">location name </div>
+             </div>
           </div>
         </div>
-         </li>
-        </ul>
+         </div>
+        </div>
           <div></div>
         </div>
       </div>
@@ -54,7 +52,8 @@ export default {
   },
   computed: {
     ordersForDisplay() {
-      const orders = JSON.parse(JSON.stringify(this.$store.getters.ordersForDisplay));
+      const orders = JSON.parse(JSON.stringify(this.$store.getters.orders));
+      console.log(orders);
       return orders.reverse();
     },
   },

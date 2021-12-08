@@ -81,7 +81,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    height: 1177px;
+    height: 1218px;
     color: $black;
     border-bottom: $separate solid 1px;
     margin-bottom:50px ; 
@@ -130,6 +130,12 @@
     font-family: airbnb-book;
     font-size: 0.95rem;
     border-bottom: $separate solid 1px;
+}
+.stay-info-desc-end{
+    padding-top: 32px;
+    padding-bottom: 14px;
+    font-family: airbnb-book;
+    font-size: 0.95rem;
 }
 .vibrous {
     line-height: 1.25;

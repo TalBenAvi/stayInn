@@ -68,6 +68,9 @@ margin-top: 20px;
 .font-size-19px{
     font-size: 19px;
 }
+.font-12{
+font-size: 12px;
+}
 .flex-row{
     display: flex;
     flex-direction: row;
@@ -122,4 +125,9 @@ color:$black;
 
 input {
     outline: 0px solid transparent;
+}
+.underline-border{
+width: 100%;
+border-bottom: $separate solid 0.5px;
+margin-bottom: 50px;
 }

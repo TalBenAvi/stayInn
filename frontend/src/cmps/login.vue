@@ -3,9 +3,18 @@
     <div @click="openCloseMenu" class="user-options">
       <div class="burger">☰</div>
       <img class="avatar" src="../assets/imgs/icons/avatar.png" />
-      <div v-if="isMenuOpen" class="profile-menu">
+      <div v-if="isMenuOpen">
+        <div v-if="!isUserLogedIn" class="profile-menu">
         <button @click="openLogin">Login</button>
         <button @click="openSignin">Signup</button>
+        </div>
+        <div v-else class="profile-menu">
+        <button class="airbnb-medium" @click="openNotifications">Notifications</button>
+        <button class="airbnb-medium" @click="openTrips">Trips</button>
+        <button class="airbnb-medium" @click="openWishlists">Wishlists</button>
+        <button class="airbnb-medium" @click="openAccount">Account</button>
+        <button class="airbnb-medium" @click="doLogout">Logout</button>
+        </div>
       </div>
     </div>
     <section v-if="isLoginOpen" class="login-modal">
@@ -117,8 +126,8 @@ export default {
     return {
       isMenuOpen: false,
       isLoginOpen: false,
-      isSigninOpen: false,
-      // isSignedUp: true,
+      isUserLogedIn: false,
+      isSigninOpen:false,
       loginCred: {
         username: "",
         password: null,
@@ -130,9 +139,27 @@ export default {
       },
     };
   },
-  //  created() {
-  //   this.loadUsers()
-  // },
+   created() {
+    if (this.$store.getters.loggedinUser){
+      console.log('logedin user');
+       this.isUserLogedIn=true;
+      }
+    else {
+       console.log('no user');
+         this.isUserLogedIn=false;
+    }
+    
+  },
+  mounted(){
+    if (this.$store.getters.loggedinUser){
+      console.log('user connected');
+      this.isUserLogedIn=true;
+      }
+    else {
+       console.log('no user');
+         this.isUserLogedIn=false;
+    }
+  },
    computed: {
     users() {
       return this.$store.getters.users;
@@ -182,6 +209,7 @@ export default {
         // this.$router.push('/')
          this.isLoginOpen = false;
          console.log('mission succeded');
+         this.isUserLogedIn=true;
       } catch(err) {
           console.log(err)
           this.msg = "Failed to login"
@@ -189,6 +217,22 @@ export default {
     },
     doLogout() {
       this.$store.dispatch({ type: "logout" });
+    },
+    openNotifications(){
+      this.$router.push("/notification");
+    },
+    openTrips(){
+    this.$router.push("/trip");
+    },
+    openWishlists(){
+     this.$router.push("/wishlist");
+    },
+    openAccount(){
+     this.$router.push("/account");
+    },
+    doLogout(){
+     sessionStorage.clear();
+      this.isUserLogedIn=false;
     },
     async doSignup() {
       if (!this.signupCred.email || !this.signupCred.password || !this.signupCred.username) {
