@@ -137,7 +137,7 @@
             <div class="airbnb">1 double bed</div>
           </div>
         </div>
-        <div class="stay-info-desc">
+        <div class="stay-info-desc-end">
           <h3>What this place offers</h3>
           <div class="offeres-layout">
             <div class="houseRules-layout">

@@ -1,14 +1,14 @@
 .user-trips {
     padding-top: 120px;
 }
-    h1 {
+    .header-user-trips{
         font-size: rem(32px);
         line-height: rem(36px);
         color: #222222;
         margin-bottom: 50px;
     }
-    button{
-        background-color: inherit;
+    .button-user-host{
+        background-color: transparent;
         border: none;
         outline: none;
         cursor: pointer;
@@ -19,9 +19,12 @@
         flex-direction: row;
         grid-column: 2;
     }
-    main {
-        border-top: 1px solid rgb(235, 235, 235);
-        padding: 16px;
+    .small-icon{
+        height: 30px;
+        width: 30px;
+        border-radius: 50%;
+        margin-left: 10px;
+        margin-right: 10px;
     }
     .order-container {
         display: grid;
@@ -38,7 +41,6 @@
                 max-height: 220px;
                 object-fit: cover;
                 border-radius: 12px 12px 0px 0px;
-                padding-bottom: 25px;
             }
             .order-dates {
                 font-size: 14px;
