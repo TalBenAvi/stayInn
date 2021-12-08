@@ -35,9 +35,8 @@
           <label for="Entire">
             <div class="option-container">
               <button
-                ref="one"
                 class="checkbox"
-                @click="toggleBtn1($event, 'Entire place')"
+                @click="toggleBtn($event, 'Entire place')"
               ></button>
               <div class="option-text">
                 <span>Entire place</span>
@@ -49,9 +48,8 @@
           <label for="Private">
             <div class="option-container">
               <button
-                ref="two"
                 class="checkbox"
-                @click="toggleBtn2($event, 'Private room')"
+                @click="toggleBtn($event, 'Private room')"
               ></button>
               <div class="option-text">
                 <span>Private room</span>
@@ -63,9 +61,8 @@
           <label for="Hotel">
             <div class="option-container">
               <button
-                ref="three"
                 class="checkbox"
-                @click="toggleBtn3($event, 'Hotel room')"
+                @click="toggleBtn($event, 'Hotel room')"
               ></button>
               <div class="option-text">
                 <span>Hotel room</span>
@@ -80,9 +77,8 @@
           <label for="Shared">
             <div class="option-container">
               <button
-                ref="four"
                 class="checkbox"
-                @click="toggleBtn4($event, 'Shared room')"
+                @click="toggleBtn($event, 'Shared room')"
               ></button>
               <div class="option-text">
                 <span>Shared room</span>
@@ -186,34 +182,30 @@
             <div class="property-container">
               <div class="house-contaier">
                 <button
-                  ref="house"
                   class="checkbox"
-                  @click="toggleProperty1($event, 'House')"
+                  @click="toggleProperty($event, 'House')"
                 ></button>
                 <span>House</span>
               </div>
 
               <div class="apartment-container">
                 <button
-                  ref="apartment"
                   class="checkbox"
-                  @click="toggleProperty2($event, 'Apartment')"
+                  @click="toggleProperty($event, 'Apartment')"
                 ></button>
                 <span>Apartment</span>
               </div>
               <div class="hotel-container">
                 <button
-                  ref="hotel"
                   class="checkbox"
-                  @click="toggleProperty3($event, 'Hotel')"
+                  @click="toggleProperty($event, 'Hotel')"
                 ></button>
                 <span>Hotel</span>
               </div>
               <div class="guesthouse-container">
                 <button
-                  ref="villa"
                   class="checkbox"
-                  @click="toggleProperty4($event, 'Villa')"
+                  @click="toggleProperty($event, 'Villa')"
                 ></button>
                 <span>Villa</span>
               </div>
@@ -226,7 +218,7 @@
               <div class="smoking-container">
                 <button
                   ref="smoking"
-                  @click="toggleRule1($event, 'Smoking allowed')"
+                  @click="toggleRule($event, 'Smoking allowed')"
                   class="checkbox"
                 ></button>
                 <span>Smoking allowed</span>
@@ -234,7 +226,7 @@
               <div class="pets-container">
                 <button
                   ref="pets"
-                  @click="toggleRule2($event, 'Pets allowed')"
+                  @click="toggleRule($event, 'Pets allowed')"
                   class="checkbox"
                 ></button>
                 <span>Pets allowed</span>
@@ -242,7 +234,7 @@
               <div class="children-container">
                 <button
                   ref="children"
-                  @click="toggleRule3($event, 'Children allowed')"
+                  @click="toggleRule($event, 'Children allowed')"
                   class="checkbox"
                 ></button>
                 <span>Children allowed</span>
@@ -387,7 +379,7 @@ export default {
           trip,
         });
         this.staysForDisplay = this.$store.getters.staysForDisplay;
-        console.log("after trip:", this.staysForDisplay);
+        // console.log("after trip:", this.staysForDisplay);
       }
       if (this.$route.query.filter) {
         const { filter } = this.$route.query;
@@ -408,9 +400,26 @@ export default {
       }
     },
     toggleModal(type) {
-      if (type === "filter") this.$refs.typeof.classList.toggle("hidden");
-      if (type === "price") this.$refs.price.classList.toggle("hidden");
-      if (type === "filters") this.$refs.filter.classList.toggle("hidden");
+      if (type === "filter") this.$refs.typeof.classList.toggle("hidden"); {
+        if (!this.$refs.typeof.classList.contains('hidden')) {
+          this.$refs.price.classList.add('hidden')
+          this.$refs.filter.classList.add('hidden')
+        }
+      }
+      if (type === "price") this.$refs.price.classList.toggle("hidden"); {
+          if (!this.$refs.price.classList.contains('hidden')) {
+          this.$refs.typeof.classList.add('hidden')
+          this.$refs.filter.classList.add('hidden')
+        }
+
+      }
+      if (type === "filters") this.$refs.filter.classList.toggle("hidden"); {
+          if (!this.$refs.filter.classList.contains('hidden')) {
+          this.$refs.price.classList.add('hidden')
+          this.$refs.typeof.classList.add('hidden')
+        }
+
+      }
     },
     async _filteringBy(event, by, key) {
       if (event.target.classList.contains("checked")) {
@@ -433,21 +442,8 @@ export default {
       });
       this.staysForDisplay = this.$store.getters.staysForDisplay;
     },
-    toggleBtn1(event, by) {
-      this.$refs.one.classList.toggle("checked");
-      this._filteringBy(event, by, "typeOfPlace");
-    },
-    toggleBtn2(event, by) {
-      this.$refs.two.classList.toggle("checked");
-      this._filteringBy(event, by, "typeOfPlace");
-    },
-    toggleBtn3(event, by) {
-      this.$refs.three.classList.toggle("checked");
-      this._filteringBy(event, by, "typeOfPlace");
-    },
-    toggleBtn4(event, by) {
-      this.$refs.four.classList.toggle("checked");
-      this._filteringBy(event, by, "typeOfPlace");
+    toggleBtn(event, by) {
+      this.toggleFilter(event,by,'typeOfPlace')
     },
     handlingScroll() {
       let scrollBarPos = window.top.scrollY;
@@ -457,6 +453,7 @@ export default {
       this.filterBy.price.minPrice = this.value[0];
       this.filterBy.price.maxPrice = this.value[1];
       this._updateStays();
+      this.$refs.price.classList.add('hidden')
     },
     async resetPriceRange() {
       this.filterBy.price.minPrice = 0;
@@ -466,34 +463,16 @@ export default {
     setRoomFilters() {
       this._updateStays();
     },
-    toggleProperty1(event, by) {
-      this.$refs.house.classList.toggle("checked");
-      this._filteringBy(event, by, "propertyType");
+    toggleProperty(event, by) {
+     this.toggleFilter(event,by,'propertyType')
     },
-    toggleProperty2(event, by) {
-      this.$refs.apartment.classList.toggle("checked");
-      this._filteringBy(event, by, "propertyType");
+    toggleRule(event, by) {
+      this.toggleFilter(event,by,'HouseRules')
     },
-    toggleProperty3(event, by) {
-      this.$refs.hotel.classList.toggle("checked");
-      this._filteringBy(event, by, "propertyType");
-    },
-    toggleProperty4(event, by) {
-      this.$refs.villa.classList.toggle("checked");
-      this._filteringBy(event, by, "propertyType");
-    },
-    toggleRule1(event, by) {
-      this.$refs.smoking.classList.toggle("checked");
-      this._filteringBy(event, by, "HouseRules");
-    },
-    toggleRule2(event, by) {
-      this.$refs.pets.classList.toggle("checked");
-      this._filteringBy(event, by, "HouseRules");
-    },
-    toggleRule3(event, by) {
-      this.$refs.children.classList.toggle("checked");
-      this._filteringBy(event, by, "HouseRules");
-    },
+    toggleFilter(event, by, type) {
+      event.target.classList.toggle("checked")
+      this._filteringBy(event, by, type);
+    }
     // toggleHeartColor() {
     //   isHeartRed=!isHeartRed
     //   console.log('isHeartRed:', isHeartRed)
