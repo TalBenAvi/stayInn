@@ -13,6 +13,7 @@ import { uploadImg } from '@/services/imgUpload.service.js'
 
 export default {
 data() {
+    return;
 },
 methods: {
     async onUploadImg(ev) {
