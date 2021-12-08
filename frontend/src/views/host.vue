@@ -78,7 +78,6 @@
               <div class="img1 gray">
                 <label>
                   <input type="file" id="myFile" name="filename" hidden/>
-                  <h3 class="h3-center">Upload Image</h3>
                   </label>
               </div>
               <div class="row1">

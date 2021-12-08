@@ -5,6 +5,9 @@ import stayApp from '../views/stayApp.vue'
 import stayDetails from '../views/stayDetails.vue'
 import hostPage from '../views/host.vue'
 import userTrips from '../views/user-trips.vue'
+import accountPage from '../views/user-account.vue'
+import userNotifications from '../views/user-notifications.vue'
+import userWishlist from '../views/user-wishlist.vue'
 Vue.use(VueRouter)
 
 const routes = [
@@ -29,23 +32,23 @@ const routes = [
     component: hostPage
   },
   {
-    path: '/user',
-    name: 'user',
-    component: userTrips
+    path: '/account',
+    name: 'account',
+    component: accountPage
   },
   {
-    path: '/user/wishlist',
-    name: 'user',
-    component: userTrips
+    path: '/wishlist',
+    name: 'wishlist',
+    component: userWishlist
   },
   {
-    path: '/user/notifications',
-    name: 'user',
-    component: userTrips
+    path: '/notifications',
+    name: 'notifications',
+    component: userNotifications
   },
   {
-    path: '/user/trip',
-    name: 'user',
+    path: '/trip',
+    name: 'trip',
     component: userTrips
   },
 

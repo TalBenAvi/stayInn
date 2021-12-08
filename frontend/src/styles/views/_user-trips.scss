@@ -1,6 +1,6 @@
 .user-trips {
     padding-top: 120px;
-    background-image: url();
+}
     h1 {
         font-size: rem(32px);
         line-height: rem(36px);
@@ -44,18 +44,6 @@
                 padding: 10px;
                 display: flex;
                 align-items: center;
-                .order-picture {
-                    width: 40px;
-                    height: 40px;
-                    border-radius: 5px;
-                }
-                .order-name {
-                    font-size: rem(14px);
-                    padding-left: 10px;
-                    font-family: Circular;
-                    text-align: start;
-                }
             }
         }
     }
-}
