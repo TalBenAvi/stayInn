@@ -58,13 +58,6 @@ export default {
       var date = moment(a).format("MMM DD yyyy");
       return date;
     },
-    async setOrdersProfile(filterBy) {
-      const filterId = filterBy.id;
-      this.orders = await this.$store.dispatch({
-        type: "filterProfile",
-        filterId,
-      });
-    },
     async loadUserOrders() {
       try {
         const orders = await this.$store.dispatch({type:'getUserOrders', userId: this.user._id})
