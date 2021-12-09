@@ -61,7 +61,7 @@ async function update(stay) {
         stay._id = id
         return stay
     } catch (err) {
-        logger.error(`cannot update stay ${stayId}`, err)
+        logger.error(`cannot update stay ${stay}`, err)
         throw err
     }
 }
