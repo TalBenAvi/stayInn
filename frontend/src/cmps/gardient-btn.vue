@@ -1,7 +1,7 @@
 <template>
   <section>
     <button ref="button" class="mouse-tracking check-available" @click="$emit('reserveStay')" @mousemove="set($event)">
-      <span>Check availability</span>
+      <span>Reserve</span>
     </button>
   </section>
 </template>

@@ -53,11 +53,6 @@ export default {
 
   },
   methods: {
-    datesForDisplay(order) {
-      var a = moment(order).format("YYYY-MM-DD");
-      var date = moment(a).format("MMM DD yyyy");
-      return date;
-    },
     async loadUserOrders() {
       try {
         const orders = await this.$store.dispatch({type:'getUserOrders', userId: this.user._id})

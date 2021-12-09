@@ -67,7 +67,7 @@
       </div>
       <div class="right-nav">
                 <div class="host-options" :style="textColor">
-        <p class="become" @click="toHost">Explore</p>
+        <p class="become" @click="showStays">Explore</p>
         <p class="become" @click="toHost">Become a Host</p>
 
       </div>
@@ -205,6 +205,9 @@ export default {
       },
       setGuests(amount) {
        this.guests = amount
+      },
+      showStays() {
+        this.$router.push('/stay')
       }
   },
   computed: {
