@@ -64,7 +64,7 @@
         <div class="head-flex">
           <div class="stay-info-heder">
             <div class="minimal-details">
-              {{ this.stay.TypeOfPlace }} hosted by
+              {{ this.stay.typeOfPlace }} hosted by
               {{ this.stay.host.fullName }}
             </div>
             <div class="location-space">
@@ -753,6 +753,7 @@ export default {
         type: "success",
       };
       eventBus.$emit("showMsg", msg);
+      await this.$store.dispatch({type:'resetTrip'})
     },
   },
   computed: {

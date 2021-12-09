@@ -40,6 +40,22 @@ async function getStayById(req, res) {
   }
 }
 
+// async function getStayByHostId(req, res) {
+//   try {
+//     // console.log('controller ');
+//     const hostId = req.params.id;
+//     const stay = await stayService.getByHostId(hostId);
+//     // stay.review = await reviewService.query({aboutStayId:stayId})
+//     console.log(stay);
+//     res.json(stay)
+//   } catch (err) {
+
+//     logger.error('Failed to get stay', err)
+//     res.status(500).send({ err: 'Failed to get stay' })
+//   }
+// }
+
+
 // POST (add stay)
 async function addStay(req, res) {
   try {
@@ -86,5 +102,6 @@ module.exports = {
   addStay,
   updateStay,
   removeStay,
-  getLabels
+  getLabels,
+  // getStayByHostId
 }

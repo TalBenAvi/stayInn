@@ -337,12 +337,7 @@
             
           </div>
           <div class="host-stays airbnb-medium font-size-19px" v-if="status">
-            <div class="flex-row space-evenly border-bottom">
-              <div>Name</div>
-              <div>Address</div>
-              <div>Price</div>
-              <div>Actions</div>
-            </div>
+              <stays :user="this.currUser"/>
             <!-- here needs to render user data for showing data -->
             <div></div>
           </div>
@@ -369,6 +364,7 @@
 <script>
 // import { uploadImg } from '@/services/imgUpload.service.js'
 import imgUpload from '@/cmps/img-upload'
+import stays from '@/cmps/host/stays.vue'
 
 export default {
   data() {
@@ -377,11 +373,17 @@ export default {
       status:false,
       orders:false,
       rates:false,
-      imgUrls: []
+      imgUrls: [],
+      currUser: null
     };
   },
   components: {
-     imgUpload
+     imgUpload,
+     stays
+  },
+  created() {
+    this.setUser()
+
   },
   methods:{
     showmain(){
@@ -410,7 +412,7 @@ export default {
     },
       saveImg(imgUrl) {
     this.imgUrls.push(imgUrl)
-    }
+    },
     // async onUploadImg(ev) {
     //     this.isLoading = true
     //     let res = await uploadImg(ev);
@@ -418,7 +420,13 @@ export default {
     //     this.$emit('onSaveImg', res.url)
     //     this.isLoading = false
     // }
+    setUser() {
+    let user=  this.$store.getters.loggedinUser
+    this.currUser = user
+    console.log(this.currUser)
   }
+  },
+
 };
 </script>
 

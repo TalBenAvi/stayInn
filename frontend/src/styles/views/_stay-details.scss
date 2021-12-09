@@ -1,6 +1,6 @@
 .stay-details {
     display: grid;
-    grid-template-columns: $layoutPaddingHome minmax(1fr, 1500px) $layoutPaddingHome;
+    grid-template-columns: $layoutPaddingHome minmax(1fr, 1450px) $layoutPaddingHome;
 
     > * {
         grid-column: 2;

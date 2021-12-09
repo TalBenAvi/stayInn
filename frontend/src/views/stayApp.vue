@@ -345,7 +345,7 @@ export default {
           paddingLeft: "105px",
           backgroundColor: "white",
           "margin-top": 0,
-          "box-shadow": "rgb(0 0 0 / 12%) 0px 6px 16px",
+          "box-shadow": "rgb(0 0 0 / 8%) 0px 1px 1px",
           "padding-inline-end": 200 + "px",
           transition: "opacity 0.1s cubic-bezier(0.35, 0, 0.65, 1) 0s",
         };

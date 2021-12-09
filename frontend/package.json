@@ -8,6 +8,7 @@
     "test:unit": "vue-cli-service test:unit"
   },
   "dependencies": {
+    "async_hooks": "^1.0.0",
     "axios": "^0.24.0",
     "cookie-parser": "^1.4.6",
     "core-js": "^3.6.5",

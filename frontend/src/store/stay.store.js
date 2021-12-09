@@ -1,4 +1,5 @@
 
+import { getStayByHostId } from "../../../backend/api/stay/stay.controller.js"
 import {stayService } from "../services/stay.service.js"
 
 export const stayStore = {
@@ -19,7 +20,7 @@ export const stayStore = {
 
             if (state.filterBy) {
                    
-                console.log('filteringby',stays)
+
                 if (state.filterBy.location) {
                     stays = stays.filter((stay) => stay.loc.country.toLowerCase() === state.filterBy.location)
                 }
@@ -60,12 +61,8 @@ export const stayStore = {
 
           
             if(state.filterByTrip) {
-                console.log(state.filterByTrip)
-                console.log(stays)
                 let accommodates = state.filterByTrip.guests.adults + state.filterByTrip.guests.children + state.filterByTrip.guests.infants
                 stays = stays.filter(stay => {
-                    console.log(stay)
-                    console.log('from service:' ,stay.loc.countryCode,'fromStore:', state.filterByTrip.dest.countryCode)
                     return stay.accommodates >= accommodates && stay.loc.countryCode === state.filterByTrip.dest.countryCode
                     
                     
@@ -121,6 +118,18 @@ export const stayStore = {
                 console.log('Had Error getting stay by id in store', err)
                 throw err;
             }
+        },
+        async getStayByHostId({commit}, {hostId}) {
+            try {
+                // var stay = await stayService.getStayByHost(hostId)
+                console.log(stay)
+                return stay
+
+            } catch {
+                console.log('Had Error getting stay by host in store', err)
+                throw err;
+            }
+
         },
         setCurrFilter({commit}, {filterBy}) {
             commit({type:'setFilter', filterBy})
