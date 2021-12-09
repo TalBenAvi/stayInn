@@ -34,7 +34,7 @@
     }
     .order-container {
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
         gap: 15px;
 
         .order-card {
@@ -47,6 +47,7 @@
                 max-height: 220px;
                 object-fit: cover;
                 border-radius: 12px 12px 0px 0px;
+                margin-bottom: 15px;
             }
             .order-dates {
                 font-size: 14px;

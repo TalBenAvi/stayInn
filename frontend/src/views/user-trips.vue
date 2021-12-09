@@ -12,11 +12,13 @@
         <div class="order-card">
           <img class="card-img" src="../assets/imgs/1.jpg"/>
           <div class="flex-column">
-           <div class="airbnb font-12 gray-color spacing-20px-left center-5px font-size-19px">15/21/21-01/12/21</div>
-          <div class="airbnb-medium spacing-20px-left center-5px spacing-15px font-size-25px">location address</div>
-             <div class="flex-row">
+           <div class="airbnb font-12 gray-color spacing-20px-left center-5px font-size-19px">Aug 30- sep 2,2021</div>
+          <div class="airbnb-medium spacing-20px-left center-5px spacing-15px font-size-25px">Amsterdam</div>
+             <div class="flex-row spacing-15px">
                <div class="spacing-10px-left" > <img class="small-icon" src="../assets/imgs/1.jpg"/> </div>
-              <div class="width-90 flex-row space-bettwen"><div class="airbnb-medium center-5px">location name </div> <div><img class="smallest-icon center-5px" src="../assets/imgs/icons/next.png" ></div></div>
+              <div class="width-90 flex-row space-bettwen">
+                <div class="airbnb center-5px">New Luxury  Authentic Amsterdam center...</div>
+               <div><img class="smallest-icon center-5px" src="../assets/imgs/icons/next.png" ></div></div>
              </div>
           </div>
         </div>
