@@ -1,36 +1,35 @@
 
 <template>
-       <div v-if="alive" class="alert" :class="alertClass" >
-        {{msg.txt}}
-    </div>
+         <div v-if="msg" class="user-msg" :class="msg.type">
+             <img v-if="msg.type==='success'" src="~@/assets/imgs/icons/approved.png">
+              <img v-else src="~@/assets/imgs/icons/rejected.png">
+            <p>{{msg.txt}}</p>
+        </div>
 </template>
 
 
 <script>
-import { eventBus, SHOW_MSG } from '../services/eventBus.js'
+import { eventBus } from '../services/eventBus.js'
 
 export default {
     created() {
-        eventBus.$on(SHOW_MSG, msg => {
-            this.msg = msg;
-            var delay = msg.delay || 2000;
-            this.alive = true;
-            setTimeout(() => {
-                this.alive = false;
-            }, delay)
-        })
+        eventBus.$on('showMsg', this.showMsg);
     },
     data() {
         return {
-            alive: false,
             msg: null
         }
     },
-    computed: {
-        alertClass() {
-            if (!this.msg) return;
-            return `alert-${this.msg.type}`
+   methods: {
+        showMsg(msg) {
+            this.msg = msg;
+            setTimeout(() => {
+                this.msg = null;
+            }, 4000);
         }
+    },
+    destroyed() {
+        eventBus.$off('showMsg', this.showMsg);
     }
 }
 </script>
