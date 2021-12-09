@@ -9,6 +9,7 @@ export const stayService = {
     query,
     getStayById,
     // setCurrFilter
+    addReview,
 }
 
 async function query() {
@@ -24,18 +25,20 @@ async function query() {
 }
 
 async function getStayById(stayId) {
+
     try {
-        // var stay = await storageService.get(STAY_KEY, stayId);
         var stay = await httpService.get(`stay/${stayId}`)
+        console.log(stay);
         return stay
-    } catch (err) {
+    }   catch (err) {
         console.log('Had an error getting stay by id (in front-service)', err)
         throw err;
     }
 }
-async function addReview(stayId) {
+async function addReview(review) {
+    console.log(review);
     try {
-        var stay = await httpService.get(`stay/${stayId}`)
+        var stay = await httpService.post(`stay/review/${review.stayId}`,review)
         return stay
     } catch (err) {
         console.log('Had an error getting stay by id (in front-service)', err)

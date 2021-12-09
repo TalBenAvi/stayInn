@@ -51,7 +51,18 @@ async function addStay(req, res) {
     res.status(500).send({ err: 'Failed to add stay' })
   }
 }
+async function addReview(req,res){
+  try {
+    const stay= await stayService.getById(req.params.stayId)
+    stay.reviews.unshift(req.body)
+    const updatedStay = await stayService.update(stay)
+    res.json(updatedStay)
+  } catch (err) {
+    logger.error('Failed to add review', err)
+    res.status(500).send({ err: 'Failed to add reveiw' })
+  }
 
+}
 // PUT (Update stay)
 async function updateStay(req, res) {
   console.log('heyush');
@@ -86,5 +97,6 @@ module.exports = {
   addStay,
   updateStay,
   removeStay,
-  getLabels
+  getLabels,
+  addReview,
 }

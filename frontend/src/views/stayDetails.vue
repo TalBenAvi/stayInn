@@ -64,8 +64,8 @@
         <div class="head-flex">
           <div class="stay-info-heder">
             <div class="minimal-details">
-              {{ this.stay.TypeOfPlace }} hosted by
-              {{ this.stay.host.fullName }}
+              {{ this.stay.typeOfPlace }} hosted by
+              <!-- {{ this.stay.host.fullName }} -->
             </div>
             <div class="location-space">
               {{ this.stay.accommodates }} guests ·
@@ -319,7 +319,7 @@
         {{ this.stay.reviews[0].rate.Value }} · {{ this.stay.reviews.length }} reviews
       </div>
       <div class="reviews-rating-data airbnb">
-        <div class="flex-center space-end">
+        <div class="review-rate-category-grid">
           <div class="spacing-10px-right">Cleanliness</div>
           <div class="gray review-rate-bar">
             <div :style="rateReview"></div>
@@ -328,7 +328,7 @@
             <div>{{ this.stay.reviews[0].rate.Cleanliness }}</div>
           </div>
         </div>
-        <div class="flex-center space-end">
+        <div class="review-rate-category-grid">
           <div class="spacing-10px-right">Communication</div>
           <div class="gray review-rate-bar">
             <div :style="rateReview"></div>
@@ -337,7 +337,7 @@
             <div>{{ this.stay.reviews[0].rate.Communication }}</div>
           </div>
         </div>
-        <div class="flex-center space-end">
+        <div class="review-rate-category-grid">
           <div class="spacing-10px-right">Check-in</div>
           <div class="gray review-rate-bar">
             <div :style="rateReview"></div>
@@ -346,16 +346,16 @@
             <div>{{ this.stay.reviews[0].rate.CheckIn}}</div>
           </div>
         </div>
-        <div class="flex-center space-end">
+        <div class="review-rate-category-grid">
           <div class="spacing-20px-right">Accuracy</div>
           <div class="gray review-rate-bar">
-            <div :style="rateReview"></div>
+            <div  :style="rateReview"></div>
           </div>
           <div class="rate-score">
             <div>{{ this.stay.reviews[0].rate.Accuracy }}</div>
           </div>
         </div>
-        <div class="flex-center space-end">
+        <div class="review-rate-category-grid">
           <div class="spacing-20px-right">Location</div>
           <div class="gray review-rate-bar">
             <div :style="rateReview"></div>
@@ -364,7 +364,7 @@
             <div>{{ this.stay.reviews[0].rate.Location }}</div>
           </div>
         </div>
-        <div class="flex-center space-end">
+        <div class="review-rate-category-grid">
           <div class="spacing-20px-right">Value</div>
           <div class="gray review-rate-bar">
             <div :style="rateReview"></div>
@@ -385,12 +385,12 @@
             </div>
             <div class="center">
               <div class="short-exmple">
-                {{ this.stay.reviews[0].by.fullName }}
+                <!-- {{ this.stay.reviews[0].by.fullName }} -->
               </div>
               <div class="review-date">March 2021</div>
             </div>
           </div>
-          <div>{{ this.stay.reviews[0].txt }}</div>
+          <div  class="vibrous">{{ this.stay.reviews[0].txt }}</div>
         </div>
         <div>
           <div class="flex-row">
@@ -402,12 +402,12 @@
             </div>
             <div class="center">
               <div class="short-exmple">
-                {{ this.stay.reviews[1].by.fullName }}
+                <!-- {{ this.stay.reviews[1].by.fullName }} -->
               </div>
               <div class="review-date">October 2019</div>
             </div>
           </div>
-          <div>{{ this.stay.reviews[1].txt }}</div>
+          <div  class="vibrous">{{ this.stay.reviews[1].txt }}</div>
         </div>
         <div>
           <div class="flex-row">
@@ -419,12 +419,12 @@
             </div>
             <div class="center">
               <div class="short-exmple">
-                {{ this.stay.reviews[2].by.fullName }}
+                <!-- {{ this.stay.reviews[2].by.fullName }} -->
               </div>
               <div class="review-date">November 2020</div>
             </div>
           </div>
-          <div>{{ this.stay.reviews[2].txt }}</div>
+          <div  class="vibrous">{{ this.stay.reviews[2].txt }}</div>
         </div>
         <div>
           <div class="flex-row">
@@ -436,12 +436,12 @@
             </div>
             <div class="center">
               <div class="short-exmple">
-                {{ this.stay.reviews[3].by.fullName }}
+                <!-- {{ this.stay.reviews[3].by.fullName }} -->
               </div>
               <div class="review-date">July 2020</div>
             </div>
           </div>
-          <div>{{ this.stay.reviews[3].txt }}</div>
+          <div  class="vibrous">{{ this.stay.reviews[3].txt }}</div>
         </div>
         <div>
           <div class="flex-row">
@@ -453,12 +453,12 @@
             </div>
             <div class="center">
               <div class="short-exmple">
-                {{ this.stay.reviews[4].by.fullName }}
+                <!-- {{ this.stay.reviews[4].by.fullName }} -->
               </div>
               <div class="review-date">October 2020</div>
             </div>
           </div>
-          <div>{{ this.stay.reviews[4].txt }}</div>
+          <div class="vibrous">{{ this.stay.reviews[4].txt }}</div>
         </div>
         <div>
           <div class="flex-row">
@@ -470,12 +470,12 @@
             </div>
             <div class="center">
               <div class="short-exmple">
-                {{ this.stay.reviews[5].by.fullName }}
+                <!-- {{ this.stay.reviews[5].by.fullName }} -->
               </div>
               <div class="review-date">January 2021</div>
             </div>
           </div>
-          <div>{{ this.stay.reviews[5].txt }}</div>
+          <div  class="vibrous">{{ this.stay.reviews[5].txt }}</div>
         </div>
       </div>
       <div>
@@ -516,7 +516,7 @@
       </div>
       <div>
         <GmapMap
-          :center="pos"
+          :center="this.stay.loc"
           :zoom="12"
           map-type-id="terrain"
           style="width: 1500px; height: 480px; margin-bottom: 80px"
@@ -538,7 +538,7 @@
               </div>
               <div class="center">
                 <div class="short-exmple">
-                  Hosted by {{ this.stay.host.fullName }}
+                  <!-- Hosted by {{ this.stay.host.fullName }} -->
                 </div>
                 <div class="review-date">Joined in August 2013</div>
               </div>
@@ -671,7 +671,10 @@ export default {
   data() {
     return {
       stay: null,
-      pos: { lat: 41.5912, lng: 1.5209 },
+      pos: { 
+        lat:0,
+         lng:0 
+        },
       scrollBar: 0,
       reviewAddOpen: false,
       reviewData:{
@@ -683,7 +686,8 @@ export default {
                 Location : 0,
                Value : 0
             },
-        text:''
+        text:'',
+        stayId:''
       },
       currentTrip: this.$store.getters.currentTrip,
       show: false,
@@ -714,14 +718,12 @@ export default {
   },
   methods: {
      async insertReview(){
+       this.reviewData.stayId=this.stay._id
        try {
-        await this.$store.dispatch({ type: "addReview",userCred:this.reviewData });
-         this.isLoginOpen = false;
-         console.log('mission succeded');
-         this.isUserLogedIn=true;
+        await this.$store.dispatch({ type: "addReview",review:this.reviewData});
       } catch(err) {
           console.log(err)
-          this.msg = "Failed to login"
+          this.msg = "Failed to add review"
       }
     },
     handlingScroll() {
@@ -784,8 +786,7 @@ export default {
     },
     rateReview(){
       let length=(this.stay.reviews[0].rate.Value)/(5/100);
-      console.log(length);
-      return { width: length + "%" };
+      return { width: length-5 + "%" };
     },
     numOfGuests() {
       let amount =
