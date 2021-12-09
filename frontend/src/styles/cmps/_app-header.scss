@@ -432,9 +432,10 @@
     background-color: #fff;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    font-family: airbnb;
+    justify-content: space-evenly;
     position: absolute;
-    top: 110%;
+    top: 120%;
     right: 0;
     width: 220px;
     border-radius: 15px;
@@ -451,6 +452,8 @@
     background-color: #fff;
     font-weight: 500;
     border: none;
+    // border-bottom: solid $separate 0.5px;
+    margin-bottom: 10px;
     cursor: pointer;
 }
 
