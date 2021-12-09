@@ -318,7 +318,7 @@
         <img class="star" src="../assets/imgs/icons/star.jpg" />
         {{ this.stay.reviews[0].rate.Value }} · {{ this.stay.reviews.length }} reviews
       </div>
-      <!-- <div class="reviews-rating-data airbnb">
+      <div class="reviews-rating-data airbnb">
         <div class="flex-center space-end">
           <div class="spacing-10px-right">Cleanliness</div>
           <div class="gray review-rate-bar">
@@ -373,7 +373,7 @@
             <div>{{ this.stay.reviews[0].rate.Value }}</div>
           </div>
         </div>
-      </div> -->
+      </div>
       <div class="reviews-display-data airbnb">
         <div>
           <div class="flex-row">
@@ -479,9 +479,6 @@
         </div>
       </div>
       <div>
-        <!-- <div>
-          <span class="underline airbnb-medium spacing-44px">Show more</span>
-        </div> -->
         <div class="marging-bottom-25">
           <button class="show-more-amenities airbnb-medium">
             show all {{ this.stay.reviews.length }} reviews
