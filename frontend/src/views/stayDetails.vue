@@ -490,7 +490,14 @@
           </button>
           <div v-else>
           <form class="marging-bottom-25" @submit.prevent="insertReview">
-           <div class="marging-bottom-25"> <textarea v-model="reviewData" class="airbnb" id="" cols="80" rows="15"></textarea></div>
+           <div class="flex-row"> 
+             <div class="spacing-20px-right">Cleanliness: <input class="input-stay-rate"  v-model="reviewData.rate.Cleanliness" type="number" min="1" max="5"> </div>
+            <div class="spacing-20px-right">Communication: <input class="input-stay-rate"  v-model="reviewData.rate.Communication" type="number" min="1" max="5"> </div>
+            <div class="spacing-20px-right">CheckIn: <input  class="input-stay-rate" v-model="reviewData.rate.CheckIn" type="number" min="1" max="5"> </div>
+            <div class="spacing-20px-right">Accuracy: <input class="input-stay-rate" v-model="reviewData.rate.Accuracy" type="number" min="1" max="5"> </div>
+            <div class="spacing-20px-right">Location: <input class="input-stay-rate" v-model="reviewData.rate.Location" type="number" min="1" max="5"> </div>
+            <div class="spacing-20px-right marging-bottom-25">Value: <input class="input-stay-rate" v-model="reviewData.rate.Value" type="number" min="1" max="5"> </div></div>
+           <div class="marging-bottom-25"> <textarea v-model="reviewData.text" class="airbnb textarea" cols="200" rows="10"></textarea></div>
           <button class="show-more-amenities airbnb-medium spacing-20px-right">
            save review
           </button>
@@ -667,7 +674,17 @@ export default {
       pos: { lat: 41.5912, lng: 1.5209 },
       scrollBar: 0,
       reviewAddOpen: false,
-      reviewData:'',
+      reviewData:{
+       rate:{
+                Cleanliness :0,
+               Communication : 0,
+                CheckIn : 0,
+               Accuracy : 0,
+                Location : 0,
+               Value : 0
+            },
+        text:''
+      },
       currentTrip: this.$store.getters.currentTrip,
       show: false,
       newOrder: this.$store.getters.emptyOrder,

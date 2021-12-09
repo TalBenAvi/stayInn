@@ -1,6 +1,6 @@
 .stay-details {
     display: grid;
-    grid-template-columns: $layoutPaddingHome minmax(1fr, 1500px) $layoutPaddingHome;
+    grid-template-columns: $layoutPaddingHome minmax(1fr, 1450px) $layoutPaddingHome;
 
     > * {
         grid-column: 2;
@@ -22,7 +22,7 @@
     height: 15px;
 }
 .location-name {
-    width: 1500px;
+    width: 1450px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -34,7 +34,7 @@
 }
 .imgs-layout {
     height: $layoutimgsheight;
-    width: 1500px;
+    width: 1450px;
     display: flex;
     justify-content: center;
     gap: 10px;
@@ -76,7 +76,7 @@
     object-fit: cover;
 }
 .res-details-layout {
-    width: 1500px;
+    width: 1450px;
     margin-top: 45.5px;
     display: flex;
     flex-direction: row;
@@ -301,6 +301,14 @@
     grid-row: 2;
     grid-column: span 2;
 }
+.input-stay-rate{
+    width: 30px;
+}
+.textarea{
+    padding: 10px;
+    border: solid $black 1;
+    border-radius: 15px;
+}
 .check-available {
     cursor: pointer;
     display: flex;
@@ -354,7 +362,7 @@
     margin-top: 15px;
 }
 .reviews-display{
-    width: 1500px;
+    width: 1450px;
     border-bottom: $separate solid 1px;
     margin-bottom:50px ;
 }
@@ -391,7 +399,7 @@
     margin-bottom: 30px;
 }
 .stay-location-map{
-    width: 1500px;
+    width: 1450px;
     border-bottom: $separate solid 1px;
     margin-bottom:50px ; 
 }
