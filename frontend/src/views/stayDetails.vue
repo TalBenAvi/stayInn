@@ -343,11 +343,7 @@
             <div :style="rateReview"></div>
           </div>
           <div class="rate-score">
-<<<<<<< HEAD
-            <div>{{ this.stay.reviews[0].rate }}</div>
-=======
             <div>{{ this.stay.reviews[0].rate.CheckIn}}</div>
->>>>>>> 42601a61a78af13537bdfdcf002779a740831c88
           </div>
         </div>
         <div class="flex-center space-end">
@@ -772,13 +768,8 @@ export default {
         };
       } else return { position: "relative", "margin-top": 640 + "px" };
     },
-<<<<<<< HEAD
-    rateReview() {
-      let length = this.stay.reviews[0].rate / (5 / 100);
-=======
     rateReview(){
       let length=(this.stay.reviews[0].rate.Value)/(5/100);
->>>>>>> 42601a61a78af13537bdfdcf002779a740831c88
       console.log(length);
       return { width: length + "%" };
     },
