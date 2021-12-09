@@ -1,5 +1,5 @@
 
-import { getStayByHostId } from "../../../backend/api/stay/stay.controller.js"
+
 import {stayService } from "../services/stay.service.js"
 
 export const stayStore = {
@@ -123,16 +123,16 @@ export const stayStore = {
                 throw err;
             }
         },
-        async getStayByHostId({commit}, {hostId}) {
-            try {
-                // var stay = await stayService.getStayByHost(hostId)
-                console.log(stay)
-                return stay
+        // async getStayByHostId({commit}, {hostId}) {
+        //     try {
+        //         // var stay = await stayService.getStayByHost(hostId)
+        //         console.log(stay)
+        //         return stay
 
-            } catch {
-                console.log('Had Error getting stay by host in store', err)
-                throw err;
-            }
+        //     } catch {
+        //         console.log('Had Error getting stay by host in store', err)
+        //         throw err;
+        //     }
 
         },
         setCurrFilter({commit}, {filterBy}) {
@@ -153,4 +153,3 @@ export const stayStore = {
         //     }
         // }
     }
-}

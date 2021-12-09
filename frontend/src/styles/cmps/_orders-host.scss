@@ -1,0 +1,11 @@
+.order-headers {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid gray;
+}
+
+.orders-body {
+    height: 500px;
+    width: 100%;
+    background-color: white;
+}

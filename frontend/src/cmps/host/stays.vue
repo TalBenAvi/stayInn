@@ -1,37 +1,53 @@
 <template>
-  <div class="flex-row space-evenly border-bottom">
-    <div>Guest Name</div>
-    <div>Check in</div>
-    <div>Check out</div>
-    <div>Status</div>
+<section>
+    <div class="flex-row space-evenly border-bottom">
+    <div>Name</div>
+    <div>Address</div>
     <div>Price</div>
     <div>Actions</div>
+
   </div>
+      <ul v-for="stay in stays" :key="stay._id" class="hostStays ">
+      <li>{{stay.name}}</li>
+      <li>{{stay.loc.address}}</li>
+      <li>{{stay.price}} $</li>
+      <li>
+        <div class="">Remove</div>
+        <div class="">Edit</div>
+        </li>
+    </ul>
+
+</section>
+
 </template>
 
 <script>
 export default {
-    props: {
-        user: Object
+  props: {
+    user: Object,
+  },
+  data() {
+    return {
+      stays: [],
+    };
+  },
+  created() {
+    console.log(this.user);
+    this.setStays();
+  },
+  methods: {
+    setStays() {
+      this.stays = this.$store.getters.stays;
+      this.getHostStays();
     },
-
-    created() {
-        console.log(this.user)
-        this.setHostStays()
-
+    getHostStays() {
+      let stays = this.stays;
+      let hostStays = stays.filter((stay) => {
+        return stay.host._id === this.user._id;
+      });
+      this.stays = hostStays;
     },
-    methods: {
-        // async setHostStays() {
-        //     try {
-        //         var stays = await this.$store.dispatch({type:'getStayByHostId', hostId: this.user._id})
-        //         console.log(stays)
-        //     } catch (err) {
-        //         console.log('had error setting host stays in component', err)
-        //     }
-        // }
-    }
-
-
-
+  },
+  computed: {},
 };
 </script>

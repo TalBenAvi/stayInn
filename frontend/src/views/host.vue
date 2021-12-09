@@ -342,13 +342,7 @@
             <div></div>
           </div>
           <div class="host-stays airbnb-medium font-size-19px" v-if="orders">
-            <div class="flex-row space-evenly border-bottom">
-              <div>Guest Name</div>
-              <div>Check in</div>
-              <div>Check out</div>
-              <div>Status</div>
-              <div>Price</div>
-              <div>Actions</div>
+            <ordersHost :user="this.currUser"/>
             </div>
             <!-- here needs to render user data for showing data -->
             <div></div>
@@ -358,13 +352,13 @@
         </div>
       </div>
     </div>
-  </div>
 </template>
 
 <script>
 // import { uploadImg } from '@/services/imgUpload.service.js'
 import imgUpload from '@/cmps/img-upload'
 import stays from '@/cmps/host/stays.vue'
+import ordersHost from '@/cmps/host/orders-host.vue'
 
 export default {
   data() {
@@ -379,7 +373,8 @@ export default {
   },
   components: {
      imgUpload,
-     stays
+     stays,
+     ordersHost
   },
   created() {
     this.setUser()

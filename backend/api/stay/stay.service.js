@@ -28,8 +28,6 @@ async function getById(stayId) {
     }
 }
 
-
-
 async function remove(stayId) {
     try {
         const collection = await dbService.getCollection('stays')
@@ -72,6 +70,5 @@ module.exports = {
     getById,
     add,
     update,
-
     // labelQuery
 }

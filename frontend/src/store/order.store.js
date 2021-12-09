@@ -81,6 +81,20 @@ export const orderStore = {
                 console.log('had trouble getting user orders from store', err)
             }
             
+        },
+        async getHostOrders({commit}, {hostId}) {
+
+            try {
+                const orders = await orderService.query() 
+                var hostOrders = orders.filter(order => {
+                    return order.hostId === hostId})
+                console.log(hostOrders)
+                
+            } catch (err) {
+                console.log('had trouble getting host orders from store', err)
+
+
+            }
         }
     }
     
