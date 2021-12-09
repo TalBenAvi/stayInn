@@ -141,9 +141,6 @@
           <h3>What this place offers</h3>
           <div class="offeres-layout">
             <div class="houseRules-layout">
-              <!-- <div class="spacing">{{this.stay.HouseRules[1]}}</div>
-            <div class="spacing">{{this.stay.HouseRules[0]}}</div>
-             <div><img class="star" src="../assets/imgs/icons/no-smoking.png" /> {{this.stay.HouseRules[2]}}</div> -->
               <div class="spacing flex-center">
                 <div class="spacing-10px-right">
                   <img class="icons" src="../assets/imgs/icons/Pool.png" />
@@ -320,7 +317,7 @@
       <div class="reviews-rating-data airbnb">
         <div class="flex-center space-end">
           <div class="spacing-10px-right">Cleanliness</div>
-          <div class="gray review-rate-bar"><div  :style="rateReview"></div></div>
+          <div class="gray review-rate-bar"><div :style="rateReview"></div></div>
           <div class="rate-score">
             <div>{{ this.stay.reviews[0].rate }}</div>
           </div>
@@ -336,7 +333,7 @@
           <div class="spacing-10px-right">Check-in</div>
            <div class="gray review-rate-bar"><div  :style="rateReview"></div></div>
           <div class="rate-score">
-            <div>{{ this.stay.reviews[0].rate }}</div>
+            <div>{{ this.stay.reviews[0].rate}}</div>
           </div>
         </div>
         <div class="flex-center space-end">
@@ -394,7 +391,7 @@
               <div class="review-date">October 2019</div>
             </div>
           </div>
-          <div>{{ this.stay.reviews[1].txt }}</div>
+          <div>{{ this.stay.reviews[0].txt }}</div>
         </div>
         <div>
           <div class="flex-row">
