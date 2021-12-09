@@ -91,7 +91,7 @@
                     <label>
                      <img-upload @onSaveImg="saveImg"></img-upload>
                      <section class="img-list">
-                       <img :style="{height:100+'%'}" v-for="imgUrl in imgUrls" :key="imgUrl" :src="imgUrl" alt="">
+                       <!-- <img :style="{height:100+'%'}" v-for="imgUrl in imgUrls" :key="imgUrl" :src="imgUrl" alt=""> -->
                      </section>
                   </label>
                   </div>
@@ -99,7 +99,7 @@
                     <label>
                      <img-upload @onSaveImg="saveImg"></img-upload>
                      <section class="img-list">
-                       <img :style="{height:100+'%'}" v-for="imgUrl in imgUrls" :key="imgUrl" :src="imgUrl" alt="">
+                       <!-- <img :style="{height:100+'%'}" v-for="imgUrl in imgUrls" :key="imgUrl" :src="imgUrl" alt=""> -->
                      </section>
                   </label>
                   </div>
@@ -109,7 +109,7 @@
                    <label>
                      <img-upload @onSaveImg="saveImg"></img-upload>
                      <section class="img-list">
-                       <img :style="{height:100+'%'}" v-for="imgUrl in imgUrls" :key="imgUrl" :src="imgUrl" alt="">
+                       <!-- <img :style="{height:100+'%'}" v-for="imgUrl in imgUrls" :key="imgUrl" :src="imgUrl" alt=""> -->
                      </section>
                   </label>
                 </div>
@@ -117,7 +117,7 @@
                   <label>
                      <img-upload @onSaveImg="saveImg"></img-upload>
                      <section class="img-list">
-                       <img :style="{height:100+'%'}" v-for="imgUrl in imgUrls" :key="imgUrl" :src="imgUrl" alt="">
+                       <!-- <img :style="{height:100+'%'}" v-for="imgUrl in imgUrls" :key="imgUrl" :src="imgUrl" alt=""> -->
                      </section>
                   </label>
                 </div>
@@ -381,8 +381,8 @@ export default {
     };
   },
   components: {
-  imgUpload
-},
+     imgUpload
+  },
   methods:{
     showmain(){
       this.main=true;
