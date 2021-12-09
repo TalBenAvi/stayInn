@@ -1,0 +1,4350 @@
+[
+  {
+    "name": "Sunflower House",
+    "initials": "SH",
+    "imgUrls": [
+      "1.jpg",
+      "2.jpg",
+      "3.jpg",
+      "4.jpg",
+      "5.jpg",
+      "6.jpg"
+    ],
+    "price": 339,
+    "summary": "Beautiful 4 bedroom architecturally designed villa, with infinity pool and floor to ceiling views in almost every room of the sea and Cap de Creus national park, in beautiful working fishing village in Northern Spain.The space The house has been featured in the New York Times and in Wallpaper.",
+    "propertyType": "Villa",
+    "typeOfPlace": "Entire place",
+    "HouseRules": [
+      "No Smoking",
+      "No pets",
+      "No parties or events"
+    ],
+    "accommodates": 10,
+    "beds": 5,
+    "bedrooms": 4,
+    "bath": 3,
+    "amenities": [
+      "Wifi",
+      "Kitchen",
+      "Washer",
+      "Free parking",
+      "Dryer",
+      "Dedicated workspace",
+      "Iron",
+      "Pool"
+    ],
+    "host": {
+      "_id": "51399391",
+      "fullName": "Geoff",
+      "imgUrl": "https://x.com/pic.jpg"
+    },
+    "loc": {
+      "country": "Spain",
+      "countryCode": "SP",
+      "address": "El Port de la Selva, Catalonia",
+      "lat": 40.416775,
+      "lng": -3.70379,
+      "position": {
+        "lat": 40.416775,
+        "lng": -3.70379
+      }
+    },
+    "reviews": [
+      {
+        "id": "madeId",
+        "txt": "A magnific house with a perfect view. We had a great time at this place. Recommend for family with children",
+        "rate": 4.8,
+        "by": {
+          "_id": "u102",
+          "fullName": "Erin",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "A magnific house with a perfect view. We had a great time at this place. Recommend for family with children",
+        "rate": 4.8,
+        "by": {
+          "_id": "u103",
+          "fullName": "Kiersta",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "A magnific house with a perfect view. We had a great time at this place. Recommend for family with children",
+        "rate": 4.8,
+        "by": {
+          "_id": "u104",
+          "fullName": "Ludovic",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "A magnific house with a perfect view. We had a great time at this place. Recommend for family with children",
+        "rate": 4.8,
+        "by": {
+          "_id": "u105",
+          "fullName": "Emile",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "A magnific house with a perfect view. We had a great time at this place. Recommend for family with children",
+        "rate": 4.8,
+        "by": {
+          "_id": "u104",
+          "fullName": "Maria",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "A magnific house with a perfect view. We had a great time at this place. Recommend for family with children",
+        "rate": 4.8,
+        "by": {
+          "_id": "u105",
+          "fullName": "Konstantin",
+          "imgUrl": "/img/img2.jpg"
+        }
+      }
+    ]
+  }
+  {
+
+    "name": "Carapathian Log Home",
+    "initials": "CLH",
+    "imgUrls": [
+      "1.jpg",
+      "2.jpg",
+      "3.jpg",
+      "4.jpg",
+      "5.jpg",
+      "6.jpg"
+    ],
+    "price": 355,
+    "summary": "Carpathian Log Home is a complex of two identical wooden villas settled on a 2 acres property filled with apple trees, meadows and so close to the forest! Carpathian Log Home is situated on the outskirts of the forest, near the legendary Bran Castle. This villa is a five bedrooms with ensuite bathrooms, amazing high ceiling livingroom with fireplace and glass wall facing the mountains, gourmet kitchen, sauna & jacuzzi, amazing surrounding nature:- this is your perfect holiday home in Romania. The space Carpathian Log Home2 will comfortably accommodate 10 people in the 5 double bedrooms, with space for 4 extra persons on the sleeping sofas in the livingroom.",
+    "propertyType": "House",
+    "typeOfPlace": "Entire place",
+    "HouseRules": [
+      "No Smoking",
+      "Pets are allowed",
+      "No parties or events"
+    ],
+    "accommodates": 12,
+    "beds": 7,
+    "bedrooms": 5,
+    "bath": 5,
+    "amenities": [
+      "Wifi",
+      "Kitchen",
+      "Washer",
+      "Free parking",
+      "Dedicated workspace",
+      "Iron"
+    ],
+    "host": {
+      "_id": "51399391",
+      "fullName": "Emanuela",
+      "imgUrl": "https://x.com/pic.jpg"
+    },
+    "loc": {
+      "country": "Romania",
+      "countryCode": "RM",
+      "address": "Predeluț, Județul Brașov",
+      "lat": 46.568825,
+      "lng": 26.916025,
+      "position": {
+        "lat": 46.568825,
+        "lng": 26.916025
+      }
+    },
+    "reviews": [
+      {
+        "id": "madeId",
+        "txt": "We had a great time in Emanuela’s villa. The communication was great and everything went smoothly. Would definitely recommend! Thank you!!!",
+        "rate": 4.9,
+        "by": {
+          "_id": "u102",
+          "fullName": "Erin",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "We had a great time in Emanuela’s villa. The communication was great and everything went smoothly. Would definitely recommend! Thank you!!!",
+        "rate": 4.9,
+        "by": {
+          "_id": "u103",
+          "fullName": "Kiersta",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "We had a great time in Emanuela’s villa. The communication was great and everything went smoothly. Would definitely recommend! Thank you!!!",
+        "rate": 4.9,
+        "by": {
+          "_id": "u104",
+          "fullName": "Ludovic",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "We had a great time in Emanuela’s villa. The communication was great and everything went smoothly. Would definitely recommend! Thank you!!!",
+        "rate": 4.9,
+        "by": {
+          "_id": "u105",
+          "fullName": "Emile",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "We had a great time in Emanuela’s villa. The communication was great and everything went smoothly. Would definitely recommend! Thank you!!!",
+        "rate": 4.9,
+        "by": {
+          "_id": "u104",
+          "fullName": "Maria",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "We had a great time in Emanuela’s villa. The communication was great and everything went smoothly. Would definitely recommend! Thank you!!!",
+        "rate": 4.9,
+        "by": {
+          "_id": "u105",
+          "fullName": "Konstantin",
+          "imgUrl": "/img/img2.jpg"
+        }
+      }
+    ]
+  }
+  {
+
+    "name": "Shuhe Arcade Ancient Town",
+    "initials": "SAT",
+    "imgUrls": [
+      "1.jpg",
+      "2.jpg",
+      "3.jpg",
+      "4.jpg",
+      "5.jpg",
+      "6.jpg"
+    ],
+    "price": 27,
+    "summary": "The guesthouse has a variety of exquisite rooms with digital TV, private WiFi, private bathrooms in each room, 24 hours hot water, and premium disposable toiletries.All rooms are equipped with hot and cold air-conditioning for your comfort and convenience. The inn provides additional tourist directions, and Puer tea is free to enjoy. Looking forward to meeting you.The space The third floor of the guest house has a sky realm and bohemian terrace, which is the highest view point nearby. The surrounding is unobstructed and overlooks the ancient town. The terrace on the second floor is equipped with a barbecue, so you can gather for dinner and drinks.There is a garden, a fish pond, a tea room, a mahogany machine, a mahogany machine, and a mahogany machine on the ground floor for feeding fish, drinking tea, and playing mahogany.The guest house is built on a hill, so you can enjoy the quietness while still enjoying the convenience of the surrounding area and the traffic. Hope to meet you.",
+    "propertyType": "Villa",
+    "typeOfPlace": "Private room",
+    "HouseRules": [
+      "Smoking allowed",
+      "Pets allowed",
+      "Check-in: Flexible"
+    ],
+    "accommodates": 2,
+    "beds": 1,
+    "bedrooms": 1,
+    "bath": 1,
+    "amenities": [
+      "Wifi",
+      "Kitchen",
+      "Washer",
+      "Free parking",
+      "Dryer",
+      "Dedicated workspace",
+      "Iron",
+      "Pool"
+    ],
+    "host": {
+      "_id": "51399391",
+      "fullName": "博",
+      "imgUrl": "https://x.com/pic.jpg"
+    },
+    "loc": {
+      "country": "Yunnan",
+      "countryCode": "CH",
+      "address": "Lijiang, Yunnan",
+      "lat": 26.8565,
+      "lng": 100.2271,
+      "position": {
+        "lat": 26.8565,
+        "lng": 100.2271
+      }
+    },
+    "reviews": [
+      {
+        "id": "madeId",
+        "txt": "No reviews (yet)",
+        "rate": 0,
+        "by": {
+          "_id": "u102",
+          "fullName": "Erin",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "No reviews (yet)",
+        "rate": 0,
+        "by": {
+          "_id": "u103",
+          "fullName": "Kiersta",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "No reviews (yet)",
+        "rate": 0,
+        "by": {
+          "_id": "u104",
+          "fullName": "Ludovic",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "No reviews (yet)",
+        "rate": 0,
+        "by": {
+          "_id": "u105",
+          "fullName": "Emile",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "No reviews (yet)",
+        "rate": 0,
+        "by": {
+          "_id": "u104",
+          "fullName": "Maria",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "No reviews (yet)",
+        "rate": 0,
+        "by": {
+          "_id": "u105",
+          "fullName": "Konstantin",
+          "imgUrl": "/img/img2.jpg"
+        }
+      }
+    ]
+  }
+  {
+
+    "name": "Stylish Trullo with pool & terrace",
+    "initials": "STP",
+    "imgUrls": [
+      "1.jpg",
+      "2.jpg",
+      "3.jpg",
+      "4.jpg",
+      "5.jpg",
+      "6.jpg"
+    ],
+    "price": 60,
+    "summary": "The \"Trullo\" is an Rural local abitation. Will allow you to spend a romantic stay in this building feature Pugliese. The Trullo is completely independent and inside there is a bathroom, a kitchenette and an outdoor area is completed with table and chairs.The pool is shared with only 2 other apartments in the same building: Lamia and Modern Apartment (visible in my other listings here on airbnb)",
+    "propertyType": "Trullo",
+    "typeOfPlace": "Trullo",
+    "HouseRules": [
+      "Pets allowed",
+      "Check-in: 4:00 PM - 12:00 AM",
+      "Checkout: 11:00 AM"
+    ],
+    "accommodates": 2,
+    "beds": 1,
+    "bedrooms": 1,
+    "bath": 1,
+    "amenities": [
+      "Wifi",
+      "Kitchen",
+      "Free parking",
+      "Pool"
+    ],
+    "host": {
+      "_id": "51399391",
+      "fullName": "Angelo",
+      "imgUrl": "https://x.com/pic.jpg"
+    },
+    "loc": {
+      "country": "Italy",
+      "countryCode": "IT",
+      "address": "Ostuni, Apúlia",
+      "lat": 40.7295,
+      "lng": 7.578,
+      "position": {
+        "lat": 40.7295,
+        "lng": 7.578
+      }
+    },
+    "reviews": [
+      {
+        "id": "madeId",
+        "txt": "Great location, great place and the hosts were so kind and helpful. Definitely recommend.",
+        "rate": 4.54,
+        "by": {
+          "_id": "u102",
+          "fullName": "Erin",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "Great location, great place and the hosts were so kind and helpful. Definitely recommend.",
+        "rate": 4.54,
+        "by": {
+          "_id": "u103",
+          "fullName": "Kiersta",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "Great location, great place and the hosts were so kind and helpful. Definitely recommend.",
+        "rate": 4.54,
+        "by": {
+          "_id": "u104",
+          "fullName": "Ludovic",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "Great location, great place and the hosts were so kind and helpful. Definitely recommend.",
+        "rate": 4.54,
+        "by": {
+          "_id": "u105",
+          "fullName": "Emile",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "Great location, great place and the hosts were so kind and helpful. Definitely recommend.",
+        "rate": 4.54,
+        "by": {
+          "_id": "u104",
+          "fullName": "Maria",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "Great location, great place and the hosts were so kind and helpful. Definitely recommend.",
+        "rate": 4.54,
+        "by": {
+          "_id": "u105",
+          "fullName": "Konstantin",
+          "imgUrl": "/img/img2.jpg"
+        }
+      }
+    ]
+  }
+  {
+
+    "name": "Tiny house Zhorec nearby Bezdružic",
+    "initials": "THZ",
+    "imgUrls": [
+      "1.jpg",
+      "2.jpg",
+      "3.jpg",
+      "4.jpg",
+      "5.jpg",
+      "6.jpg"
+    ],
+    "price": 40,
+    "summary": "Come to enjoy non-traditional accommodation in the former military tiny house in Zhorec near Bezdruzice in our garden surrounded by meadows and forests. This simple accommodation with a base equipped kitchen, outdoor toilet and shower, which is a supplement but separate to our existing accommodation in the cottage. Possibility of barbecue and relaxation, privacy guaranteed :) We have the electricity and possibility to heat it up. Appreciated by adventurers and enthusiasts for romance in nature.The space Simple equipment, kitchenette, electricity, the possibility of using outdoor areas and a fireplace",
+    "propertyType": "Entire place",
+    "typeOfPlace": "Camper/RV",
+    "HouseRules": [
+      "No Smoking",
+      "No pets",
+      "No parties or events"
+    ],
+    "accommodates": 2,
+    "beds": 1,
+    "bedrooms": 1,
+    "bath": 1,
+    "amenities": [
+      "Kitchen",
+      "Dedicated workspace",
+      "Pool"
+    ],
+    "host": {
+      "_id": "51399391",
+      "fullName": "Gabriela",
+      "imgUrl": "https://x.com/pic.jpg"
+    },
+    "loc": {
+      "country": "Czechia",
+      "countryCode": "CZ",
+      "address": "Bezdružice, Plzeňský kraj",
+      "lat": 49.9067,
+      "lng": 12.9713,
+      "position": {
+        "lat": 49.9067,
+        "lng": 12.9713
+      }
+    },
+    "reviews": [
+      {
+        "id": "madeId",
+        "txt": "A beautiful place to relax and just enjoy the mesmerizing countryside :)",
+        "rate": 4.86,
+        "by": {
+          "_id": "u102",
+          "fullName": "Erin",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "A beautiful place to relax and just enjoy the mesmerizing countryside :)",
+        "rate": 4.86,
+        "by": {
+          "_id": "u103",
+          "fullName": "Kiersta",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "A beautiful place to relax and just enjoy the mesmerizing countryside :)",
+        "rate": 4.86,
+        "by": {
+          "_id": "u104",
+          "fullName": "Ludovic",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "A beautiful place to relax and just enjoy the mesmerizing countryside :)",
+        "rate": 4.86,
+        "by": {
+          "_id": "u105",
+          "fullName": "Emile",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "A beautiful place to relax and just enjoy the mesmerizing countryside :)",
+        "rate": 4.86,
+        "by": {
+          "_id": "u104",
+          "fullName": "Maria",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "A beautiful place to relax and just enjoy the mesmerizing countryside :)",
+        "rate": 4.86,
+        "by": {
+          "_id": "u105",
+          "fullName": "Konstantin",
+          "imgUrl": "/img/img2.jpg"
+        }
+      }
+    ]
+  }
+  {
+
+    "name": "Nuit insolite sous les étoiles",
+    "initials": "NISSLE",
+    "imgUrls": [
+      "1.jpg",
+      "2.jpg",
+      "3.jpg",
+      "4.jpg",
+      "5.jpg",
+      "6.jpg"
+    ],
+    "price": 125,
+    "summary": "Nestled in the heart of the Famenne, our dome welcomes you in a setting of greenery and flowers.Caroline, Christophe and their tribe of girls prepare this cocoon with love for you to spend a moment out of time : disconnect from everyday life, slow down for a night and reconnect with nature and the stars.Wake up with the first rays of the sun, the birds singing and the smell of flowers.Local breakfast, organic and optional house, as well as evening meals.",
+    "propertyType": "Dome house",
+    "typeOfPlace": "Dome house",
+    "HouseRules": [
+      "No Smoking",
+      "No pets",
+      "No parties or events"
+    ],
+    "accommodates": 2,
+    "beds": 1,
+    "bedrooms": 1,
+    "bath": 1,
+    "amenities": [
+      "Free parking"
+    ],
+    "host": {
+      "_id": "51399391",
+      "fullName": "Caroline",
+      "imgUrl": "https://x.com/pic.jpg"
+    },
+    "loc": {
+      "country": "Belgium",
+      "countryCode": "BG",
+      "address": "Aye, Wallonie",
+      "lat": 50.2249,
+      "lng": 5.297,
+      "position": {
+        "lat": 50.2249,
+        "lng": 5.297
+      }
+    },
+    "reviews": [
+      {
+        "id": "madeId",
+        "txt": "We spent a warm night surrounded by lots of little attention which we really enjoy. My partner and I highly recommend",
+        "rate": 5,
+        "by": {
+          "_id": "u102",
+          "fullName": "Erin",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "We spent a warm night surrounded by lots of little attention which we really enjoy. My partner and I highly recommend",
+        "rate": 5,
+        "by": {
+          "_id": "u103",
+          "fullName": "Kiersta",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "We spent a warm night surrounded by lots of little attention which we really enjoy. My partner and I highly recommend",
+        "rate": 5,
+        "by": {
+          "_id": "u104",
+          "fullName": "Ludovic",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "We spent a warm night surrounded by lots of little attention which we really enjoy. My partner and I highly recommend",
+        "rate": 5,
+        "by": {
+          "_id": "u105",
+          "fullName": "Emile",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "We spent a warm night surrounded by lots of little attention which we really enjoy. My partner and I highly recommend",
+        "rate": 5,
+        "by": {
+          "_id": "u104",
+          "fullName": "Maria",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "We spent a warm night surrounded by lots of little attention which we really enjoy. My partner and I highly recommend",
+        "rate": 5,
+        "by": {
+          "_id": "u105",
+          "fullName": "Konstantin",
+          "imgUrl": "/img/img2.jpg"
+        }
+      }
+    ]
+  }
+  {
+
+    "name": "Apartma Zemljanka - Earth House",
+    "initials": "AP",
+    "imgUrls": [
+      "1.jpg",
+      "2.jpg",
+      "3.jpg",
+      "4.jpg",
+      "5.jpg",
+      "6.jpg"
+    ],
+    "price": 78,
+    "summary": "With a tiring life-rhythm, constant worries, always new burdens and obligations, there is always a need to find time for REST and RELAXATION. Outside the citys hustle and bustle, in the middle of a beautiful landscape in Razkrižje, there is a modern EARTH- / HOBIT HOUSE, that impresses every guest. It is entirely built of natural materials (CLAY, WOOD, ...). Love for creativity and nature can be felt at every step. The evidences are handcrafted \"masterpieces\" in the earth and around it.The space Surrounding ecological plantations of apples and blueberries also give a special note to the earth house. In the Razkrižje \"oasis\" of peace even those who love the noble drop will not be disappointed. In the evenings you can enjoy the selected home-made wine on the terrace, with a view of the surrounding area.In the surrounding areas, you will also be able to find various water activities, since the Apartment Zemljanka is near Therme Sveti Martin na Muri (Croatia), Terme Banovci, Terme Lendava and Bioterme Mala Nedelja.This way you can charge your batteries and get new élan for carrying out your everyday tasks!",
+    "propertyType": "Rental unit",
+    "typeOfPlace": "Entire place",
+    "HouseRules": [
+      "No Smoking",
+      "No pets",
+      "No parties or events"
+    ],
+    "accommodates": 4,
+    "beds": 2,
+    "bedrooms": 1,
+    "bath": 1,
+    "amenities": [
+      "Wifi",
+      "Kitchen",
+      "TV",
+      "Free parking"
+    ],
+    "host": {
+      "_id": "51399391",
+      "fullName": "Mirko",
+      "imgUrl": "https://x.com/pic.jpg"
+    },
+    "loc": {
+      "country": "Slovenia",
+      "countryCode": "SL",
+      "address": "Ljutomer",
+      "lat": 46.5194,
+      "lng": 16.1978,
+      "position": {
+        "lat": 46.5194,
+        "lng": 16.1978
+      }
+    },
+    "reviews": [
+      {
+        "id": "madeId",
+        "txt": "Very fascinating house and definitely worth seeing.Everything available that you need and extremely nice and caring hosts.",
+        "rate": 4.98,
+        "by": {
+          "_id": "u102",
+          "fullName": "Erin",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "Very fascinating house and definitely worth seeing.Everything available that you need and extremely nice and caring hosts.",
+        "rate": 4.98,
+        "by": {
+          "_id": "u103",
+          "fullName": "Kiersta",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "Very fascinating house and definitely worth seeing.Everything available that you need and extremely nice and caring hosts.",
+        "rate": 4.98,
+        "by": {
+          "_id": "u104",
+          "fullName": "Ludovic",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "Very fascinating house and definitely worth seeing.Everything available that you need and extremely nice and caring hosts.",
+        "rate": 4.98,
+        "by": {
+          "_id": "u105",
+          "fullName": "Emile",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "Very fascinating house and definitely worth seeing.Everything available that you need and extremely nice and caring hosts.",
+        "rate": 4.98,
+        "by": {
+          "_id": "u104",
+          "fullName": "Maria",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "Very fascinating house and definitely worth seeing.Everything available that you need and extremely nice and caring hosts.",
+        "rate": 4.98,
+        "by": {
+          "_id": "u105",
+          "fullName": "Konstantin",
+          "imgUrl": "/img/img2.jpg"
+        }
+      }
+    ]
+  }
+  {
+
+    "name": "Schneekarhuette - Tower Suite",
+    "initials": "STS",
+    "imgUrls": [
+      "1.jpg",
+      "2.jpg",
+      "3.jpg",
+      "4.jpg",
+      "5.jpg",
+      "6.jpg"
+    ],
+    "price": 563,
+    "summary": "The Schneekarhütte is located on a, if not the most beautiful,viewing plateau at the top of the ski area. The outstanding pyramid construction was designed bythe focus is on organic, sustainable foods- if possible from our own farm.Since 2012, there are 10 unique suites to choosefrom. To be the first on the slopes in the morning before everyoneelse comes up - this is only available here.",
+    "propertyType": "Private room",
+    "typeOfPlace": "Private room in hut",
+    "HouseRules": [
+      "No Smoking"
+    ],
+    "accommodates": 2,
+    "beds": 1,
+    "bedrooms": 1,
+    "bath": 1,
+    "amenities": [
+      "Wifi",
+      "Kitchen",
+      "TV",
+      "Free parking",
+      "Dedicated workspace"
+    ],
+    "host": {
+      "_id": "51399391",
+      "fullName": "Marie-Luise",
+      "imgUrl": "https://x.com/pic.jpg"
+    },
+    "loc": {
+      "country": "Austria",
+      "countryCode": "AU",
+      "address": "Mayrhofen, Tirol",
+      "lat": 47.1605,
+      "lng": 11.8597,
+      "position": {
+        "lat": 47.1605,
+        "lng": 11.8597
+      }
+    },
+    "reviews": [
+      {
+        "id": "madeId",
+        "txt": "No reviews (yet)",
+        "rate": 0,
+        "by": {
+          "_id": "u102",
+          "fullName": "Erin",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "No reviews (yet)",
+        "rate": 0,
+        "by": {
+          "_id": "u103",
+          "fullName": "Kiersta",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "No reviews (yet)",
+        "rate": 0,
+        "by": {
+          "_id": "u104",
+          "fullName": "Ludovic",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "No reviews (yet)",
+        "rate": 0,
+        "by": {
+          "_id": "u105",
+          "fullName": "Emile",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "No reviews (yet)",
+        "rate": 0,
+        "by": {
+          "_id": "u104",
+          "fullName": "Maria",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "No reviews (yet)",
+        "rate": 0,
+        "by": {
+          "_id": "u105",
+          "fullName": "Konstantin",
+          "imgUrl": "/img/img2.jpg"
+        }
+      }
+    ]
+  }
+  {
+
+    "name": "Invisible House Joshua Tree - Skyscraper with Pool",
+    "initials": "IHJT",
+    "imgUrls": [
+      "1.jpg",
+      "2.jpg",
+      "3.jpg",
+      "4.jpg",
+      "5.jpg",
+      "6.jpg"
+    ],
+    "price": 949,
+    "summary": "Quite simply, Invisible House is the most spectacular house in Joshua Tree. As seen in design and lifestyle publications worldwide, this mirrored 22 story horizontal skyscraper virtually disappears into the vast desert landscape. The luxurious 100-foot indoor swimming pool contrasts with the High Desert surroundings. The 90 acre property has its own 4000ft mountain and shares half a mile border with the National Park.The word unique is insufficient. Welcome to Invisible House.",
+    "propertyType": "Residential home",
+    "typeOfPlace": "Entire place",
+    "HouseRules": [
+      "No Smoking",
+      "No pets"
+    ],
+    "accommodates": 8,
+    "beds": 4,
+    "bedrooms": 4,
+    "bath": 5,
+    "amenities": [
+      "Wifi",
+      "TV",
+      "Kitchen",
+      "Washer",
+      "Free parking",
+      "Dryer",
+      "Dedicated workspace",
+      "Iron",
+      "Pool"
+    ],
+    "host": {
+      "_id": "51399391",
+      "fullName": "Foxden Hospitality",
+      "imgUrl": "https://x.com/pic.jpg"
+    },
+    "loc": {
+      "country": "Usa",
+      "countryCode": "US",
+      "address": "Joshua Tree, California",
+      "lat": 34.1347,
+      "lng": 116.3131,
+      "position": {
+        "lat": 34.1347,
+        "lng": 116.3131
+      }
+    },
+    "reviews": [
+      {
+        "id": "madeId",
+        "txt": "Fabulous house in a fabulous location! Really fun weekend! :)",
+        "rate": 4.82,
+        "by": {
+          "_id": "u102",
+          "fullName": "Erin",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "Fabulous house in a fabulous location! Really fun weekend! :)",
+        "rate": 4.82,
+        "by": {
+          "_id": "u103",
+          "fullName": "Kiersta",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "Fabulous house in a fabulous location! Really fun weekend! :)",
+        "rate": 4.82,
+        "by": {
+          "_id": "u104",
+          "fullName": "Ludovic",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "Fabulous house in a fabulous location! Really fun weekend! :)",
+        "rate": 4.82,
+        "by": {
+          "_id": "u105",
+          "fullName": "Emile",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "Fabulous house in a fabulous location! Really fun weekend! :)",
+        "rate": 4.82,
+        "by": {
+          "_id": "u104",
+          "fullName": "Maria",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "Fabulous house in a fabulous location! Really fun weekend! :)",
+        "rate": 4.82,
+        "by": {
+          "_id": "u105",
+          "fullName": "Konstantin",
+          "imgUrl": "/img/img2.jpg"
+        }
+      }
+    ]
+  }
+  {
+
+    "name": "Cabane Drommen - L'Arbre à Cabane",
+    "initials": "CD",
+    "imgUrls": [
+      "1.jpg",
+      "2.jpg",
+      "3.jpg",
+      "4.jpg",
+      "5.jpg",
+      "6.jpg"
+    ],
+    "price": 89,
+    "summary": "Discover the magical world of the Drommen hut, unique in France. With 4 levels :the living room, then the toilet, then the bedroom.Guests can dine on the perched terrace.",
+    "propertyType": "Treehouse",
+    "typeOfPlace": "Treehouse",
+    "HouseRules": [
+      "No Smoking",
+      "No pets",
+      "No parties or events"
+    ],
+    "accommodates": 2,
+    "beds": 1,
+    "bedrooms": 1,
+    "bath": 0,
+    "amenities": [
+      "Free parking"
+    ],
+    "host": {
+      "_id": "51399391",
+      "fullName": "Jean-Marie",
+      "imgUrl": "https://x.com/pic.jpg"
+    },
+    "loc": {
+      "country": "France",
+      "countryCode": "FR",
+      "address": "Guyonvelle, Grand Est",
+      "lat": 34.1347,
+      "lng": 116.3131,
+      "position": {
+        "lat": 34.1347,
+        "lng": 116.3131
+      }
+    },
+    "reviews": [
+      {
+        "id": "madeId",
+        "txt": "Charming tree house! Don’t hesitate to come, it was a great experience.",
+        "rate": 4.73,
+        "by": {
+          "_id": "u102",
+          "fullName": "Erin",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "Charming tree house! Don’t hesitate to come, it was a great experience.",
+        "rate": 4.73,
+        "by": {
+          "_id": "u103",
+          "fullName": "Kiersta",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "Charming tree house! Don’t hesitate to come, it was a great experience.",
+        "rate": 4.73,
+        "by": {
+          "_id": "u104",
+          "fullName": "Ludovic",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "Charming tree house! Don’t hesitate to come, it was a great experience.",
+        "rate": 4.73,
+        "by": {
+          "_id": "u105",
+          "fullName": "Emile",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "Charming tree house! Don’t hesitate to come, it was a great experience.",
+        "rate": 4.73,
+        "by": {
+          "_id": "u104",
+          "fullName": "Maria",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "Charming tree house! Don’t hesitate to come, it was a great experience.",
+        "rate": 4.73,
+        "by": {
+          "_id": "u105",
+          "fullName": "Konstantin",
+          "imgUrl": "/img/img2.jpg"
+        }
+      }
+    ]
+  }
+  {
+
+    "name": "La Réserve de l'Aube - Hébergement Insolite Design",
+    "initials": "LRDI",
+    "imgUrls": [
+      "1.jpg",
+      "2.jpg",
+      "3.jpg",
+      "4.jpg",
+      "5.jpg",
+      "6.jpg"
+    ],
+    "price": 247,
+    "summary": "Our accommodations are unusual ecological constructions of great comfort in wood and glass nestled in a green setting in the Dawn, at the gates of Champagne. They all have a large equipped terrace where you can relax and enjoy your meals (optional from €19) and breakfasts (included) in baskets served on request. Guests have free access to the swimming pool area, private deckchairs and bar and snack service",
+    "propertyType": "Villa",
+    "typeOfPlace": "Entire place",
+    "HouseRules": [
+      "No Smoking",
+      "No pets",
+      "No parties or events"
+    ],
+    "accommodates": 2,
+    "beds": 1,
+    "bedrooms": 1,
+    "bath": 1,
+    "amenities": [
+      "Free parking",
+      "Pool"
+    ],
+    "host": {
+      "_id": "51399391",
+      "fullName": "Christophe",
+      "imgUrl": "https://x.com/pic.jpg"
+    },
+    "loc": {
+      "country": "France",
+      "countryCode": "FR",
+      "address": "Villenauxe-la-Grande, Grand Est",
+      "lat": 48.5896,
+      "lng": 3.5532,
+      "position": {
+        "lat": 48.5896,
+        "lng": 3.5532
+      }
+    },
+    "reviews": [
+      {
+        "id": "madeId",
+        "txt": "It was one of the best spot i’ve ever had and see in my life. Like something from other plant and feels like home. Wanna stay there more nights but we’ve got back to Paris. Highly recommended.",
+        "rate": 5,
+        "by": {
+          "_id": "u102",
+          "fullName": "Erin",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "It was one of the best spot i’ve ever had and see in my life. Like something from other plant and feels like home. Wanna stay there more nights but we’ve got back to Paris. Highly recommended.",
+        "rate": 5,
+        "by": {
+          "_id": "u103",
+          "fullName": "Kiersta",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "It was one of the best spot i’ve ever had and see in my life. Like something from other plant and feels like home. Wanna stay there more nights but we’ve got back to Paris. Highly recommended.",
+        "rate": 5,
+        "by": {
+          "_id": "u104",
+          "fullName": "Ludovic",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "It was one of the best spot i’ve ever had and see in my life. Like something from other plant and feels like home. Wanna stay there more nights but we’ve got back to Paris. Highly recommended.",
+        "rate": 5,
+        "by": {
+          "_id": "u105",
+          "fullName": "Emile",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "It was one of the best spot i’ve ever had and see in my life. Like something from other plant and feels like home. Wanna stay there more nights but we’ve got back to Paris. Highly recommended.",
+        "rate": 5,
+        "by": {
+          "_id": "u104",
+          "fullName": "Maria",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "It was one of the best spot i’ve ever had and see in my life. Like something from other plant and feels like home. Wanna stay there more nights but we’ve got back to Paris. Highly recommended.",
+        "rate": 5,
+        "by": {
+          "_id": "u105",
+          "fullName": "Konstantin",
+          "imgUrl": "/img/img2.jpg"
+        }
+      }
+    ]
+  }
+  {
+
+    "name": "Amazing view of fjord & mountains glamping Birdbox",
+    "initials": "AVOF",
+    "imgUrls": [
+      "1.jpg",
+      "2.jpg",
+      "3.jpg",
+      "4.jpg",
+      "5.jpg",
+      "6.jpg"
+    ],
+    "price": 269,
+    "summary": "Enjoy the relaxed and comfortable enclosure of the Birdbox. Sleep right beside nature and its amazing surroundings. Lay down and look at the spectacular mountains all around you. Put on your skis and have a breathtaking journey around the nearby trails. Hike down to Langelandsvatnet in the summer and enjoy swimming in energizing water. Your imagination is the limit for what you can experience.",
+    "propertyType": "Villa",
+    "typeOfPlace": "Treehouse",
+    "HouseRules": [
+      "No Smoking",
+      "No pets",
+      "No parties or events"
+    ],
+    "accommodates": 2,
+    "beds": 1,
+    "bedrooms": 1,
+    "bath": 1,
+    "amenities": [
+      "Kitchen",
+      "Free parking"
+    ],
+    "host": {
+      "_id": "51399391",
+      "fullName": "Siv",
+      "imgUrl": "https://x.com/pic.jpg"
+    },
+    "loc": {
+      "country": "Norway",
+      "countryCode": "NO",
+      "address": "Gaular, Sogn og Fjordane",
+      "lat": 61.3451,
+      "lng": 5.7575,
+      "position": {
+        "lat": 61.3451,
+        "lng": 5.7575
+      }
+    },
+    "reviews": [
+      {
+        "id": "madeId",
+        "txt": "Amazing place and amazing views! Friendly and helpful host.",
+        "rate": 4.99,
+        "by": {
+          "_id": "u102",
+          "fullName": "Erin",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "Amazing place and amazing views! Friendly and helpful host.",
+        "rate": 4.99,
+        "by": {
+          "_id": "u103",
+          "fullName": "Kiersta",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "Amazing place and amazing views! Friendly and helpful host.",
+        "rate": 4.99,
+        "by": {
+          "_id": "u104",
+          "fullName": "Ludovic",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "Amazing place and amazing views! Friendly and helpful host.",
+        "rate": 4.99,
+        "by": {
+          "_id": "u105",
+          "fullName": "Emile",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "Amazing place and amazing views! Friendly and helpful host.",
+        "rate": 4.99,
+        "by": {
+          "_id": "u104",
+          "fullName": "Maria",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "Amazing place and amazing views! Friendly and helpful host.",
+        "rate": 4.99,
+        "by": {
+          "_id": "u105",
+          "fullName": "Konstantin",
+          "imgUrl": "/img/img2.jpg"
+        }
+      }
+    ]
+  }
+  {
+
+    "name": "Kalle's Inn Glassshouses",
+    "initials": "KLG",
+    "imgUrls": [
+      "1.jpg",
+      "2.jpg",
+      "3.jpg",
+      "4.jpg",
+      "5.jpg",
+      "6.jpg"
+    ],
+    "price": 566,
+    "summary": "Unique Prism shaped glasshouses with fantastic view over The Gulf of Bothnia. Heated glass will guarantee you a clear view in any weather. Motorized luxury beds will ensure that you can enjoy your stay watching seals, stars, birds. In winter time Aurora Borealis if you are lucky and in summer time the midnight sun.",
+    "propertyType": "Igloo",
+    "typeOfPlace": "Private room in igloo",
+    "HouseRules": [
+      "No Smoking",
+      "No pets",
+      "No parties or events"
+    ],
+    "accommodates": 4,
+    "beds": 2,
+    "bedrooms": 1,
+    "bath": 1,
+    "amenities": [
+      "Wifi",
+      "Free parking",
+      "Pool"
+    ],
+    "host": {
+      "_id": "51399391",
+      "fullName": "Kalles Inn",
+      "imgUrl": "https://x.com/pic.jpg"
+    },
+    "loc": {
+      "country": "Finland",
+      "countryCode": "FI",
+      "address": "Mustasaari",
+      "lat": 63.1141,
+      "lng": 21.6822,
+      "position": {
+        "lat": 63.1141,
+        "lng": 21.6822
+      }
+    },
+    "reviews": [
+      {
+        "id": "madeId",
+        "txt": "No reviews (yet)",
+        "rate": 0,
+        "by": {
+          "_id": "u102",
+          "fullName": "Erin",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "No reviews (yet)",
+        "rate": 0,
+        "by": {
+          "_id": "u103",
+          "fullName": "Kiersta",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "No reviews (yet)",
+        "rate": 0,
+        "by": {
+          "_id": "u104",
+          "fullName": "Ludovic",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "No reviews (yet)",
+        "rate": 0,
+        "by": {
+          "_id": "u105",
+          "fullName": "Emile",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "No reviews (yet)",
+        "rate": 0,
+        "by": {
+          "_id": "u104",
+          "fullName": "Maria",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "No reviews (yet)",
+        "rate": 0,
+        "by": {
+          "_id": "u105",
+          "fullName": "Konstantin",
+          "imgUrl": "/img/img2.jpg"
+        }
+      }
+    ]
+  }
+  {
+
+    "name": "Beautiful and bright studio in belleville",
+    "initials": "BABS",
+    "imgUrls": [
+      "1.jpg",
+      "2.jpg",
+      "3.jpg",
+      "4.jpg",
+      "5.jpg",
+      "6.jpg"
+    ],
+    "price": 79,
+    "summary": "Hello, If you are looking for a REAL PARISIAN EXPERIENCE, here is the place !My cosy studio is located in the heart of the 19th district of Paris near of the great Parc Buttes Chaumont (1 block away) and the canal Saint Martin (10 mins by walking) my favorite part of Paris (a really romantic place to hang out and ideal for families).The apt itself is situated on the 6th floor with an elevator. The place is really charming, luminous and has a little balcony. If you are lucky enough you will have a wonderful sunset. You will love stay in this neighborhood considered as a nice village atmosphere, with all amenities, bars and restaurants (a great japonese and moroccan and of course a lots of \"bistrot français\" around the corner).",
+    "propertyType": "Rental unit",
+    "typeOfPlace": "Entire place",
+    "HouseRules": [
+      "No Smoking",
+      "No parties or events"
+    ],
+    "accommodates": 2,
+    "beds": 1,
+    "bedrooms": 1,
+    "bath": 1,
+    "amenities": [
+      "Wifi",
+      "Kitchen",
+      "Washer",
+      "Dryer",
+      "TV"
+    ],
+    "host": {
+      "_id": "51399391",
+      "fullName": "Christine",
+      "imgUrl": "https://x.com/pic.jpg"
+    },
+    "loc": {
+      "country": "Paris",
+      "countryCode": "PR",
+      "address": "Paris, Île-de-France",
+      "lat": 48.864716,
+      "lng": 2.349014,
+      "position": {
+        "lat": 48.864716,
+        "lng": 2.349014
+      }
+    },
+    "reviews": [
+      {
+        "id": "madeId",
+        "txt": "The host canceled this reservation 2 days before arrival. This is an automated posting.",
+        "rate": 4.67,
+        "by": {
+          "_id": "u102",
+          "fullName": "Erin",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "The host canceled this reservation 2 days before arrival. This is an automated posting.",
+        "rate": 4.67,
+        "by": {
+          "_id": "u103",
+          "fullName": "Kiersta",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "The host canceled this reservation 2 days before arrival. This is an automated posting.",
+        "rate": 4.67,
+        "by": {
+          "_id": "u104",
+          "fullName": "Ludovic",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "The host canceled this reservation 2 days before arrival. This is an automated posting.",
+        "rate": 4.67,
+        "by": {
+          "_id": "u105",
+          "fullName": "Emile",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "The host canceled this reservation 2 days before arrival. This is an automated posting.",
+        "rate": 4.67,
+        "by": {
+          "_id": "u104",
+          "fullName": "Maria",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "The host canceled this reservation 2 days before arrival. This is an automated posting.",
+        "rate": 4.67,
+        "by": {
+          "_id": "u105",
+          "fullName": "Konstantin",
+          "imgUrl": "/img/img2.jpg"
+        }
+      }
+    ]
+  }
+  {
+
+    "name": "LOUVRE 1: UPPER CLASS SUITE - RUE SAINT HONORE",
+    "initials": "LUC",
+    "imgUrls": [
+      "1.jpg",
+      "2.jpg",
+      "3.jpg",
+      "4.jpg",
+      "5.jpg",
+      "6.jpg"
+    ],
+    "price": 152,
+    "summary": "Located in the prestigious rue Saint-Honoré, this bright 2 people studio, recently renovated, is tastefully furnished with high quality material...",
+    "propertyType": "Rental unit",
+    "typeOfPlace": "Entire place",
+    "HouseRules": [
+      "No Smoking",
+      "No pets",
+      "No parties or events"
+    ],
+    "accommodates": 2,
+    "beds": 1,
+    "bedrooms": 1,
+    "bath": 1,
+    "amenities": [
+      "Wifi",
+      "Kitchen",
+      "TV",
+      "Iron"
+    ],
+    "host": {
+      "_id": "51399391",
+      "fullName": "Alain",
+      "imgUrl": "https://x.com/pic.jpg"
+    },
+    "loc": {
+      "country": "Paris",
+      "countryCode": "PR",
+      "address": "Paris, Île-de-France",
+      "lat": 48.864716,
+      "lng": 2.349014,
+      "position": {
+        "lat": 48.864716,
+        "lng": 2.349014
+      }
+    },
+    "reviews": [
+      {
+        "id": "madeId",
+        "txt": "This is a great little flat in a great part of Paris! We were walking distance to many places. you can NOt go wrong with this place!",
+        "rate": 4.59,
+        "by": {
+          "_id": "u102",
+          "fullName": "Erin",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "This is a great little flat in a great part of Paris! We were walking distance to many places. you can NOt go wrong with this place!",
+        "rate": 4.59,
+        "by": {
+          "_id": "u103",
+          "fullName": "Kiersta",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "This is a great little flat in a great part of Paris! We were walking distance to many places. you can NOt go wrong with this place!",
+        "rate": 4.59,
+        "by": {
+          "_id": "u104",
+          "fullName": "Ludovic",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "This is a great little flat in a great part of Paris! We were walking distance to many places. you can NOt go wrong with this place!",
+        "rate": 4.59,
+        "by": {
+          "_id": "u105",
+          "fullName": "Emile",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "This is a great little flat in a great part of Paris! We were walking distance to many places. you can NOt go wrong with this place!",
+        "rate": 4.59,
+        "by": {
+          "_id": "u104",
+          "fullName": "Maria",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "This is a great little flat in a great part of Paris! We were walking distance to many places. you can NOt go wrong with this place!",
+        "rate": 4.59,
+        "by": {
+          "_id": "u105",
+          "fullName": "Konstantin",
+          "imgUrl": "/img/img2.jpg"
+        }
+      }
+    ]
+  }
+  {
+ 
+    "name": "Cosy one bedroom near Grand Boulevards",
+    "initials": "COB",
+    "imgUrls": [
+      "1.jpg",
+      "2.jpg",
+      "3.jpg",
+      "4.jpg",
+      "5.jpg",
+      "6.jpg"
+    ],
+    "price": 180,
+    "summary": "Superb 2 room apartment of 50m2 in the heart of the 10th arrondissement, bohemian and typical Parisian district, refurbished, will make you spend a great stay in our capital Perfect for couple or family trips or business travelers :)",
+    "propertyType": "Rental unit",
+    "typeOfPlace": "Entire place",
+    "HouseRules": [
+      "No Smoking",
+      "No pets",
+      "No parties or events"
+    ],
+    "accommodates": 4,
+    "beds": 2,
+    "bedrooms": 1,
+    "bath": 1,
+    "amenities": [
+      "Wifi",
+      "TV",
+      "Kitchen",
+      "Washer",
+      "Free parking",
+      "Dryer",
+      "Iron"
+    ],
+    "host": {
+      "_id": "51399391",
+      "fullName": "Diane&Jonathan",
+      "imgUrl": "https://x.com/pic.jpg"
+    },
+    "loc": {
+      "country": "Paris",
+      "countryCode": "PR",
+      "address": "Paris, Île-de-France",
+      "lat": 48.864716,
+      "lng": 2.349014,
+      "position": {
+        "lat": 48.864716,
+        "lng": 2.349014
+      }
+    },
+    "reviews": [
+      {
+        "id": "madeId",
+        "txt": "Great location and very beautiful, well-maintained space. Be careful of the elevator - can be extremely fickle. Hosts were quick to respond though to any issues.",
+        "rate": 4.81,
+        "by": {
+          "_id": "u102",
+          "fullName": "Erin",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "Great location and very beautiful, well-maintained space. Be careful of the elevator - can be extremely fickle. Hosts were quick to respond though to any issues.",
+        "rate": 4.81,
+        "by": {
+          "_id": "u103",
+          "fullName": "Kiersta",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "Great location and very beautiful, well-maintained space. Be careful of the elevator - can be extremely fickle. Hosts were quick to respond though to any issues.",
+        "rate": 4.81,
+        "by": {
+          "_id": "u104",
+          "fullName": "Ludovic",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "Great location and very beautiful, well-maintained space. Be careful of the elevator - can be extremely fickle. Hosts were quick to respond though to any issues.",
+        "rate": 4.81,
+        "by": {
+          "_id": "u105",
+          "fullName": "Emile",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "Great location and very beautiful, well-maintained space. Be careful of the elevator - can be extremely fickle. Hosts were quick to respond though to any issues.",
+        "rate": 4.81,
+        "by": {
+          "_id": "u104",
+          "fullName": "Maria",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "Great location and very beautiful, well-maintained space. Be careful of the elevator - can be extremely fickle. Hosts were quick to respond though to any issues.",
+        "rate": 4.81,
+        "by": {
+          "_id": "u105",
+          "fullName": "Konstantin",
+          "imgUrl": "/img/img2.jpg"
+        }
+      }
+    ]
+  }
+  {
+
+    "name": "Truly parisien apartment in St Germain des Prés",
+    "initials": "TPA",
+    "imgUrls": [
+      "1.jpg",
+      "2.jpg",
+      "3.jpg",
+      "4.jpg",
+      "5.jpg",
+      "6.jpg"
+    ],
+    "price": 157,
+    "summary": "Large 18th century apartment with parquet and woodwork, very comfortable and very quiet overlooking a garden in the heart of St Germain des Près, many museums, restaurants, cafes, shopping all nearby.",
+    "propertyType": "Rental unit",
+    "typeOfPlace": "Entire place",
+    "HouseRules": [
+      "Smoking allowed",
+      "No pets",
+      "No parties or events"
+    ],
+    "accommodates": 2,
+    "beds": 1,
+    "bedrooms": 1,
+    "bath": 1,
+    "amenities": [
+      "Wifi",
+      "Kitchen",
+      "Washer",
+      "Free parking",
+      "Dryer",
+      "Dedicated workspace",
+      "Iron",
+      "Pool"
+    ],
+    "host": {
+      "_id": "51399391",
+      "fullName": "Alexandra",
+      "imgUrl": "https://x.com/pic.jpg"
+    },
+    "loc": {
+      "country": "Paris",
+      "countryCode": "PR",
+      "address": "Paris, Île-de-France",
+      "lat": 48.864716,
+      "lng": 2.349014,
+      "position": {
+        "lat": 48.864716,
+        "lng": 2.349014
+      }
+    },
+    "reviews": [
+      {
+        "id": "madeId",
+        "txt": "If I am ever in Paris again I will stay in this apartment! It was more beautiful than I could have ever imagined and the location was fantastic. Alexandra was so accommodating and quick to respond. I highly recommend this Airbnb.",
+        "rate": 4.91,
+        "by": {
+          "_id": "u102",
+          "fullName": "Erin",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "If I am ever in Paris again I will stay in this apartment! It was more beautiful than I could have ever imagined and the location was fantastic. Alexandra was so accommodating and quick to respond. I highly recommend this Airbnb.",
+        "rate": 4.91,
+        "by": {
+          "_id": "u103",
+          "fullName": "Kiersta",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "If I am ever in Paris again I will stay in this apartment! It was more beautiful than I could have ever imagined and the location was fantastic. Alexandra was so accommodating and quick to respond. I highly recommend this Airbnb.",
+        "rate": 4.91,
+        "by": {
+          "_id": "u104",
+          "fullName": "Ludovic",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "If I am ever in Paris again I will stay in this apartment! It was more beautiful than I could have ever imagined and the location was fantastic. Alexandra was so accommodating and quick to respond. I highly recommend this Airbnb.",
+        "rate": 4.91,
+        "by": {
+          "_id": "u105",
+          "fullName": "Emile",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "If I am ever in Paris again I will stay in this apartment! It was more beautiful than I could have ever imagined and the location was fantastic. Alexandra was so accommodating and quick to respond. I highly recommend this Airbnb.",
+        "rate": 4.91,
+        "by": {
+          "_id": "u104",
+          "fullName": "Maria",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "If I am ever in Paris again I will stay in this apartment! It was more beautiful than I could have ever imagined and the location was fantastic. Alexandra was so accommodating and quick to respond. I highly recommend this Airbnb.",
+        "rate": 4.91,
+        "by": {
+          "_id": "u105",
+          "fullName": "Konstantin",
+          "imgUrl": "/img/img2.jpg"
+        }
+      }
+    ]
+  }
+  {
+
+    "name": "Magnificent flat 1BR/3P - Marais/Republic",
+    "initials": "MFB",
+    "imgUrls": [
+      "1.jpg",
+      "2.jpg",
+      "3.jpg",
+      "4.jpg",
+      "5.jpg",
+      "6.jpg"
+    ],
+    "price": 210,
+    "summary": "Looking for a flat for 3 people? Located just a stones throw from the Place de la République and the famous Marais district, dont hesitate!",
+    "propertyType": "Rental unit",
+    "typeOfPlace": "Entire place",
+    "HouseRules": [
+      "No Smoking",
+      "No pets",
+      "No parties or events"
+    ],
+    "accommodates": 3,
+    "beds": 2,
+    "bedrooms": 1,
+    "bath": 1,
+    "amenities": [
+      "Wifi",
+      "Kitchen",
+      "Washer",
+      "TV",
+      "Dedicated workspace",
+      "Iron"
+    ],
+    "host": {
+      "_id": "51399391",
+      "fullName": "Check My Guest",
+      "imgUrl": "https://x.com/pic.jpg"
+    },
+    "loc": {
+      "country": "Paris",
+      "countryCode": "PR",
+      "address": "Paris, Île-de-France",
+      "lat": 48.864716,
+      "lng": 2.349014,
+      "position": {
+        "lat": 48.864716,
+        "lng": 2.349014
+      }
+    },
+    "reviews": [
+      {
+        "id": "madeId",
+        "txt": "Amazing location in the middle of everything yet on the quietist street, in an elevator building with the bedroom facing the inner courtyard. What more could you ask!",
+        "rate": 4.94,
+        "by": {
+          "_id": "u102",
+          "fullName": "Erin",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "Amazing location in the middle of everything yet on the quietist street, in an elevator building with the bedroom facing the inner courtyard. What more could you ask!",
+        "rate": 4.94,
+        "by": {
+          "_id": "u103",
+          "fullName": "Kiersta",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "Amazing location in the middle of everything yet on the quietist street, in an elevator building with the bedroom facing the inner courtyard. What more could you ask!",
+        "rate": 4.94,
+        "by": {
+          "_id": "u104",
+          "fullName": "Ludovic",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "Amazing location in the middle of everything yet on the quietist street, in an elevator building with the bedroom facing the inner courtyard. What more could you ask!",
+        "rate": 4.94,
+        "by": {
+          "_id": "u105",
+          "fullName": "Emile",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "Amazing location in the middle of everything yet on the quietist street, in an elevator building with the bedroom facing the inner courtyard. What more could you ask!",
+        "rate": 4.94,
+        "by": {
+          "_id": "u104",
+          "fullName": "Maria",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "Amazing location in the middle of everything yet on the quietist street, in an elevator building with the bedroom facing the inner courtyard. What more could you ask!",
+        "rate": 4.94,
+        "by": {
+          "_id": "u105",
+          "fullName": "Konstantin",
+          "imgUrl": "/img/img2.jpg"
+        }
+      }
+    ]
+  }
+  {
+
+    "name": "Bright & cozy 1 bedroom 4p near Canal St Martin",
+    "initials": "BCB",
+    "imgUrls": [
+      "1.jpg",
+      "2.jpg",
+      "3.jpg",
+      "4.jpg",
+      "5.jpg",
+      "6.jpg"
+    ],
+    "price": 187,
+    "summary": "Superb 2 room apartment of 50m2 in the heart of the 10th arrondissement, bohemian and typical Parisian district, refurbished, will make you spend a great stay in our capital Perfect for couple or family trips or business travelers :)",
+    "propertyType": "Rental unit",
+    "typeOfPlace": "Entire place",
+    "HouseRules": [
+      "No Smoking",
+      "Pets allowed",
+      "No parties or events"
+    ],
+    "accommodates": 4,
+    "beds": 2,
+    "bedrooms": 1,
+    "bath": 1,
+    "amenities": [
+      "Wifi",
+      "Kitchen",
+      "Washer",
+      "Free parking",
+      "Dryer",
+      "Dedicated workspace",
+      "Iron",
+      "TV"
+    ],
+    "host": {
+      "_id": "51399391",
+      "fullName": "Diane&Jonathan",
+      "imgUrl": "https://x.com/pic.jpg"
+    },
+    "loc": {
+      "country": "Paris",
+      "countryCode": "PR",
+      "address": "Paris, Île-de-France",
+      "lat": 48.864716,
+      "lng": 2.349014,
+      "position": {
+        "lat": 48.864716,
+        "lng": 2.349014
+      }
+    },
+    "reviews": [
+      {
+        "id": "madeId",
+        "txt": "Thanks Nicholas, we could not provide any fan for your 3 days stay at the end of summer while the weather was not hot at all sorry and like you said it was as well mention in the ad",
+        "rate": 4.61,
+        "by": {
+          "_id": "u102",
+          "fullName": "Erin",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "Thanks Nicholas, we could not provide any fan for your 3 days stay at the end of summer while the weather was not hot at all sorry and like you said it was as well mention in the ad",
+        "rate": 4.61,
+        "by": {
+          "_id": "u103",
+          "fullName": "Kiersta",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "Thanks Nicholas, we could not provide any fan for your 3 days stay at the end of summer while the weather was not hot at all sorry and like you said it was as well mention in the ad",
+        "rate": 4.61,
+        "by": {
+          "_id": "u104",
+          "fullName": "Ludovic",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "Thanks Nicholas, we could not provide any fan for your 3 days stay at the end of summer while the weather was not hot at all sorry and like you said it was as well mention in the ad",
+        "rate": 4.61,
+        "by": {
+          "_id": "u105",
+          "fullName": "Emile",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "Thanks Nicholas, we could not provide any fan for your 3 days stay at the end of summer while the weather was not hot at all sorry and like you said it was as well mention in the ad",
+        "rate": 4.61,
+        "by": {
+          "_id": "u104",
+          "fullName": "Maria",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "Thanks Nicholas, we could not provide any fan for your 3 days stay at the end of summer while the weather was not hot at all sorry and like you said it was as well mention in the ad",
+        "rate": 4.61,
+        "by": {
+          "_id": "u105",
+          "fullName": "Konstantin",
+          "imgUrl": "/img/img2.jpg"
+        }
+      }
+    ]
+  }
+  {
+
+    "name": "Story Flat Lisbon - Alfama",
+    "initials": "SFL",
+    "imgUrls": [
+      "1.jpg",
+      "2.jpg",
+      "3.jpg",
+      "4.jpg",
+      "5.jpg",
+      "6.jpg"
+    ],
+    "price": 79,
+    "summary": "Story Flat Lisbon is an invitation for you to discover your own Lisbon story. This bright and charming apartment offers a true sensory experience of the city, as all the rooms present you with a stunning panoramic view of river Tagus.",
+    "propertyType": "Rental unit",
+    "typeOfPlace": "Entire place",
+    "HouseRules": [
+      "No Smoking",
+      "No pets",
+      "No parties or events"
+    ],
+    "accommodates": 4,
+    "beds": 2,
+    "bedrooms": 1,
+    "bath": 1,
+    "amenities": [
+      "Wifi",
+      "Kitchen",
+      "Washer",
+      "Dedicated workspace",
+      "Iron",
+      "TV"
+    ],
+    "host": {
+      "_id": "51399391",
+      "fullName": "Ana & Rita",
+      "imgUrl": "https://x.com/pic.jpg"
+    },
+    "loc": {
+      "country": "Lisbon",
+      "countryCode": "LSB",
+      "address": "Lisboa",
+      "lat": 38.736946,
+      "lng": -9.142685,
+      "position": {
+        "lat": 38.736946,
+        "lng": -9.142685
+      }
+    },
+    "reviews": [
+      {
+        "id": "madeId",
+        "txt": "This flat is the perfect place to start your Lisbon adventures! The location is very easy to travel around the city and is walking distance from Santa Apolonia train station. The number of restaurants nearby will give you far too many fantastic options. You’ll also be hard pressed to find a prettier view with such nice accommodations. Ana and Rita have really gone out of their way to make this flat a special and relaxing place to come home too. I highly recommend this beautiful flat and would absolutely stay here again if back in Lisbon!",
+        "rate": 4.84,
+        "by": {
+          "_id": "u102",
+          "fullName": "Erin",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "This flat is the perfect place to start your Lisbon adventures! The location is very easy to travel around the city and is walking distance from Santa Apolonia train station. The number of restaurants nearby will give you far too many fantastic options. You’ll also be hard pressed to find a prettier view with such nice accommodations. Ana and Rita have really gone out of their way to make this flat a special and relaxing place to come home too. I highly recommend this beautiful flat and would absolutely stay here again if back in Lisbon!",
+        "rate": 4.84,
+        "by": {
+          "_id": "u103",
+          "fullName": "Kiersta",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "This flat is the perfect place to start your Lisbon adventures! The location is very easy to travel around the city and is walking distance from Santa Apolonia train station. The number of restaurants nearby will give you far too many fantastic options. You’ll also be hard pressed to find a prettier view with such nice accommodations. Ana and Rita have really gone out of their way to make this flat a special and relaxing place to come home too. I highly recommend this beautiful flat and would absolutely stay here again if back in Lisbon!",
+        "rate": 4.84,
+        "by": {
+          "_id": "u104",
+          "fullName": "Ludovic",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "This flat is the perfect place to start your Lisbon adventures! The location is very easy to travel around the city and is walking distance from Santa Apolonia train station. The number of restaurants nearby will give you far too many fantastic options. You’ll also be hard pressed to find a prettier view with such nice accommodations. Ana and Rita have really gone out of their way to make this flat a special and relaxing place to come home too. I highly recommend this beautiful flat and would absolutely stay here again if back in Lisbon!",
+        "rate": 4.84,
+        "by": {
+          "_id": "u105",
+          "fullName": "Emile",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "This flat is the perfect place to start your Lisbon adventures! The location is very easy to travel around the city and is walking distance from Santa Apolonia train station. The number of restaurants nearby will give you far too many fantastic options. You’ll also be hard pressed to find a prettier view with such nice accommodations. Ana and Rita have really gone out of their way to make this flat a special and relaxing place to come home too. I highly recommend this beautiful flat and would absolutely stay here again if back in Lisbon!",
+        "rate": 4.84,
+        "by": {
+          "_id": "u104",
+          "fullName": "Maria",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "This flat is the perfect place to start your Lisbon adventures! The location is very easy to travel around the city and is walking distance from Santa Apolonia train station. The number of restaurants nearby will give you far too many fantastic options. You’ll also be hard pressed to find a prettier view with such nice accommodations. Ana and Rita have really gone out of their way to make this flat a special and relaxing place to come home too. I highly recommend this beautiful flat and would absolutely stay here again if back in Lisbon!",
+        "rate": 4.84,
+        "by": {
+          "_id": "u105",
+          "fullName": "Konstantin",
+          "imgUrl": "/img/img2.jpg"
+        }
+      }
+    ]
+  }
+  {
+
+    "name": "Alfama - Historic Center",
+    "initials": "AHC",
+    "imgUrls": [
+      "1.jpg",
+      "2.jpg",
+      "3.jpg",
+      "4.jpg",
+      "5.jpg",
+      "6.jpg"
+    ],
+    "price": 339,
+    "summary": "This small and charming apartment fully restored, offers a wonderful view over the old rooftops of Alfama, the most typical and historic neighbourhood of Lisbon.This flat provides every thing you need for an unforgettable experience.",
+    "propertyType": "Rental unit",
+    "typeOfPlace": "Entire place",
+    "HouseRules": [
+      "No Smoking",
+      "No pets",
+      "No parties or events"
+    ],
+    "accommodates": 2,
+    "beds": 1,
+    "bedrooms": 1,
+    "bath": 1,
+    "amenities": [
+      "Wifi",
+      "Kitchen",
+      "Dedicated workspace",
+      "Iron",
+      "TV"
+    ],
+    "host": {
+      "_id": "51399391",
+      "fullName": "António",
+      "imgUrl": "https://x.com/pic.jpg"
+    },
+    "loc": {
+      "country": "Lisbon",
+      "countryCode": "LSB",
+      "address": "Lisboa",
+      "lat": 38.736946,
+      "lng": -9.142685,
+      "position": {
+        "lat": 38.736946,
+        "lng": -9.142685
+      }
+    },
+    "reviews": [
+      {
+        "id": "madeId",
+        "txt": "António’s place was lovely! Easy check in and location is great near the center of Alfama. Beware if you can’t do stairs! Bed was comfy and was brought a bottle of wine upon checkin!",
+        "rate": 4.89,
+        "by": {
+          "_id": "u102",
+          "fullName": "Erin",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "António’s place was lovely! Easy check in and location is great near the center of Alfama. Beware if you can’t do stairs! Bed was comfy and was brought a bottle of wine upon checkin!",
+        "rate": 4.89,
+        "by": {
+          "_id": "u103",
+          "fullName": "Kiersta",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "António’s place was lovely! Easy check in and location is great near the center of Alfama. Beware if you can’t do stairs! Bed was comfy and was brought a bottle of wine upon checkin!",
+        "rate": 4.89,
+        "by": {
+          "_id": "u104",
+          "fullName": "Ludovic",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "António’s place was lovely! Easy check in and location is great near the center of Alfama. Beware if you can’t do stairs! Bed was comfy and was brought a bottle of wine upon checkin!",
+        "rate": 4.89,
+        "by": {
+          "_id": "u105",
+          "fullName": "Emile",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "António’s place was lovely! Easy check in and location is great near the center of Alfama. Beware if you can’t do stairs! Bed was comfy and was brought a bottle of wine upon checkin!",
+        "rate": 4.89,
+        "by": {
+          "_id": "u104",
+          "fullName": "Maria",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "António’s place was lovely! Easy check in and location is great near the center of Alfama. Beware if you can’t do stairs! Bed was comfy and was brought a bottle of wine upon checkin!",
+        "rate": 4.89,
+        "by": {
+          "_id": "u105",
+          "fullName": "Konstantin",
+          "imgUrl": "/img/img2.jpg"
+        }
+      }
+    ]
+  }
+  {
+
+    "name": "Stylish 1BR apt in Lisbon Downtown* Baixa",
+    "initials": "SAL",
+    "imgUrls": [
+      "1.jpg",
+      "2.jpg",
+      "3.jpg",
+      "4.jpg",
+      "5.jpg",
+      "6.jpg"
+    ],
+    "price": 124,
+    "summary": "* Your Health first *.We follow the standards recommended by the health authorities.In the charming, central Baixa neighborhood, this 1-bedroom Gonzalo’s Guest apartment is just right for a romantic getaway.If you are visiting Lisbon, be it for business or pleasure, and you need to stay in a modern, cozy, luxurious, clean and convenient place with easy access to all points of interest - then look no further, our exquisite apartment is the perfect place for you!",
+    "propertyType": "Rental unit",
+    "typeOfPlace": "Entire place",
+    "HouseRules": [
+      "No Smoking",
+      "No pets"
+    ],
+    "accommodates": 4,
+    "beds": 2,
+    "bedrooms": 1,
+    "bath": 1,
+    "amenities": [
+      "Wifi",
+      "Kitchen",
+      "Washer",
+      "Free parking",
+      "Iron",
+      "TV"
+    ],
+    "host": {
+      "_id": "51399391",
+      "fullName": "Gonzalos Guest",
+      "imgUrl": "https://x.com/pic.jpg"
+    },
+    "loc": {
+      "country": "Lisbon",
+      "countryCode": "LSB",
+      "address": "Lisboa",
+      "lat": 38.736946,
+      "lng": -9.142685,
+      "position": {
+        "lat": 38.736946,
+        "lng": -9.142685
+      }
+    },
+    "reviews": [
+      {
+        "id": "madeId",
+        "txt": "Great location, very central. Can be a little noisy with the tram outside but we stayed during the week and had no issues. Good shutter blinds to keep out the street lights and noise",
+        "rate": 4.7,
+        "by": {
+          "_id": "u102",
+          "fullName": "Erin",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "Great location, very central. Can be a little noisy with the tram outside but we stayed during the week and had no issues. Good shutter blinds to keep out the street lights and noise",
+        "rate": 4.7,
+        "by": {
+          "_id": "u103",
+          "fullName": "Kiersta",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "Great location, very central. Can be a little noisy with the tram outside but we stayed during the week and had no issues. Good shutter blinds to keep out the street lights and noise",
+        "rate": 4.7,
+        "by": {
+          "_id": "u104",
+          "fullName": "Ludovic",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "Great location, very central. Can be a little noisy with the tram outside but we stayed during the week and had no issues. Good shutter blinds to keep out the street lights and noise",
+        "rate": 4.7,
+        "by": {
+          "_id": "u105",
+          "fullName": "Emile",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "Great location, very central. Can be a little noisy with the tram outside but we stayed during the week and had no issues. Good shutter blinds to keep out the street lights and noise",
+        "rate": 4.7,
+        "by": {
+          "_id": "u104",
+          "fullName": "Maria",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "Great location, very central. Can be a little noisy with the tram outside but we stayed during the week and had no issues. Good shutter blinds to keep out the street lights and noise",
+        "rate": 4.7,
+        "by": {
+          "_id": "u105",
+          "fullName": "Konstantin",
+          "imgUrl": "/img/img2.jpg"
+        }
+      }
+    ]
+  }
+  {
+
+    "name": "Chiado Loft 17 Charm Boutique Apartment",
+    "initials": "CLC",
+    "imgUrls": [
+      "1.jpg",
+      "2.jpg",
+      "3.jpg",
+      "4.jpg",
+      "5.jpg",
+      "6.jpg"
+    ],
+    "price": 339,
+    "summary": "This incredible intimate and comfortable Loft apartment, in a typical Lisbon XIX Century building with no elevator is located in a street that corners with Rua da Bica. Offering a very warm atmosphere. It boasts a very inviting terrace with views over a charming and typical Lisbon street. It offers a living and dinning area, a kitchenette, a mosaic and white marble bathroom with a comfortable shower enclosure, and a bedroom space. The Loft has 3 tall windows that open to the terrace.",
+    "propertyType": "Rental unit",
+    "typeOfPlace": "Entire place",
+    "HouseRules": [
+      "No Smoking",
+      "No pets",
+      "No parties or events"
+    ],
+    "accommodates": 2,
+    "beds": 1,
+    "bedrooms": 1,
+    "bath": 1,
+    "amenities": [
+      "Wifi",
+      "Kitchen",
+      "Washer",
+      "Free parking",
+      "Dryer",
+      "Dedicated workspace",
+      "Iron",
+      "TV"
+    ],
+    "host": {
+      "_id": "51399391",
+      "fullName": "Pedro",
+      "imgUrl": "https://x.com/pic.jpg"
+    },
+    "loc": {
+      "country": "Lisbon",
+      "countryCode": "LSB",
+      "address": "Lisboa",
+      "lat": 38.736946,
+      "lng": -9.142685,
+      "position": {
+        "lat": 38.736946,
+        "lng": -9.142685
+      }
+    },
+    "reviews": [
+      {
+        "id": "madeId",
+        "txt": "the location is convenient and the hosts are great. the space is really cute with beautiful windows and beautiful balcony. highly recommend.",
+        "rate": 4.95,
+        "by": {
+          "_id": "u102",
+          "fullName": "Erin",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "the location is convenient and the hosts are great. the space is really cute with beautiful windows and beautiful balcony. highly recommend.",
+        "rate": 4.95,
+        "by": {
+          "_id": "u103",
+          "fullName": "Kiersta",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "the location is convenient and the hosts are great. the space is really cute with beautiful windows and beautiful balcony. highly recommend.",
+        "rate": 4.95,
+        "by": {
+          "_id": "u104",
+          "fullName": "Ludovic",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "the location is convenient and the hosts are great. the space is really cute with beautiful windows and beautiful balcony. highly recommend.",
+        "rate": 4.95,
+        "by": {
+          "_id": "u105",
+          "fullName": "Emile",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "the location is convenient and the hosts are great. the space is really cute with beautiful windows and beautiful balcony. highly recommend.",
+        "rate": 4.95,
+        "by": {
+          "_id": "u104",
+          "fullName": "Maria",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "the location is convenient and the hosts are great. the space is really cute with beautiful windows and beautiful balcony. highly recommend.",
+        "rate": 4.95,
+        "by": {
+          "_id": "u105",
+          "fullName": "Konstantin",
+          "imgUrl": "/img/img2.jpg"
+        }
+      }
+    ]
+  }
+  {
+
+    "name": "Remodeled Historic Apartment in Bairro Alto",
+    "initials": "RHA",
+    "imgUrls": [
+      "1.jpg",
+      "2.jpg",
+      "3.jpg",
+      "4.jpg",
+      "5.jpg",
+      "6.jpg"
+    ],
+    "price": 62,
+    "summary": "Special COVID-19 : We do a special cleaning disinfecting all the floors, kitchen, bathrooms, doorknobs and all touchable surfaces with a special product, used in hospitals, known by its lasting effect.",
+    "propertyType": "Rental unit",
+    "typeOfPlace": "Entire place",
+    "HouseRules": [
+      "No Smoking",
+      "No pets",
+      "No parties or events"
+    ],
+    "accommodates": 4,
+    "beds": 1,
+    "bedrooms": 1,
+    "bath": 1,
+    "amenities": [
+      "Wifi",
+      "Kitchen",
+      "Washer",
+      "Free parking",
+      "Iron",
+      "TV"
+    ],
+    "host": {
+      "_id": "51399391",
+      "fullName": "Vasco",
+      "imgUrl": "https://x.com/pic.jpg"
+    },
+    "loc": {
+      "country": "Lisbon",
+      "countryCode": "LSB",
+      "address": "Lisboa",
+      "lat": 38.736946,
+      "lng": -9.142685,
+      "position": {
+        "lat": 38.736946,
+        "lng": -9.142685
+      }
+    },
+    "reviews": [
+      {
+        "id": "madeId",
+        "txt": "One of the best air b&bs I’ve stayed in and in a great location (Bairro Alto). The design of the apartment is super well done & there are 3 stunning bay windows in the living room. Vasco met us at the apartment and gave us recommendations for places to eat, where to see Fado, sites to see, etc. There’s a detailed binder that he provides as well with recommendations and important info. Thanks so much for your hospitality! We loved our stay and felt welcome in your beautiful apartment!",
+        "rate": 4.87,
+        "by": {
+          "_id": "u102",
+          "fullName": "Erin",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "One of the best air b&bs I’ve stayed in and in a great location (Bairro Alto). The design of the apartment is super well done & there are 3 stunning bay windows in the living room. Vasco met us at the apartment and gave us recommendations for places to eat, where to see Fado, sites to see, etc. There’s a detailed binder that he provides as well with recommendations and important info. Thanks so much for your hospitality! We loved our stay and felt welcome in your beautiful apartment!",
+        "rate": 4.87,
+        "by": {
+          "_id": "u103",
+          "fullName": "Kiersta",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "One of the best air b&bs I’ve stayed in and in a great location (Bairro Alto). The design of the apartment is super well done & there are 3 stunning bay windows in the living room. Vasco met us at the apartment and gave us recommendations for places to eat, where to see Fado, sites to see, etc. There’s a detailed binder that he provides as well with recommendations and important info. Thanks so much for your hospitality! We loved our stay and felt welcome in your beautiful apartment!",
+        "rate": 4.87,
+        "by": {
+          "_id": "u104",
+          "fullName": "Ludovic",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "One of the best air b&bs I’ve stayed in and in a great location (Bairro Alto). The design of the apartment is super well done & there are 3 stunning bay windows in the living room. Vasco met us at the apartment and gave us recommendations for places to eat, where to see Fado, sites to see, etc. There’s a detailed binder that he provides as well with recommendations and important info. Thanks so much for your hospitality! We loved our stay and felt welcome in your beautiful apartment!",
+        "rate": 4.87,
+        "by": {
+          "_id": "u105",
+          "fullName": "Emile",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "One of the best air b&bs I’ve stayed in and in a great location (Bairro Alto). The design of the apartment is super well done & there are 3 stunning bay windows in the living room. Vasco met us at the apartment and gave us recommendations for places to eat, where to see Fado, sites to see, etc. There’s a detailed binder that he provides as well with recommendations and important info. Thanks so much for your hospitality! We loved our stay and felt welcome in your beautiful apartment!",
+        "rate": 4.87,
+        "by": {
+          "_id": "u104",
+          "fullName": "Maria",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "One of the best air b&bs I’ve stayed in and in a great location (Bairro Alto). The design of the apartment is super well done & there are 3 stunning bay windows in the living room. Vasco met us at the apartment and gave us recommendations for places to eat, where to see Fado, sites to see, etc. There’s a detailed binder that he provides as well with recommendations and important info. Thanks so much for your hospitality! We loved our stay and felt welcome in your beautiful apartment!",
+        "rate": 4.87,
+        "by": {
+          "_id": "u105",
+          "fullName": "Konstantin",
+          "imgUrl": "/img/img2.jpg"
+        }
+      }
+    ]
+  }
+  {
+
+    "name": "Lisbon Baronesa Historic Center Apartaments",
+    "initials": "LBH",
+    "imgUrls": [
+      "1.jpg",
+      "2.jpg",
+      "3.jpg",
+      "4.jpg",
+      "5.jpg",
+      "6.jpg"
+    ],
+    "price": 60,
+    "summary": "Charming, spacious and bright apartment on the first floor of a recently restored 19th century building, Historical Center of Lisbon. Traditional neighborhood of Graça. Close to the Castle, Alfama, Praça do Comércio, Mouraria, Monastery of São Vicente de Fora, Feira da Ladra. Neighbor to the Miradouros of Nossa Senhora do Monte and Miradouro da Graça. Close to cafes, supermarkets and restaurants. The traditional Electric 28 has a stop in Largo.",
+    "propertyType": "Rental unit",
+    "typeOfPlace": "Entire place",
+    "HouseRules": [
+      "No Smoking",
+      "No pets",
+      "No parties or events"
+    ],
+    "accommodates": 4,
+    "beds": 2,
+    "bedrooms": 1,
+    "bath": 1,
+    "amenities": [
+      "Wifi",
+      "Kitchen",
+      "Free parking",
+      "Dryer",
+      "Iron",
+      "TV"
+    ],
+    "host": {
+      "_id": "51399391",
+      "fullName": "Andreia",
+      "imgUrl": "https://x.com/pic.jpg"
+    },
+    "loc": {
+      "country": "Lisbon",
+      "countryCode": "LSB",
+      "address": "Lisboa",
+      "lat": 38.736946,
+      "lng": -9.142685,
+      "position": {
+        "lat": 38.736946,
+        "lng": -9.142685
+      }
+    },
+    "reviews": [
+      {
+        "id": "madeId",
+        "txt": "Great place in a great neighborhood. Close to anything you would want. Hosts are very accommodating and friendly! Ask for suggestions and they will give you gems!For this apartment the street noise can be more than you are used to, but use the fans provided to create some white noise and it’s all good!",
+        "rate": 4.92,
+        "by": {
+          "_id": "u102",
+          "fullName": "Erin",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "Great place in a great neighborhood. Close to anything you would want. Hosts are very accommodating and friendly! Ask for suggestions and they will give you gems!For this apartment the street noise can be more than you are used to, but use the fans provided to create some white noise and it’s all good!",
+        "rate": 4.92,
+        "by": {
+          "_id": "u103",
+          "fullName": "Kiersta",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "Great place in a great neighborhood. Close to anything you would want. Hosts are very accommodating and friendly! Ask for suggestions and they will give you gems!For this apartment the street noise can be more than you are used to, but use the fans provided to create some white noise and it’s all good!",
+        "rate": 4.92,
+        "by": {
+          "_id": "u104",
+          "fullName": "Ludovic",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "Great place in a great neighborhood. Close to anything you would want. Hosts are very accommodating and friendly! Ask for suggestions and they will give you gems!For this apartment the street noise can be more than you are used to, but use the fans provided to create some white noise and it’s all good!",
+        "rate": 4.92,
+        "by": {
+          "_id": "u105",
+          "fullName": "Emile",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "Great place in a great neighborhood. Close to anything you would want. Hosts are very accommodating and friendly! Ask for suggestions and they will give you gems!For this apartment the street noise can be more than you are used to, but use the fans provided to create some white noise and it’s all good!",
+        "rate": 4.92,
+        "by": {
+          "_id": "u104",
+          "fullName": "Maria",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "Great place in a great neighborhood. Close to anything you would want. Hosts are very accommodating and friendly! Ask for suggestions and they will give you gems!For this apartment the street noise can be more than you are used to, but use the fans provided to create some white noise and it’s all good!",
+        "rate": 4.92,
+        "by": {
+          "_id": "u105",
+          "fullName": "Konstantin",
+          "imgUrl": "/img/img2.jpg"
+        }
+      }
+    ]
+  }
+  {
+
+    "name": "Apartment in the heart of Lisbon",
+    "initials": "AIT",
+    "imgUrls": [
+      "1.jpg",
+      "2.jpg",
+      "3.jpg",
+      "4.jpg",
+      "5.jpg",
+      "6.jpg"
+    ],
+    "price": 65,
+    "summary": "Very nice apartment in the heart of city. From here you can easily reach most of Lisbon must-see spots by foot (S. Jorge Castle, Alfama, Bairro Alto, Mouraria, Baixa, Chiado, Cais Sodré, Av. Liberdade).Most varied transportation is just around.",
+    "propertyType": "Rental unit",
+    "typeOfPlace": "Entire place",
+    "HouseRules": [
+      "No Smoking",
+      "No pets",
+      "No parties or events"
+    ],
+    "accommodates": 4,
+    "beds": 1,
+    "bedrooms": 1,
+    "bath": 1,
+    "amenities": [
+      "Wifi",
+      "Kitchen",
+      "Washer",
+      "Free parking",
+      "Iron",
+      "TV"
+    ],
+    "host": {
+      "_id": "51399391",
+      "fullName": " Rita & Helder",
+      "imgUrl": "https://x.com/pic.jpg"
+    },
+    "loc": {
+      "country": "Lisbon",
+      "countryCode": "LSB",
+      "address": "Lisboa",
+      "lat": 38.736946,
+      "lng": -9.142685,
+      "position": {
+        "lat": 38.736946,
+        "lng": -9.142685
+      }
+    },
+    "reviews": [
+      {
+        "id": "madeId",
+        "txt": "Our stay was so wonderful! The apartment is well kept, very comfortable and central to many of the neighborhoods in Lisbon. The street is lined with restaurants serving Portuguese cuisine often with musicians serenading diners. One of our favorite parts about our stay was opening up the balcony door to listen to and watch everything happening below.",
+        "rate": 4.79,
+        "by": {
+          "_id": "u102",
+          "fullName": "Erin",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "Our stay was so wonderful! The apartment is well kept, very comfortable and central to many of the neighborhoods in Lisbon. The street is lined with restaurants serving Portuguese cuisine often with musicians serenading diners. One of our favorite parts about our stay was opening up the balcony door to listen to and watch everything happening below.",
+        "rate": 4.79,
+        "by": {
+          "_id": "u103",
+          "fullName": "Kiersta",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "Our stay was so wonderful! The apartment is well kept, very comfortable and central to many of the neighborhoods in Lisbon. The street is lined with restaurants serving Portuguese cuisine often with musicians serenading diners. One of our favorite parts about our stay was opening up the balcony door to listen to and watch everything happening below.",
+        "rate": 4.79,
+        "by": {
+          "_id": "u104",
+          "fullName": "Ludovic",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "Our stay was so wonderful! The apartment is well kept, very comfortable and central to many of the neighborhoods in Lisbon. The street is lined with restaurants serving Portuguese cuisine often with musicians serenading diners. One of our favorite parts about our stay was opening up the balcony door to listen to and watch everything happening below.",
+        "rate": 4.79,
+        "by": {
+          "_id": "u105",
+          "fullName": "Emile",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "Our stay was so wonderful! The apartment is well kept, very comfortable and central to many of the neighborhoods in Lisbon. The street is lined with restaurants serving Portuguese cuisine often with musicians serenading diners. One of our favorite parts about our stay was opening up the balcony door to listen to and watch everything happening below.",
+        "rate": 4.79,
+        "by": {
+          "_id": "u104",
+          "fullName": "Maria",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "Our stay was so wonderful! The apartment is well kept, very comfortable and central to many of the neighborhoods in Lisbon. The street is lined with restaurants serving Portuguese cuisine often with musicians serenading diners. One of our favorite parts about our stay was opening up the balcony door to listen to and watch everything happening below.",
+        "rate": 4.79,
+        "by": {
+          "_id": "u105",
+          "fullName": "Konstantin",
+          "imgUrl": "/img/img2.jpg"
+        }
+      }
+    ]
+  }
+  {
+
+    "name": "Stunning Mews House in South Kensington",
+    "initials": "SMH",
+    "imgUrls": [
+      "1.jpg",
+      "2.jpg",
+      "3.jpg",
+      "4.jpg",
+      "5.jpg",
+      "6.jpg"
+    ],
+    "price": 371,
+    "summary": "A stunning two bedroom mews house in prime west London location. The house has been refurbished and boasts 2 reception rooms across the spacious lower ground floor with wooden floors, utility room and home office. For those travelling with family to be together.",
+    "propertyType": "Rental unit",
+    "typeOfPlace": "Entire place",
+    "HouseRules": [
+      "No Smoking",
+      "No pets",
+      "No parties or events"
+    ],
+    "accommodates": 4,
+    "beds": 3,
+    "bedrooms": 2,
+    "bath": 2,
+    "amenities": [
+      "Wifi",
+      "Kitchen",
+      "Washer",
+      "Free parking",
+      "Dryer",
+      "Dedicated workspace",
+      "Iron",
+      "TV"
+    ],
+    "host": {
+      "_id": "51399391",
+      "fullName": "Will",
+      "imgUrl": "https://x.com/pic.jpg"
+    },
+    "loc": {
+      "country": "London",
+      "countryCode": "LND",
+      "address": "Greater London, England",
+      "lat": 51.509865,
+      "lng": -0.118092,
+      "position": {
+        "lat": 51.509865,
+        "lng": -0.118092
+      }
+    },
+    "reviews": [
+      {
+        "id": "madeId",
+        "txt": "A wonderful property in a fabulous location! Highly recommended!",
+        "rate": 4.7,
+        "by": {
+          "_id": "u102",
+          "fullName": "Erin",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "A wonderful property in a fabulous location! Highly recommended!",
+        "rate": 4.7,
+        "by": {
+          "_id": "u103",
+          "fullName": "Kiersta",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "A wonderful property in a fabulous location! Highly recommended!",
+        "rate": 4.7,
+        "by": {
+          "_id": "u104",
+          "fullName": "Ludovic",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "A wonderful property in a fabulous location! Highly recommended!",
+        "rate": 4.7,
+        "by": {
+          "_id": "u105",
+          "fullName": "Emile",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "A wonderful property in a fabulous location! Highly recommended!",
+        "rate": 4.7,
+        "by": {
+          "_id": "u104",
+          "fullName": "Maria",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "A wonderful property in a fabulous location! Highly recommended!",
+        "rate": 4.7,
+        "by": {
+          "_id": "u105",
+          "fullName": "Konstantin",
+          "imgUrl": "/img/img2.jpg"
+        }
+      }
+    ]
+  }
+  {
+
+    "name": "Unique & Welcoming 2BD Flat in Limehouse",
+    "initials": "UWF",
+    "imgUrls": [
+      "1.jpg",
+      "2.jpg",
+      "3.jpg",
+      "4.jpg",
+      "5.jpg",
+      "6.jpg"
+    ],
+    "price": 102,
+    "summary": "This two bedroom property is ideally located for a family or friends trip to the city. Not only is the property itself located in an excellent part of the city, near many tourist spots and easy to access transport links, It is also kitted out with everything you would need for a memorable stay. Guests can relax in comfort with a stylishly designed living space as well as a fully kitted out bathroom and cosy bedrooms.",
+    "propertyType": "Rental unit",
+    "typeOfPlace": "Entire place",
+    "HouseRules": [
+      "No Smoking",
+      "No pets",
+      "No parties or events"
+    ],
+    "accommodates": 3,
+    "beds": 2,
+    "bedrooms": 2,
+    "bath": 1,
+    "amenities": [
+      "Wifi",
+      "Kitchen",
+      "Washer",
+      "Free parking",
+      "Dedicated workspace",
+      "Iron",
+      "TV"
+    ],
+    "host": {
+      "_id": "51399391",
+      "fullName": "Sheryl",
+      "imgUrl": "https://x.com/pic.jpg"
+    },
+    "loc": {
+      "country": "London",
+      "countryCode": "LND",
+      "address": "Greater London, England",
+      "lat": 51.509865,
+      "lng": -0.118092,
+      "position": {
+        "lat": 51.509865,
+        "lng": -0.118092
+      }
+    },
+    "reviews": [
+      {
+        "id": "madeId",
+        "txt": "This was the perfect flat. Eclectically furnished, complete, great location - everything we needed.",
+        "rate": 4.7,
+        "by": {
+          "_id": "u102",
+          "fullName": "Erin",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "This was the perfect flat. Eclectically furnished, complete, great location - everything we needed.",
+        "rate": 4.7,
+        "by": {
+          "_id": "u103",
+          "fullName": "Kiersta",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "This was the perfect flat. Eclectically furnished, complete, great location - everything we needed.",
+        "rate": 4.7,
+        "by": {
+          "_id": "u104",
+          "fullName": "Ludovic",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "This was the perfect flat. Eclectically furnished, complete, great location - everything we needed.",
+        "rate": 4.7,
+        "by": {
+          "_id": "u105",
+          "fullName": "Emile",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "This was the perfect flat. Eclectically furnished, complete, great location - everything we needed.",
+        "rate": 4.7,
+        "by": {
+          "_id": "u104",
+          "fullName": "Maria",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "This was the perfect flat. Eclectically furnished, complete, great location - everything we needed.",
+        "rate": 4.7,
+        "by": {
+          "_id": "u105",
+          "fullName": "Konstantin",
+          "imgUrl": "/img/img2.jpg"
+        }
+      }
+    ]
+  }
+  {
+
+    "name": "Stay&Co Classic Studio Apartment",
+    "initials": "SCC",
+    "imgUrls": [
+      "1.jpg",
+      "2.jpg",
+      "3.jpg",
+      "4.jpg",
+      "5.jpg",
+      "6.jpg"
+    ],
+    "price": 224,
+    "summary": "Incredible studio, newly refurbished, modern, cozy and perfect located. The studio has a private bathroom and if it’s furnished with everything you may need.Located in the heart of Covent Garden, you will be a shortly walking distance from Trafalgar Square, Leicester Square and Charing Cross, Soho (6 min walk), Oxford Street (9 min walk) and much more. At the step of the studio, you will find shops, restaurants and bars.",
+    "propertyType": "condo",
+    "typeOfPlace": "Entire place",
+    "HouseRules": [
+      "No Smoking",
+      "No pets",
+      "No parties or events"
+    ],
+    "accommodates": 2,
+    "beds": 1,
+    "bedrooms": 1,
+    "bath": 1,
+    "amenities": [
+      "Wifi",
+      "Kitchen",
+      "Washer",
+      "Dryer",
+      "Dedicated workspace",
+      "Iron",
+      "TV"
+    ],
+    "host": {
+      "_id": "51399391",
+      "fullName": "Peleg",
+      "imgUrl": "https://x.com/pic.jpg"
+    },
+    "loc": {
+      "country": "London",
+      "countryCode": "LND",
+      "address": "Greater London, England",
+      "lat": 51.509865,
+      "lng": -0.118092,
+      "position": {
+        "lat": 51.509865,
+        "lng": -0.118092
+      }
+    },
+    "reviews": [
+      {
+        "id": "madeId",
+        "txt": "Lovely apartment and location, but we had a really disappointing experience with the heat. When we checked in the heat had been left on max, when it was a scorching hot day in London. We were sweating getting ready, and could barely sleep at night because it was 80 degrees F in the apartment, when it was only 60 degrees outside. We received no help with fixing this, and I had to personally research how to turn down the boiler, because the thermostats throughout the apartment were turned to minimum, yet it was still scorching hot. Additionally, the bottom sheets had stains all over them, so we had to sleep on top of the sheets. Bed was also extremely uncomfortable- like sleeping on springs.",
+        "rate": 4.6,
+        "by": {
+          "_id": "u102",
+          "fullName": "Erin",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "Lovely apartment and location, but we had a really disappointing experience with the heat. When we checked in the heat had been left on max, when it was a scorching hot day in London. We were sweating getting ready, and could barely sleep at night because it was 80 degrees F in the apartment, when it was only 60 degrees outside. We received no help with fixing this, and I had to personally research how to turn down the boiler, because the thermostats throughout the apartment were turned to minimum, yet it was still scorching hot. Additionally, the bottom sheets had stains all over them, so we had to sleep on top of the sheets. Bed was also extremely uncomfortable- like sleeping on springs.",
+        "rate": 4.6,
+        "by": {
+          "_id": "u103",
+          "fullName": "Kiersta",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "Lovely apartment and location, but we had a really disappointing experience with the heat. When we checked in the heat had been left on max, when it was a scorching hot day in London. We were sweating getting ready, and could barely sleep at night because it was 80 degrees F in the apartment, when it was only 60 degrees outside. We received no help with fixing this, and I had to personally research how to turn down the boiler, because the thermostats throughout the apartment were turned to minimum, yet it was still scorching hot. Additionally, the bottom sheets had stains all over them, so we had to sleep on top of the sheets. Bed was also extremely uncomfortable- like sleeping on springs.",
+        "rate": 4.6,
+        "by": {
+          "_id": "u104",
+          "fullName": "Ludovic",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "Lovely apartment and location, but we had a really disappointing experience with the heat. When we checked in the heat had been left on max, when it was a scorching hot day in London. We were sweating getting ready, and could barely sleep at night because it was 80 degrees F in the apartment, when it was only 60 degrees outside. We received no help with fixing this, and I had to personally research how to turn down the boiler, because the thermostats throughout the apartment were turned to minimum, yet it was still scorching hot. Additionally, the bottom sheets had stains all over them, so we had to sleep on top of the sheets. Bed was also extremely uncomfortable- like sleeping on springs.",
+        "rate": 4.6,
+        "by": {
+          "_id": "u105",
+          "fullName": "Emile",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "Lovely apartment and location, but we had a really disappointing experience with the heat. When we checked in the heat had been left on max, when it was a scorching hot day in London. We were sweating getting ready, and could barely sleep at night because it was 80 degrees F in the apartment, when it was only 60 degrees outside. We received no help with fixing this, and I had to personally research how to turn down the boiler, because the thermostats throughout the apartment were turned to minimum, yet it was still scorching hot. Additionally, the bottom sheets had stains all over them, so we had to sleep on top of the sheets. Bed was also extremely uncomfortable- like sleeping on springs.",
+        "rate": 4.6,
+        "by": {
+          "_id": "u104",
+          "fullName": "Maria",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "Lovely apartment and location, but we had a really disappointing experience with the heat. When we checked in the heat had been left on max, when it was a scorching hot day in London. We were sweating getting ready, and could barely sleep at night because it was 80 degrees F in the apartment, when it was only 60 degrees outside. We received no help with fixing this, and I had to personally research how to turn down the boiler, because the thermostats throughout the apartment were turned to minimum, yet it was still scorching hot. Additionally, the bottom sheets had stains all over them, so we had to sleep on top of the sheets. Bed was also extremely uncomfortable- like sleeping on springs.",
+        "rate": 4.6,
+        "by": {
+          "_id": "u105",
+          "fullName": "Konstantin",
+          "imgUrl": "/img/img2.jpg"
+        }
+      }
+    ]
+  }
+  {
+
+    "name": "Spacious and Quiet Studio near Kings Cross Station",
+    "initials": "SAQ",
+    "imgUrls": [
+      "1.jpg",
+      "2.jpg",
+      "3.jpg",
+      "4.jpg",
+      "5.jpg",
+      "6.jpg"
+    ],
+    "price": 99,
+    "summary": "Attractive studio situated in a great location in Kings Cross. The station is just a stone throw away (3 min walk) to mainline Kings Cross St Pancras, close to the west end and all major attractions in London, you will find everything you need. The area is full of jazzy restaurants and bars perfect for those spontaneous outings. The flat is in a secured private building, located in the lower ground level, quiet and peaceful. Supermarkets are close by within a few mins walking distance.",
+    "propertyType": "Rental unit",
+    "typeOfPlace": "Entire place",
+    "HouseRules": [
+      "No Smoking",
+      "No pets",
+      "No parties or events"
+    ],
+    "accommodates": 2,
+    "beds": 1,
+    "bedrooms": 1,
+    "bath": 1,
+    "amenities": [
+      "Wifi",
+      "Kitchen",
+      "Washer",
+      "Dryer",
+      "Dedicated workspace",
+      "Iron",
+      "TV"
+    ],
+    "host": {
+      "_id": "51399391",
+      "fullName": "Rofiqul",
+      "imgUrl": "https://x.com/pic.jpg"
+    },
+    "loc": {
+      "country": "London",
+      "countryCode": "LND",
+      "address": "Greater London, England",
+      "lat": 51.509865,
+      "lng": -0.118092,
+      "position": {
+        "lat": 51.509865,
+        "lng": -0.118092
+      }
+    },
+    "reviews": [
+      {
+        "id": "madeId",
+        "txt": "Nice clean little place in a convenient location to Kings Cross station and more. Note that it is a basement place so there is not much natural light if that matters to you.",
+        "rate": 4.88,
+        "by": {
+          "_id": "u102",
+          "fullName": "Erin",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "Nice clean little place in a convenient location to Kings Cross station and more. Note that it is a basement place so there is not much natural light if that matters to you.",
+        "rate": 4.88,
+        "by": {
+          "_id": "u103",
+          "fullName": "Kiersta",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "Nice clean little place in a convenient location to Kings Cross station and more. Note that it is a basement place so there is not much natural light if that matters to you.",
+        "rate": 4.88,
+        "by": {
+          "_id": "u104",
+          "fullName": "Ludovic",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "Nice clean little place in a convenient location to Kings Cross station and more. Note that it is a basement place so there is not much natural light if that matters to you.",
+        "rate": 4.88,
+        "by": {
+          "_id": "u105",
+          "fullName": "Emile",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "Nice clean little place in a convenient location to Kings Cross station and more. Note that it is a basement place so there is not much natural light if that matters to you.",
+        "rate": 4.88,
+        "by": {
+          "_id": "u104",
+          "fullName": "Maria",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "Nice clean little place in a convenient location to Kings Cross station and more. Note that it is a basement place so there is not much natural light if that matters to you.",
+        "rate": 4.88,
+        "by": {
+          "_id": "u105",
+          "fullName": "Konstantin",
+          "imgUrl": "/img/img2.jpg"
+        }
+      }
+    ]
+  }
+  {
+
+    "name": "A pocket full of pearls in the heart of London",
+    "initials": "PFO",
+    "imgUrls": [
+      "1.jpg",
+      "2.jpg",
+      "3.jpg",
+      "4.jpg",
+      "5.jpg",
+      "6.jpg"
+    ],
+    "price": 300,
+    "summary": "Found in exclusive Kensington, just minutes from the high street and Kensington Gardens, this home scores highly on the quaintness factor with its private mews location. Once inside, the home has a coherent, modern look that feels very calming due to lots of neutral tones. Staying in this luxury Kensington duplex will make your trip to London a truly memorable experience. You’ll soon see why this home is called \"A Pocket Full of Pearls\", it really is a little gem of a property.",
+    "propertyType": "Rental unit",
+    "typeOfPlace": "Entire place",
+    "HouseRules": [
+      "No Smoking",
+      "No pets",
+      "No parties or events"
+    ],
+    "accommodates": 2,
+    "beds": 1,
+    "bedrooms": 1,
+    "bath": 2,
+    "amenities": [
+      "Wifi",
+      "Kitchen",
+      "Washer",
+      "Dryer",
+      "Dedicated workspace",
+      "Iron",
+      "TV"
+    ],
+    "host": {
+      "_id": "51399391",
+      "fullName": "VanZyl",
+      "imgUrl": "https://x.com/pic.jpg"
+    },
+    "loc": {
+      "country": "London",
+      "countryCode": "LND",
+      "address": "Greater London, England",
+      "lat": 51.509865,
+      "lng": -0.118092,
+      "position": {
+        "lat": 51.509865,
+        "lng": -0.118092
+      }
+    },
+    "reviews": [
+      {
+        "id": "madeId",
+        "txt": "Truly a hidden gem of an Airbnb. Location is great, house is clean, and delicious french bakery on its block. Highly recommend staying here!",
+        "rate": 4.98,
+        "by": {
+          "_id": "u102",
+          "fullName": "Erin",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "Truly a hidden gem of an Airbnb. Location is great, house is clean, and delicious french bakery on its block. Highly recommend staying here!",
+        "rate": 4.98,
+        "by": {
+          "_id": "u103",
+          "fullName": "Kiersta",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "Truly a hidden gem of an Airbnb. Location is great, house is clean, and delicious french bakery on its block. Highly recommend staying here!",
+        "rate": 4.98,
+        "by": {
+          "_id": "u104",
+          "fullName": "Ludovic",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "Truly a hidden gem of an Airbnb. Location is great, house is clean, and delicious french bakery on its block. Highly recommend staying here!",
+        "rate": 4.98,
+        "by": {
+          "_id": "u105",
+          "fullName": "Emile",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "Truly a hidden gem of an Airbnb. Location is great, house is clean, and delicious french bakery on its block. Highly recommend staying here!",
+        "rate": 4.98,
+        "by": {
+          "_id": "u104",
+          "fullName": "Maria",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "Truly a hidden gem of an Airbnb. Location is great, house is clean, and delicious french bakery on its block. Highly recommend staying here!",
+        "rate": 4.98,
+        "by": {
+          "_id": "u105",
+          "fullName": "Konstantin",
+          "imgUrl": "/img/img2.jpg"
+        }
+      }
+    ]
+  }
+  {
+
+    "name": "Stunning Shoreditch Loft Conversion + Movie Screen",
+    "initials": "SSL",
+    "imgUrls": [
+      "1.jpg",
+      "2.jpg",
+      "3.jpg",
+      "4.jpg",
+      "5.jpg",
+      "6.jpg"
+    ],
+    "price": 993,
+    "summary": "The largest one bedroom apartment in Shoreditch. This unique loft conversion is on a quiet road in the centre of Shoreditch with easy access to everything. The apartment has a piano, pinball machine and a drop down movie screen with everything set up. I only rent to individuals or couples and you must have a positive review to be considered. All guests are looked after by Rosie or Debbie and on hand during your stay if you need any help with anything",
+    "propertyType": "condo",
+    "typeOfPlace": "Entire place",
+    "HouseRules": [
+      "No Smoking",
+      "No pets",
+      "No parties or events"
+    ],
+    "accommodates": 2,
+    "beds": 1,
+    "bedrooms": 1,
+    "bath": 1,
+    "amenities": [
+      "Wifi",
+      "Kitchen",
+      "Dedicated workspace",
+      "Iron"
+    ],
+    "host": {
+      "_id": "51399391",
+      "fullName": "Jon",
+      "imgUrl": "https://x.com/pic.jpg"
+    },
+    "loc": {
+      "country": "London",
+      "countryCode": "LND",
+      "address": "Greater London, England",
+      "lat": 51.509865,
+      "lng": -0.118092,
+      "position": {
+        "lat": 51.509865,
+        "lng": -0.118092
+      }
+    },
+    "reviews": [
+      {
+        "id": "madeId",
+        "txt": "This place is the absolute best! It is everything you see in the photos and more. Jon was incredibly nice, accommodating, and responsive. Can not wait to stay here again!",
+        "rate": 4.93,
+        "by": {
+          "_id": "u102",
+          "fullName": "Erin",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "This place is the absolute best! It is everything you see in the photos and more. Jon was incredibly nice, accommodating, and responsive. Can not wait to stay here again!",
+        "rate": 4.93,
+        "by": {
+          "_id": "u103",
+          "fullName": "Kiersta",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "This place is the absolute best! It is everything you see in the photos and more. Jon was incredibly nice, accommodating, and responsive. Can not wait to stay here again!",
+        "rate": 4.93,
+        "by": {
+          "_id": "u104",
+          "fullName": "Ludovic",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "This place is the absolute best! It is everything you see in the photos and more. Jon was incredibly nice, accommodating, and responsive. Can not wait to stay here again!",
+        "rate": 4.93,
+        "by": {
+          "_id": "u105",
+          "fullName": "Emile",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "This place is the absolute best! It is everything you see in the photos and more. Jon was incredibly nice, accommodating, and responsive. Can not wait to stay here again!",
+        "rate": 4.93,
+        "by": {
+          "_id": "u104",
+          "fullName": "Maria",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "This place is the absolute best! It is everything you see in the photos and more. Jon was incredibly nice, accommodating, and responsive. Can not wait to stay here again!",
+        "rate": 4.93,
+        "by": {
+          "_id": "u105",
+          "fullName": "Konstantin",
+          "imgUrl": "/img/img2.jpg"
+        }
+      }
+    ]
+  }
+  {
+
+    "name": "Luxury, Design, Garden, Vondelpark & Free Bikes!",
+    "initials": "LDG",
+    "imgUrls": [
+      "1.jpg",
+      "2.jpg",
+      "3.jpg",
+      "4.jpg",
+      "5.jpg",
+      "6.jpg"
+    ],
+    "price": 94,
+    "summary": "This is a very privat ground floor studioapartment( so no steep stairs) with your own privatgarden , in the peaceful so called backhouse of our canalhouse at the Amstel river. extremely central yet very quiet. A privat marble bathroom/ toillet, privat kitchen+ privat (Miele) washingmachine / dryer(etc.).",
+    "propertyType": "Rental unit",
+    "typeOfPlace": "Entire place",
+    "HouseRules": [
+      "No Smoking",
+      "No pets",
+      "No parties or events"
+    ],
+    "accommodates": 2,
+    "beds": 1,
+    "bedrooms": 1,
+    "bath": 1,
+    "amenities": [
+      "Wifi",
+      "Kitchen",
+      "Washer",
+      "Dryer",
+      "Dedicated workspace",
+      "TV"
+    ],
+    "host": {
+      "_id": "51399391",
+      "fullName": "Ivo",
+      "imgUrl": "https://x.com/pic.jpg"
+    },
+    "loc": {
+      "country": "Amsterdam",
+      "countryCode": "AMS",
+      "address": "Amsterdam, Noord-Holland",
+      "lat": 52.377956,
+      "lng": 4.89707,
+      "position": {
+        "lat": 52.377956,
+        "lng": 4.89707
+      }
+    },
+    "reviews": [
+      {
+        "id": "madeId",
+        "txt": "Great place with amazing location! Marius is very friendly and accommodating! Would stay again :)",
+        "rate": 5,
+        "by": {
+          "_id": "u102",
+          "fullName": "Erin",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "Great place with amazing location! Marius is very friendly and accommodating! Would stay again :)",
+        "rate": 5,
+        "by": {
+          "_id": "u103",
+          "fullName": "Kiersta",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "Great place with amazing location! Marius is very friendly and accommodating! Would stay again :)",
+        "rate": 5,
+        "by": {
+          "_id": "u104",
+          "fullName": "Ludovic",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "Great place with amazing location! Marius is very friendly and accommodating! Would stay again :)",
+        "rate": 5,
+        "by": {
+          "_id": "u105",
+          "fullName": "Emile",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "Great place with amazing location! Marius is very friendly and accommodating! Would stay again :)",
+        "rate": 5,
+        "by": {
+          "_id": "u104",
+          "fullName": "Maria",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "Great place with amazing location! Marius is very friendly and accommodating! Would stay again :)",
+        "rate": 5,
+        "by": {
+          "_id": "u105",
+          "fullName": "Konstantin",
+          "imgUrl": "/img/img2.jpg"
+        }
+      }
+    ]
+  }
+  {
+
+    "name": "Amsterdam Special Watervilla",
+    "initials": "ASW",
+    "imgUrls": [
+      "1.jpg",
+      "2.jpg",
+      "3.jpg",
+      "4.jpg",
+      "5.jpg",
+      "6.jpg"
+    ],
+    "price": 286,
+    "summary": "Amsterdam Special Watervilla is a luxurious watervilla on a hotspot in town near Dam, Nemo, NieuwMarkt, Central Station, WaterlooPlein. In the heart of the city, but still in an oasis of quietness and privacy. You can swim in the waters in front of the door, sun bathe on deck or enjoy the luxury in doors.",
+    "propertyType": "Private room",
+    "typeOfPlace": "Private room in houseboat",
+    "HouseRules": [
+      "No Smoking",
+      "No pets",
+      "No parties or events"
+    ],
+    "accommodates": 4,
+    "beds": 2,
+    "bedrooms": 2,
+    "bath": 1.5,
+    "amenities": [
+      "Wifi",
+      "Kitchen",
+      "Washer",
+      "Free parking",
+      "Dedicated workspace",
+      "TV"
+    ],
+    "host": {
+      "_id": "51399391",
+      "fullName": "Pedja&Nina",
+      "imgUrl": "https://x.com/pic.jpg"
+    },
+    "loc": {
+      "country": "Amsterdam",
+      "countryCode": "AMS",
+      "address": "Amsterdam, Noord-Holland",
+      "lat": 52.377956,
+      "lng": 4.89707,
+      "position": {
+        "lat": 52.377956,
+        "lng": 4.89707
+      }
+    },
+    "reviews": [
+      {
+        "id": "madeId",
+        "txt": "We had a wonderful stay, the house boat was incredibly clean and hospitable. The location was perfect, just a 5-10 minute walk to the main train station.",
+        "rate": 4.55,
+        "by": {
+          "_id": "u102",
+          "fullName": "Erin",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "We had a wonderful stay, the house boat was incredibly clean and hospitable. The location was perfect, just a 5-10 minute walk to the main train station.",
+        "rate": 4.55,
+        "by": {
+          "_id": "u103",
+          "fullName": "Kiersta",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "We had a wonderful stay, the house boat was incredibly clean and hospitable. The location was perfect, just a 5-10 minute walk to the main train station.",
+        "rate": 4.55,
+        "by": {
+          "_id": "u104",
+          "fullName": "Ludovic",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "We had a wonderful stay, the house boat was incredibly clean and hospitable. The location was perfect, just a 5-10 minute walk to the main train station.",
+        "rate": 4.55,
+        "by": {
+          "_id": "u105",
+          "fullName": "Emile",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "We had a wonderful stay, the house boat was incredibly clean and hospitable. The location was perfect, just a 5-10 minute walk to the main train station.",
+        "rate": 4.55,
+        "by": {
+          "_id": "u104",
+          "fullName": "Maria",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "We had a wonderful stay, the house boat was incredibly clean and hospitable. The location was perfect, just a 5-10 minute walk to the main train station.",
+        "rate": 4.55,
+        "by": {
+          "_id": "u105",
+          "fullName": "Konstantin",
+          "imgUrl": "/img/img2.jpg"
+        }
+      }
+    ]
+  }
+  {
+
+    "name": "Design house with wellness & sauna",
+    "initials": "DHW",
+    "imgUrls": [
+      "1.jpg",
+      "2.jpg",
+      "3.jpg",
+      "4.jpg",
+      "5.jpg",
+      "6.jpg"
+    ],
+    "price": 253,
+    "summary": "Great location,Very near Amsterdam and Haarlem. Total privé house only 10 minutes walk to the station ,Lovely design house on the water with hotel beds , & your own sauna.",
+    "propertyType": "Residential home",
+    "typeOfPlace": "Entire place",
+    "HouseRules": [
+      "No Smoking",
+      "No pets",
+      "No parties or events"
+    ],
+    "accommodates": 6,
+    "beds": 4,
+    "bedrooms": 3,
+    "bath": 1.5,
+    "amenities": [
+      "Wifi",
+      "Kitchen",
+      "Washer",
+      "Free parking",
+      "Dryer",
+      "Dedicated workspace",
+      "Iron",
+      "TV"
+    ],
+    "host": {
+      "_id": "51399391",
+      "fullName": "Sendra&Guy",
+      "imgUrl": "https://x.com/pic.jpg"
+    },
+    "loc": {
+      "country": "Amsterdam",
+      "countryCode": "AMS",
+      "address": "Zwanenburg, Noord-Holland",
+      "lat": 52.377956,
+      "lng": 4.89707,
+      "position": {
+        "lat": 52.377956,
+        "lng": 4.89707
+      }
+    },
+    "reviews": [
+      {
+        "id": "madeId",
+        "txt": "Amazing place the location was just a bit further than we thought. But great place. Will stay again.",
+        "rate": 4.63,
+        "by": {
+          "_id": "u102",
+          "fullName": "Erin",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "Amazing place the location was just a bit further than we thought. But great place. Will stay again.",
+        "rate": 4.63,
+        "by": {
+          "_id": "u103",
+          "fullName": "Kiersta",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "Amazing place the location was just a bit further than we thought. But great place. Will stay again.",
+        "rate": 4.63,
+        "by": {
+          "_id": "u104",
+          "fullName": "Ludovic",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "Amazing place the location was just a bit further than we thought. But great place. Will stay again.",
+        "rate": 4.63,
+        "by": {
+          "_id": "u105",
+          "fullName": "Emile",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "Amazing place the location was just a bit further than we thought. But great place. Will stay again.",
+        "rate": 4.63,
+        "by": {
+          "_id": "u104",
+          "fullName": "Maria",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "Amazing place the location was just a bit further than we thought. But great place. Will stay again.",
+        "rate": 4.63,
+        "by": {
+          "_id": "u105",
+          "fullName": "Konstantin",
+          "imgUrl": "/img/img2.jpg"
+        }
+      }
+    ]
+  }
+  {
+
+    "name": "Central & Modern Eco-houseboat at the IJ water",
+    "initials": "CME",
+    "imgUrls": [
+      "1.jpg",
+      "2.jpg",
+      "3.jpg",
+      "4.jpg",
+      "5.jpg",
+      "6.jpg"
+    ],
+    "price": 404,
+    "summary": "Beautiful, bright and private studio rooms in a recently renovated Amsterdam eco-houseboat. It has en suite bathrooms and stunning views over the IJ water. Located in the city-centre, nearby the famous Jordaan area.",
+    "propertyType": "Houseboat",
+    "typeOfPlace": "Entire place",
+    "HouseRules": [
+      "No Smoking",
+      "No pets",
+      "No parties or events"
+    ],
+    "accommodates": 4,
+    "beds": 2,
+    "bedrooms": 2,
+    "bath": 3,
+    "amenities": [
+      "Wifi",
+      "TV",
+      "Washer",
+      "Dedicated workspace"
+    ],
+    "host": {
+      "_id": "51399391",
+      "fullName": "Arie",
+      "imgUrl": "https://x.com/pic.jpg"
+    },
+    "loc": {
+      "country": "Amsterdam",
+      "countryCode": "AMS",
+      "address": "Amsterdam, Noord-Holland",
+      "lat": 52.377956,
+      "lng": 4.89707,
+      "position": {
+        "lat": 52.377956,
+        "lng": 4.89707
+      }
+    },
+    "reviews": [
+      {
+        "id": "madeId",
+        "txt": "beautifully renovated houseboat, close to the city centre, stunning view on a part of the skyline",
+        "rate": 4.82,
+        "by": {
+          "_id": "u102",
+          "fullName": "Erin",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "beautifully renovated houseboat, close to the city centre, stunning view on a part of the skyline",
+        "rate": 4.82,
+        "by": {
+          "_id": "u103",
+          "fullName": "Kiersta",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "beautifully renovated houseboat, close to the city centre, stunning view on a part of the skyline",
+        "rate": 4.82,
+        "by": {
+          "_id": "u104",
+          "fullName": "Ludovic",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "beautifully renovated houseboat, close to the city centre, stunning view on a part of the skyline",
+        "rate": 4.82,
+        "by": {
+          "_id": "u105",
+          "fullName": "Emile",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "beautifully renovated houseboat, close to the city centre, stunning view on a part of the skyline",
+        "rate": 4.82,
+        "by": {
+          "_id": "u104",
+          "fullName": "Maria",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "beautifully renovated houseboat, close to the city centre, stunning view on a part of the skyline",
+        "rate": 4.82,
+        "by": {
+          "_id": "u105",
+          "fullName": "Konstantin",
+          "imgUrl": "/img/img2.jpg"
+        }
+      }
+    ]
+  }
+  {
+
+    "name": "Great Houseboat in Amsterdam Centrum",
+    "initials": "GHI",
+    "imgUrls": [
+      "1.jpg",
+      "2.jpg",
+      "3.jpg",
+      "4.jpg",
+      "5.jpg",
+      "6.jpg"
+    ],
+    "price": 265,
+    "summary": "It is a spacious and comfortable place on a quiet canal. You can see ducks from the windows. Two bedrooms, one bathroom and a nice living room to enjoy. It is decorated in a modern style and peaceful colors.",
+    "propertyType": "Houseboat ",
+    "typeOfPlace": "Entire place",
+    "HouseRules": [
+      "No Smoking",
+      "No pets",
+      "No parties or events"
+    ],
+    "accommodates": 4,
+    "beds": 2,
+    "bedrooms": 2,
+    "bath": 1,
+    "amenities": [
+      "Wifi",
+      "Kitchen",
+      "TV",
+      "Free parking",
+      "Dedicated workspace"
+    ],
+    "host": {
+      "_id": "51399391",
+      "fullName": "Isadora And Cristian",
+      "imgUrl": "https://x.com/pic.jpg"
+    },
+    "loc": {
+      "country": "Amsterdam",
+      "countryCode": "AMS",
+      "address": "Amsterdam, Noord-Holland",
+      "lat": 52.377956,
+      "lng": 4.89707,
+      "position": {
+        "lat": 52.377956,
+        "lng": 4.89707
+      }
+    },
+    "reviews": [
+      {
+        "id": "madeId",
+        "txt": "Great spot. Exactly as advertised. Walking distance to most anything you want to do and tram to central station right outside if going farther (e.g. we went to Ajax football match). Highly recommend.",
+        "rate": 5,
+        "by": {
+          "_id": "u102",
+          "fullName": "Erin",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "Great spot. Exactly as advertised. Walking distance to most anything you want to do and tram to central station right outside if going farther (e.g. we went to Ajax football match). Highly recommend.",
+        "rate": 5,
+        "by": {
+          "_id": "u103",
+          "fullName": "Kiersta",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "Great spot. Exactly as advertised. Walking distance to most anything you want to do and tram to central station right outside if going farther (e.g. we went to Ajax football match). Highly recommend.",
+        "rate": 5,
+        "by": {
+          "_id": "u104",
+          "fullName": "Ludovic",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "Great spot. Exactly as advertised. Walking distance to most anything you want to do and tram to central station right outside if going farther (e.g. we went to Ajax football match). Highly recommend.",
+        "rate": 5,
+        "by": {
+          "_id": "u105",
+          "fullName": "Emile",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "Great spot. Exactly as advertised. Walking distance to most anything you want to do and tram to central station right outside if going farther (e.g. we went to Ajax football match). Highly recommend.",
+        "rate": 5,
+        "by": {
+          "_id": "u104",
+          "fullName": "Maria",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "Great spot. Exactly as advertised. Walking distance to most anything you want to do and tram to central station right outside if going farther (e.g. we went to Ajax football match). Highly recommend.",
+        "rate": 5,
+        "by": {
+          "_id": "u105",
+          "fullName": "Konstantin",
+          "imgUrl": "/img/img2.jpg"
+        }
+      }
+    ]
+  }
+  {
+
+    "name": "Amazing houseboat in Amsterdam city center",
+    "initials": "AHI",
+    "imgUrls": [
+      "1.jpg",
+      "2.jpg",
+      "3.jpg",
+      "4.jpg",
+      "5.jpg",
+      "6.jpg"
+    ],
+    "price": 508,
+    "summary": "My place is right on the canal in the best possible location. You’ll love it because of the ambiance of being on a houseboat and our neighbourhood. It is good for couples, friends, business travelers, and families (incl with kids).",
+    "propertyType": "Houseboat",
+    "typeOfPlace": "Entire place",
+    "HouseRules": [
+      "No Smoking",
+      "No pets",
+      "No parties or events"
+    ],
+    "accommodates": 4,
+    "beds": 3,
+    "bedrooms": 2,
+    "bath": 1,
+    "amenities": [
+      "Wifi",
+      "Kitchen",
+      "Washer",
+      "Free parking",
+      "Dryer",
+      "Dedicated workspace",
+      "TV"
+    ],
+    "host": {
+      "_id": "51399391",
+      "fullName": "Maarten",
+      "imgUrl": "https://x.com/pic.jpg"
+    },
+    "loc": {
+      "country": "Amsterdam",
+      "countryCode": "AMS",
+      "address": "Amsterdam, Noord-Holland",
+      "lat": 52.377956,
+      "lng": 4.89707,
+      "position": {
+        "lat": 52.377956,
+        "lng": 4.89707
+      }
+    },
+    "reviews": [
+      {
+        "id": "madeId",
+        "txt": "Such a great and unique stay. Amazing location and truly an insider experience. Hosts are very responsive and helpful. Highly recommend staying here!!",
+        "rate": 5,
+        "by": {
+          "_id": "u102",
+          "fullName": "Erin",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "Such a great and unique stay. Amazing location and truly an insider experience. Hosts are very responsive and helpful. Highly recommend staying here!!",
+        "rate": 5,
+        "by": {
+          "_id": "u103",
+          "fullName": "Kiersta",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "Such a great and unique stay. Amazing location and truly an insider experience. Hosts are very responsive and helpful. Highly recommend staying here!!",
+        "rate": 5,
+        "by": {
+          "_id": "u104",
+          "fullName": "Ludovic",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "Such a great and unique stay. Amazing location and truly an insider experience. Hosts are very responsive and helpful. Highly recommend staying here!!",
+        "rate": 5,
+        "by": {
+          "_id": "u105",
+          "fullName": "Emile",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "Such a great and unique stay. Amazing location and truly an insider experience. Hosts are very responsive and helpful. Highly recommend staying here!!",
+        "rate": 5,
+        "by": {
+          "_id": "u104",
+          "fullName": "Maria",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "Such a great and unique stay. Amazing location and truly an insider experience. Hosts are very responsive and helpful. Highly recommend staying here!!",
+        "rate": 5,
+        "by": {
+          "_id": "u105",
+          "fullName": "Konstantin",
+          "imgUrl": "/img/img2.jpg"
+        }
+      }
+    ]
+  }
+  {
+    "name": "New Appt: Perfect for family in great location",
+    "initials": "NAP",
+    "imgUrls": [
+      "1.jpg",
+      "2.jpg",
+      "3.jpg",
+      "4.jpg",
+      "5.jpg",
+      "6.jpg"
+    ],
+    "price": 283,
+    "summary": "Comfortable, new appt in quiet, green neighborhood in convenient, authentic Amsterdam-West. Ideal home base to easily explore attractions of Amsterdam-Centre all day while coming back to enjoy peace & quiet to sleep.",
+    "propertyType": "condo",
+    "typeOfPlace": "Entire place",
+    "HouseRules": [
+      "No Smoking",
+      "Pets allowed",
+      "No parties or events"
+    ],
+    "accommodates": 4,
+    "beds": 3,
+    "bedrooms": 1,
+    "bath": 1.5,
+    "amenities": [
+      "Wifi",
+      "Kitchen",
+      "Washer",
+      "Free parking",
+      "Dryer",
+      "Dedicated workspace",
+      "Iron",
+      "TV"
+    ],
+    "host": {
+      "_id": "51399391",
+      "fullName": "Michael",
+      "imgUrl": "https://x.com/pic.jpg"
+    },
+    "loc": {
+      "country": "Amsterdam",
+      "countryCode": "AMS",
+      "address": "Amsterdam, Noord-Holland",
+      "lat": 52.377956,
+      "lng": 4.89707,
+      "position": {
+        "lat": 52.377956,
+        "lng": 4.89707
+      }
+    },
+    "reviews": [
+      {
+        "id": "madeId",
+        "txt": "Michaels place was clean, cozy, and in an excellent relaxing location. It is around 1-2 miles away from the city center, which is an affordable Uber, but also 3 minutes away from the bus and train station. Thus, it is pretty economical to get to from an airport.Michael provided great tips about what to do in Amsterdam, and was very knowledgeable about attractions in the city center, but also local gems around the apartment unit. Would stay again if I returned to Amsterdam",
+        "rate": 4.84,
+        "by": {
+          "_id": "u102",
+          "fullName": "Erin",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "Michaels place was clean, cozy, and in an excellent relaxing location. It is around 1-2 miles away from the city center, which is an affordable Uber, but also 3 minutes away from the bus and train station. Thus, it is pretty economical to get to from an airport.Michael provided great tips about what to do in Amsterdam, and was very knowledgeable about attractions in the city center, but also local gems around the apartment unit. Would stay again if I returned to Amsterdam",
+        "rate": 4.84,
+        "by": {
+          "_id": "u103",
+          "fullName": "Kiersta",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "Michaels place was clean, cozy, and in an excellent relaxing location. It is around 1-2 miles away from the city center, which is an affordable Uber, but also 3 minutes away from the bus and train station. Thus, it is pretty economical to get to from an airport.Michael provided great tips about what to do in Amsterdam, and was very knowledgeable about attractions in the city center, but also local gems around the apartment unit. Would stay again if I returned to Amsterdam",
+        "rate": 4.84,
+        "by": {
+          "_id": "u104",
+          "fullName": "Ludovic",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "Michaels place was clean, cozy, and in an excellent relaxing location. It is around 1-2 miles away from the city center, which is an affordable Uber, but also 3 minutes away from the bus and train station. Thus, it is pretty economical to get to from an airport.Michael provided great tips about what to do in Amsterdam, and was very knowledgeable about attractions in the city center, but also local gems around the apartment unit. Would stay again if I returned to Amsterdam",
+        "rate": 4.84,
+        "by": {
+          "_id": "u105",
+          "fullName": "Emile",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "Michaels place was clean, cozy, and in an excellent relaxing location. It is around 1-2 miles away from the city center, which is an affordable Uber, but also 3 minutes away from the bus and train station. Thus, it is pretty economical to get to from an airport.Michael provided great tips about what to do in Amsterdam, and was very knowledgeable about attractions in the city center, but also local gems around the apartment unit. Would stay again if I returned to Amsterdam",
+        "rate": 4.84,
+        "by": {
+          "_id": "u104",
+          "fullName": "Maria",
+          "imgUrl": "/img/img2.jpg"
+        }
+      },
+      {
+        "id": "madeId",
+        "txt": "Michaels place was clean, cozy, and in an excellent relaxing location. It is around 1-2 miles away from the city center, which is an affordable Uber, but also 3 minutes away from the bus and train station. Thus, it is pretty economical to get to from an airport.Michael provided great tips about what to do in Amsterdam, and was very knowledgeable about attractions in the city center, but also local gems around the apartment unit. Would stay again if I returned to Amsterdam",
+        "rate": 4.84,
+        "by": {
+          "_id": "u105",
+          "fullName": "Konstantin",
+          "imgUrl": "/img/img2.jpg"
+        }
+      }
+    ]
+  }
+]
