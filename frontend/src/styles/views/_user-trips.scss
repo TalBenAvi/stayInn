@@ -1,4 +1,5 @@
 .user-trips {
+    
     padding-top: 120px;
 }
     .header-user-trips{
@@ -6,6 +7,7 @@
         line-height: rem(36px);
         color: #222222;
         margin-bottom: 50px;
+
     }
     .button-user-host{
         background-color: transparent;
@@ -17,11 +19,12 @@
         margin-top: 30px;
         margin-bottom: 30px;
         flex-direction: row;
+        height: 70vh;
         grid-column: 2;
     }
     .small-icon{
-        height: 30px;
-        width: 30px;
+        height: 40px;
+        width: 40px;
         border-radius: 10px;
         margin-left: 10px;
         margin-right: 10px;
@@ -33,6 +36,7 @@
         margin-right: 10px;
     }
     .order-container {
+        padding: 5px;
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
         gap: 15px;
@@ -60,5 +64,97 @@
                 display: flex;
                 align-items: center;
             }
+
+            .order-name {
+                cursor: pointer;
+            }
+  
+            .order-status {
+                border-top: 1px solid rgb(221,221,221);
+                display: flex ;
+                flex-direction: row;
+                min-height: 60px;
+                align-items: center;
+                position: relative;
+                padding-left: 24px;
+                padding-right: 24px;
+                justify-content: center;
+                text-align: center;
+                margin-top: auto;
+
+                span {
+                    
+                    margin-inline-end: 6px;
+                    font-family: airbnb-medium;
+                    color: $black;
+                }
+
+                .orange {
+                    color: rgb(233, 163, 97);
+                }
+
+                .green {
+                    color: green;
+
+                }
+
+                .red {
+                    color: red;
+                }
+
+                
+
+
+            }
         }
+    }
+
+
+    .empty-page {
+      
+        span {
+            color: $gray;
+        }
+
+        img {
+            display: flex;
+            justify-content: flex-start;
+            width: 100%;
+            object-fit: contain ;
+    
+        }
+
+        button {
+            cursor: pointer;
+    display: inline-block;
+    margin-top: -30px;
+
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    width: auto;
+
+    font-family: airbnb-book;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 600;
+    border-radius: 8px;
+    outline: none;
+    padding: 14px 24px;
+    border: none;
+    background: rgb(34, 34, 34);
+    color: rgb(255, 255, 255);
+    contain: paint;
+
+        }
+    }
+
+
+
+    .upcoming {
+        text-decoration: underline;
+    }
+
+    .past {
+        color: $gray;
     }

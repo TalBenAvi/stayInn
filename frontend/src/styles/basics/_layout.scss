@@ -2,7 +2,7 @@
 .main-layout {
     display: grid;
     grid-template-columns: $layoutPadding 1fr $layoutPadding;
-
+    height: 100vh
     // > * {
     //     grid-column: 2;
     // }

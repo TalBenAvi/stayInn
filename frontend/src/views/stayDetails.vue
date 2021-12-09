@@ -693,7 +693,7 @@ export default {
         this.sendOrderRequest()
       }
     },
-    sendOrderRequest() {
+    async sendOrderRequest() {
       this.newOrder.createdAt = Date.now()
       this.newOrder.startDate = this.currentTrip.startDate
       this.newOrder.endDate = this.currentTrip.endDate
@@ -702,9 +702,12 @@ export default {
       this.newOrder.stay.name = this.stay.name
       this.newOrder.stay.price = this.stay.price //**
       this.newOrder.stay._id = this.stay._id
-      this.newOrder.stay.totalPrice = this.calcultedPrice
-      console.log('Hello, order!', this.newOrder)
-      this.$store.dispatch({type:'addOrder', order: this.newOrder})
+      this.newOrder.totalPrice = this.calcultedPrice+150
+      this.newOrder.stay.imgSrc = this.stay.imgUrls
+      this.newOrder.stay.initials = this.stay.initials
+      this.newOrder.stay.country = this.stay.loc.country
+
+      await this.$store.dispatch({type:'addOrder', order: this.newOrder})
     }
   },
   computed: {
@@ -740,11 +743,13 @@ export default {
       }
     },
     nightsCount() {
+      console.log(parseInt(this.nightsAmount))
       return parseInt(this.nightsAmount)
 
     },
     calcultedPrice() {
-      return this.stay.price * this.nightsAmount
+      console.log(this.stay.price,this.nightsAmount,  this.stay.price * this.nightsAmount)
+      return (this.stay.price * this.nightsAmount)+150
     }
   },
   watch: {

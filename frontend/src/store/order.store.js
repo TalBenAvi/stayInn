@@ -4,6 +4,7 @@ export const orderStore = {
     state: {
         orders:[],
         emptyOrder : {
+            
             hostId: "",
             createdAt: Date.now(),
             buyer: {
@@ -22,7 +23,10 @@ export const orderStore = {
             stay: {
               _id: "",
               name: "",
-              price: ''
+              price: '',
+              imgSrc: '',
+              initials: '',
+              country: ''
             },
             status: "pending"
         }
@@ -62,6 +66,21 @@ export const orderStore = {
                 console.log('orderStore: Error in loadOrders', err)
                 throw err
             }
+        },
+        async getUserOrders({commit}, {userId}) { 
+            try {
+                const orders = await orderService.query()
+                console.log(orders)
+
+                var userOrders = orders.filter(order => { 
+                    console.log(order.buyer._id, userId) 
+                    return order.buyer._id === userId})
+
+                return userOrders
+            } catch (err) {
+                console.log('had trouble getting user orders from store', err)
+            }
+            
         }
     }
     
