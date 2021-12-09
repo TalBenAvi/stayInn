@@ -7,7 +7,7 @@
       <!-- because yaniv is the best! -->
       <div>
         <img class="star" src="../assets/imgs/icons/star.jpg" />
-        {{ this.stay.reviews[0].rate }} ({{ this.stay.reviews.length }} reviews)
+        {{ this.stay.reviews[0].rate.Value }} ({{ this.stay.reviews.length }} reviews)
         · {{ this.stay.loc.address }},{{ this.stay.loc.country }}
       </div>
       <div class="flex-center">
@@ -210,7 +210,7 @@
                 <img
                   class="h-13px w-13px padding-2px"
                   src="../assets/imgs/icons/star.jpg"
-                />{{ this.stay.reviews[0].rate }}
+                />{{ this.stay.reviews[0].rate.Value }}
               </div>
               <div class="reviews">
                 ({{ this.stay.reviews.length }} reviews)
@@ -312,52 +312,52 @@
     <div class="reviews-display">
       <div class="airbnb-medium font-size-19px spacing-44px">
         <img class="star" src="../assets/imgs/icons/star.jpg" />
-        {{ this.stay.reviews[0].rate }} · {{ this.stay.reviews.length }} reviews
+        {{ this.stay.reviews[0].rate.Value }} · {{ this.stay.reviews.length }} reviews
       </div>
-      <div class="reviews-rating-data airbnb">
+      <!-- <div class="reviews-rating-data airbnb">
         <div class="flex-center space-end">
           <div class="spacing-10px-right">Cleanliness</div>
           <div class="gray review-rate-bar"><div :style="rateReview"></div></div>
           <div class="rate-score">
-            <div>{{ this.stay.reviews[0].rate }}</div>
+            <div>{{ this.stay.reviews[0].rate.Cleanliness }}</div>
           </div>
         </div>
         <div class="flex-center space-end">
           <div class="spacing-10px-right">Communication</div>
            <div class="gray review-rate-bar"><div  :style="rateReview"></div></div>
           <div class="rate-score">
-            <div>{{ this.stay.reviews[0].rate }}</div>
+            <div>{{ this.stay.reviews[0].rate.Communication }}</div>
           </div>
         </div>
         <div class="flex-center space-end">
           <div class="spacing-10px-right">Check-in</div>
            <div class="gray review-rate-bar"><div  :style="rateReview"></div></div>
           <div class="rate-score">
-            <div>{{ this.stay.reviews[0].rate}}</div>
+            <div>{{ this.stay.reviews[0].rate.CheckIn}}</div>
           </div>
         </div>
         <div class="flex-center space-end">
           <div class="spacing-20px-right">Accuracy</div>
            <div class="gray review-rate-bar"><div  :style="rateReview"></div></div>
           <div class="rate-score">
-            <div>{{ this.stay.reviews[0].rate }}</div>
+            <div>{{ this.stay.reviews[0].rate.Accuracy }}</div>
           </div>
         </div>
         <div class="flex-center space-end">
           <div class="spacing-20px-right">Location</div>
            <div class="gray review-rate-bar"><div  :style="rateReview"></div></div>
           <div class="rate-score">
-            <div>{{ this.stay.reviews[0].rate }}</div>
+            <div>{{ this.stay.reviews[0].rate.Location }}</div>
           </div>
         </div>
         <div class="flex-center space-end">
           <div class="spacing-20px-right">Value</div>
            <div class="gray review-rate-bar"><div  :style="rateReview"></div></div>
           <div class="rate-score">
-            <div>{{ this.stay.reviews[0].rate }}</div>
+            <div>{{ this.stay.reviews[0].rate.Value }}</div>
           </div>
         </div>
-      </div>
+      </div> -->
       <div class="reviews-display-data airbnb">
         <div>
           <div class="flex-row">
@@ -374,7 +374,7 @@
               <div class="review-date">March 2021</div>
             </div>
           </div>
-          <div>{{ this.stay.reviews[1].txt }}</div>
+          <div>{{ this.stay.reviews[0].txt }}</div>
         </div>
         <div>
           <div class="flex-row">
@@ -391,7 +391,7 @@
               <div class="review-date">October 2019</div>
             </div>
           </div>
-          <div>{{ this.stay.reviews[0].txt }}</div>
+          <div>{{ this.stay.reviews[1].txt }}</div>
         </div>
         <div>
           <div class="flex-row">
@@ -408,7 +408,7 @@
               <div class="review-date">November 2020</div>
             </div>
           </div>
-          <div>{{ this.stay.reviews[1].txt }}</div>
+          <div>{{ this.stay.reviews[2].txt }}</div>
         </div>
         <div>
           <div class="flex-row">
@@ -425,7 +425,7 @@
               <div class="review-date">July 2020</div>
             </div>
           </div>
-          <div>{{ this.stay.reviews[1].txt }}</div>
+          <div>{{ this.stay.reviews[3].txt }}</div>
         </div>
         <div>
           <div class="flex-row">
@@ -442,7 +442,7 @@
               <div class="review-date">October 2020</div>
             </div>
           </div>
-          <div>{{ this.stay.reviews[1].txt }}</div>
+          <div>{{ this.stay.reviews[4].txt }}</div>
         </div>
         <div>
           <div class="flex-row">
@@ -459,17 +459,33 @@
               <div class="review-date">January 2021</div>
             </div>
           </div>
-          <div>{{ this.stay.reviews[1].txt }}</div>
+          <div>{{ this.stay.reviews[5].txt }}</div>
         </div>
       </div>
       <div>
-        <div>
+        <!-- <div>
           <span class="underline airbnb-medium spacing-44px">Show more</span>
-        </div>
-        <div class="spacing-44px">
+        </div> -->
+        <div class="marging-bottom-25">
           <button class="show-more-amenities airbnb-medium">
             show all {{ this.stay.reviews.length }} reviews
           </button>
+        </div>
+        <div class="spacing-44px">
+          <button v-if="!reviewAddOpen" class="show-more-amenities airbnb-medium" @click="reviewAddOpen=!reviewAddOpen">
+            Add Review
+          </button>
+          <div v-else>
+          <form class="marging-bottom-25" @submit.prevent="insertReview">
+           <div class="marging-bottom-25"> <textarea v-model="reviewData" class="airbnb" id="" cols="80" rows="15"></textarea></div>
+          <button class="show-more-amenities airbnb-medium spacing-20px-right">
+           save review
+          </button>
+        </form>
+           <button class="show-more-amenities airbnb-medium" @click="reviewAddOpen=!reviewAddOpen">
+           close review
+          </button>
+        </div>
         </div>
       </div>
     </div>
@@ -483,7 +499,7 @@
           :center="pos"
           :zoom="12"
           map-type-id="terrain"
-          style="width: 1120px; height: 480px; margin-bottom: 80px"
+          style="width: 1500px; height: 480px; margin-bottom: 80px"
         >
           <GmapMarker :position="pos" :clickable="true" />
         </GmapMap>
@@ -637,6 +653,8 @@ export default {
       stay: null,
       pos: { lat: 41.5912, lng: 1.5209 },
       scrollBar: 0,
+      reviewAddOpen: false,
+      reviewData:'',
       currentTrip: this.$store.getters.currentTrip,
       show: false,
       newOrder: this.$store.getters.emptyOrder,
@@ -666,6 +684,17 @@ export default {
     window.addEventListener("scroll", this.handlingScroll);
   },
   methods: {
+     async insertReview(){
+       try {
+        await this.$store.dispatch({ type: "addReview",userCred:this.reviewData });
+         this.isLoginOpen = false;
+         console.log('mission succeded');
+         this.isUserLogedIn=true;
+      } catch(err) {
+          console.log(err)
+          this.msg = "Failed to login"
+      }
+    },
     handlingScroll() {
       let scrollBarPos = window.top.scrollY;
       this.scrollBar = scrollBarPos;
@@ -716,7 +745,7 @@ export default {
       else return {position: "relative","margin-top":640 + "px" };
     },
     rateReview(){
-      let length=(this.stay.reviews[0].rate)/(5/100);
+      let length=(this.stay.reviews[0].rate.Value)/(5/100);
       console.log(length);
       return {width:length + "%"};
     },
