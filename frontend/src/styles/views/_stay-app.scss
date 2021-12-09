@@ -74,7 +74,7 @@
 
 .grid-card-container {
     margin-top: 38px;
-    row-gap: 38px;
+    row-gap: 50px;
     column-gap: 25px;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(275px, 1fr));
@@ -141,26 +141,31 @@
     // text-size-adjust: 60%;
 }
 
+.gray-222222{
+    color: #222222;
+}
+
 .stay-name {
    margin-top: 7px;
    font-family: airbnb-medium;
    justify-content: space-between;
    display: flex;
    gap: 10px;
-    .left-details-display {
-        text-overflow: ellipsis;
-        white-space: nowrap;
-        overflow: hidden;
-        // width: 210px; // some width
-        flex-grow:1fr;
-        max-width: 40ch;
-    }
+
     .price-details-display {
         color: $black;
         font-family: airbnb;
         font-size: 16.5px;
         min-width: 90px;
     }
+}
+.left-details-display {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    // width: 210px; // some width
+    flex-grow:1fr;
+    max-width: 40ch;
 }
 .stay-details-display {
     color: $gray;
@@ -181,6 +186,9 @@
 
 }
 
+.stay-name-left-details-display{
+font-size: 18px;
+}
 
 
 
