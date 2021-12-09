@@ -33,18 +33,16 @@ async function getStayById(stayId) {
         throw err;
     }
 }
-
-// async function setCurrFilter(city) {
+// async function addReview(stayId) {
 //     try {
-//         console.log(city)
-//         var city = await storageService.get(STAY_KEY, city);
-//         console.log(stay)
+//         var stay = await httpService.get(`stay/${stayId}`)
 //         return stay
 //     } catch (err) {
 //         console.log('Had an error getting stay by id (in front-service)', err)
 //         throw err;
 //     }
 // }
+
 
 function _createStays() {
     let stays = utilService.loadFromStorage(STAY_KEY);

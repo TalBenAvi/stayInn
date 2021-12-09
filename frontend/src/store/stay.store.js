@@ -91,6 +91,18 @@ export const stayStore = {
         }
     },
     actions: {
+        async addReview({ commit }, { userCred }) {
+            console.log(userCred);
+            // try {
+            //     const user = await stayService.login(userCred);
+            //     commit({ type: 'setLoggedinUser', user })
+            //     console.log(user);
+            //     return user;
+            // } catch (err) {
+            //     console.log('userStore: Error in login', err)
+            //     throw err
+            // }
+        },
         async loadStays({commit}) {
             try  {
                 var stays = await stayService.query()
