@@ -197,7 +197,7 @@
 
     }
     // height: 80px;
-    box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
+    box-shadow: rgb(0 0 0 / 8%) 0px 1px 1px;
         .logo-img {
             transition: .5s;
             object-fit: contain;
@@ -429,7 +429,8 @@
 // Login + signup + host manu
 
 .profile-menu {
-    background-color: #fff;
+    background-color: white;
+   padding: 10px;
     display: flex;
     flex-direction: column;
     font-family: airbnb;
@@ -439,24 +440,43 @@
     right: 0;
     width: 220px;
     border-radius: 15px;
-    box-shadow: 0 0 10px 2px rgb(0 0 0 / 30%);
+    border: 1px solid #DDDDDD;
     overflow: hidden;
-    z-index: 10;
+    z-index: 20000;
+
+    button:hover {
+        width: 100%;
+        background-color: #eeeeee8c;
+    }
+
+
+button:first-of-type {
+    font-family: airbnb-medium;
+    
+}
+
+    button:nth-last-of-type(even) {
+        border-bottom: 1px solid #DDDDDD;
+
+    }
 }
 
 .profile-menu a, .profile-menu button {
     // display: none;
-    padding: 12px 15px;
+    font-family: airbnb;
+    padding: 12px 14px;
+    background-color: #fff;
     text-align: left;
-    font-size: .7rem;
+    font-size: .8.5rem;
     background-color: #fff;
     font-weight: 500;
     border: none;
     // border-bottom: solid $separate 0.5px;
     margin-bottom: 10px;
     cursor: pointer;
-}
 
+
+}
 
 
 

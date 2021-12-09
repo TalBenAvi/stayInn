@@ -1,7 +1,5 @@
 <template>
-  
   <div v-if="stay" class="stay-details">
-  
     <div class="name">{{ this.stay.name }}</div>
     <div class="location-name">
       <!-- because yaniv is the best! -->
@@ -205,7 +203,7 @@
           <div class="stay-reserve">
             <div class="price-reviews">
               <div class="stay-price">${{ this.stay.price }}</div>
-              <div class="night">/night </div>
+              <div class="night">/night</div>
               <div class="rate">
                 <img
                   class="h-13px w-13px padding-2px"
@@ -277,15 +275,17 @@
               </div>
 
               <div>
-                  <gardient-btn @reserveStay="reserveStay()"></gardient-btn>
+                <gardient-btn @reserveStay="reserveStay()"></gardient-btn>
               </div>
             </div>
-            <div class="charged">
-              You won't be charged yet
-              </div>
+            <div class="charged">You won't be charged yet</div>
             <div class="priceing">
-              <div class="underline">${{ this.stay.price }} x {{nightsCount}} nights</div>
-              <div>${{ Number(this.stay.price * nightsCount ).toLocaleString() }}</div>
+              <div class="underline">
+                ${{ this.stay.price }} x {{ nightsCount }} nights
+              </div>
+              <div>
+                ${{ Number(this.stay.price * nightsCount).toLocaleString() }}
+              </div>
             </div>
             <div class="priceing">
               <div class="underline">Cleaning fee</div>
@@ -298,7 +298,11 @@
             <div class="total">
               <div class="airbnb-medium">Total</div>
               <div class="airbnb-medium">
-              ${{ Number(this.stay.price * nightsCount + 50 + 100).toLocaleString() }}
+                ${{
+                  Number(
+                    this.stay.price * nightsCount + 50 + 100
+                  ).toLocaleString()
+                }}
               </div>
             </div>
           </div>
@@ -317,42 +321,54 @@
       <div class="reviews-rating-data airbnb">
         <div class="flex-center space-end">
           <div class="spacing-10px-right">Cleanliness</div>
-          <div class="gray review-rate-bar"><div :style="rateReview"></div></div>
+          <div class="gray review-rate-bar">
+            <div :style="rateReview"></div>
+          </div>
           <div class="rate-score">
             <div>{{ this.stay.reviews[0].rate.Cleanliness }}</div>
           </div>
         </div>
         <div class="flex-center space-end">
           <div class="spacing-10px-right">Communication</div>
-           <div class="gray review-rate-bar"><div  :style="rateReview"></div></div>
+          <div class="gray review-rate-bar">
+            <div :style="rateReview"></div>
+          </div>
           <div class="rate-score">
             <div>{{ this.stay.reviews[0].rate.Communication }}</div>
           </div>
         </div>
         <div class="flex-center space-end">
           <div class="spacing-10px-right">Check-in</div>
-           <div class="gray review-rate-bar"><div  :style="rateReview"></div></div>
+          <div class="gray review-rate-bar">
+            <div :style="rateReview"></div>
+          </div>
           <div class="rate-score">
             <div>{{ this.stay.reviews[0].rate.CheckIn}}</div>
           </div>
         </div>
         <div class="flex-center space-end">
           <div class="spacing-20px-right">Accuracy</div>
-           <div class="gray review-rate-bar"><div  :style="rateReview"></div></div>
+          <div class="gray review-rate-bar">
+            <div :style="rateReview"></div>
+          </div>
           <div class="rate-score">
             <div>{{ this.stay.reviews[0].rate.Accuracy }}</div>
           </div>
         </div>
         <div class="flex-center space-end">
           <div class="spacing-20px-right">Location</div>
-           <div class="gray review-rate-bar"><div  :style="rateReview"></div></div>
+          <div class="gray review-rate-bar">
+            <div :style="rateReview"></div>
+          </div>
           <div class="rate-score">
             <div>{{ this.stay.reviews[0].rate.Location }}</div>
           </div>
         </div>
         <div class="flex-center space-end">
           <div class="spacing-20px-right">Value</div>
-           <div class="gray review-rate-bar"><div  :style="rateReview"></div></div>
+          <div class="gray review-rate-bar">
+            <div :style="rateReview"></div>
+          </div>
           <div class="rate-score">
             <div>{{ this.stay.reviews[0].rate.Value }}</div>
           </div>
@@ -543,7 +559,7 @@
     </div>
     <div class="full-width">
       <h3 class="airbnb">Things to know</h3>
-      </div>
+    </div>
     <div class="flex-row full-width">
       <div class="width-33">
         <div>
@@ -638,11 +654,11 @@
 <script>
 import datePicker from "../cmps/date-picker.vue";
 import { eventBus } from "../services/eventBus.js";
-import gardientBtn from '../cmps/gardient-btn.vue';
+import gardientBtn from "../cmps/gardient-btn.vue";
 export default {
   components: {
     datePicker,
-    gardientBtn
+    gardientBtn,
   },
   name: "stay-details",
   data() {
@@ -655,8 +671,7 @@ export default {
       currentTrip: this.$store.getters.currentTrip,
       show: false,
       newOrder: this.$store.getters.emptyOrder,
-      nightsAmount : 0
-  
+      nightsAmount: 0,
     };
   },
   created() {
@@ -697,7 +712,6 @@ export default {
       this.scrollBar = scrollBarPos;
     },
     dateUpdated(dates, amount) {
-      
       if (!this.currentTrip) return;
       this.currentTrip.startDate = `${new Date(dates.start).getDate()}/${
         new Date(dates.start).getMonth() + 1
@@ -705,46 +719,56 @@ export default {
       this.currentTrip.endDate = `${new Date(dates.end).getDate()}/${
         new Date(dates.end).getMonth() + 1
       }/${new Date(dates.end).getFullYear()}`;
-      this.nightsAmount = amount
-   
+      this.nightsAmount = amount;
     },
     reserveStay() {
-      let user = this.$store.getters.loggedinUser
+      let user = this.$store.getters.loggedinUser;
       if (!user) {
-        prompt('please sign in ')
+        const msg = {
+          txt: `Please sign-in to procceed`,
+          type: "error",
+        };
+        eventBus.$emit("showMsg", msg);
       } else {
-        this.sendOrderRequest()
+        this.sendOrderRequest();
       }
     },
     async sendOrderRequest() {
-      this.newOrder.createdAt = Date.now()
-      this.newOrder.startDate = this.currentTrip.startDate
-      this.newOrder.endDate = this.currentTrip.endDate
-      this.newOrder.hostId= this.stay.host._id
-      this.newOrder.guests = this.currentTrip.guests
-      this.newOrder.stay.name = this.stay.name
-      this.newOrder.stay.price = this.stay.price //**
-      this.newOrder.stay._id = this.stay._id
-      this.newOrder.totalPrice = this.calcultedPrice+150
-      this.newOrder.stay.imgSrc = this.stay.imgUrls
-      this.newOrder.stay.initials = this.stay.initials
-      this.newOrder.stay.country = this.stay.loc.country
+      this.newOrder.createdAt = Date.now();
+      this.newOrder.startDate = this.currentTrip.startDate;
+      this.newOrder.endDate = this.currentTrip.endDate;
+      this.newOrder.hostId = this.stay.host._id;
+      this.newOrder.guests = this.currentTrip.guests;
+      this.newOrder.stay.name = this.stay.name;
+      this.newOrder.stay.price = this.stay.price; //**
+      this.newOrder.stay._id = this.stay._id;
+      this.newOrder.totalPrice = this.calcultedPrice + 150;
+      this.newOrder.stay.imgSrc = this.stay.imgUrls;
+      this.newOrder.stay.initials = this.stay.initials;
+      this.newOrder.stay.country = this.stay.loc.country;
 
-      await this.$store.dispatch({type:'addOrder', order: this.newOrder})
-    }
+      await this.$store.dispatch({ type: "addOrder", order: this.newOrder });
+      const msg = {
+        txt: `Reservation request sent to host`,
+        type: "success",
+      };
+      eventBus.$emit("showMsg", msg);
+    },
   },
   computed: {
     determinePos() {
-      if (this.scrollBar < 580 ) return { position: "relative"};
-      else  if (this.scrollBar >= 580 && this.scrollBar <= 1200) {
-        return {position: "relative","margin-top": this.scrollBar-580 + "px"};
-      } 
-      else return {position: "relative","margin-top":640 + "px" };
+      if (this.scrollBar < 580) return { position: "relative" };
+      else if (this.scrollBar >= 580 && this.scrollBar <= 1200) {
+        return {
+          position: "relative",
+          "margin-top": this.scrollBar - 580 + "px",
+        };
+      } else return { position: "relative", "margin-top": 640 + "px" };
     },
     rateReview(){
       let length=(this.stay.reviews[0].rate.Value)/(5/100);
       console.log(length);
-      return {width:length + "%"};
+      return { width: length + "%" };
     },
     numOfGuests() {
       let amount =
@@ -766,14 +790,17 @@ export default {
       }
     },
     nightsCount() {
-      console.log(parseInt(this.nightsAmount))
-      return parseInt(this.nightsAmount)
-
+      console.log(parseInt(this.nightsAmount));
+      return parseInt(this.nightsAmount);
     },
     calcultedPrice() {
-      console.log(this.stay.price,this.nightsAmount,  this.stay.price * this.nightsAmount)
-      return (this.stay.price * this.nightsAmount)+150
-    }
+      console.log(
+        this.stay.price,
+        this.nightsAmount,
+        this.stay.price * this.nightsAmount
+      );
+      return this.stay.price * this.nightsAmount + 150;
+    },
   },
   watch: {
     "$route.params.stayId": {
