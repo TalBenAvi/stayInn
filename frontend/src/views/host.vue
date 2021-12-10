@@ -367,14 +367,8 @@ export default {
       status:false,
       orders:false,
       rates:false,
-<<<<<<< HEAD
       imgUrls: [],
       currUser: null
-=======
-      imgUrls1: [],
-      imgUrls2: []
-
->>>>>>> c1c3601c9b97bbc06a3ba2deff0ad91210cea7c5
     };
   },
   components: {
@@ -411,18 +405,9 @@ export default {
         this.orders=false;
          this.rates=true;
     },
-<<<<<<< HEAD
       saveImg(imgUrl) {
     this.imgUrls.push(imgUrl)
     },
-=======
-      saveImg1(imgUrl1) {
-    this.imgUrls1.push(imgUrl1)
-    },
-          saveImg2(imgUrl2) {
-    this.imgUrls1.push(imgUrl2)
-    }
->>>>>>> c1c3601c9b97bbc06a3ba2deff0ad91210cea7c5
     // async onUploadImg(ev) {
     //     this.isLoading = true
     //     let res = await uploadImg(ev);
