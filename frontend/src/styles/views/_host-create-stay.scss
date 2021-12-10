@@ -2,7 +2,6 @@
     display: grid;
     grid-template-columns: 150px 1fr 150px;
 }
-<<<<<<< HEAD
 .main-area{
     min-height: 65vh;
 margin-top:30px;
@@ -10,14 +9,6 @@ margin-bottom:30px;
 display: flex;
 flex-direction: row;
 grid-column: 2;
-=======
-.main-area {
-    margin-top: 30px;
-    margin-bottom: 30px;
-    display: flex;
-    flex-direction: row;
-    grid-column: 2;
->>>>>>> c1c3601c9b97bbc06a3ba2deff0ad91210cea7c5
 }
 .menu-bar {
     width: 16%;
