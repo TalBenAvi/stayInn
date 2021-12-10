@@ -77,9 +77,9 @@
             <div class="imgs-layout-host marging-bottom-25">
               <div class="img1-host gray">
                 <label>
-                     <img-upload @onSaveImg="saveImg"></img-upload>
+                     <img-upload @onSaveImg="saveImg1"></img-upload>
                      <section class="img-list">
-                       <img class="image-upload1" :style="{height:100+'%'}" v-for="imgUrl in imgUrls" :key="imgUrl" :src="imgUrl" alt="">
+                       <img class="image-upload1" :style="{height:100+'%'}" v-for="imgUrl1 in imgUrls1" :key="imgUrl1" :src="imgUrl1" alt="">
                      </section>
                   <!-- <input type="file" id="myFile" name="filename" hidden/> -->
                      <!-- <img-upload @onSaveImg="saveImg"></img-upload> -->
@@ -89,9 +89,9 @@
               <div class="row1">
                   <div class="img2-host gray ">
                     <label>
-                     <img-upload @onSaveImg="saveImg"></img-upload>
+                     <img-upload @onSaveImg="saveImg2"></img-upload>
                      <section class="img-list">
-                       <!-- <img class="image-upload2" :style="{height:100+'%'}" v-for="imgUrl2 in imgUrls2" :key="imgUrl2" :src="imgUrl2" alt=""> -->
+                       <img class="image-upload2" :style="{height:100+'%'}" v-for="imgUrl2 in imgUrls2" :key="imgUrl2" :src="imgUrl2" alt="">
                      </section>
                   </label>
                   </div>

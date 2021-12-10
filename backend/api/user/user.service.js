@@ -1,6 +1,7 @@
 
 const dbService = require('../../services/db.service')
 const logger = require('../../services/logger.service')
+
 const ObjectId = require('mongodb').ObjectId
 
 module.exports = {
@@ -9,7 +10,8 @@ module.exports = {
     getByUsername,
     remove,
     update,
-    add
+    add,
+
 }
 
 async function query(filterBy = {}) {
@@ -33,15 +35,11 @@ async function query(filterBy = {}) {
 
 async function getById(userId) {
     try {
+        console.log(userId)
         const collection = await dbService.getCollection('user')
         const user = await collection.findOne({ '_id': ObjectId(userId) })
+        console.log(user)
         delete user.password
-
-        user.givenReviews = user.givenReviews.map(review => {
-            delete review.byUser
-            return review
-        })
-
         return user
     } catch (err) {
         logger.error(`while finding user ${userId}`, err)
@@ -71,17 +69,14 @@ async function remove(userId) {
 
 async function update(user) {
     try {
-        const userToSave = {
-            _id: ObjectId(user._id),
-            username: user.username,
-            fullname: user.fullname,
-            score: user.score,
-        }
+        var id = ObjectId(user._id)
+        delete user._id
         const collection = await dbService.getCollection('user')
-        await collection.updateOne({ _id: userToSave._id }, { $set: userToSave })
-        return userToSave;
+        await collection.updateOne({ "_id": id }, { $set: { ...user } })
+        user._id = id
+        return user
     } catch (err) {
-        logger.error(`cannot update user ${user._id}`, err)
+        logger.error(`cannot update user ${user}`, err)
         throw err
     }
 }
@@ -92,7 +87,7 @@ async function add(user) {
             username: user.username,
             password: user.password,
             fullname: user.fullname,
-            score: 100
+            pendingOrders: []
         }
         const collection = await dbService.getCollection('user')
         await collection.insertOne(userToAdd)
@@ -121,7 +116,5 @@ function _buildCriteria(filterBy) {
     }
     return criteria
 }
-
-
 
 
