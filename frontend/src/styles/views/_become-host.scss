@@ -1,0 +1,50 @@
+.become-page-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 90vh;
+    img {
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .become-text {
+        height: 100%;
+        background: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        span {
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-family: airbnb-medium;
+            font-size: 45px;
+        }
+
+        button {
+            margin-top: 40px;
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+            text-align: center;
+            text-decoration: none;
+            width: auto;
+            font-family: airbnb-book;
+            font-size: 17px;
+            line-height: 20px;
+            font-weight: 600;
+            border-radius: 8px;
+            outline: none;
+            padding: 14px 24px;
+            border: none;
+            background: rgb(255,54,92);
+            color: rgb(255, 255, 255);
+            contain: paint;
+        }
+    }
+
+}

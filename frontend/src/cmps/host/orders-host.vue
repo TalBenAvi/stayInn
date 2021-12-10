@@ -10,30 +10,40 @@
     </div>
 
     <div class="orders-body">
-        <div v-if="hostOrders"></div>
-         <div v-for="order in hostOrders" :key="order._id" class="orders-container">
-                   <div class="">{{order.buyer.fullName}}</div>
-            <div>{{order.startDate}}</div>
-            <div>{{order.endDate}}</div>
-            <div>{{order.status}}</div>
-            <div>{{order.stay.totalPrice}}</div>
-            <div class="">
-                <button>Accept</button>
-                <button>Decline</button>
-            </div>
-
-         </div>
-      
+      <div v-if="hostOrders"></div>
+      <div
+        v-for="order in hostOrders"
+        :key="order._id"
+        class="orders-container"
+      >
+        <div class="">{{ order.buyer.fullname.substring(0, 6) }}</div>
+        <div>{{ order.startDate }}</div>
+        <div>{{ order.endDate }}</div>
+        <div>{{ order.status }}</div>
+        <div>{{ order.totalPrice }}$</div>
+        <div>
+          <div v-if="order.status === 'pending'">
+            <button @click="updateOrderStatus(order._id, 'Accepted')" class="accept">
+              Accept
+            </button>
+            <button class="decline" @click="updateOrderStatus(order._id, 'Declined')">Decline</button>
+          </div>
+          <div v-if="order.status === 'Accepted'">
+            <div>Accepted</div>
+          </div>
+          <div v-if="order.status==='Declined'">Declined</div>
         </div>
+      </div>
+    </div>
   </section>
 </template>
 
 <script>
 export default {
-    props: {
+  props: {
     user: Object,
   },
-    data() {
+  data() {
     return {
       hostOrders: [],
     };
@@ -41,14 +51,36 @@ export default {
   created() {
     console.log(this.user);
     this.setOrders();
+    this.clearPending();
   },
   methods: {
     async setOrders() {
-      let orders = await this.$store.dispatch({type: 'getHostOrders', hostId: this.user._id});
-      console.log(orders)
-      this.hostOrders = orders
-    }
+      let orders = await this.$store.dispatch({
+        type: "getHostOrders",
+        hostId: this.user._id,
+      });
+      console.log(orders);
+      this.hostOrders = orders;
+    },
+    async updateOrderStatus(orderId, status) {
+      var updatedOrder = await this.$store.dispatch({
+        type: 'updateOrderStatus',
+        orderId,
+        status
+      });
+      console.log(updatedOrder);
+      this.setOrders();
+    },
+      async clearPending() {
+      var updatedOrder = await this.$store.dispatch({
+        type: 'clearPending',
+        hostId: this.user._id,
+      });
+      console.log(updatedOrder);
+      }
+
   },
-  computed: {},
+  computed: {
+  },
 };
 </script>

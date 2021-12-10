@@ -145,7 +145,7 @@ export default {
 
     },
     toHost() {
-      this.$router.push("/host");
+      this.$router.push('/become');
     },
     handleScroll() {
       let scrollBarPos = window.top.scrollY;

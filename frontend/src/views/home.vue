@@ -53,7 +53,7 @@
       </div>
         </div>
 
-      <div @click="showDetails('id')" class="banner">
+      <div @click="toHost()" class="banner">
         <h1>Become a host</h1>
         <h4 class="sub-header">Unlock new opportunities by sharing your space.</h4>
         <button class="learn-btn">Learn More</button>
@@ -94,6 +94,9 @@ export default {
     },
     showDetails(stayId) {
       this.$router.push(`/stay/details/${stayId}`)
+    },
+    toHost() {
+       this.$router.push('/become');
     }
   }
 };

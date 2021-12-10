@@ -26,7 +26,7 @@
                <div><img class="smallest-icon center-5px" src="../assets/imgs/icons/next.png" ></div></div>
              </div>
              <div class="order-status">
-               <span>Order status: </span><span :class="{orange: order.status === 'pending' ,  green: order.status === 'approved'}">{{order.status}}</span>
+               <span>Order status: </span><span :class="{orange: order.status === 'pending' ,  green: order.status === 'Accepted', red: order.status === 'Declined'}">{{order.status}}</span>
              </div>
           </div>
         </div>
