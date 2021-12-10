@@ -2,7 +2,7 @@
   <div class="stay-app">
     <section class="stay-filter-container" :style="determinePos">
       <!-- <div class="separete-line"> -->
-      <button @click="toggleModal('price')" class="filter-btn">
+      <button @click="toggleModal('price')" class="filter-btn price-btn-margin">
         Price <i class="arrow down"></i>
       </button>
 
@@ -245,7 +245,8 @@
       </div>
     </section>
     <!-- Card Grid Display -->
-    <div v-if="staysForDisplay" class="center-20 airbnb gray-222222">{{this.staysForDisplay.length}} stays in {{this.staysForDisplay[0].loc.country}}</div>
+    <div v-if="staysForDisplay" class="center-20 airbnb gray-222222">{{this.staysForDisplay.length}} stays <span v-if="filterByLoc !== 'all' && filterByLoc">in {{this.staysForDisplay[0].loc.country}}</span></div>
+    <!-- in {{this.staysForDisplay[0].loc.country}} -->
     <section v-if="staysForDisplay" class="grid-card-container">
       <div v-for="stay in staysForDisplay" :key="stay._id" class="grid-card-item" @click="showDetails(stay._id)">
       <div class="grid-img">
@@ -265,11 +266,11 @@
           <!-- <p class="stay-name flex"> -->
             <div class="flex-row">
               <div> <img class="star center-5px spacing-10px-right" src="../assets/imgs/icons/star.jpg" /></div>
-              <div class="airbnb center gray-color"> {{stay.reviews[0].rate.Value }} ({{stay.reviews.length}})</div>
+              <div class="airbnb center gray-color rate-score-stay-line"><span class="rate-score-stay">{{stay.reviews[0].rate.Value }}</span> ({{stay.reviews.length}})</div>
             </div>
             <div class="left-details-display airbnb">{{ stay.typeOfPlace }} ∙ {{ stay.loc.country }}</div>
             <div class="left-details-display stay-name-left-details-display airbnb">{{ stay.name }}</div>
-            <div class="price-details-display flex-row"><div class="airbnb-medium">${{ stay.price }}</div><div class="airbnb">/ night</div></div>
+            <div class="price-details-display flex-row"><div class="airbnb-medium">${{ stay.price }}</div><div class="airbnb"> / night</div></div>
           <!-- </p> -->
         </div>
       </div>
@@ -315,6 +316,10 @@ export default {
   },
   mounted() {},
   computed: {
+        filterByLoc(){
+      console.log(this.$store.getters.filterByLoc)
+      return this.$store.getters.filterByLoc
+    },
     determinePos() {
       if (this.scrollBar >= 85) {
         return {
@@ -323,8 +328,10 @@ export default {
           width: 100 + "%",
           // padding: "54px 147px 54px",
           //  "padding-bottom": 58 + "px",
-          padding: "20px",
-          paddingLeft: "105px",
+          paddingTop: "20px",
+          paddingBottom: "20px",
+          // paddingLeft: "110px",
+          marginLeft: "150px",
           backgroundColor: "white",
           "margin-top": 0,
           "box-shadow": "rgb(0 0 0 / 8%) 0px 1px 1px",
@@ -464,7 +471,8 @@ export default {
     },
     toggleIsLiked(ev) {
       ev.target.classList.toggle('active')
-    }
+    },
+
 
   },
 };
