@@ -6,7 +6,6 @@ async function getStays(req, res) {
   try {
     var queryParams = req.query;
     const stays = await stayService.query(queryParams)
-    console.log('stays from getStays' , stays)
     res.json(stays);
   } catch (err) {
     logger.error('Failed to get stays', err)
@@ -29,7 +28,6 @@ async function getStayById(req, res) {
     // console.log('controller ');
     const stayId = req.params.id;
     const stay = await stayService.getById(stayId);
-    stay.review = await reviewService.query({aboutStayId:stayId})
     console.log(stay);
     res.json(stay)
   } catch (err) {

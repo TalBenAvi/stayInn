@@ -13,11 +13,27 @@ export const userService = {
     getById,
     remove,
     update,
-    changeScore
+    changeScore,
+    addPendingOrder
 }
 
 // Debug technique
 window.userService = userService
+
+async function addPendingOrder(orderId, hostId) {
+   var host = await getById(hostId);
+   console.log(host)
+   console.log('orderId', orderId)
+    try {
+        var user = await httpService.post(`user/order/${host._id}/${orderId}`)
+        return user
+    } catch (err) {
+        console.log('Had an error getting order by id (in front-service)', err)
+        throw err;
+    }
+
+}
+
 
 
 function getUsers() {

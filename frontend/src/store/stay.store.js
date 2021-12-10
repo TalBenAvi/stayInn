@@ -1,5 +1,3 @@
-
-
 import {stayService } from "../services/stay.service.js"
 
 export const stayStore = {
@@ -92,6 +90,17 @@ export const stayStore = {
         }
     },
     actions: {
+        async setCurrFilter({commit}, {stayCity}) {
+            console.log("stay store:", stayCity)
+            try {
+                var city = await stayService.setCurrFilter(stayCity)
+                return city
+
+            } catch (err){
+                console.log('Had Error getting city in store', err)
+                throw err;
+            }
+        },
     async addReview({ commit }, { review}) {
             console.log(review);
             try {
@@ -123,33 +132,13 @@ export const stayStore = {
                 throw err;
             }
         },
-        // async getStayByHostId({commit}, {hostId}) {
-        //     try {
-        //         // var stay = await stayService.getStayByHost(hostId)
-        //         console.log(stay)
-        //         return stay
-
-        //     } catch {
-        //         console.log('Had Error getting stay by host in store', err)
-        //         throw err;
-        //     }
-
-        },
         setCurrFilter({commit}, {filterBy}) {
             commit({type:'setFilter', filterBy})
         },
         setFilterByTrip({commit}, {trip}) {
             commit({type:'setFilterByTrip', trip})
+        },
         }
-        // async setCurrFilter({commit}, {stayCity}) {
-        //     console.log("stay store:", stayCity)
-        //     try {
-        //         var city = await stayService.setCurrFilter(stayCity)
-        //         return city
 
-        //     } catch {
-        //         console.log('Had Error getting city in store', err)
-        //         throw err;
-        //     }
-        // }
+     
     }

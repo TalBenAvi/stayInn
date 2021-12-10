@@ -389,6 +389,7 @@ export default {
       }
       if (this.$route.query.filter) {
         const { filter } = this.$route.query;
+        console.log(filter)
         this.filterBy.location = filter;
         this._updateStays();
       }
