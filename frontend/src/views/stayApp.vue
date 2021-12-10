@@ -247,13 +247,26 @@
     <!-- Card Grid Display -->
     <div v-if="staysForDisplay" class="center-20 airbnb gray-222222">{{this.staysForDisplay.length}} stays in {{this.staysForDisplay[0].loc.country}}</div>
     <section v-if="staysForDisplay" class="grid-card-container">
-      <div v-for="stay in staysForDisplay" :key="stay._id" class="grid-card-item" @click="showDetails(stay._id)">
-      <div class="grid-img">
-      <span class="material-icons heart-icon" @click.stop="toggleIsLiked($event)">favorite</span>
-      <span class="demonstration"></span>
-      <el-carousel trigger="click" height="262.250px" width="362px" :autoplay="false" :loop="false">
+      <div
+        v-for="stay in staysForDisplay"
+        :key="stay._id"
+        class="grid-card-item"
+        @click="showDetails(stay._id)"
+      >
+        <div class="grid-img">
+          <span class="material-icons heart-icon" @click.stop="toggleIsLiked($event)">favorite</span>
+    <span class="demonstration"></span>
+    <el-carousel         trigger="click"
+        height="262.250px"
+        width="362px"
+        :autoplay="false"
+        :loop="false">
       <el-carousel-item v-for="(item, idx) in stay.imgUrls" :key="idx">
-          <img class="stay-grid-img-border" :src="require(`@/assets/imgs/stays/${stay.initials}/${stay.imgUrls[idx]}`)"/> 
+          <img class="stay-grid-img-border"
+            :src="
+              require(`@/assets/imgs/stays/${stay.initials}/${stay.imgUrls[idx]}`)
+            "
+          /> 
         <!-- <h3 class="small">{{ idx }}</h3> -->
       </el-carousel-item>
     </el-carousel>
@@ -267,7 +280,7 @@
               <div> <img class="star center-5px spacing-10px-right" src="../assets/imgs/icons/star.jpg" /></div>
               <div class="airbnb center gray-color"> {{stay.reviews[0].rate.Value }} ({{stay.reviews.length}})</div>
             </div>
-            <div class="left-details-display airbnb">{{ stay.typeOfPlace }} ∙ {{ stay.loc.country }}</div>
+            <div class="left-details-display airbnb">{{ stay.loc.country }} ∙ {{ stay.typeOfPlace }}</div>
             <div class="left-details-display stay-name-left-details-display airbnb">{{ stay.name }}</div>
             <div class="price-details-display flex-row"><div class="airbnb-medium">${{ stay.price }}</div><div class="airbnb">/ night</div></div>
           <!-- </p> -->

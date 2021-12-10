@@ -26,7 +26,7 @@
             <button @click="updateOrderStatus(order._id, 'Accepted')" class="accept">
               Accept
             </button>
-            <button class="decline" @click="updateOrderStatus(order._id, 'Declined')">Decline</button>
+            <button class="decline" @click="updateOrderStatus(order._id, 'Decline')">Decline</button>
           </div>
           <div v-if="order.status === 'Accepted'">
             <div>Accepted</div>
