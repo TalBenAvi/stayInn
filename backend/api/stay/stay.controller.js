@@ -1,5 +1,4 @@
 const stayService = require('./stay.service.js');
-const reviewService = require('../review/review.service.js');
 const logger = require('../../services/logger.service')
 
 // GET LIST
@@ -30,7 +29,6 @@ async function getStayById(req, res) {
     // console.log('controller ');
     const stayId = req.params.id;
     const stay = await stayService.getById(stayId);
-    stay.review = await reviewService.query({aboutStayId:stayId})
     console.log(stay);
     res.json(stay)
   } catch (err) {
