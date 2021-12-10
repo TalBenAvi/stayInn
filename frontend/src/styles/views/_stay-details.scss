@@ -1,6 +1,6 @@
 .stay-details {
     display: grid;
-    grid-template-columns: $layoutPaddingHome minmax(1fr, 1500px) $layoutPaddingHome;
+    grid-template-columns: $layoutPaddingHome minmax(1120px, 1450px) $layoutPaddingHome;
 
     > * {
         grid-column: 2;
@@ -22,19 +22,19 @@
     height: 15px;
 }
 .location-name {
-    width: 1500px;
+    width: 1450px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     color: $gray;
     font-family: airbnb-medium;
-    font-size: 0.85rem;
+    font-size: 1rem;
     text-decoration: underline;
     margin-bottom: 24px;
 }
 .imgs-layout {
     height: $layoutimgsheight;
-    width: 1500px;
+    width: 1450px;
     display: flex;
     justify-content: center;
     gap: 10px;
@@ -76,7 +76,7 @@
     object-fit: cover;
 }
 .res-details-layout {
-    width: 1500px;
+    width: 1450px;
     margin-top: 45.5px;
     display: flex;
     flex-direction: row;
@@ -138,7 +138,8 @@
     font-size: 0.95rem;
 }
 .vibrous {
-    line-height: 1.25;
+    line-height: 1.65;
+    letter-spacing:0.01em;
 }
 .short-exmple {
     font-family: airbnb-medium;
@@ -206,7 +207,7 @@
     border: 1px solid rgb(221, 221, 221);
     border-radius: 12px;
     padding: 24px;
-    box-shadow: rgb(0 0 0 / 12%) 0px 6px 16px;
+    box-shadow: rgb(0 0 0 / 6%) 0px 6px 16px;
 
      .details  {
          position: absolute;
@@ -249,7 +250,7 @@
     grid-template-rows: 50% 50%;
     margin: 0 auto;
     height: 112px;
-    border: solid 1px $gray;
+    border: solid 1px $separate;
     border-radius: 10px;
     font-family: airbnb-medium;
     font-size: 0.65rem;
@@ -274,8 +275,8 @@
 }
 .check-in {
     grid-column: 1;
-    border-right: solid 1px $gray;
-    border-bottom: solid 1px $gray;
+    border-right: solid 1px $separate;
+    border-bottom: solid 1px $separate;
     .mx-datepicker-main{
         width: 20000px;
         background-color: aqua !important;
@@ -283,7 +284,7 @@
 }
 .check-out {
     grid-column: 2;
-    border-bottom: solid 1px $gray;
+    border-bottom: solid 1px $separate;
 }
 .category-stay-label {
     margin-left: 5px;
@@ -300,6 +301,14 @@
     cursor: pointer;
     grid-row: 2;
     grid-column: span 2;
+}
+.input-stay-rate{
+    width: 30px;
+}
+.textarea{
+    padding: 10px;
+    border: solid $black 1;
+    border-radius: 15px;
 }
 .check-available {
     cursor: pointer;
@@ -354,7 +363,7 @@
     margin-top: 15px;
 }
 .reviews-display{
-    width: 1500px;
+    width: 1450px;
     border-bottom: $separate solid 1px;
     margin-bottom:50px ;
 }
@@ -391,7 +400,7 @@
     margin-bottom: 30px;
 }
 .stay-location-map{
-    width: 1500px;
+    width: 1450px;
     border-bottom: $separate solid 1px;
     margin-bottom:50px ; 
 }
@@ -402,22 +411,26 @@
     border-radius: 8px;
     font-size: 0.85rem;
     color: $black;
-    font-family: airbnb-medium;
-    background-color: white;
 }
 .review-rate-bar{
-    width:60%;
-    height: 10px;
+    width: 100%;
+    height: 4px;
+    background:$gray;
+    align-items: center;
     border-radius: 10px;
-    margin-top: 5px;
+    margin-top: 8px;
 }
 .review-rate-bar>div{
     background-color: $black;
-    height: 10px;
-    border-radius: 10px;
+    height: 4px;
+    border-radius: 8px;
     color: transparent;
 }
-
+.review-rate-category-grid{
+ display: grid;
+ grid-template-columns:  33% 33% 33%;
+ text-align: center;
+}
 //GUESTS MODAL//
 .guests-options {
     z-index: 5;

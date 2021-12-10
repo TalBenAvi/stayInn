@@ -1,5 +1,5 @@
 
-import { storageService } from "./async-storage.service.js";
+// import { storageService } from "./async-storage.service.js";
 import { utilService } from "./utils.service.js";
 import {httpService} from "./http.service.js"
 const STAY_KEY = 'staysDB'
@@ -9,6 +9,7 @@ export const stayService = {
     query,
     getStayById,
     // setCurrFilter
+    addReview,
 }
 
 async function query() {
@@ -24,24 +25,26 @@ async function query() {
 }
 
 async function getStayById(stayId) {
+
     try {
-        // var stay = await storageService.get(STAY_KEY, stayId);
         var stay = await httpService.get(`stay/${stayId}`)
+        console.log(stay);
+        return stay
+    }   catch (err) {
+        console.log('Had an error getting stay by id (in front-service)', err)
+        throw err;
+    }
+}
+async function addReview(review) {
+    console.log(review);
+    try {
+        var stay = await httpService.post(`stay/review/${review.stayId}`,review)
         return stay
     } catch (err) {
         console.log('Had an error getting stay by id (in front-service)', err)
         throw err;
     }
 }
-// async function addReview(stayId) {
-//     try {
-//         var stay = await httpService.get(`stay/${stayId}`)
-//         return stay
-//     } catch (err) {
-//         console.log('Had an error getting stay by id (in front-service)', err)
-//         throw err;
-//     }
-// }
 
 
 function _createStays() {

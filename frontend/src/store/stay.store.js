@@ -1,4 +1,3 @@
-
 import {stayService } from "../services/stay.service.js"
 
 export const stayStore = {
@@ -80,8 +79,12 @@ export const stayStore = {
         setStays(state,{stays}) {
             state.stays = stays
         },
-         setStay(state,{stays}) {
-            state.stay = stays.find(stay=>stay.id===stayId)
+        //  setStay(state,{stays}) {
+        //     state.stay = stays.find(stay=>stay.id===stayId)
+        // },
+        updateStay(state,{stay}){
+            const idx = state.stays.findIndex(s=>s._id===stay.id) 
+            state.stays.splice(idx,1,stay);
         },
         setFilter(state,{filterBy}) {
             state.filterBy = filterBy
@@ -91,17 +94,16 @@ export const stayStore = {
         }
     },
     actions: {
-        async addReview({ commit }, { userCred }) {
-            console.log(userCred);
-            // try {
-            //     const user = await stayService.login(userCred);
-            //     commit({ type: 'setLoggedinUser', user })
-            //     console.log(user);
-            //     return user;
-            // } catch (err) {
-            //     console.log('userStore: Error in login', err)
-            //     throw err
-            // }
+    async addReview({ commit }, { review}) {
+            console.log(review);
+            try {
+                const updatedStay = await stayService.addReview(review);
+                console.log(updatedStay);
+                commit
+            } catch (err) {
+                console.log('stayStore: Error in adding review', err)
+                throw err
+            }
         },
         async loadStays({commit}) {
             try  {
@@ -115,6 +117,7 @@ export const stayStore = {
         async getStayById({commit}, {stayId}) {
             try {
                 var stay = await stayService.getStayById(stayId)
+                console.log(stay);
                 return stay
 
             } catch {
