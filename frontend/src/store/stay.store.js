@@ -8,6 +8,9 @@ export const stayStore = {
     },
     getters: {
         stays(state) {return state.stays},
+        filterByLoc(state) {
+            return state.filterBy.location
+        }  ,
         staysForDisplay(state) {
 
             let stays =  JSON.parse(JSON.stringify(state.stays))
