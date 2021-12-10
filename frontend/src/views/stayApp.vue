@@ -254,7 +254,7 @@
         @click="showDetails(stay._id)"
       >
         <div class="grid-img">
-          <span class="material-icons-outlined heart-icon">favorite</span>
+          <span class="material-icons heart-icon" @click.stop="toggleIsLiked($event)">favorite</span>
     <span class="demonstration"></span>
     <el-carousel         trigger="click"
         height="262.250px"
@@ -262,7 +262,7 @@
         :autoplay="false"
         :loop="false">
       <el-carousel-item v-for="(item, idx) in stay.imgUrls" :key="idx">
-          <img 
+          <img class="stay-grid-img-border"
             :src="
               require(`@/assets/imgs/stays/${stay.initials}/${stay.imgUrls[idx]}`)
             "
@@ -282,11 +282,6 @@
             </div>
             <div class="left-details-display airbnb">{{ stay.loc.country }} ∙ {{ stay.typeOfPlace }}</div>
             <div class="left-details-display stay-name-left-details-display airbnb">{{ stay.name }}</div>
-
-          <!-- </p>{{ stay.name }} -->
-          <!-- <p class="stay-details-display"> -->
-           <!-- <div class="stay-details-display  airbnb"> {{ stay.accommodates }} guests ∙ {{ stay.bedrooms }} bedrooms ∙ -->
-            <!-- {{ stay.beds }} beds ∙ {{ stay.bath }} baths</div> -->
             <div class="price-details-display flex-row"><div class="airbnb-medium">${{ stay.price }}</div><div class="airbnb">/ night</div></div>
           <!-- </p> -->
         </div>
@@ -319,7 +314,7 @@ export default {
       scrollBar: 0,
       value: [100, 400],
       modalOpen: true,
-      // isHeartRed: false
+      isLiked: false
     };
   },
   async created() {
@@ -479,11 +474,10 @@ export default {
     toggleFilter(event, by, type) {
       event.target.classList.toggle("checked")
       this._filteringBy(event, by, type);
+    },
+    toggleIsLiked(ev) {
+      ev.target.classList.toggle('active')
     }
-    // toggleHeartColor() {
-    //   isHeartRed=!isHeartRed
-    //   console.log('isHeartRed:', isHeartRed)
-    // }
 
   },
 };

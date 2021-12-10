@@ -87,14 +87,18 @@
     flex-direction: column;
 }
 
+.stay-grid-img-border {
+    border-radius: 15px;
+}
+
 .grid-img{
     position:relative ;
+    // border-radius: 15px;
 }
 
 .grid-img img {
     aspect-ratio: 1 / 1;
     object-fit: cover;
-    border-radius: 15px;
 }
 
 .heart-icon{
@@ -107,6 +111,11 @@
     height: 24px;
     width: 24px;
     z-index: 3;
+
+}
+
+.active {
+    color: red;
 }
 
 .el-carousel__button {
@@ -126,6 +135,10 @@
     box-shadow: transparent 0px 0px 0px 1px, transparent 0px 0px 0px 4px, rgb(0 0 0 / 18%) 0px 2px 4px !important;
     width: 32px !important;
     height: 32px !important;
+}
+
+.el-carousel__item{
+    border-radius: 15px;
 }
 
 .all-txt {

@@ -65,7 +65,7 @@
           <div class="stay-info-heder">
             <div class="minimal-details">
               {{ this.stay.typeOfPlace }} hosted by
-              <!-- {{ this.stay.host.fullName }} -->
+              {{ this.stay.host.fullName }}
             </div>
             <div class="location-space">
               {{ this.stay.accommodates }} guests ·
@@ -385,7 +385,7 @@
             </div>
             <div class="center">
               <div class="short-exmple">
-                <!-- {{ this.stay.reviews[0].by.fullName }} -->
+                {{ this.stay.reviews[0].by.fullName }}
               </div>
               <div class="review-date">March 2021</div>
             </div>
@@ -402,7 +402,7 @@
             </div>
             <div class="center">
               <div class="short-exmple">
-                <!-- {{ this.stay.reviews[1].by.fullName }} -->
+                {{ this.stay.reviews[1].by.fullName }}
               </div>
               <div class="review-date">October 2019</div>
             </div>
@@ -419,7 +419,7 @@
             </div>
             <div class="center">
               <div class="short-exmple">
-                <!-- {{ this.stay.reviews[2].by.fullName }} -->
+                {{ this.stay.reviews[2].by.fullName }}
               </div>
               <div class="review-date">November 2020</div>
             </div>
@@ -436,7 +436,7 @@
             </div>
             <div class="center">
               <div class="short-exmple">
-                <!-- {{ this.stay.reviews[3].by.fullName }} -->
+                {{ this.stay.reviews[3].by.fullName }}
               </div>
               <div class="review-date">July 2020</div>
             </div>
@@ -453,7 +453,7 @@
             </div>
             <div class="center">
               <div class="short-exmple">
-                <!-- {{ this.stay.reviews[4].by.fullName }} -->
+                {{ this.stay.reviews[4].by.fullName }}
               </div>
               <div class="review-date">October 2020</div>
             </div>
@@ -470,7 +470,7 @@
             </div>
             <div class="center">
               <div class="short-exmple">
-                <!-- {{ this.stay.reviews[5].by.fullName }} -->
+                {{ this.stay.reviews[5].by.fullName }}
               </div>
               <div class="review-date">January 2021</div>
             </div>
@@ -497,7 +497,7 @@
             <div class="spacing-20px-right">Accuracy: <input class="input-stay-rate" v-model="reviewData.rate.Accuracy" type="number" min="1" max="5"> </div>
             <div class="spacing-20px-right">Location: <input class="input-stay-rate" v-model="reviewData.rate.Location" type="number" min="1" max="5"> </div>
             <div class="spacing-20px-right marging-bottom-25">Value: <input class="input-stay-rate" v-model="reviewData.rate.Value" type="number" min="1" max="5"> </div></div>
-           <div class="marging-bottom-25"> <textarea v-model="reviewData.text" class="airbnb textarea" cols="200" rows="10"></textarea></div>
+           <div class="marging-bottom-25"> <textarea v-model="reviewData.txt" class="airbnb textarea" cols="200" rows="10"></textarea></div>
           <button class="show-more-amenities airbnb-medium spacing-20px-right">
            save review
           </button>
@@ -538,7 +538,7 @@
               </div>
               <div class="center">
                 <div class="short-exmple">
-                  <!-- Hosted by {{ this.stay.host.fullName }} -->
+                  Hosted by {{ this.stay.host.fullName }}
                 </div>
                 <div class="review-date">Joined in August 2013</div>
               </div>
@@ -686,8 +686,11 @@ export default {
                 Location : 0,
                Value : 0
             },
-        text:'',
-        stayId:''
+        txt:'',
+        stayId:'',
+        by:{
+          fullName:'',
+        }
       },
       currentTrip: this.$store.getters.currentTrip,
       show: false,
@@ -718,6 +721,9 @@ export default {
   },
   methods: {
      async insertReview(){
+       const loggedinUser=sessionStorage.getItem('loggedinUser');
+       const retrievedUser =JSON.parse(loggedinUser)
+       this.reviewData.by.fullName=retrievedUser.username
        this.reviewData.stayId=this.stay._id
        try {
         await this.$store.dispatch({ type: "addReview",review:this.reviewData});
