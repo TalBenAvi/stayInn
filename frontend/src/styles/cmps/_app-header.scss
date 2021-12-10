@@ -147,6 +147,7 @@
                 height: 30px;
             }
 
+
             .burger {
                 position: absolute;
                 top: 9px;
@@ -159,7 +160,12 @@
 }
 
 
-
+.notification-icon {
+    position: absolute;
+    right:0;
+    width: 15px;
+    height: 15px;
+}
 
 
 
