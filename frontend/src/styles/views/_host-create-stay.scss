@@ -1,15 +1,15 @@
-.host-view{
+.host-view {
     display: grid;
     grid-template-columns: 150px 1fr 150px;
 }
-.main-area{
-margin-top:30px;
-margin-bottom:30px;
-display: flex;
-flex-direction: row;
-grid-column: 2;
+.main-area {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: row;
+    grid-column: 2;
 }
-.menu-bar{
+.menu-bar {
     width: 16%;
     position: sticky;
     display: flex;
@@ -21,7 +21,7 @@ grid-column: 2;
     align-items: flex-start;
     text-align: start;
 }
-.menu-bar>button{
+.menu-bar > button {
     padding: 10px 5px;
     display: flex;
     -webkit-align-items: center;
@@ -31,7 +31,7 @@ grid-column: 2;
     line-height: 28px;
     border: none;
 }
-.menu-bar-button{
+.menu-bar-button {
     border: none;
     background: white;
     width: 150px;
@@ -41,79 +41,79 @@ grid-column: 2;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
 }
-.display-bar{
+.display-bar {
     width: 84%;
-    background-color: rgb(239,243,245);
-    padding:20px ;
+    background-color: rgb(239, 243, 245);
+    padding: 20px;
     border-radius: 15px;
 }
-.dashboard-header{
+.dashboard-header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     margin-bottom: 20px;
 }
-.dashboard-header>div {
+.dashboard-header > div {
     background-color: #fff;
     min-width: 23%;
     border-radius: 13px;
     padding: 20px;
 }
-.money{
+.money {
     font-size: 22px;
     font-family: airbnb-medium;
 }
-.creating-stay-layout{
+.creating-stay-layout {
     background-color: #fff;
     min-width: 200px;
     border-radius: 13px;
     padding: 20px;
 }
-.stay-name-host{
+.stay-name-host {
     font-family: airbnb-medium;
     font-size: 1.46875rem;
     line-height: 1.6875rem;
     width: 200px;
-    border:none;
-    border-bottom:solid 0.5px $separate;
+    border: none;
+    border-bottom: solid 0.5px $separate;
     color: $gray;
     margin: 0;
     margin-bottom: 25px;
 }
-.stay-address-host{
+.stay-address-host {
     font-family: airbnb;
     font-size: 1rem;
     width: 200px;
     justify-content: center;
-    border:none;
-    border-bottom:solid 0.5px $separate;
+    border: none;
+    border-bottom: solid 0.5px $separate;
     color: $gray;
 }
-.stay-capacity-host{
+.stay-capacity-host {
     font-family: airbnb;
     font-size: 1rem;
     width: 50px;
     justify-content: center;
-    border:none;
-    border-bottom:solid 0.5px $separate;
+    border: none;
+    border-bottom: solid 0.5px $separate;
     color: $gray;
 }
-.stay-typeof-select-host{
+.stay-typeof-select-host {
     font-family: airbnb;
     font-size: 1rem;
     width: 120px;
     justify-content: center;
-    border:none;
-    border-bottom:solid 0.5px $separate;
+    border: none;
+    border-bottom: solid 0.5px $separate;
     color: $gray;
 }
-.gray{
-    background-color: rgb(239,243,245);
+.gray {
+    background-color: rgb(239, 243, 245);
 }
 .imgs-layout-host {
     height: $layoutimgsheight;
     width: 100%;
-    padding:20px ;
+    padding: 20px;
     display: flex;
     justify-content: center;
     gap: 10px;
@@ -124,8 +124,18 @@ grid-column: 2;
 .row1 {
     display: flex;
     flex-direction: column;
-    gap:10px;
+    gap: 10px;
     width: 25%;
+}
+
+.image-upload1 {
+    margin-top: -43px!important;
+    height: 350px !important;
+}
+.image-upload2 {
+    margin-top: -43px!important;
+    height: 350px !important;
+    right: 1000px !important;
 }
 .img1-host {
     border-top-left-radius: 15px;
@@ -152,14 +162,14 @@ grid-column: 2;
     height: 47.94%;
     object-fit: cover;
 }
-.description{
+.description {
     width: 89.3%;
     height: 150px;
     border-radius: 8px;
     margin-bottom: 40px;
-    text-align:inherit;
+    text-align: inherit;
 }
-.add-stay-save-btn{
+.add-stay-save-btn {
     margin-left: 350px;
     background-color: #ff385c;
     padding: 7px 40px;
@@ -170,14 +180,14 @@ grid-column: 2;
     margin-top: 20px;
     border: none;
 }
-.menu-bar-button:hover{
+.menu-bar-button:hover {
     cursor: pointer;
     background: $separate;
 }
-.create-stay{
+.create-stay {
     display: none;
 }
-.h3-center{
+.h3-center {
     text-align: center;
     margin-top: 25%;
     position: absolute;
