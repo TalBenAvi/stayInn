@@ -111,18 +111,22 @@ export const userStore = {
 
         },
         async addPendingOrder({commit}, {orderId,hostId}) {
-            console.log(orderId);
-            console.log(hostId);
             try {
                 const updatedUser = await userService.addPendingOrder(orderId, hostId);
-                console.log(updatedUser);
             } catch (err) {
                 console.log('stayStore: Error in adding pendingOrder', err)
                 throw err
             }
-
-
-
+        }
+        ,
+        async clearPending({commit}, {hostId}) {
+            console.log('from clear pending', hostId)
+            try {
+                const updatedUser = await userService.clearPendingOrders(hostId);
+            } catch (err) {
+                console.log('stayStore: Error in adding pendingOrder', err)
+                throw err
+            }
         }
     }
 }

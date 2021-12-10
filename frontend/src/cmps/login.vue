@@ -13,6 +13,7 @@
         <button class="airbnb-medium" @click="openNotifications">Notifications</button>
         <button class="airbnb-medium" @click="openTrips">Trips</button>
         <button class="airbnb-medium" @click="openWishlists">Wishlists</button>
+         <button class="airbnb-medium" @click="openDashboard">Manage listings</button>
         <button class="airbnb-medium" @click="openAccount">Account</button>
         <button class="airbnb-medium" @click="doLogout">Logout</button>
         </div>
@@ -224,7 +225,10 @@ export default {
       this.$store.dispatch({ type: "logout" });
     },
     openNotifications(){
-      this.$router.push("/notification");
+      this.$router.push("/notifications");
+    },
+    openDashboard() {
+       this.$router.push("/host")
     },
     openTrips(){
     this.$router.push("/trip");
@@ -238,6 +242,7 @@ export default {
     doLogout(){
      sessionStorage.clear();
       this.isUserLogedIn=false;
+      this.$router.push('/')
     },
     async doSignup() {
       if (!this.signupCred.email || !this.signupCred.password || !this.signupCred.username) {

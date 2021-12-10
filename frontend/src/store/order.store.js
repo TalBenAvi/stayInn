@@ -42,7 +42,7 @@ export const orderStore = {
             state.orders = orders
         },
         addOrder(state,{order}) {
-            state.orders.push(order)
+            state.orders.unshift(order)
         }
     },
     actions: {
@@ -96,6 +96,27 @@ export const orderStore = {
                 console.log('had trouble getting host orders from store', err)
 
 
+            }
+        },
+        async acceptOrder({commit}, {orderId, status}) {
+            console.log(orderId)
+            try {
+                var order = await orderService.getOrderById(orderId)
+                var updatedOrder = await orderService.updateOrderStatus(order, status)
+                return updatedOrder
+            } catch (err) {
+                console.log('had trouble getting from store order by id', err)
+            }
+        }
+        ,
+        async updateOrderStatus({commit}, {orderId, status}) {
+            console.log(orderId)
+            try {
+                var order = await orderService.getOrderById(orderId)
+                var updatedOrder = await orderService.updateOrderStatus(order, status)
+                return updatedOrder
+            } catch (err) {
+                console.log('had trouble getting from store order by id', err)
             }
         }
     }

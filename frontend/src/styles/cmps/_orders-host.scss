@@ -8,4 +8,37 @@
     height: 500px;
     width: 100%;
     background-color: white;
+
+    .orders-container {
+        border-radius: 10px;
+        background: rgb(243, 243, 243);
+        margin-top: 20px;
+        font-family: airbnb;
+        display: grid;
+        align-items: center;
+        grid-template-columns: repeat(6, 1fr);
+        column-gap: 90px;
+
+        .accept {
+            cursor: pointer;
+            border: none;
+            background: transparent;
+            font-family: airbnb;
+            font-size: 17px;
+            text-decoration: underline;
+            color: green;
+        }
+
+        .decline {
+            cursor: pointer;
+            border: none;
+            background: transparent;
+            font-family: airbnb;
+            font-size: 17px;
+            text-decoration: underline;
+            color: rgb(255, 0, 0);
+        }
+    }
+
+
 }

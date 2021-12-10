@@ -14,11 +14,17 @@ export const userService = {
     remove,
     update,
     changeScore,
-    addPendingOrder
+    addPendingOrder,
+    clearPendingOrders
 }
 
 // Debug technique
 window.userService = userService
+
+
+async function clearPendingOrders(hostId) {
+    
+}
 
 async function addPendingOrder(orderId, hostId) {
    var host = await getById(hostId);
