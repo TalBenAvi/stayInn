@@ -3,6 +3,7 @@
     <div @click="openCloseMenu" class="user-options">
       <div class="burger">☰</div>
       <img class="avatar" src="../assets/imgs/icons/avatar.png" />
+      <img v-if="userLoggedIn && userLoggedIn.pendingOrders" class="notification-icon" src="../assets/imgs/icons/notification.png">
       <div v-if="isMenuOpen">
         <div v-if="!isUserLogedIn" class="profile-menu">
         <button @click="openLogin">Login</button>
@@ -124,6 +125,7 @@
 export default {
   data() {
     return {
+      userLoggedIn: null,
       isMenuOpen: false,
       isLoginOpen: false,
       isUserLogedIn: false,
@@ -141,8 +143,11 @@ export default {
   },
    created() {
     if (this.$store.getters.loggedinUser){
-      console.log('logedin user');
+      let user = this.$store.getters.loggedinUser
+      console.log('logedin user', user);
        this.isUserLogedIn=true;
+       this.userLoggedIn = user
+
       }
     else {
        console.log('no user');

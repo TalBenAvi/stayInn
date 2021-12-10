@@ -18,7 +18,7 @@ export const stayStore = {
 
             if (state.filterBy) {
                    
-                console.log('filteringby',stays)
+
                 if (state.filterBy.location) {
                     stays = stays.filter((stay) => stay.loc.country.toLowerCase() === state.filterBy.location)
                 }
@@ -59,12 +59,8 @@ export const stayStore = {
 
           
             if(state.filterByTrip) {
-                console.log(state.filterByTrip)
-                console.log(stays)
                 let accommodates = state.filterByTrip.guests.adults + state.filterByTrip.guests.children + state.filterByTrip.guests.infants
                 stays = stays.filter(stay => {
-                    console.log(stay)
-                    console.log('from service:' ,stay.loc.countryCode,'fromStore:', state.filterByTrip.dest.countryCode)
                     return stay.accommodates >= accommodates && stay.loc.countryCode === state.filterByTrip.dest.countryCode
                     
                     
@@ -94,6 +90,17 @@ export const stayStore = {
         }
     },
     actions: {
+        async setCurrFilter({commit}, {stayCity}) {
+            console.log("stay store:", stayCity)
+            try {
+                var city = await stayService.setCurrFilter(stayCity)
+                return city
+
+            } catch (err){
+                console.log('Had Error getting city in store', err)
+                throw err;
+            }
+        },
     async addReview({ commit }, { review}) {
             console.log(review);
             try {
@@ -130,17 +137,8 @@ export const stayStore = {
         },
         setFilterByTrip({commit}, {trip}) {
             commit({type:'setFilterByTrip', trip})
+        },
         }
-        // async setCurrFilter({commit}, {stayCity}) {
-        //     console.log("stay store:", stayCity)
-        //     try {
-        //         var city = await stayService.setCurrFilter(stayCity)
-        //         return city
 
-        //     } catch {
-        //         console.log('Had Error getting city in store', err)
-        //         throw err;
-        //     }
-        // }
+     
     }
-}

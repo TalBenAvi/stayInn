@@ -43,11 +43,17 @@ export const tripStore = {
     mutations: {
         setCurrTrip(state, {trip}) {
             state.trip = trip
+        },
+        resetTrip(state) {
+            state.trip = state.emptytrip
         }
     },
     actions: {
         updateTrip({commit}, {trip}) {
             commit({type: 'setCurrTrip', trip})
+        },
+        resetTrip({commit}) {
+            commit({type:'resetTrip'})
         }
 
     }

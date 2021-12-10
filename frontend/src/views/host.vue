@@ -337,23 +337,12 @@
             
           </div>
           <div class="host-stays airbnb-medium font-size-19px" v-if="status">
-            <div class="flex-row space-evenly border-bottom">
-              <div>Name</div>
-              <div>Address</div>
-              <div>Price</div>
-              <div>Actions</div>
-            </div>
+              <stays :user="this.currUser"/>
             <!-- here needs to render user data for showing data -->
             <div></div>
           </div>
           <div class="host-stays airbnb-medium font-size-19px" v-if="orders">
-            <div class="flex-row space-evenly border-bottom">
-              <div>Guest Name</div>
-              <div>Check in</div>
-              <div>Check out</div>
-              <div>Status</div>
-              <div>Price</div>
-              <div>Actions</div>
+            <ordersHost :user="this.currUser"/>
             </div>
             <!-- here needs to render user data for showing data -->
             <div></div>
@@ -363,12 +352,13 @@
         </div>
       </div>
     </div>
-  </div>
 </template>
 
 <script>
 // import { uploadImg } from '@/services/imgUpload.service.js'
 import imgUpload from '@/cmps/img-upload'
+import stays from '@/cmps/host/stays.vue'
+import ordersHost from '@/cmps/host/orders-host.vue'
 
 export default {
   data() {
@@ -377,13 +367,24 @@ export default {
       status:false,
       orders:false,
       rates:false,
+<<<<<<< HEAD
+      imgUrls: [],
+      currUser: null
+=======
       imgUrls1: [],
       imgUrls2: []
 
+>>>>>>> c1c3601c9b97bbc06a3ba2deff0ad91210cea7c5
     };
   },
   components: {
-     imgUpload
+     imgUpload,
+     stays,
+     ordersHost
+  },
+  created() {
+    this.setUser()
+
   },
   methods:{
     showmain(){
@@ -410,12 +411,18 @@ export default {
         this.orders=false;
          this.rates=true;
     },
+<<<<<<< HEAD
+      saveImg(imgUrl) {
+    this.imgUrls.push(imgUrl)
+    },
+=======
       saveImg1(imgUrl1) {
     this.imgUrls1.push(imgUrl1)
     },
           saveImg2(imgUrl2) {
     this.imgUrls1.push(imgUrl2)
     }
+>>>>>>> c1c3601c9b97bbc06a3ba2deff0ad91210cea7c5
     // async onUploadImg(ev) {
     //     this.isLoading = true
     //     let res = await uploadImg(ev);
@@ -423,7 +430,13 @@ export default {
     //     this.$emit('onSaveImg', res.url)
     //     this.isLoading = false
     // }
+    setUser() {
+    let user=  this.$store.getters.loggedinUser
+    this.currUser = user
+    console.log(this.currUser)
   }
+  },
+
 };
 </script>
 

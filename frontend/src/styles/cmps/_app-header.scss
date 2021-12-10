@@ -147,6 +147,7 @@
                 height: 30px;
             }
 
+
             .burger {
                 position: absolute;
                 top: 9px;
@@ -159,7 +160,12 @@
 }
 
 
-
+.notification-icon {
+    position: absolute;
+    right:0;
+    width: 15px;
+    height: 15px;
+}
 
 
 
@@ -450,10 +456,10 @@
     }
 
 
-button:first-of-type {
-    font-family: airbnb-medium;
+// button:first-of-type {
+//     font-family: airbnb-medium;
     
-}
+// }
 
     button:nth-last-of-type(even) {
         border-bottom: 1px solid #DDDDDD;

@@ -8,6 +8,7 @@ _createStays()
 export const stayService = {
     query,
     getStayById,
+    // getStayByHost
     // setCurrFilter
     addReview,
 }
@@ -16,7 +17,6 @@ async function query() {
     try {
         // var stays = await storageService.query(STAY_KEY)
         var stays = await httpService.get('stay')
-        console.log('stays from quary' , stays)
         return stays
     } catch (err) {
         console.log('had trouble loading stays :', err)

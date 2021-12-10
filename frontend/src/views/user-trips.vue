@@ -7,7 +7,7 @@
       <div><button class="button-user-host upcoming  airbnb-medium font-size-19px spacing-70px-right">Upcoming</button></div>
       <div><button class="button-user-host past  airbnb-medium font-size-19px">Past</button></div>
        </div>
-               <div v-if="!orders" class="empty-page" >
+               <div v-if="!orders.length" class="empty-page" >
           <span>When you’re ready to start planning your next trip, we’re here to help. </span>
           <img src="../assets/imgs/user-pages/no-orders.png">
           <button @click="toExplore()">Explore Stayinn</button>

@@ -759,6 +759,9 @@ export default {
       }
     },
     async sendOrderRequest() {
+
+      
+
       this.newOrder.createdAt = Date.now();
       this.newOrder.startDate = this.currentTrip.startDate;
       this.newOrder.endDate = this.currentTrip.endDate;
@@ -771,14 +774,27 @@ export default {
       this.newOrder.stay.imgSrc = this.stay.imgUrls;
       this.newOrder.stay.initials = this.stay.initials;
       this.newOrder.stay.country = this.stay.loc.country;
-
+      
       await this.$store.dispatch({ type: "addOrder", order: this.newOrder });
       const msg = {
         txt: `Reservation request sent to host`,
         type: "success",
       };
       eventBus.$emit("showMsg", msg);
+      this.updateHostPending()
+      await this.$store.dispatch({type:'resetTrip'})
     },
+    async updateHostPending() {
+      try {
+         let host = this.stay.host
+         let order = this.$store.getters.orders
+      await this.$store.dispatch({type: 'addPendingOrder',orderId: order[order.length-1]._id, hostId: host._id})
+      } catch (err) {
+        console.log('had problem communicating with store', err)
+      }
+     
+
+    }
   },
   computed: {
     determinePos() {

@@ -41,7 +41,6 @@ async function remove(stayId) {
 
 async function add(stay) {
     try {
-        console.log(stay);
         const collection = await dbService.getCollection('stays')
         const addedStay = await collection.insertOne(stay)
         return addedStay

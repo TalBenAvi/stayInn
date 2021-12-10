@@ -20,11 +20,6 @@
           />
         </div>
       </div>
-      <!-- <div v-if="isTop" class="nav-link" :style="navLinkColor">
-        <span>Explore</span>
-        <span>Experiences</span>
-        <span>Online Experiences</span>
-      </div> -->
       <div v-if="expandedSearch" class="expty-space"></div>
       <div v-if="isTop" class="secondary-search-bar" :style="determineStyle">
         <form @submit.prevent="">
@@ -68,7 +63,7 @@
       <div class="right-nav">
                 <div class="host-options" :style="textColor">
         <p class="become" @click="showStays">Explore</p>
-        <p class="become" @click="toHost">Become a Host</p>
+        <p class="become" @click="toHost">Become a host</p>
 
       </div>
       <div class="global">
@@ -112,10 +107,11 @@ export default {
       checkinDate: 'Add dates',
       checkoutDate: 'Add dates',
       location: '',
-      guests: 'Add guests'
+      guests: 'Add guests',
     };
   },
   created() {
+
     eventBus.$on('selectedLocation', this.setLocation)
     eventBus.$on('setGuests', this.setGuests)
     this.setCurrPage();
@@ -143,9 +139,10 @@ export default {
         }
       }
     },
-    toHome() {
+    async toHome() {
       this.$router.push("/");
-      this.$store.dispatch({type:'updateTrip', trip: ''})
+      await this.$store.dispatch({type:'resetTrip'})
+
     },
     toHost() {
       this.$router.push("/host");
@@ -185,6 +182,10 @@ export default {
         if (this.checkinDate && this.checkoutDate) {
           const dates = [this.checkinDate, this.checkoutDate]
           eventBus.$emit('setDates', dates)
+          this.checkinDate = 'add Dates'
+          this.checkoutDate = 'add Dates'
+          this.location = 'Where are you going?'
+          this.guests = 0
         }
       }
     },

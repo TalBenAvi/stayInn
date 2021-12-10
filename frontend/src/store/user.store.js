@@ -110,14 +110,18 @@ export const userStore = {
             }
 
         },
-        async increaseScore({ commit }) {
+        async addPendingOrder({commit}, {orderId,hostId}) {
+            console.log(orderId);
+            console.log(hostId);
             try {
-                const score = await userService.changeScore(100)
-                commit({ type: 'setUserScore', score })
+                const updatedUser = await userService.addPendingOrder(orderId, hostId);
+                console.log(updatedUser);
             } catch (err) {
-                console.log('userStore: Error in increaseScore', err)
+                console.log('stayStore: Error in adding pendingOrder', err)
                 throw err
             }
+
+
 
         }
     }
