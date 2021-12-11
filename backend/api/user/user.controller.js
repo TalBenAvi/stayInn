@@ -48,12 +48,12 @@ async function updateUser(req, res) {
 }
 
 async function addPendingOrder(req,res) {
-    // console.log('hrtr')
-    // console.log(req.params.orderId)
-    // console.log(req.params, req.body)
+    console.log('hrtr')
+    console.log(req.params.orderId)
+    console.log(req.params, req.body)
     try {
         const user = await userService.getById(req.params.userId)
-        // console.log('got user:', user)
+        console.log('got user:', user)
         user.pendingOrders.unshift(req.params.orderId)
         const updatedUser = await userService.update(user)
         res.json(updatedUser)
