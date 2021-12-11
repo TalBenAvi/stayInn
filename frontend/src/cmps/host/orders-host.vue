@@ -1,37 +1,62 @@
 <template>
   <section>
-    <div class="order-headers">
-      <div>Guest Name</div>
-      <div>Check in</div>
-      <div>Check out</div>
-      <div>Status</div>
-      <div>Price</div>
-      <div>Actions</div>
-    </div>
-
     <div class="orders-body">
+      <div class="order-statistics">
+        <div class="box">
+          <img src="../../assets/imgs/icons/host/total.png" />
+          <div class="details">
+            <div>{{ hostOrders.length }}</div>
+            <div>Orders</div>
+          </div>
+        </div>
+
+                <div class="box">
+          <img src="../../assets/imgs/icons/host/waiting.png" />
+          <div class="details">
+            <div>{{ amountPending }}</div>
+            <div>Pending</div>
+          </div>
+        </div>
+
+
+                <div class="box">
+          <img src="../../assets/imgs/icons/host/answered.png" />
+          <div class="details">
+            <div>{{ amountHandled }}</div>
+            <div>Handled</div>
+          </div>
+        </div>
+      </div>
       <div v-if="hostOrders"></div>
       <div
         v-for="order in hostOrders"
         :key="order._id"
         class="orders-container"
       >
-        <div class="">{{ order.buyer.fullname.substring(0, 6) }}</div>
+        <div class="">{{ order.buyer.fullname }}</div>
         <div>{{ order.startDate }}</div>
         <div>{{ order.endDate }}</div>
         <div>{{ order.status }}</div>
         <div>{{ order.totalPrice }}$</div>
         <div>
           <div v-if="order.status === 'pending'">
-            <button @click="updateOrderStatus(order._id, 'Accepted')" class="accept">
+            <button
+              @click="updateOrderStatus(order._id, 'Accepted')"
+              class="accept"
+            >
               Accept
             </button>
-            <button class="decline" @click="updateOrderStatus(order._id, 'Decline')">Decline</button>
+            <button
+              class="decline"
+              @click="updateOrderStatus(order._id, 'Declined')"
+            >
+              Decline
+            </button>
           </div>
           <div v-if="order.status === 'Accepted'">
-            <div>Accepted</div>
+            <div class="green">Accepted</div>
           </div>
-          <div v-if="order.status==='Declined'">Declined</div>
+          <div class="red" v-if="order.status === 'Declined'">Declined</div>
         </div>
       </div>
     </div>
@@ -64,23 +89,37 @@ export default {
     },
     async updateOrderStatus(orderId, status) {
       var updatedOrder = await this.$store.dispatch({
-        type: 'updateOrderStatus',
+        type: "updateOrderStatus",
         orderId,
-        status
+        status,
       });
       console.log(updatedOrder);
       this.setOrders();
     },
-      async clearPending() {
-      var updatedOrder = await this.$store.dispatch({
-        type: 'clearPending',
+    async clearPending() {
+      var updatedUser = await this.$store.dispatch({
+        type: "clearPending",
         hostId: this.user._id,
       });
-      console.log(updatedOrder);
-      }
-
+      console.log(updatedUser);
+    },
   },
   computed: {
+    amountPending() {
+      var pendingOrders = this.hostOrders.filter(order => {
+        return order.status === 'pending'
+      });
+      return pendingOrders.length
+    },
+
+    amountHandled() {
+       var handledOrders = this.hostOrders.filter(order => {
+        return order.status !== 'pending'
+      });
+      return handledOrders.length
+
+
+    }
   },
 };
 </script>

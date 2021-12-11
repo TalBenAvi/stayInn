@@ -740,10 +740,10 @@ export default {
       if (!this.currentTrip) return;
       this.currentTrip.startDate = `${new Date(dates.start).getDate()}/${
         new Date(dates.start).getMonth() + 1
-      }/${new Date(dates.start).getFullYear()}`;
+      }/${new Date(dates.start).getFullYear()+1}`;
       this.currentTrip.endDate = `${new Date(dates.end).getDate()}/${
         new Date(dates.end).getMonth() + 1
-      }/${new Date(dates.end).getFullYear()}`;
+      }/${new Date(dates.end).getFullYear()+1}`;
       this.nightsAmount = amount;
     },
     reserveStay() {

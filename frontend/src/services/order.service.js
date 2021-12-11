@@ -38,7 +38,7 @@ function query(filterBy) {
   async function add(order) {
     // const addedReview = await httpService.post(`review`, review)
     const user = userService.getLoggedinUser()
-    order.buyer.fullname = user.fullname
+    order.buyer.fullname = user.username
     order.buyer._id = user._id
     // order.host = await userService.getById(order.user._id)
     const addedOrder = await storageService.post('order', order)

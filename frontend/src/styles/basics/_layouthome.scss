@@ -22,3 +22,9 @@
         @include layoutGTCHome($break-wide);
     }
 }
+
+@media (max-width: $break-narrow) {
+    .home-layout {
+        grid-template-columns: 20px 450px  20px;
+    }
+}
