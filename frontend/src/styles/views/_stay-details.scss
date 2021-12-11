@@ -432,6 +432,9 @@
  grid-template-columns:  33% 33% 33%;
  text-align: center;
 }
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+  }
 //GUESTS MODAL//
 .guests-options {
     z-index: 5;
@@ -523,9 +526,6 @@
         
 
 }
-
-
-
 .guests-selection {
    
     display: flex;
@@ -541,13 +541,32 @@
         align-items: center;
     }
 }
-
 .hidden {
     display: none;
 }
-
 .shown {
     display: block;
+}
+.map-design{
+    width: 1120px;
+     height: 480px;
+    margin-bottom: 80px
+}
+.stay-host-details-layout{
+    width: $layoutimgswidth;
+    border-bottom: $separate solid 1px;
+    margin-bottom:50px ;
+}
+.add-review-button {
+    cursor: pointer;
+    font-family: airbnb-medium;
+    height: 45px;
+    width: 200px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    color: white;
+    background-color: #ff385c;
 }
 
 

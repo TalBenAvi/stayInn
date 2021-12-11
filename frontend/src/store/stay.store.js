@@ -109,7 +109,7 @@ export const stayStore = {
             try {
                 const updatedStay = await stayService.addReview(review);
                 console.log(updatedStay);
-                commit
+                return updatedStay
             } catch (err) {
                 console.log('stayStore: Error in adding review', err)
                 throw err
