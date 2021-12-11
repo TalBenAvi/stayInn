@@ -382,7 +382,7 @@
               <div class="short-exmple">
                 {{ this.stay.reviews[0].by.fullName }}
               </div>
-              <div class="review-date">March 2021</div>
+              <div class="review-date">{{this.stay.reviews[0].by.date}}</div>
             </div>
           </div>
           <div  class="vibrous">{{ this.stay.reviews[0].txt }}</div>
@@ -399,10 +399,10 @@
               <div class="short-exmple">
                 {{ this.stay.reviews[1].by.fullName }}
               </div>
-              <div class="review-date">October 2019</div>
+              <div class="review-date">{{this.stay.reviews[1].by.date}}</div>
             </div>
           </div>
-          <div  class="vibrous"> {{this.stay.reviews[1].by.date}}</div>
+          <div  class="vibrous"> {{this.stay.reviews[1].txt}}</div>
         </div>
         <div>
           <div class="flex-row">
@@ -484,22 +484,19 @@
             Add Review
           </button>
           <div v-else>
-          <form class="marging-bottom-25" @submit.prevent="insertReview">
+          <form class="marging-bottom-25 airbnb" @submit.prevent="insertReview">
            <div class="flex-row"> 
-             <div class="spacing-20px-right">Cleanliness: <input class="input-stay-rate"  v-model="reviewData.rate.Cleanliness" type="number" min="1" max="5"> </div>
-            <div class="spacing-20px-right">Communication: <input class="input-stay-rate"  v-model="reviewData.rate.Communication" type="number" min="1" max="5"> </div>
-            <div class="spacing-20px-right">CheckIn: <input  class="input-stay-rate" v-model="reviewData.rate.CheckIn" type="number" min="1" max="5"> </div>
-            <div class="spacing-20px-right">Accuracy: <input class="input-stay-rate" v-model="reviewData.rate.Accuracy" type="number" min="1" max="5"> </div>
-            <div class="spacing-20px-right">Location: <input class="input-stay-rate" v-model="reviewData.rate.Location" type="number" min="1" max="5"> </div>
-            <div class="spacing-20px-right marging-bottom-25">Value: <input class="input-stay-rate" v-model="reviewData.rate.Value" type="number" min="1" max="5"> </div></div>
-           <div class="marging-bottom-25"> <textarea v-model="reviewData.txt" class="airbnb textarea" cols="200" rows="10"></textarea></div>
-          <button class="show-more-amenities airbnb-medium spacing-20px-right">
+             <div class="spacing-20px-right">Cleanliness: <input class="input-stay-rate"  v-model="reviewData.rate.Cleanliness" type="number" min="1" max="5" placeholder="1-5"> </div>
+            <div class="spacing-20px-right">Communication: <input class="input-stay-rate"  v-model="reviewData.rate.Communication" type="number" min="1" max="5" placeholder="1-5"> </div>
+            <div class="spacing-20px-right">CheckIn: <input  class="input-stay-rate" v-model="reviewData.rate.CheckIn" type="number" min="1" max="5" placeholder="1-5"> </div>
+            <div class="spacing-20px-right">Accuracy: <input class="input-stay-rate" v-model="reviewData.rate.Accuracy" type="number" min="1" max="5" placeholder="1-5"> </div>
+            <div class="spacing-20px-right">Location: <input class="input-stay-rate" v-model="reviewData.rate.Location" type="number" min="1" max="5" placeholder="1-5"> </div>
+            <div class="spacing-20px-right marging-bottom-25">Value: <input class="input-stay-rate" v-model="reviewData.rate.Value" type="number" min="1" max="5" placeholder="1-5"> </div></div>
+           <div class="marging-bottom-25"> <textarea v-model="reviewData.txt" class="airbnb textarea" cols="150" rows="10"></textarea></div>
+          <button class="add-review-button airbnb-medium spacing-20px-right" >
            save review
           </button>
         </form>
-           <button class="show-more-amenities airbnb-medium" @click="reviewAddOpen=!reviewAddOpen">
-           close review
-          </button>
         </div>
         </div>
       </div>
@@ -726,8 +723,8 @@ export default {
        var sDay = today.toLocaleDateString("en-US", options);
        this.reviewData.by.date=sDay;
        try {
-        await this.$store.dispatch({ type: "addReview",review:this.reviewData});
-        await this.$store.dispatch({ type: "getStayById",review:this.reviewData});
+        const updatedStay =await this.$store.dispatch({ type: "addReview",review:this.reviewData});
+        this.stay=updatedStay;
       } catch(err) {
           console.log(err)
           this.msg = "Failed to add review"
