@@ -387,7 +387,7 @@
               <div class="short-exmple">
                 {{ this.stay.reviews[0].by.fullName }}
               </div>
-              <div class="review-date">March 2021</div>
+              <div class="review-date">{{this.stay.reviews[0].by.date}}</div>
             </div>
           </div>
           <div  class="vibrous">{{ this.stay.reviews[0].txt }}</div>
@@ -404,10 +404,10 @@
               <div class="short-exmple">
                 {{ this.stay.reviews[1].by.fullName }}
               </div>
-              <div class="review-date">October 2019</div>
+              <div class="review-date">{{this.stay.reviews[1].by.date}}</div>
             </div>
           </div>
-          <div  class="vibrous">{{ this.stay.reviews[1].txt }}</div>
+          <div  class="vibrous"> {{this.stay.reviews[1].txt}}</div>
         </div>
         <div>
           <div class="flex-row">
@@ -489,22 +489,19 @@
             Add Review
           </button>
           <div v-else>
-          <form class="marging-bottom-25" @submit.prevent="insertReview">
+          <form class="marging-bottom-25 airbnb" @submit.prevent="insertReview">
            <div class="flex-row"> 
-             <div class="spacing-20px-right">Cleanliness: <input class="input-stay-rate"  v-model="reviewData.rate.Cleanliness" type="number" min="1" max="5"> </div>
-            <div class="spacing-20px-right">Communication: <input class="input-stay-rate"  v-model="reviewData.rate.Communication" type="number" min="1" max="5"> </div>
-            <div class="spacing-20px-right">CheckIn: <input  class="input-stay-rate" v-model="reviewData.rate.CheckIn" type="number" min="1" max="5"> </div>
-            <div class="spacing-20px-right">Accuracy: <input class="input-stay-rate" v-model="reviewData.rate.Accuracy" type="number" min="1" max="5"> </div>
-            <div class="spacing-20px-right">Location: <input class="input-stay-rate" v-model="reviewData.rate.Location" type="number" min="1" max="5"> </div>
-            <div class="spacing-20px-right marging-bottom-25">Value: <input class="input-stay-rate" v-model="reviewData.rate.Value" type="number" min="1" max="5"> </div></div>
-           <div class="marging-bottom-25"> <textarea v-model="reviewData.txt" class="airbnb textarea" cols="200" rows="10"></textarea></div>
-          <button class="show-more-amenities airbnb-medium spacing-20px-right">
+             <div class="spacing-20px-right">Cleanliness: <input class="input-stay-rate"  v-model="reviewData.rate.Cleanliness" type="number" min="1" max="5" placeholder="1-5"> </div>
+            <div class="spacing-20px-right">Communication: <input class="input-stay-rate"  v-model="reviewData.rate.Communication" type="number" min="1" max="5" placeholder="1-5"> </div>
+            <div class="spacing-20px-right">CheckIn: <input  class="input-stay-rate" v-model="reviewData.rate.CheckIn" type="number" min="1" max="5" placeholder="1-5"> </div>
+            <div class="spacing-20px-right">Accuracy: <input class="input-stay-rate" v-model="reviewData.rate.Accuracy" type="number" min="1" max="5" placeholder="1-5"> </div>
+            <div class="spacing-20px-right">Location: <input class="input-stay-rate" v-model="reviewData.rate.Location" type="number" min="1" max="5" placeholder="1-5"> </div>
+            <div class="spacing-20px-right marging-bottom-25">Value: <input class="input-stay-rate" v-model="reviewData.rate.Value" type="number" min="1" max="5" placeholder="1-5"> </div></div>
+           <div class="marging-bottom-25"> <textarea v-model="reviewData.txt" class="airbnb textarea" cols="150" rows="10"></textarea></div>
+          <button class="add-review-button airbnb-medium spacing-20px-right" >
            save review
           </button>
         </form>
-           <button class="show-more-amenities airbnb-medium" @click="reviewAddOpen=!reviewAddOpen">
-           close review
-          </button>
         </div>
         </div>
       </div>
@@ -515,17 +512,12 @@
         {{ this.stay.loc.address }},{{ this.stay.loc.country }}
       </div>
       <div>
-        <GmapMap
-          :center="this.stay.loc"
-          :zoom="12"
-          map-type-id="terrain"
-          style="width: 1500px; height: 480px; margin-bottom: 80px"
-        >
-          <GmapMarker :position="pos" :clickable="true" />
+        <GmapMap :center="this.stay.loc" :zoom="12" map-type-id="terrain" class="map-design">
+          <GmapMarker :position="this.stay.loc" :clickable="true" />
         </GmapMap>
       </div>
     </div>
-    <div>
+    <div class="host-details-info-stay">
       <div class="stay-location-map">
         <div class="flex-row">
           <div class="width-50 spacing-120px-right">
@@ -613,7 +605,7 @@
           </div>
         </div>
       </div>
-      <div class="width-33">
+      <div class="width-33 do-not-show-400">
         <div class="airbnb-medium spacing-15px">Health & safety</div>
         <div class="flex-row spacing-15px">
           <div class="center">
@@ -643,7 +635,7 @@
           </div>
         </div>
       </div>
-      <div class="width-33">
+      <div class="width-33 do-not-show-400">
         <div class="airbnb-medium spacing-15px">Cancellation policy</div>
         <div class="flex-row spacing-15px">
           <div>
@@ -726,7 +718,8 @@ export default {
        this.reviewData.by.fullName=retrievedUser.username
        this.reviewData.stayId=this.stay._id
        try {
-        await this.$store.dispatch({ type: "addReview",review:this.reviewData});
+        const updatedStay =await this.$store.dispatch({ type: "addReview",review:this.reviewData});
+        this.stay=updatedStay;
       } catch(err) {
           console.log(err)
           this.msg = "Failed to add review"
@@ -800,11 +793,8 @@ export default {
     determinePos() {
       if (this.scrollBar < 580) return { position: "relative" };
       else if (this.scrollBar >= 580 && this.scrollBar <= 1200) {
-        return {
-          position: "relative",
-          "margin-top": this.scrollBar - 580 + "px",
-        };
-      } else return { position: "relative", "margin-top": 640 + "px" };
+        return {"margin-top": this.scrollBar - 580 + "px",};
+      } else return {"margin-top": 640 + "px" };
     },
     rateReview(){
       let length=(this.stay.reviews[0].rate.Value)/(5/100);

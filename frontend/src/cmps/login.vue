@@ -2,8 +2,8 @@
   <section class="login-container">
     <div @click="openCloseMenu" class="user-options">
       <div class="burger">☰</div>
-      <!-- <img class="avatar" src="../assets/imgs/icons/avatar.png" /> -->
-      <avatar class="avatar" size="31" name="host" :src="require(`@/assets/imgs/profile_pic/Eva Macron.jpg`)" />
+      <img class="avatar" src="../assets/imgs/icons/avatar.png" />
+      <avatar v-if="userLoggedIn" class="avatar" size=31 name="host" :src="require(`@/assets/imgs/profile_pic/${userLoggedIn.username}.jpg`)" />
       <!-- <img v-if="userLoggedIn" class="avatar" src="../assets/imgs/profile_pic/host.jpg" /> -->
       <img v-if="userLoggedIn && isPendingOrders" class="notification-icon" src="../assets/imgs/icons/notification.png">
       <div v-if="isMenuOpen">

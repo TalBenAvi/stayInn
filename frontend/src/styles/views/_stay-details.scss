@@ -1,6 +1,6 @@
 .stay-details {
     display: grid;
-    grid-template-columns: $layoutPaddingHome minmax(1120px, 1450px) $layoutPaddingHome;
+    grid-template-columns: $layoutPaddingHome minmax(1120px, 1600px) $layoutPaddingHome;
 
     > * {
         grid-column: 2;
@@ -22,7 +22,7 @@
     height: 15px;
 }
 .location-name {
-    width: 1450px;
+    width: 1600px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -34,7 +34,7 @@
 }
 .imgs-layout {
     height: $layoutimgsheight;
-    width: 1450px;
+    width: 1600px;
     display: flex;
     justify-content: center;
     gap: 10px;
@@ -76,7 +76,7 @@
     object-fit: cover;
 }
 .res-details-layout {
-    width: 1450px;
+    width: 1600px;
     margin-top: 45.5px;
     display: flex;
     flex-direction: row;
@@ -363,7 +363,7 @@
     margin-top: 15px;
 }
 .reviews-display{
-    width: 1450px;
+    width: 1600px;
     border-bottom: $separate solid 1px;
     margin-bottom:50px ;
 }
@@ -401,7 +401,7 @@
     margin-bottom: 30px;
 }
 .stay-location-map{
-    width: 1450px;
+    width: 1600px;
     border-bottom: $separate solid 1px;
     margin-bottom:50px ; 
 }
@@ -430,7 +430,13 @@
 .review-rate-category-grid{
  display: grid;
  grid-template-columns:  33% 33% 33%;
- text-align: center;
+ text-align: start;
+}
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+  }
+.do-not-show-400{
+    display: block;
 }
 //GUESTS MODAL//
 .guests-options {
@@ -523,9 +529,6 @@
         
 
 }
-
-
-
 .guests-selection {
    
     display: flex;
@@ -541,13 +544,32 @@
         align-items: center;
     }
 }
-
 .hidden {
     display: none;
 }
-
 .shown {
     display: block;
+}
+.map-design{
+    width: 1600px;
+     height: 500px;
+    margin-bottom: 80px
+}
+.stay-host-details-layout{
+    width: $layoutimgswidth;
+    border-bottom: $separate solid 1px;
+    margin-bottom:50px ;
+}
+.add-review-button {
+    cursor: pointer;
+    font-family: airbnb-medium;
+    height: 45px;
+    width: 200px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    color: white;
+    background-color: #ff385c;
 }
 
 
@@ -581,12 +603,29 @@
      }
 }
 @media (max-width: 400px) {
+    .stay-details {
+        display: grid;
+        grid-template-columns: 0 375px 0;
+    
+        > * {
+            grid-column: 2;
+        }
+    
+        > *.full {
+            grid-column: 1 / -1;
+        }
+    }
+    .name{
+        margin-top: 80px;
+    }
     .location-name{
+        width: 375px;
         flex-direction: column;
         gap: 10px;
+        font-size: 14px;
     }
     .imgs-layout{
-        width: 385px;
+        width: 375px;
     }
     .img1{
       width: 100%;
@@ -613,6 +652,12 @@
         height: 65px;
 
     }
+    .houseRules-layout{
+        padding-right: 60px; 
+    }
+    .stay-info {
+        width: 100%;
+    }
     .minimal-details {
         grid-column: 1;
         grid-row: 1;
@@ -622,6 +667,9 @@
     }
     .location-space{ 
         font-size: 13px;
+    }
+    .res-details-layout{
+        width: 375px;
     }
     .stay-info-desc {
         width:42.3%;
@@ -643,15 +691,40 @@
         font-size: 0.75rem;
         border-bottom: #DDDDDD solid 1px;
     }
+    .reviews-rating-data{
+        display: none;
+    }
     .reviews-display-data {
         display: grid;
-        row-gap: 20px;
+        row-gap: 5px;
         column-gap: 20px;
-        grid-template-columns: 46%;
-        grid-template-rows: 16.67% 16.67% 16.67% 16.67% 16.67% 16.67%;
+        grid-template-columns: 20%;
+        // grid-template-rows: % 16.67% 16.67% 16.67% 16.67% 16.67%;
         padding-bottom: 100px;
+    }
+    .reviews-display{
+        width: 375px;
+    }
+    .review-date{
+        padding-bottom: 0px;
+    }
+    .host-details-info-stay{
+     display: none;
+    }
+    .do-not-show-400{
+      display: none;
+    }
+    .map-design{
+        width: 375px;
+        height: 300px;
+        margin-bottom: 20px;
     }
     .stay-reserve-layout{
         display: none;
+    }
+    .stay-location-map {
+        width: 375px;
+        border-bottom: #DDDDDD solid 1px;
+        margin-bottom: 50px;
     }
   }
