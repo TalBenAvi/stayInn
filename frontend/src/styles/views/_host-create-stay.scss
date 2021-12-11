@@ -11,6 +11,7 @@ flex-direction: row;
 grid-column: 2;
 }
 .menu-bar {
+    margin-top: 20px;
     width: 16%;
     position: sticky;
     display: flex;
@@ -21,32 +22,42 @@ grid-column: 2;
     -webkit-align-items: flex-start;
     align-items: flex-start;
     text-align: start;
+
+    .menu-option {
+        display: flex;
+
+        img {
+            width: 25px;
+            height: 25px;
+            margin: 0;
+            margin-bottom: -5px;
+        }
+    }
+
+    .menu-bar-button {
+        font-family: airbnb-book;
+        color: $black;
+        border: none;
+        background: white;
+        width: 150px;
+        font-size: 17px;
+        text-align: start;
+        padding-bottom: 20px;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+
+    .menu-bar-button:hover {
+        cursor: pointer;
+        background: rgba(235, 235, 235, 0.418);
+    }
 }
-.menu-bar > button {
-    padding: 10px 5px;
-    display: flex;
-    -webkit-align-items: center;
-    align-items: center;
-    width: 100%;
-    font-family: airbnb-medium;
-    line-height: 28px;
-    border: none;
-}
-.menu-bar-button {
-    border: none;
-    background: white;
-    width: 150px;
-    font-size: 17px;
-    text-align: start;
-    padding-bottom: 20px;
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
-}
+
 .display-bar {
-    width: 84%;
-    background-color: rgb(239, 243, 245);
-    padding: 20px;
-    border-radius: 15px;
+    // width: 84%;
+    // background-color: rgb(239, 243, 245);
+    // padding: 20px;
+    // border-radius: 15px;
 }
 .dashboard-header {
     display: flex;
@@ -180,10 +191,7 @@ grid-column: 2;
     margin-top: 20px;
     border: none;
 }
-.menu-bar-button:hover {
-    cursor: pointer;
-    background: $separate;
-}
+
 .create-stay {
     display: none;
 }

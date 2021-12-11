@@ -7,6 +7,8 @@ export const orderService= {
     add,
     query,
     remove,
+    getOrderById,
+    updateOrderStatus
 }
 
 function query(filterBy) {
@@ -15,6 +17,19 @@ function query(filterBy) {
     return storageService.query('order')
   }
   
+
+  async function updateOrderStatus(order, status) {
+    try {
+      order.status = status
+      var updatedOrder = await storageService.put('order', order)
+      return updatedOrder
+    } catch (err) {
+      console.log('had trouble updating order status from service', err)
+    }
+  }
+
+
+
   function remove(orderId) {
     // return httpService.delete(`review/${reviewId}`)
     return storageService.delete('order', orderId)
@@ -23,7 +38,7 @@ function query(filterBy) {
   async function add(order) {
     // const addedReview = await httpService.post(`review`, review)
     const user = userService.getLoggedinUser()
-    order.buyer.fullname = user.fullname
+    order.buyer.fullname = user.username
     order.buyer._id = user._id
     // order.host = await userService.getById(order.user._id)
     const addedOrder = await storageService.post('order', order)
@@ -32,6 +47,15 @@ function query(filterBy) {
     return addedOrder
   }
   
+  async function getOrderById(orderId) {
+    try {
+      var order = await storageService.get('order', orderId)
+      return order
+  
+    } catch (err) {
+      console.log('had error getting order by id', err)
+    }
+  }
   // This IIFE functions for Dev purposes 
   // It allows testing of real time updates (such as sockets) by listening to storage events
 //   (async () => {

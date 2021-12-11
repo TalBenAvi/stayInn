@@ -2,8 +2,10 @@
   <section class="login-container">
     <div @click="openCloseMenu" class="user-options">
       <div class="burger">☰</div>
-      <img class="avatar" src="../assets/imgs/icons/avatar.png" />
-      <img v-if="userLoggedIn && userLoggedIn.pendingOrders" class="notification-icon" src="../assets/imgs/icons/notification.png">
+      <!-- <img class="avatar" src="../assets/imgs/icons/avatar.png" /> -->
+      <avatar class="avatar" size="31" name="host" :src="require(`@/assets/imgs/profile_pic/Eva Macron.jpg`)" />
+      <!-- <img v-if="userLoggedIn" class="avatar" src="../assets/imgs/profile_pic/host.jpg" /> -->
+      <img v-if="userLoggedIn && isPendingOrders" class="notification-icon" src="../assets/imgs/icons/notification.png">
       <div v-if="isMenuOpen">
         <div v-if="!isUserLogedIn" class="profile-menu">
         <button @click="openLogin">Login</button>
@@ -13,6 +15,7 @@
         <button class="airbnb-medium" @click="openNotifications">Notifications</button>
         <button class="airbnb-medium" @click="openTrips">Trips</button>
         <button class="airbnb-medium" @click="openWishlists">Wishlists</button>
+         <button class="airbnb-medium" @click="openDashboard">Manage listings</button>
         <button class="airbnb-medium" @click="openAccount">Account</button>
         <button class="airbnb-medium" @click="doLogout">Logout</button>
         </div>
@@ -122,10 +125,16 @@
 </template>
 
 <script>
+
+import Avatar from 'vue-avatar'
+
 export default {
   data() {
     return {
       userLoggedIn: null,
+      isPendingOrders: null,
+
+
       isMenuOpen: false,
       isLoginOpen: false,
       isUserLogedIn: false,
@@ -148,6 +157,11 @@ export default {
        this.isUserLogedIn=true;
        this.userLoggedIn = user
 
+       if (this.loggedinUser.pendingOrders.length) {
+         this.isPendingOrders = true
+       } else {
+         this.isPendingOrders = false
+       }
       }
     else {
        console.log('no user');
@@ -224,7 +238,10 @@ export default {
       this.$store.dispatch({ type: "logout" });
     },
     openNotifications(){
-      this.$router.push("/notification");
+      this.$router.push("/notifications");
+    },
+    openDashboard() {
+       this.$router.push("/host")
     },
     openTrips(){
     this.$router.push("/trip");
@@ -238,6 +255,7 @@ export default {
     doLogout(){
      sessionStorage.clear();
       this.isUserLogedIn=false;
+      // this.$router.push('/')
     },
     async doSignup() {
       if (!this.signupCred.email || !this.signupCred.password || !this.signupCred.username) {
@@ -252,6 +270,9 @@ export default {
       // this.$router.push('/')
       
     },
+  },
+   components: {
+    Avatar
   },
 };
 </script>

@@ -1,31 +1,18 @@
-.home {
-    background-color: black;
-    width: 100%;
-}
+
 
 
 .top-fold {
-    
-    margin-top: 170px;
-    height: 700px;
-    
-    .home-img {
-        grid-column: 2/3;
 
+    .home-img {
+        
         img {
             object-fit: cover;
-            height: 700px;
             position: relative;
-            border-radius: 20px;
         }
     }
     .slogan {
-        white-space: nowrap;
-        max-width: 100%;
         font-family: airbnb-medium;
         font-size: 37px;
-        top: 55%;
-        left: 48.5%;
         transform: translate( -50%, -50% );
         text-align: center;
         color: white;
@@ -33,9 +20,7 @@
     }
 
     .flexible-btn {
-        top:60%;
         position: absolute;
-        left: 43%;
         padding: 16px 32px;
         cursor: pointer;
         text-align: center;
@@ -58,8 +43,101 @@
 
 }
 
+@media (max-width: $break-narrow) {
+    .top-fold  {
+        grid-column: 1/-1;
+       margin-top: 0;
+       height: 750px;
+    }
+
+    .home-img {
+        border-radius: none;
+        grid-column: 1/-1;
+        height: 750px;
+
+        img {
+            border-radius: none;
+            grid-column: 1/-1;
+            height: 750px;
+        }
+
+    }
+
+    .slogan {
+        font-family: airbnb-medium;
+        font-size: 37px;
+        width: 120%;
+        top: 90%;
+        left: 70%;
+        text-align: center;
+        color: white;
+        position: absolute;
+    }
+
+    .flexible-btn {
+        top:98%;
+        position: absolute;
+        left: 48.5%;
+        padding: 16px 32px;
+        cursor: pointer;
+        text-align: center;
+        width: auto;
+        font-family: airbnb-medium;
+        font-size: 16px;
+        line-height: 20px;
+        border-radius: 1000px;
+        border: 1px solid black;
+    }
+
+}
+
+@media (min-width: $break-narrow) {
+
+    .home {
+        background-color: black;
+        width: 100%;
+    }
+
+
+    .top-fold  {    
+    margin-top: 170px;
+    height: 700px;
+    
+    }
+
+    .home-img {
+        grid-column: 2/3;
+
+
+        img {
+            border-radius: 20px;
+            height: 700px;
+        }
+
+    }
+
+    .slogan {
+        white-space: nowrap;
+        max-width: 100%;
+        font-family: airbnb-medium;
+        font-size: 37px;
+        top: 55%;
+        left: 49%;
+        transform: translate( -50%, -50% );
+        text-align: center;
+        color: white;
+        position: absolute;
+    }
+
+    .flexible-btn {
+        top:60%;
+        left: 44%;
+    }
+}
+
+
+
 .bottom-fold {
-    margin-top: 100px;
     background-color: white;
     
     .locations-section {
@@ -75,11 +153,9 @@
         .location-cards {
             cursor: pointer;
             display: grid;
-            grid-template-columns: repeat(4, minmax(0, 1fr));
             column-gap: 20px;
     
             .location-img {
-                height: 90%;
                 border-radius: 10px;
                 aspect-ratio: 1 / 1;
                 object-fit: cover;
@@ -97,13 +173,9 @@
         .banner {
             
             position: relative;
-            margin-top: 105px;
-            margin-bottom: 105px;
 
             h1 {
                 font-family: airbnb-book;
-                margin-top: 100px;
-                margin-left: 50px;
                 font-size: 50px;
                 letter-spacing: -0.02em;
                 color: white;
@@ -112,17 +184,9 @@
 
 
             .sub-header {
-                
-                font-size: 18px;
                 font-family: airbnb;
                 color: white;
-                margin-left: 50px;
-                margin-top: 170px;
                 position: absolute;
-            }
-
-            .learn-btn {
-                margin-top: 230px;
             }
 
             
@@ -135,8 +199,6 @@
             button {
                 cursor: pointer;
                 position: absolute;
-                margin-top: 185px;
-                margin-left: 50px;
                 color: $black;
                 font-size: 15px;
                 font-family: airbnb-medium;
@@ -157,3 +219,104 @@
 
  
 }
+
+
+@media (max-width: $break-narrow) {
+    .bottom-fold {
+        margin-top: 20px;
+    }
+
+    .locations-section {
+        margin-top: 20px;
+    }
+
+    .location-cards {
+        grid-template-columns: repeat(4, 280px);
+        grid-auto-flow: column;
+    gap: 25px;
+    overflow: auto hidden;
+    -ms-scroll-snap-type: x mandatory;
+    scroll-snap-type: x mandatory;
+    }
+
+    .location-img { 
+
+        height: 350px;
+    }
+
+    .banner {
+        margin-top: 50px;
+        margin-bottom: 60px;
+
+
+    h1 {
+        margin-top: 40px;
+        margin-left: 40px;
+    }
+
+    button {
+        margin-top: 185px;
+        margin-left: 40px;
+    }
+
+    .sub-header {
+        font-family: airbnb;
+        color: white;
+        margin-left: 40px;
+        margin-top: 100px;
+        position: absolute;
+    }
+
+    .learn-btn {
+        margin-top: 200px;
+    }
+
+    }
+}
+
+@media (min-width: $break-narrow) {
+
+    .bottom-fold {
+        margin-top: 100px;
+    }
+
+    .locations-section {
+        margin-top: 50px;
+    }
+
+    .location-cards {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .location-img {
+        height: 90%;
+    }
+
+    .banner {
+        margin-top: 105px;
+        margin-bottom: 105px;
+
+        h1 {
+            margin-top: 100px;
+            margin-left: 50px;
+        }
+    
+        button {
+            margin-top: 185px;
+            margin-left: 50px;
+        }
+
+        .sub-header {
+                
+            font-size: 18px;
+            margin-left: 50px;
+            margin-top: 170px;
+        }
+    
+        .learn-btn {
+            margin-top: 230px;
+        }
+    }
+ 
+}
+

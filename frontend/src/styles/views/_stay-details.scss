@@ -1,6 +1,6 @@
 .stay-details {
     display: grid;
-    grid-template-columns: $layoutPaddingDetails minmax(1fr, $layoutimgswidth) $layoutPaddingDetails;
+    grid-template-columns: $layoutPaddingHome minmax(1120px, 1450px) $layoutPaddingHome;
 
     > * {
         grid-column: 2;
@@ -22,7 +22,7 @@
     height: 15px;
 }
 .location-name {
-    width: $layoutimgswidth;
+    width: 1450px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -34,7 +34,7 @@
 }
 .imgs-layout {
     height: $layoutimgsheight;
-    width: $layoutimgswidth;
+    width: 1450px;
     display: flex;
     justify-content: center;
     gap: 10px;
@@ -76,7 +76,7 @@
     object-fit: cover;
 }
 .res-details-layout {
-    width: $layoutimgswidth;
+    width: 1450px;
     margin-top: 45.5px;
     display: flex;
     flex-direction: row;
@@ -198,7 +198,7 @@
     padding-right: 150px;
 }
 .stay-reserve-layout{
-    width: 29.03%;
+    width: 24.03%;
 }
 .stay-reserve {
     position: relative;
@@ -363,7 +363,7 @@
     margin-top: 15px;
 }
 .reviews-display{
-    width: $layoutimgswidth;
+    width: 1450px;
     border-bottom: $separate solid 1px;
     margin-bottom:50px ;
 }
@@ -386,6 +386,7 @@
 .user-review-avatar{
     height: 50px;
     width: 50px;
+    border-radius: 50%;
 }
 .review-date{
     font-size: 13px;
@@ -400,7 +401,7 @@
     margin-bottom: 30px;
 }
 .stay-location-map{
-    width: $layoutimgswidth;
+    width: 1450px;
     border-bottom: $separate solid 1px;
     margin-bottom:50px ; 
 }
@@ -419,7 +420,6 @@
     align-items: center;
     border-radius: 10px;
     margin-top: 8px;
-    margin-right: 20px;
 }
 .review-rate-bar>div{
     background-color: $black;
@@ -430,8 +430,7 @@
 .review-rate-category-grid{
  display: grid;
  grid-template-columns:  33% 33% 33%;
- column-gap: 20px;
- text-align: start;
+ text-align: center;
 }
 input[type=number]::-webkit-inner-spin-button {
     -webkit-appearance: none;
@@ -569,6 +568,8 @@ input[type=number]::-webkit-inner-spin-button {
     color: white;
     background-color: #ff385c;
 }
+
+
 .user-msg {
     margin-bottom: 15px;
     text-align: center;
@@ -599,20 +600,7 @@ input[type=number]::-webkit-inner-spin-button {
      }
 }
 @media (max-width: 400px) {
-    .stay-details {
-        display: grid;
-        grid-template-columns: 0 375px 0;
-    
-        > * {
-            grid-column: 2;
-        }
-    
-        > *.full {
-            grid-column: 1 / -1;
-        }
-    }
     .location-name{
-        font-size: 0.75rem;
         flex-direction: column;
         gap: 10px;
     }
@@ -649,17 +637,13 @@ input[type=number]::-webkit-inner-spin-button {
         grid-row: 1;
         margin-bottom: 5px;
         font-family: airbnb-medium;
-        font-size: 12px;
+        font-size: 16px;
     }
     .location-space{ 
-        font-size: 12px;
-    }
-    .baner{
-        width: 40px;
-        height: 40px;
+        font-size: 13px;
     }
     .stay-info-desc {
-        width:50.3%;
+        width:42.3%;
         padding-top: 32px;
         padding-bottom: 14px;
         font-family: airbnb-book;
@@ -669,7 +653,7 @@ input[type=number]::-webkit-inner-spin-button {
         border-bottom: #DDDDDD solid 1px;
     }
     .stay-info-desc-end {
-        width:50.3%;
+        width:42.3%;
         padding-top: 32px;
         padding-bottom: 14px;
         padding-right: 20px;
@@ -686,101 +670,7 @@ input[type=number]::-webkit-inner-spin-button {
         grid-template-rows: 16.67% 16.67% 16.67% 16.67% 16.67% 16.67%;
         padding-bottom: 100px;
     }
-    .houseRules-layout{
-        padding-right: 40px  
-    }
-    .reviews-rating-data{
-        display: none;
-    }
-    .stay-location-map{
-        width: 375px;
-    }
-    
     .stay-reserve-layout{
         display: none;
     }
-    .map-design{
-        width: 370px;
-    }
-    .stay-host-details-layout{
-        display: none;
-    }
-    .things-to-know{
-        display:none;
-    }
   }
-//   @media (max-width: 800px) {
-//     .location-name{
-//         flex-direction: column;
-//         gap: 10px;
-//     }
-//     .imgs-layout{
-//         width: 385px;
-//     }
-//     .img1{
-//       width: 100%;
-//       }
-//     .img2{
-//       display: none;
-//     }
-//     .img3{
-//         display: none;
-//     }
-//     .img4{
-//         display: none;
-//     }
-//     .img5{
-//         display: none;
-//     }
-//     .head-flex {
-//         display: flex;
-//         flex-direction: row;
-//         flex-wrap: wrap;
-//         width: 100vw;
-//         padding-right: 20px;
-//         padding-left: 20px;
-//         height: 65px;
-
-//     }
-//     .minimal-details {
-//         grid-column: 1;
-//         grid-row: 1;
-//         margin-bottom: 5px;
-//         font-family: airbnb-medium;
-//         font-size: 16px;
-//     }
-//     .location-space{ 
-//         font-size: 13px;
-//     }
-//     .stay-info-desc {
-//         width:42.3%;
-//         padding-top: 32px;
-//         padding-bottom: 14px;
-//         font-family: airbnb-book;
-//         padding-left: 20px;
-//         padding-right: 20px;
-//         font-size: 0.75rem;
-//         border-bottom: #DDDDDD solid 1px;
-//     }
-//     .stay-info-desc-end {
-//         width:42.3%;
-//         padding-top: 32px;
-//         padding-bottom: 14px;
-//         padding-right: 20px;
-//         padding-left: 20px;
-//         font-family: airbnb-book;
-//         font-size: 0.75rem;
-//         border-bottom: #DDDDDD solid 1px;
-//     }
-//     .reviews-display-data {
-//         display: grid;
-//         row-gap: 20px;
-//         column-gap: 20px;
-//         grid-template-columns: 46%;
-//         grid-template-rows: 16.67% 16.67% 16.67% 16.67% 16.67% 16.67%;
-//         padding-bottom: 100px;
-//     }
-//     .stay-reserve-layout{
-//         display: none;
-//     }
-//   }

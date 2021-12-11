@@ -6,7 +6,6 @@ async function getStays(req, res) {
   try {
     var queryParams = req.query;
     const stays = await stayService.query(queryParams)
-    console.log('stays from getStays' , stays)
     res.json(stays);
   } catch (err) {
     logger.error('Failed to get stays', err)

@@ -65,7 +65,7 @@
           <div class="stay-info-heder">
             <div class="minimal-details">
               {{ this.stay.typeOfPlace }} hosted by
-              {{ this.stay.host.fullName }}
+              {{ this.stay.host.username }}
             </div>
             <div class="location-space">
               {{ this.stay.accommodates }} guests ·
@@ -73,7 +73,7 @@
               {{ this.stay.bath }} baths
             </div>
           </div>
-          <div><img class="baner" src="../assets/imgs/icons/host.png" /></div>
+          <div><img class="baner" :src="require(`@/assets/imgs/profile_pic/${this.stay.host.username}.jpg`)" /></div>
         </div>
         <div class="stay-info-desc">
           <div class="flex-row">
@@ -218,11 +218,15 @@
               <div class="checking">
                 <div class="check-in">
                   <div class="category-stay-label">CHECK-IN</div>
+                  <!-- <div v-if="!currentTrip" class="add">Add date</div> -->
+                  <!-- <div class="add">{{ currentTrip.startDate }}</div> -->
                   <date-picker v-if="currentTrip" :tripdate="tripDates" />
                   <date-picker v-else />
                 </div>
                 <div class="check-out">
                   <div class="category-stay-label">CHECK-OUT</div>
+                  <!-- <div v-if="!currentTrip" class="add">Add date</div>
+                  <div v-else class="add">{{ currentTrip.endDate }}</div> -->
                 </div>
                 <div class="guests-num" @click="show = !show">
                   <div class="category-stay-label">GUESTS</div>
@@ -231,6 +235,7 @@
                   <div v-else class="add">{{ numOfGuests }} guests</div>
                 </div>
               </div>
+
               <div
                 ref="guestModal"
                 class="guests-options"
@@ -375,7 +380,7 @@
             <div class="center spacing-10px-right">
               <img
                 class="user-review-avatar"
-                src="../assets/imgs/icons/avatar.png"
+                :src="require(`@/assets/imgs/profile_pic/${this.stay.reviews[0].by.fullName}.jpg`)"                       
               />
             </div>
             <div class="center">
@@ -392,7 +397,7 @@
             <div class="center spacing-10px-right">
               <img
                 class="user-review-avatar"
-                src="../assets/imgs/icons/avatar.png"
+                :src="require(`@/assets/imgs/profile_pic/${this.stay.reviews[1].by.fullName}.jpg`)"                       
               />
             </div>
             <div class="center">
@@ -409,14 +414,14 @@
             <div class="center spacing-10px-right">
               <img
                 class="user-review-avatar"
-                src="../assets/imgs/icons/avatar.png"
+                :src="require(`@/assets/imgs/profile_pic/${this.stay.reviews[2].by.fullName}.jpg`)"                       
               />
             </div>
             <div class="center">
               <div class="short-exmple">
                 {{ this.stay.reviews[2].by.fullName }}
               </div>
-              <div class="review-date"> {{ this.stay.reviews[2].by.date }}</div>
+              <div class="review-date">November 2020</div>
             </div>
           </div>
           <div  class="vibrous">{{ this.stay.reviews[2].txt }}</div>
@@ -426,14 +431,14 @@
             <div class="center spacing-10px-right">
               <img
                 class="user-review-avatar"
-                src="../assets/imgs/icons/avatar.png"
+                :src="require(`@/assets/imgs/profile_pic/${this.stay.reviews[3].by.fullName}.jpg`)"                       
               />
             </div>
             <div class="center">
               <div class="short-exmple">
                 {{ this.stay.reviews[3].by.fullName }}
               </div>
-              <div class="review-date"> {{ this.stay.reviews[3].by.date }}</div>
+              <div class="review-date">July 2020</div>
             </div>
           </div>
           <div  class="vibrous">{{ this.stay.reviews[3].txt }}</div>
@@ -443,14 +448,14 @@
             <div class="center spacing-10px-right">
               <img
                 class="user-review-avatar"
-                src="../assets/imgs/icons/avatar.png"
+                :src="require(`@/assets/imgs/profile_pic/${this.stay.reviews[4].by.fullName}.jpg`)"                       
               />
             </div>
             <div class="center">
               <div class="short-exmple">
                 {{ this.stay.reviews[4].by.fullName }}
               </div>
-              <div class="review-date"> {{ this.stay.reviews[4].by.date }}</div>
+              <div class="review-date">October 2020</div>
             </div>
           </div>
           <div class="vibrous">{{ this.stay.reviews[4].txt }}</div>
@@ -460,14 +465,14 @@
             <div class="center spacing-10px-right">
               <img
                 class="user-review-avatar"
-                src="../assets/imgs/icons/avatar.png"
+                :src="require(`@/assets/imgs/profile_pic/${this.stay.reviews[5].by.fullName}.jpg`)"                       
               />
             </div>
             <div class="center">
               <div class="short-exmple">
                 {{ this.stay.reviews[5].by.fullName }}
               </div>
-              <div class="review-date"> {{ this.stay.reviews[5].by.date }}</div>
+              <div class="review-date">January 2021</div>
             </div>
           </div>
           <div  class="vibrous">{{ this.stay.reviews[5].txt }}</div>
@@ -511,14 +516,14 @@
           :center="this.stay.loc"
           :zoom="12"
           map-type-id="terrain"
-          class="map-design"
+          style="width: 1500px; height: 480px; margin-bottom: 80px"
         >
           <GmapMarker :position="pos" :clickable="true" />
         </GmapMap>
       </div>
     </div>
     <div>
-      <div class="stay-host-details-layout">
+      <div class="stay-location-map">
         <div class="flex-row">
           <div class="width-50 spacing-120px-right">
             <div class="flex-row">
@@ -556,7 +561,7 @@
         </div>
       </div>
     </div>
-    <div class="full-width things-to-know">
+    <div class="full-width">
       <h3 class="airbnb">Things to know</h3>
     </div>
     <div class="flex-row full-width">
@@ -605,7 +610,7 @@
           </div>
         </div>
       </div>
-      <div class="width-33 things-to-know">
+      <div class="width-33">
         <div class="airbnb-medium spacing-15px">Health & safety</div>
         <div class="flex-row spacing-15px">
           <div class="center">
@@ -635,7 +640,7 @@
           </div>
         </div>
       </div>
-      <div class="width-33 things-to-know">
+      <div class="width-33">
         <div class="airbnb-medium spacing-15px">Cancellation policy</div>
         <div class="flex-row spacing-15px">
           <div>
@@ -682,7 +687,6 @@ export default {
         stayId:'',
         by:{
           fullName:'',
-          date:'',
         }
       },
       currentTrip: this.$store.getters.currentTrip,
@@ -718,10 +722,6 @@ export default {
        const retrievedUser =JSON.parse(loggedinUser)
        this.reviewData.by.fullName=retrievedUser.username
        this.reviewData.stayId=this.stay._id
-       var today = new Date();
-       var options = { month: "long",year: "numeric"}
-       var sDay = today.toLocaleDateString("en-US", options);
-       this.reviewData.by.date=sDay;
        try {
         const updatedStay =await this.$store.dispatch({ type: "addReview",review:this.reviewData});
         this.stay=updatedStay;
@@ -738,10 +738,10 @@ export default {
       if (!this.currentTrip) return;
       this.currentTrip.startDate = `${new Date(dates.start).getDate()}/${
         new Date(dates.start).getMonth() + 1
-      }/${new Date(dates.start).getFullYear()}`;
+      }/${new Date(dates.start).getFullYear()+1}`;
       this.currentTrip.endDate = `${new Date(dates.end).getDate()}/${
         new Date(dates.end).getMonth() + 1
-      }/${new Date(dates.end).getFullYear()}`;
+      }/${new Date(dates.end).getFullYear()+1}`;
       this.nightsAmount = amount;
     },
     reserveStay() {
