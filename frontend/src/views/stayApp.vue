@@ -387,7 +387,6 @@ export default {
           trip,
         });
         this.staysForDisplay = this.$store.getters.staysForDisplay;
-        // console.log("after trip:", this.staysForDisplay);
       }
       if (this.$route.query.filter) {
         const { filter } = this.$route.query;
@@ -441,8 +440,10 @@ export default {
       } else {
         var idx = this.filterBy[key].findIndex((k) => k === by);
         this.filterBy[key].splice(idx, 1);
+        
       }
       this.staysForDisplay = this.$store.getters.staysForDisplay;
+      
     },
     async _updateStays() {
       await this.$store.dispatch({

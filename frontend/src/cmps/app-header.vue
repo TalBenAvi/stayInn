@@ -11,8 +11,8 @@
           @click="toHome"
         />
       </div>
-      <div v-if="!isTop " @click="expandToSearch()" class="initial-search-bar">
-        <p>Start your search</p>
+      <div v-if="!isTop" @click="expandToSearch()" class="initial-search-bar">
+        <p>{{setSearchBarText}}</p>
         <div class="circle">
           <img
             class="search-icon"
@@ -25,7 +25,11 @@
         <form @submit.prevent="">
           <label class="main-search-label" @click="openModal('location')">
             <span>Location</span>
-            <input placeholder="Where are you going?" @input="openModal('s-location')"  v-model="location" />
+            <input
+              placeholder="Where are you going?"
+              @input="openModal('s-location')"
+              v-model="location"
+            />
           </label>
           <label class="main-search-label" @click="openModal()">
             <span>Check in</span>
@@ -39,7 +43,7 @@
           <label class="main-search-label" @click="openModal()">
             <span>Check out</span>
             <input
-            :placeholder="getCheckoutDate"
+              :placeholder="getCheckoutDate"
               v-model="checkoutDate"
               ref="myDatePicker"
               range
@@ -61,17 +65,48 @@
         </form>
       </div>
       <div class="right-nav">
-                <div class="host-options" :style="textColor">
-        <p class="become" @click="showStays">Explore</p>
-        <p class="become" @click="toHost">Become a host</p>
+        <div class="host-options" :style="textColor">
+          <p class="become" @click="showStays">Explore</p>
+          <p class="become" @click="toHost">Become a host</p>
+        </div>
+        <!-- <div class="global">
+          <img :src="require(`@/assets/imgs/icons/${globalSrc}.png`)" />
+        </div> -->
+        <login />
+      </div>
+    </section>
+<!-- 
+    <section class="mobile-header">
+      <div @click="expandToSearch()" class="initial-search-bar">
+        <p>{{setSearchBarText}}</p>
+        <div class="circle">
+          <img
+            class="search-icon"
+            src="../assets/imgs/icons/search-circle.png"
+          />
+        </div>
+          <dynamic-modal :clicked="this.clickedOn" />
+      </div>
+    </section> -->
 
+    <section class="mobile-nav">
+      <div class="mobile-option">
+        <img src= "../assets/imgs/icons/user/search.png" />
+        <span @click="toHome" >Explore</span>
       </div>
-      <div class="global">
-        <img :src="require(`@/assets/imgs/icons/${globalSrc}.png`)" />
+      <div class="mobile-option">
+        <img src= "../assets/imgs/icons/user/heart.png"  />
+        <span>Wishlists</span>
       </div>
-      <login/>
+      <div class="mobile-option">
+        <img src= "../assets/imgs/icons/user/logo.png" />
+        <span>Trips</span>
       </div>
-
+           <div class="mobile-option">
+        <img src= "../assets/imgs/icons/user/user.png" />
+        <span>Profile</span>
+        <login/>
+      </div>
     </section>
   </header>
 </template>
@@ -80,7 +115,7 @@ import dynamicModal from "./dynamic-modal.vue";
 import DatePicker from "vue2-datepicker";
 import "vue2-datepicker/index.css";
 import login from "./login.vue";
-import {eventBus} from '../services/eventBus.js'
+import { eventBus } from "../services/eventBus.js";
 
 DatePicker.methods.displayPopup = function () {
   this.position = {
@@ -104,16 +139,16 @@ export default {
       currPage: "",
       expandedSearch: false,
       clickedOn: "",
-      checkinDate: 'Add dates',
-      checkoutDate: 'Add dates',
-      location: '',
-      guests: 'Add guests',
+      checkinDate: "Add dates",
+      checkoutDate: "Add dates",
+      location: "",
+      guests: "Add guests",
+      cityName: 'Start your search'
     };
   },
   created() {
-
-    eventBus.$on('selectedLocation', this.setLocation)
-    eventBus.$on('setGuests', this.setGuests)
+    eventBus.$on("selectedLocation", this.setLocation);
+    eventBus.$on("setGuests", this.setGuests);
     this.setCurrPage();
     window.addEventListener("scroll", this.handleScroll);
   },
@@ -141,11 +176,10 @@ export default {
     },
     async toHome() {
       this.$router.push("/");
-      await this.$store.dispatch({type:'resetTrip'})
-
+      await this.$store.dispatch({ type: "resetTrip" });
     },
     toHost() {
-      this.$router.push('/become');
+      this.$router.push("/become");
     },
     handleScroll() {
       let scrollBarPos = window.top.scrollY;
@@ -178,38 +212,36 @@ export default {
     handleChange() {},
     openModal(of) {
       this.clickedOn = of;
-      if (of === 'submit') {
+      if (of === "submit") {
         if (this.checkinDate && this.checkoutDate) {
-          const dates = [this.checkinDate, this.checkoutDate]
-          eventBus.$emit('setDates', dates)
-          this.checkinDate = 'add Dates'
-          this.checkoutDate = 'add Dates'
-          this.location = 'Where are you going?'
-          this.guests = 0
+          const dates = [this.checkinDate, this.checkoutDate];
+          eventBus.$emit("setDates", dates);
+          this.checkinDate = "add Dates";
+          this.checkoutDate = "add Dates";
+          this.location = "Where are you going?";
+          this.guests = 0;
         }
       }
     },
-      setLocation(location) {
-        this.location = location
-        this.openModal()
-        
-      },
-      renderDates(event) {
+    setLocation(location) {
+      this.location = location;
+      this.openModal();
+    },
+    renderDates(event) {
       this.checkinDate = `${new Date(event[0]).getDate()}/${
         new Date(event[0]).getMonth() + 1
-      }/${new Date(event[0]).getFullYear()}`
+      }/${new Date(event[0]).getFullYear()}`;
 
       this.checkoutDate = `${new Date(event[1]).getDate()}/${
         new Date(event[1]).getMonth() + 1
-      }/${new Date(event[1]).getFullYear()}`
-
-      },
-      setGuests(amount) {
-       this.guests = amount
-      },
-      showStays() {
-        this.$router.push('/stay')
-      }
+      }/${new Date(event[1]).getFullYear()}`;
+    },
+    setGuests(amount) {
+      this.guests = amount;
+    },
+    showStays() {
+      this.$router.push("/stay");
+    },
   },
   computed: {
     logo() {
@@ -249,19 +281,22 @@ export default {
       }
     },
     getCheckinDate() {
-      return this.checkinDate
+      return this.checkinDate;
     },
-        getCheckoutDate() {
-      return this.checkoutDate
+    getCheckoutDate() {
+      return this.checkoutDate;
     },
     getGuestsAmount() {
-      if (!this.guests) return 'Add guests'
-      return this.guests
+      if (!this.guests) return "Add guests";
+      return this.guests;
     },
     determineStyle() {
-      if (this.currPage !== 'home') {
-        return {top: 13+'%'}
-      } 
+      if (this.currPage !== "home") {
+        return { top: 13 + "%" };
+      }
+    },
+    setSearchBarText() {
+      return this.cityName
     }
   },
   destroyed() {
@@ -282,6 +317,10 @@ export default {
         }
       },
       immediate: true,
+    },
+    $route() {
+      const {filter} = this.$route.query
+      this.cityName = (filter)? filter.charAt(0).toUpperCase() + filter.slice(1) : 'Start your search'
     }
   },
 };

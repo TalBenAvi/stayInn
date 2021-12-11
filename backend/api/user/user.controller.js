@@ -65,10 +65,26 @@ async function addPendingOrder(req,res) {
     
 
 }
+
+async function clearPendingOrders(req,res) {
+    try {
+        const user = await userService.getById(req.params.userId)
+        user.pendingOrders = []
+        const updatedUser = await userService.update(user)
+        res.json(updatedUser)
+        console.log(updateUser)
+      } catch (err) {
+        logger.error('Failed to add review', err)
+        res.status(500).send({ err: 'Failed to add reveiw' })
+      }
+}
+
+
 module.exports = {
     getUser,
     getUsers,
     deleteUser,
     updateUser,
-    addPendingOrder
+    addPendingOrder,
+    clearPendingOrders
 }

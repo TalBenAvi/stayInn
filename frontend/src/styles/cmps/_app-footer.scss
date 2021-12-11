@@ -58,3 +58,19 @@
         }
     }
 }
+
+
+
+@media (max-width: $break-narrow) {
+    .footer-container {
+       display: none;
+
+    }
+
+    .main-footer { 
+        display: none;
+        // max-width: $break-narrow;
+        // grid-column: 1 / -1;
+        // flex-direction: column;
+    }
+}

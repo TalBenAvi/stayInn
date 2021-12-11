@@ -9,15 +9,57 @@
     width: 100%;
     background-color: white;
 
+
+
+    .order-statistics {
+        display: flex;
+        justify-content: space-between;
+
+        img {
+            width: 65px;
+            height: 65px;
+            margin-inline-start: 20px;
+            margin-inline-end: 50px;
+        }
+
+        .box {
+            display: flex;
+            align-items: center;
+            box-shadow: rgb(0 0 0 / 8%) 0px 1px 1px;
+            border: 1px solid #ddd;
+            width: 300px;
+            height: 100px;
+            border-radius: 10px;
+            font-size: 25px;
+            
+
+            .details {
+               
+                display: flex;
+                flex-direction: column;
+                font-family: airbnb-book;
+                color: $gray;
+
+                div:first-of-type {
+                    color: $black;
+                   font-family: airbnb-medium;
+                }
+
+            }
+
+      
+        }
+    }
+
     .orders-container {
-        border-radius: 10px;
-        background: rgb(243, 243, 243);
+        padding: 10px;
+        border: 1px solid #ddd;
         margin-top: 20px;
         font-family: airbnb;
         display: grid;
         align-items: center;
         grid-template-columns: repeat(6, 1fr);
-        column-gap: 90px;
+        column-gap: 50px;
 
         .accept {
             cursor: pointer;
@@ -38,6 +80,38 @@
             text-decoration: underline;
             color: rgb(255, 0, 0);
         }
+
+        .status-btn  {
+            cursor: pointer;
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    width: auto;
+    font-family: airbnb-book;
+    font-size: 17px;
+    line-height: 20px;
+    font-weight: 600;
+    border-radius: 8px;
+    outline: none;
+    padding: 12px 10px;
+    border: none;
+    color: white;
+    contain: paint;
+        }
+    }
+
+    .orange {
+       color: rgba(247, 156, 38, 0.61);
+    }
+
+    .red {
+        color: rgba(236, 24, 24, 0.637);
+    }
+
+
+    .green {
+        color: rgba(0, 128, 0, 0.61);
     }
 
 

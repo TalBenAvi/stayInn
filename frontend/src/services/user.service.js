@@ -23,13 +23,20 @@ window.userService = userService
 
 
 async function clearPendingOrders(hostId) {
+    var host = await getById(hostId);
+    console.log('from service', host)
+     try {
+         var user = await httpService.post(`user/order/${host._id}`)
+         return user
+     } catch (err) {
+         console.log('Had an error getting order by id (in front-service)', err)
+         throw err;
+     }
     
 }
 
 async function addPendingOrder(orderId, hostId) {
    var host = await getById(hostId);
-   console.log(host)
-   console.log('orderId', orderId)
     try {
         var user = await httpService.post(`user/order/${host._id}/${orderId}`)
         return user
