@@ -2,7 +2,9 @@
   <section class="login-container">
     <div @click="openCloseMenu" class="user-options">
       <div class="burger">☰</div>
-      <img class="avatar" src="../assets/imgs/icons/avatar.png" />
+      <!-- <img class="avatar" src="../assets/imgs/icons/avatar.png" /> -->
+      <avatar class="avatar" size="31" name="host" :src="require(`@/assets/imgs/profile_pic/Eva Macron.jpg`)" />
+      <!-- <img v-if="userLoggedIn" class="avatar" src="../assets/imgs/profile_pic/host.jpg" /> -->
       <img v-if="userLoggedIn && userLoggedIn.pendingOrders" class="notification-icon" src="../assets/imgs/icons/notification.png">
       <div v-if="isMenuOpen">
         <div v-if="!isUserLogedIn" class="profile-menu">
@@ -123,6 +125,9 @@
 </template>
 
 <script>
+
+import Avatar from 'vue-avatar'
+
 export default {
   data() {
     return {
@@ -257,6 +262,9 @@ export default {
       // this.$router.push('/')
       
     },
+  },
+   components: {
+    Avatar
   },
 };
 </script>

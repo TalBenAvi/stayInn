@@ -65,7 +65,7 @@
           <div class="stay-info-heder">
             <div class="minimal-details">
               {{ this.stay.typeOfPlace }} hosted by
-              {{ this.stay.host.fullName }}
+              {{ this.stay.host.username }}
             </div>
             <div class="location-space">
               {{ this.stay.accommodates }} guests ·
@@ -73,7 +73,7 @@
               {{ this.stay.bath }} baths
             </div>
           </div>
-          <div><img class="baner" src="../assets/imgs/icons/host.png" /></div>
+          <div><img class="baner" :src="require(`@/assets/imgs/profile_pic/${this.stay.host.username}.jpg`)" /></div>
         </div>
         <div class="stay-info-desc">
           <div class="flex-row">
@@ -380,7 +380,7 @@
             <div class="center spacing-10px-right">
               <img
                 class="user-review-avatar"
-                src="../assets/imgs/icons/avatar.png"
+                :src="require(`@/assets/imgs/profile_pic/${this.stay.reviews[0].by.fullName}.jpg`)"                       
               />
             </div>
             <div class="center">
@@ -397,7 +397,7 @@
             <div class="center spacing-10px-right">
               <img
                 class="user-review-avatar"
-                src="../assets/imgs/icons/avatar.png"
+                :src="require(`@/assets/imgs/profile_pic/${this.stay.reviews[1].by.fullName}.jpg`)"                       
               />
             </div>
             <div class="center">
@@ -414,7 +414,7 @@
             <div class="center spacing-10px-right">
               <img
                 class="user-review-avatar"
-                src="../assets/imgs/icons/avatar.png"
+                :src="require(`@/assets/imgs/profile_pic/${this.stay.reviews[2].by.fullName}.jpg`)"                       
               />
             </div>
             <div class="center">
@@ -431,7 +431,7 @@
             <div class="center spacing-10px-right">
               <img
                 class="user-review-avatar"
-                src="../assets/imgs/icons/avatar.png"
+                :src="require(`@/assets/imgs/profile_pic/${this.stay.reviews[3].by.fullName}.jpg`)"                       
               />
             </div>
             <div class="center">
@@ -448,7 +448,7 @@
             <div class="center spacing-10px-right">
               <img
                 class="user-review-avatar"
-                src="../assets/imgs/icons/avatar.png"
+                :src="require(`@/assets/imgs/profile_pic/${this.stay.reviews[4].by.fullName}.jpg`)"                       
               />
             </div>
             <div class="center">
@@ -465,7 +465,7 @@
             <div class="center spacing-10px-right">
               <img
                 class="user-review-avatar"
-                src="../assets/imgs/icons/avatar.png"
+                :src="require(`@/assets/imgs/profile_pic/${this.stay.reviews[5].by.fullName}.jpg`)"                       
               />
             </div>
             <div class="center">
