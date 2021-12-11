@@ -57,9 +57,9 @@ import createStay from '@/cmps/host/create-stay.vue'
 export default {
   data() {
     return {
-      main: true,
+      main: false,
       status:false,
-      orders:false,
+      orders:true,
       rates:false,
       currUser: null
     };

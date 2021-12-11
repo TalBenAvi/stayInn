@@ -512,17 +512,12 @@
         {{ this.stay.loc.address }},{{ this.stay.loc.country }}
       </div>
       <div>
-        <GmapMap
-          :center="this.stay.loc"
-          :zoom="12"
-          map-type-id="terrain"
-          style="width: 1500px; height: 480px; margin-bottom: 80px"
-        >
-          <GmapMarker :position="pos" :clickable="true" />
+        <GmapMap :center="this.stay.loc" :zoom="12" map-type-id="terrain" class="map-design">
+          <GmapMarker :position="this.stay.loc" :clickable="true" />
         </GmapMap>
       </div>
     </div>
-    <div>
+    <div class="host-details-info-stay">
       <div class="stay-location-map">
         <div class="flex-row">
           <div class="width-50 spacing-120px-right">
@@ -610,7 +605,7 @@
           </div>
         </div>
       </div>
-      <div class="width-33">
+      <div class="width-33 do-not-show-400">
         <div class="airbnb-medium spacing-15px">Health & safety</div>
         <div class="flex-row spacing-15px">
           <div class="center">
@@ -640,7 +635,7 @@
           </div>
         </div>
       </div>
-      <div class="width-33">
+      <div class="width-33 do-not-show-400">
         <div class="airbnb-medium spacing-15px">Cancellation policy</div>
         <div class="flex-row spacing-15px">
           <div>
@@ -798,11 +793,8 @@ export default {
     determinePos() {
       if (this.scrollBar < 580) return { position: "relative" };
       else if (this.scrollBar >= 580 && this.scrollBar <= 1200) {
-        return {
-          position: "relative",
-          "margin-top": this.scrollBar - 580 + "px",
-        };
-      } else return { position: "relative", "margin-top": 640 + "px" };
+        return {"margin-top": this.scrollBar - 580 + "px",};
+      } else return {"margin-top": 640 + "px" };
     },
     rateReview(){
       let length=(this.stay.reviews[0].rate.Value)/(5/100);
