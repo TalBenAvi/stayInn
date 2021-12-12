@@ -717,9 +717,11 @@ export default {
        const retrievedUser =JSON.parse(loggedinUser)
        this.reviewData.by.fullName=retrievedUser.username
        this.reviewData.stayId=this.stay._id
+
        try {
         const updatedStay =await this.$store.dispatch({ type: "addReview",review:this.reviewData});
         this.stay=updatedStay;
+        this.reviewData.txt='';
       } catch(err) {
           console.log(err)
           this.msg = "Failed to add review"
