@@ -152,7 +152,9 @@ export default {
     },
     setNewTrip() {
       this.$store.dispatch({type:'updateTrip', trip:this.newTrip})
+      eventBus.$emit('updateCityName', this.newTrip.dest.country)
       this.$router.push( {path: '/stay' , query: {trip: this.newTrip}})
+      
     }
   },
 };

@@ -149,6 +149,7 @@ export default {
   created() {
     eventBus.$on("selectedLocation", this.setLocation);
     eventBus.$on("setGuests", this.setGuests);
+    eventBus.$on('updateCityName',this.updateCityName);
     this.setCurrPage();
     window.addEventListener("scroll", this.handleScroll);
   },
@@ -242,6 +243,10 @@ export default {
     showStays() {
       this.$router.push("/stay");
     },
+    updateCityName(city) {
+      console.log(city)
+      this.cityName =city.charAt(0)+city.slice(1).toLowerCase()
+    }
   },
   computed: {
     logo() {
@@ -311,6 +316,7 @@ export default {
           this.globalSrc = "global";
           this.imgSrc = "airbnb-logo";
         } else if (this.currPage === "home" && this.isTop) {
+          this.cityName = 'Start your search'
           this.openModal();
           this.imgSrc = "logo-white";
           this.globalSrc = "global-white";
@@ -320,7 +326,9 @@ export default {
     },
     $route() {
       const {filter} = this.$route.query
-      this.cityName = (filter)? filter.charAt(0).toUpperCase() + filter.slice(1) : 'Start your search'
+      if (filter) {
+        this.cityName = filter.charAt(0).toUpperCase() + filter.slice(1)
+      }
     }
   },
 };
