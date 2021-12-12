@@ -135,31 +135,31 @@
             <div class="airbnb">1 double bed</div>
           </div>
         </div>
-        <div class="stay-info-desc-end">
+        <!-- <div class="stay-info-desc-end">
           <h3>What this place offers</h3>
           <div class="offeres-layout">
             <div class="houseRules-layout">
               <div class="spacing flex-center">
                 <div class="spacing-10px-right">
-                  <img class="icons" src="../assets/imgs/icons/Pool.png" />
+                  <img class="icons" :src="require(`../assets/imgs/icons/${this.stay.amenities[0]}.png`)"  />
                 </div>
-                <div class="center">{{ this.stay.amenities[7] }}</div>
+                <div class="center">{{ this.stay.amenities[0] }}</div>
               </div>
               <div class="spacing flex-center">
                 <div class="spacing-10px-right">
-                  <img class="icons" src="../assets/imgs/icons/Dryer.png" />
+                  <img class="icons" :src="require(`../assets/imgs/icons/${this.stay.amenities[1]}.png`)" />
                 </div>
-                <div class="center">{{ this.stay.amenities[4] }}</div>
+                <div class="center">{{ this.stay.amenities[1] }}</div>
               </div>
               <div class="spacing flex-center">
                 <div class="spacing-10px-right">
-                  <img class="icons" src="../assets/imgs/icons/TV.png" />
+                  <img class="icons" :src="require(`../assets/imgs/icons/${this.stay.amenities[2]}.png`)" />
                 </div>
-                <div class="center">{{ this.stay.amenities[5] }}</div>
+                <div class="center">{{ this.stay.amenities[2] }}</div>
               </div>
               <div class="spacing-44px flex-center">
                 <div class="spacing-10px-right">
-                  <img class="icons" src="../assets/imgs/icons/car.png" />
+                  <img class="icons" :src="require(`../assets/imgs/icons/${this.stay.amenities[3]}.png`)" />
                 </div>
                 <div class="center">{{ this.stay.amenities[3] }}</div>
               </div>
@@ -167,27 +167,27 @@
             <div class="amenities-layout">
               <div class="spacing flex-center">
                 <div class="spacing-10px-right">
-                  <img class="icons" src="../assets/imgs/icons/Kitchen.png" />
+                  <img class="icons" :src="require(`@/assets/imgs/icons/${this.stay.amenities[4]}.png`)" />
                 </div>
-                <div class="center">{{ this.stay.amenities[1] }}</div>
+                <div class="center">{{ this.stay.amenities[4] }}</div>
               </div>
               <div class="spacing flex-center">
                 <div class="spacing-10px-right">
-                  <img class="icons" src="../assets/imgs/icons/Iron.png" />
+                  <img class="icons" :src="require(`../assets/imgs/icons/${this.stay.amenities[5]}.png`)" />
+                </div>
+                <div class="center">{{ this.stay.amenities[5] }}</div>
+              </div>
+              <div class="spacing flex-center">
+                <div class="spacing-10px-right">
+                  <img class="icons" :src="require(`../assets/imgs/icons/${this.stay.amenities[6]}.png`)" />
                 </div>
                 <div class="center">{{ this.stay.amenities[6] }}</div>
               </div>
-              <div class="spacing flex-center">
-                <div class="spacing-10px-right">
-                  <img class="icons" src="../assets/imgs/icons/Wifi.png" />
-                </div>
-                <div class="center">{{ this.stay.amenities[0] }}</div>
-              </div>
               <div class="spacing-44px flex-center">
                 <div class="spacing-10px-right">
-                  <img class="icons" src="../assets/imgs/icons/Washer.png" />
+                  <img class="icons" :src="require(`../assets/imgs/icons/${this.stay.amenities[7]}.png`)" />
                 </div>
-                <div class="center">{{ this.stay.amenities[2] }}</div>
+                <div class="center">{{ this.stay.amenities[7] }}</div>
               </div>
             </div>
           </div>
@@ -196,7 +196,7 @@
               show all {{ this.stay.amenities.length }} amenities
             </button>
           </div>
-        </div>
+        </div> -->
       </div>
       <div class="stay-reserve-layout">
         <div :style="determinePos">
@@ -589,7 +589,7 @@
           </div>
           <div class="flex-row spacing-15px">
             <div class="center">
-              <img class="icon" src="../assets/imgs/icons/home.png" />
+              <img class="icon" src="../assets/imgs/icons/no-pets.png" />
             </div>
             <div>
               <div class="airbnb">No pets</div>
@@ -597,7 +597,7 @@
           </div>
           <div class="flex-row spacing-15px">
             <div class="center">
-              <img class="icon" src="../assets/imgs/icons/home.png" />
+              <img class="icon" src="../assets/imgs/icons/party.png" />
             </div>
             <div>
               <div class="airbnb">No parties or events</div>
@@ -609,7 +609,7 @@
         <div class="airbnb-medium spacing-15px">Health & safety</div>
         <div class="flex-row spacing-15px">
           <div class="center">
-            <img class="icon" src="../assets/imgs/icons/clock.png" />
+            <img class="icon" src="../assets/imgs/icons/spray-bottle.png" />
           </div>
           <div>
             <div class="airbnb width-75">
@@ -620,7 +620,7 @@
         </div>
         <div class="flex-row spacing-15px">
           <div class="center">
-            <img class="icon" src="../assets/imgs/icons/clock.png" />
+            <img class="icon" src="../assets/imgs/icons/fire-alarm.png" />
           </div>
           <div>
             <div class="airbnb">No carbon monoxide alarm</div>
@@ -735,10 +735,10 @@ export default {
       if (!this.currentTrip) return;
       this.currentTrip.startDate = `${new Date(dates.start).getDate()}/${
         new Date(dates.start).getMonth() + 1
-      }/${new Date(dates.start).getFullYear()+1}`;
+      }/${new Date(dates.start).getFullYear()}`;
       this.currentTrip.endDate = `${new Date(dates.end).getDate()}/${
         new Date(dates.end).getMonth() + 1
-      }/${new Date(dates.end).getFullYear()+1}`;
+      }/${new Date(dates.end).getFullYear()}`;
       this.nightsAmount = amount;
     },
     reserveStay() {

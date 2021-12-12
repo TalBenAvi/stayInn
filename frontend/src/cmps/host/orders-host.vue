@@ -64,6 +64,8 @@
 </template>
 
 <script>
+import {socketService} from '../../services/socket.service.js'
+
 export default {
   props: {
     user: Object,
@@ -74,9 +76,15 @@ export default {
     };
   },
   created() {
+    socketService.emit('connect-host',this.user._id)
+    socketService.on('add-order',(order) => {
+            console.log('host in host', order);
+             this.hostOrders.push(order);
+      })
     console.log(this.user);
     this.setOrders();
     this.clearPending();
+
   },
   methods: {
     async setOrders() {

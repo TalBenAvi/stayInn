@@ -6,9 +6,9 @@ export const SOCKET_EVENT_REVIEW_ADDED = 'review-added';
 export const SOCKET_EVENT_REVIEW_ABOUT_YOU = 'review-about-you';
 
 
-const baseUrl = (process.env.NODE_ENV === 'production')? '' : '//localhost:3031'
-// export const socketService = createSocketService()
-export const socketService = createDummySocketService()
+const baseUrl = (process.env.NODE_ENV === 'production')? '' : '//localhost:3030'
+export const socketService = createSocketService()
+// export const socketService = createDummySocketService()
 
 window.socketService = socketService
 
@@ -74,9 +74,4 @@ function createDummySocketService() {
 }
 
 
-// Basic Tests
-// function cb(x) {console.log(x)}
-// socketService.on('baba', cb)
-// socketService.emit('baba', 'DATA')
-// socketService.off('baba', cb)
 

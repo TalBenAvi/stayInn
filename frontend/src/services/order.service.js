@@ -1,7 +1,8 @@
-import { httpService} from "./http.service.js";
+// import { httpService} from "./http.service.js";
 import {storageService} from './async-storage.service.js'
 import {userService} from './user.service.js'
-import { utilService } from "./utils.service.js";
+// import { utilService } from "./utils.service.js";
+import {socketService} from './socket.service.js'
 
 export const orderService= {
     add,
@@ -42,8 +43,7 @@ function query(filterBy) {
     order.buyer._id = user._id
     // order.host = await userService.getById(order.user._id)
     const addedOrder = await storageService.post('order', order)
-    console.log(addedOrder)
-  
+    socketService.emit('add-order',addedOrder)
     return addedOrder
   }
   

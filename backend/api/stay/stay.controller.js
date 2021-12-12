@@ -28,7 +28,7 @@ async function getStayById(req, res) {
     // console.log('controller ');
     const stayId = req.params.id;
     const stay = await stayService.getById(stayId);
-    console.log(stay);
+    // console.log(stay);
     res.json(stay)
   } catch (err) {
 
@@ -62,12 +62,12 @@ async function addReview(req,res){
 }
 // PUT (Update stay)
 async function updateStay(req, res) {
-  console.log('heyush');
+  // console.log('heyush');
   try {
     const stay = req.body;
-    console.log('stay before update',stay);
+    // console.log('stay before update',stay);
     const updatedStay = await stayService.update(stay)
-    console.log('stay after update', updatedStay);
+    // console.log('stay after update', updatedStay);
     res.json(updatedStay)
   } catch (err) {
     logger.error('Failed to update stay', err)
