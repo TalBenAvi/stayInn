@@ -279,7 +279,7 @@
           <!-- <p class="stay-name flex"> -->
             <div class="flex-row">
               <div> <img class="star center-5px spacing-10px-right" src="../assets/imgs/icons/star.jpg" /></div>
-              <div class="airbnb center gray-color rate-score-stay-line"><span class="rate-score-stay">{{stay.reviews[0].rate.Value }}</span> ({{stay.reviews.length}})</div>
+              <div class="airbnb center gray-color rate-score-stay-line"><span class="rate-score-stay">{{stay.reviews[0].avgrate}}</span> ({{stay.reviews[0].revnum}})</div>
             </div>
             <div class="left-details-display airbnb">{{ stay.loc.country }} ∙ {{ stay.typeOfPlace }}</div>
             <div class="left-details-display stay-name-left-details-display airbnb">{{ stay.name }}</div>
