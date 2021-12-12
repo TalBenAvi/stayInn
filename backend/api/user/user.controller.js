@@ -48,16 +48,16 @@ async function updateUser(req, res) {
 }
 
 async function addPendingOrder(req,res) {
-    console.log('hrtr')
-    console.log(req.params.orderId)
-    console.log(req.params, req.body)
+    // console.log('hrtr')
+    // console.log(req.params.orderId)
+    // console.log(req.params, req.body)
     try {
         const user = await userService.getById(req.params.userId)
-        console.log('got user:', user)
+        // console.log('got user:', user)
         user.pendingOrders.unshift(req.params.orderId)
         const updatedUser = await userService.update(user)
         res.json(updatedUser)
-        console.log(updateUser)
+        // console.log(updateUser)
       } catch (err) {
         logger.error('Failed to add review', err)
         res.status(500).send({ err: 'Failed to add reveiw' })
@@ -72,7 +72,7 @@ async function clearPendingOrders(req,res) {
         user.pendingOrders = []
         const updatedUser = await userService.update(user)
         res.json(updatedUser)
-        console.log(updateUser)
+        // console.log(updateUser)
       } catch (err) {
         logger.error('Failed to add review', err)
         res.status(500).send({ err: 'Failed to add reveiw' })
