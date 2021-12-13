@@ -12,12 +12,12 @@
           <div class="min-max-price">
             <div class="min-price">
               <span>min price</span>
-              <div>{{ minPrice }}</div>
+              <div>$ {{ minPrice }}</div>
             </div>
             -
             <div class="max-price">
               <span>max price</span>
-              <div>{{ maxPrice }}</div>
+              <div>$ {{ maxPrice }}</div>
             </div>
           </div>
           <div class="save-price">

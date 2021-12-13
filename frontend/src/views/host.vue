@@ -2,9 +2,6 @@
   <div class="host-view">
     <div class="main-area">
       <div class="menu-bar">
-        <div>
-
-        </div>
         <div class="menu-option">
           <button class="airbnb-medium menu-bar-button" @click="showStatus">
             <span class="spacing-20px-right"><img src="../assets/imgs/icons/host/house.png"></span>My Stays
@@ -13,11 +10,6 @@
         <div class="menu-option">
           <button class="airbnb-medium menu-bar-button" @click="showOrders">
             <span class="spacing-20px-right"><img src="../assets/imgs/icons/host/orders.png"></span>Orders
-          </button>
-        </div>
-        <div class="menu-option">
-          <button class="airbnb-medium menu-bar-button" @click="showRates">
-            <span class="spacing-20px-right"><img src="../assets/imgs/icons/host/rates.png"></span>Rates
           </button>
         </div>
         <div></div>
@@ -91,12 +83,6 @@ export default {
        this.status=false;
         this.orders=true;
          this.rates=false;
-    },
-    showRates(){
-      this.main=false;
-       this.status=false;
-        this.orders=false;
-         this.rates=true;
     },
     setUser() {
     let user=  this.$store.getters.loggedinUser

@@ -89,7 +89,7 @@
       </div>
     </section> -->
 
-    <section class="mobile-nav">
+    <section v-if="currPage !== all" class="mobile-nav">
       <div class="mobile-option">
         <img src= "../assets/imgs/icons/user/search.png" />
         <span @click="toHome" >Explore</span>
