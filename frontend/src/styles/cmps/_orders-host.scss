@@ -3,15 +3,15 @@
     background-color: white;
     grid-column: 2;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-    padding: 20px;
+    padding: 30px;
 
     .order-statistics {
         display: flex;
         justify-content: space-between;
 
         img {
-            width: 65px;
-            height: 65px;
+            width: 75px;
+            height: 75px;
             margin-inline-start: 20px;
             margin-inline-end: 50px;
         }
@@ -19,8 +19,8 @@
         .box {
             display: flex;
             align-items: center;
-            
-            background: linear-gradient(to left, #ff385d71 , $brand);
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+            // box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
             padding: 20px;
             width: 31%;
             height: 150px;
@@ -33,7 +33,7 @@
                 display: flex;
                 flex-direction: column;
                 font-family: airbnb-book;
-                color: white;
+                color: $gray;
 
                 div:first-of-type {
                     color: $black;
@@ -43,16 +43,6 @@
             }
 
       
-        }
-
-        .box:nth-child(2) {
-            background: linear-gradient(to left, #ff385d71 , $brand);
-
-        }
-
-        .box:nth-child(3) {
-            background: linear-gradient(to left, #ff385d71 , $brand);
-
         }
     }
 
@@ -64,9 +54,15 @@
         justify-content: space-between;
 
         table {
+           margin-top: 30px;
             border-radius: 10px;
             
         }
+
+        thead {
+            background: #FFF1F3;
+        }
+
 
         th {
             padding: 15px;
@@ -170,3 +166,20 @@
  .green {
      color: green;
  }
+
+
+
+ .trackable {
+    border:0;
+	min-height:4rem;
+	padding: 0.75rem 1.5rem;
+	border-radius: 2rem;
+	color:white;
+	font-weight: bold;
+	font-size:1.25rem;
+	background-image: radial-gradient(circle at center, #FF385C 0%, #E61E4D 27.5%, #E31C5F 40%, #D70466 57.5%, #BD1E59 75%, #BD1E59 100% );
+	transition: opacity 1.25s ease 0s !important;
+	min-width: 200px;
+    background-size: 200% 200%;
+	background-position: calc((100 - var(--mouse-x, 0)) * 1%) calc((100 - var(--mouse-y, 0)) * 1%);
+}
