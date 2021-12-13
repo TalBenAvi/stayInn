@@ -1,15 +1,9 @@
-.order-headers {
-    display: flex;
-    justify-content: space-between;
-    border-bottom: 1px solid gray;
-}
 
 .orders-body {
-    height: 500px;
-    width: 100%;
     background-color: white;
-
-
+    grid-column: 2;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    padding: 20px;
 
     .order-statistics {
         display: flex;
@@ -25,10 +19,11 @@
         .box {
             display: flex;
             align-items: center;
-            box-shadow: rgb(0 0 0 / 8%) 0px 1px 1px;
-            border: 1px solid #ddd;
-            width: 300px;
-            height: 100px;
+            
+            background: linear-gradient(to left, #ff385d71 , $brand);
+            padding: 20px;
+            width: 31%;
+            height: 150px;
             border-radius: 10px;
             font-size: 25px;
             
@@ -38,7 +33,7 @@
                 display: flex;
                 flex-direction: column;
                 font-family: airbnb-book;
-                color: $gray;
+                color: white;
 
                 div:first-of-type {
                     color: $black;
@@ -49,24 +44,52 @@
 
       
         }
+
+        .box:nth-child(2) {
+            background: linear-gradient(to left, #ff385d71 , $brand);
+
+        }
+
+        .box:nth-child(3) {
+            background: linear-gradient(to left, #ff385d71 , $brand);
+
+        }
     }
 
     .orders-container {
-        padding: 10px;
-        border: 1px solid #ddd;
+        // padding: 25px;
         margin-top: 20px;
         font-family: airbnb;
-        display: grid;
-        align-items: center;
-        grid-template-columns: repeat(6, 1fr);
-        column-gap: 50px;
+        display: flex;
+        justify-content: space-between;
+
+        table {
+            border-radius: 10px;
+            
+        }
+
+        th {
+            padding: 15px;
+            text-align: left;
+            font-family: airbnb-book;
+        }
+
+
+        td {
+            color: $gray;
+            padding: 12px;
+            text-transform: capitalize;
+            border:none;
+            width: 220px;
+            height: 40px;
+        }
 
         .accept {
             cursor: pointer;
             border: none;
             background: transparent;
             font-family: airbnb;
-            font-size: 17px;
+            font-size: 19px;
             text-decoration: underline;
             color: green;
         }
@@ -76,7 +99,7 @@
             border: none;
             background: transparent;
             font-family: airbnb;
-            font-size: 17px;
+            font-size: 19px;
             text-decoration: underline;
             color: rgb(255, 0, 0);
         }
@@ -94,25 +117,56 @@
     font-weight: 600;
     border-radius: 8px;
     outline: none;
-    padding: 12px 10px;
+    // padding: 12px 10px;
     border: none;
     color: white;
     contain: paint;
         }
     }
 
-    .orange {
-       color: rgba(247, 156, 38, 0.61);
+ 
+
+
+
+
+}
+
+
+
+@media (max-width: $break-narrow) {
+
+    .order-statistics {
+        flex-direction: column;
     }
 
-    .red {
-        color: rgba(236, 24, 24, 0.637);
-    }
-
-
-    .green {
-        color: rgba(0, 128, 0, 0.61);
+    .box {
+        grid-column: 2/3;
+        font-size: 20px;
     }
 
 
 }
+
+
+@media (min-width: $break-narrow) {
+
+    .orders-body {
+        // height: 63vh;
+        width: 100%;
+    }
+
+}
+
+.orange {
+    color: rgba(247, 156, 38, 0.61);
+ }
+
+ .red {
+
+     color: red;
+ }
+
+
+ .green {
+     color: green;
+ }

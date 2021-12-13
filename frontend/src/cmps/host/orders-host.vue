@@ -5,66 +5,74 @@
         <div class="box">
           <img src="../../assets/imgs/icons/host/total.png" />
           <div class="details">
-            <div>{{ hostOrders.length }}</div>
+            <div>{{ 3+hostOrders.length }}</div>
             <div>Orders</div>
           </div>
         </div>
 
-                <div class="box">
+        <div class="box">
           <img src="../../assets/imgs/icons/host/waiting.png" />
           <div class="details">
-            <div>{{ amountPending }}</div>
-            <div>Pending</div>
+            <div>$ {{ amountPending }}</div>
+            <div>Revenue</div>
           </div>
         </div>
 
-
-                <div class="box">
+        <div class="box">
           <img src="../../assets/imgs/icons/host/answered.png" />
           <div class="details">
-            <div>{{ amountHandled }}</div>
-            <div>Handled</div>
+            <div>{{ this.stays.length }}</div>
+            <div>Stays</div>
           </div>
         </div>
       </div>
-      <div v-if="hostOrders"></div>
-      <div
-        v-for="order in hostOrders"
-        :key="order._id"
-        class="orders-container"
-      >
-        <div class="">{{ order.buyer.fullname }}</div>
-        <div>{{ order.startDate }}</div>
-        <div>{{ order.endDate }}</div>
-        <div>{{ order.status }}</div>
-        <div>{{ order.totalPrice }}$</div>
-        <div>
-          <div v-if="order.status === 'pending'">
-            <button
+      <div class="orders-container">
+            <table v-if="hostOrders">
+        <thead>
+        <th>Guest</th>
+        <th>Check In</th>
+        <th>Check Out</th>
+        <th>Total</th>
+        <th>Status</th>
+        </thead>
+          <tr  v-for="order in hostOrders" :key="order._id">
+               <td class="">{{ order.buyer.fullname }}</td >
+        <td >{{ order.startDate }}</td>
+        <td >{{ order.endDate }}</td>
+                <td >$ {{ order.totalPrice.toLocaleString() }}</td >
+        <td v-if="order.status !== 'pending'"><span :class="{red: order.status === 'Declined', green: order.status === 'Accepted'}">{{ order.status }}</span></td >
+         <td v-else>   <button
               @click="updateOrderStatus(order._id, 'Accepted')"
               class="accept"
             >
               Accept
-            </button>
+            </button>/
             <button
               class="decline"
               @click="updateOrderStatus(order._id, 'Declined')"
             >
               Decline
-            </button>
-          </div>
-          <div v-if="order.status === 'Accepted'">
-            <div class="green">Accepted</div>
-          </div>
-          <div class="red" v-if="order.status === 'Declined'">Declined</div>
-        </div>
+            </button></td >
+
+        </tr>
+        <tr v-for="fakeOrder in fakeOrders" :key="fakeOrder.name">
+          <td>{{fakeOrder.buyer}}</td>
+          <td>{{fakeOrder.checkin}}</td>
+          <td>{{fakeOrder.checkout}}</td>
+          <td>${{fakeOrder.total.toLocaleString()}}</td>
+           <td><span  class="green">{{fakeOrder.status}}</span></td>
+          
+        </tr>
+      </table>
+
       </div>
+
     </div>
   </section>
 </template>
 
 <script>
-import {socketService} from '../../services/socket.service.js'
+import { socketService } from "../../services/socket.service.js";
 
 export default {
   props: {
@@ -73,18 +81,40 @@ export default {
   data() {
     return {
       hostOrders: [],
+      stays: [],
+      fakeOrders: [{
+        buyer: 'Rebbeca Flin',
+        checkin : '21/3/2022',
+        checkout: '30/3/2022',
+        total: 1040,
+        status: 'Approved'
+      },
+      {
+        buyer: 'Jason Parse',
+        checkin : '9/10/2022',
+        checkout: '13/10/2022',
+        total: 540,
+        status: 'Approved'
+      },
+      {
+        buyer: 'Consoleio Logger',
+        checkin : '30/8/2022',
+        checkout: '5/9/2022',
+        total: 860,
+        status: 'Approved'
+      }]
     };
   },
   created() {
-    socketService.emit('connect-host',this.user._id)
-    socketService.on('add-order',(order) => {
-            console.log('host in host', order);
-             this.hostOrders.push(order);
-      })
+    socketService.emit("connect-host", this.user._id);
+    socketService.on("add-order", (order) => {
+      console.log("host in host", order);
+      this.hostOrders.push(order);
+    });
     console.log(this.user);
     this.setOrders();
     this.clearPending();
-
+     this.setStays();
   },
   methods: {
     async setOrders() {
@@ -111,23 +141,29 @@ export default {
       });
       console.log(updatedUser);
     },
+    setStays() {
+      this.stays = this.$store.getters.stays;
+      this.getHostStays();
+    },
+    getHostStays() {
+      let stays = this.stays;
+      let hostStays = stays.filter((stay) => {
+        return stay.host._id === this.user._id;
+      });
+      this.stays = hostStays;
+    },
   },
   computed: {
     amountPending() {
-      var pendingOrders = this.hostOrders.filter(order => {
-        return order.status === 'pending'
+           var handledOrders = this.hostOrders.filter((order) => {
+        return order.status !== "Declined" && order.status !== "pending";
       });
-      return pendingOrders.length
-    },
-
-    amountHandled() {
-       var handledOrders = this.hostOrders.filter(order => {
-        return order.status !== 'pending'
-      });
-      return handledOrders.length
-
-
+      let sum = 2440;
+      for (let i = 0; i < handledOrders.length; i++) {
+        sum += handledOrders[i].totalPrice;
+      }
+      return sum.toLocaleString() 
     }
-  },
+  }
 };
 </script>

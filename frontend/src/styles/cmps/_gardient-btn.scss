@@ -63,6 +63,22 @@
     --size: 120px;
 }
 
+// .trackable {
+//     border:0;
+// 	min-height:4rem;
+// 	padding: 0.75rem 1.5rem;
+// 	border-radius: 2rem;
+// 	color:white;
+// 	font-weight: bold;
+// 	font-size:1.25rem;
+// 	background-image: radial-gradient(circle at center, #FF385C 0%, #E61E4D 27.5%, #E31C5F 40%, #D70466 57.5%, #BD1E59 75%, #BD1E59 100% );
+// 	transition: opacity 1.25s ease 0s !important;
+// 	min-width: 200px;
+//     background-size: 200% 200%;
+// 	background-position: calc((100 - var(--mouse-x, 0)) * 1%) calc((100 - var(--mouse-y, 0)) * 1%);
+// }
+
+
 .disabled {
     background: gray !important;
     cursor: not-allowed !important;
