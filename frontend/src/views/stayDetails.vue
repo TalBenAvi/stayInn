@@ -1,5 +1,5 @@
 <template>
-<img v-if="stay" :src="require('../assets/imgs/loader.gif')" class="loader-details"/>
+<img v-if="!stay" :src="require('../assets/imgs/loader.gif')" class="loader-details"/>
   <div v-else class="stay-details">
     <div class="name">{{ this.stay.name }}</div>
     <div class="location-name">
