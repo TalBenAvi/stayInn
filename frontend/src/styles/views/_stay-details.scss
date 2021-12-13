@@ -143,8 +143,13 @@
     line-height: 1.65;
     letter-spacing: 0.01em;
     padding-bottom: 50px;
-    // margin-top: ;
 }
+.vibrous-reviews {
+    line-height: 1.65;
+    letter-spacing: 0.01em;
+    padding-bottom: 50px;
+}
+
 .short-exmple {
     font-family: airbnb-medium;
     padding-bottom: 4px;
@@ -175,7 +180,7 @@
 }
 .reviews-spacing {
     display: block;
-    height: 225px;
+    height: 165px;
 }
 .icon {
     width: 40px;
@@ -606,6 +611,9 @@ input[type="number"]::-webkit-inner-spin-button {
 .stay-reserve-mobile {
     display: none;
 }
+.layout-width-grid{
+width: 1120px;
+}
 @media (max-width: 375px) {
     .stay-details {
         display: grid;
@@ -705,7 +713,8 @@ input[type="number"]::-webkit-inner-spin-button {
         row-gap: 1px;
         column-gap: 20px;
         grid-template-columns: 100%;
-        padding-bottom: 510px;
+        grid-template-rows:16.67% 16.67% 16.67% 16.67% 16.67% 16.67%;
+        padding-bottom: 10px;
     }
     .reviews-display {
         width: 375px;
@@ -823,4 +832,10 @@ input[type="number"]::-webkit-inner-spin-button {
     h3{
         padding: 10px;
     }
+    .layout-width-grid{
+        width: 375px;
+        }
+        .spacing-44px{
+           display: none;
+        }
 }
