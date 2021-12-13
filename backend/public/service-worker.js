@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/precache-manifest.50925b4c43b4ed36cd5895d11dc92cee.js"
+  "/precache-manifest.6ec80ff9492c58fa42c9a68fa814a9a3.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "stayinn"});

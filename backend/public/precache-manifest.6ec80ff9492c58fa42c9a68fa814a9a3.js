@@ -1,7 +1,7 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "bf06da66ffb656e65691",
-    "url": "/css/app.8d233446.css"
+    "revision": "506414b4a6c4984a2be0",
+    "url": "/css/app.593d8065.css"
   },
   {
     "revision": "b03d51c948320d0a73f8",
@@ -1072,6 +1072,14 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/img/6.f783d03c.jpg"
   },
   {
+    "revision": "a21d0718f2b1639e17d9f248b4bbfefe",
+    "url": "/img/Dedicated workspace.a21d0718.png"
+  },
+  {
+    "revision": "a3111f052d13cb367027b3e12e630945",
+    "url": "/img/Dryer.a3111f05.png"
+  },
+  {
     "revision": "81b06304d224bfde3b7e65570513ffcc",
     "url": "/img/Emile.81b06304.jpg"
   },
@@ -1084,12 +1092,24 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/img/Eva Macron.ffff010c.jpg"
   },
   {
+    "revision": "c4b1ff0e7e43f4b172b35e7eb2aabbaf",
+    "url": "/img/Free parking.c4b1ff0e.png"
+  },
+  {
+    "revision": "64842e2a103a1dc4fc2db904b8fbb334",
+    "url": "/img/Iron.64842e2a.png"
+  },
+  {
     "revision": "bde5eb38b67614b2ceccb6a68ae9997b",
     "url": "/img/John Travolta.bde5eb38.jpg"
   },
   {
     "revision": "30136596fef37383b279040b63db7e4c",
     "url": "/img/Kiersta.30136596.jpg"
+  },
+  {
+    "revision": "f2d5bf775688f1ebbc51ae972e45cd33",
+    "url": "/img/Kitchen.f2d5bf77.png"
   },
   {
     "revision": "b8c38205d4c530fd06f99064efdbfee2",
@@ -1112,6 +1132,14 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/img/Pool.b6d10331.png"
   },
   {
+    "revision": "9bd949e7012c3d9a22649faaf63a697e",
+    "url": "/img/Washer.9bd949e7.png"
+  },
+  {
+    "revision": "18cb72f55a9bd64bbc47dee7d8ca9eaa",
+    "url": "/img/Wifi.18cb72f5.png"
+  },
+  {
     "revision": "7416988335c53411c5c4d101e3be8e50",
     "url": "/img/Yaniv Richman.74169883.jpg"
   },
@@ -1132,8 +1160,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/img/amsterdam.04835038.jpg"
   },
   {
-    "revision": "da2d7d89a51bdd88a74900ee30d83fcc",
-    "url": "/img/answered.da2d7d89.png"
+    "revision": "2f2375cb75808f8b3b8c70f3716d0220",
+    "url": "/img/answered.2f2375cb.png"
   },
   {
     "revision": "b7b353b47a36f339a51d0f442a83676a",
@@ -1170,10 +1198,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "8c744f462047a4eb166f5d340d9130cd",
     "url": "/img/heart.8c744f46.png"
-  },
-  {
-    "revision": "dce853da50d40a3e13b21402b4ac8bef",
-    "url": "/img/heart.dce853da.png"
   },
   {
     "revision": "e33e9da0901b9419176eeca1e7a6c0f4",
@@ -1216,10 +1240,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/img/logo-white.74e0380e.png"
   },
   {
-    "revision": "a4ec0e4cada6a329bffa5734d1bc83aa",
-    "url": "/img/logo.a4ec0e4c.png"
-  },
-  {
     "revision": "7ddec2f41e349c409db13bbcc99e0ed0",
     "url": "/img/london.7ddec2f4.jpg"
   },
@@ -1256,20 +1276,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/img/party.4f5e6dbc.png"
   },
   {
-    "revision": "ac11a637642aed898d05d8ba827e85d3",
-    "url": "/img/rates.ac11a637.png"
-  },
-  {
     "revision": "3ef6bfde1c69c4b179d21e1c23e8681d",
     "url": "/img/rejected.3ef6bfde.png"
   },
   {
     "revision": "12c9366c1e06d24fe86515c829f0560c",
     "url": "/img/search-circle.12c9366c.png"
-  },
-  {
-    "revision": "daba60548c8a4f745e4df9703ef58e1b",
-    "url": "/img/search.daba6054.png"
   },
   {
     "revision": "00c9f4321c9a1d89466a53278ff03ac4",
@@ -1280,28 +1292,24 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/img/star.7761c37e.jpg"
   },
   {
-    "revision": "68ac6870819814cafa0b1ac85ccea9cb",
-    "url": "/img/total.68ac6870.png"
+    "revision": "b3febbfd5662db5711ed1a679863b318",
+    "url": "/img/total.b3febbfd.png"
   },
   {
     "revision": "a8d70e189322bcfcca58195ceb5b9a69",
     "url": "/img/twitter.a8d70e18.png"
   },
   {
-    "revision": "33a02c6ff147e54698a8381a9551ee05",
-    "url": "/img/user.33a02c6f.png"
+    "revision": "cacd867614e8a77cdf601a26ed3b3cf2",
+    "url": "/img/waiting.cacd8676.png"
   },
   {
-    "revision": "1fd833614425e4037dfec2699eddfb28",
-    "url": "/img/waiting.1fd83361.png"
-  },
-  {
-    "revision": "29989d68e5bb3b02a4316510e985ffbe",
+    "revision": "11ba6b06bea528ccc296217079f95590",
     "url": "/index.html"
   },
   {
-    "revision": "bf06da66ffb656e65691",
-    "url": "/js/app.6bfd525f.js"
+    "revision": "506414b4a6c4984a2be0",
+    "url": "/js/app.abcd2214.js"
   },
   {
     "revision": "b03d51c948320d0a73f8",
