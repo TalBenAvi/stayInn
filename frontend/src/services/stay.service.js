@@ -5,6 +5,8 @@ import {httpService} from "./http.service.js"
 const STAY_KEY = 'staysDB'
 _createStays()
 
+const STAY_URL = '/stay';
+
 export const stayService = {
     query,
     getStayById,
@@ -16,7 +18,7 @@ export const stayService = {
 async function query() {
     try {
         // var stays = await storageService.query(STAY_KEY)
-        var stays = await httpService.get('stay')
+        var stays = await httpService.get(STAY_URL)
         return stays
     } catch (err) {
         console.log('had trouble loading stays :', err)
@@ -27,7 +29,7 @@ async function query() {
 async function getStayById(stayId) {
 
     try {
-        var stay = await httpService.get(`stay/${stayId}`)
+        var stay = await httpService.get(`/stay/${stayId}`)
         console.log(stay);
         return stay
     }   catch (err) {
@@ -38,7 +40,7 @@ async function getStayById(stayId) {
 async function addReview(review) {
     console.log(review);
     try {
-        var stay = await httpService.post(`stay/review/${review.stayId}`,review)
+        var stay = await httpService.post(`/stay/review/${review.stayId}`,review)
         return stay
     } catch (err) {
         console.log('Had an error getting stay by id (in front-service)', err)

@@ -48,6 +48,6 @@ app.get('/**', (req, res) => {
 const logger = require('./services/logger.service')
 
 const port = process.env.PORT || 3030;
-app.listen(port, () => {
+http.listen(port, () => {
 console.log(`App listening on port ${port}!`)
 });

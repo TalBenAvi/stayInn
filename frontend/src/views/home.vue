@@ -29,25 +29,25 @@
       <h1>Unique Stays</h1>
       <div class="location-cards">
         <!-- <div @click="showDetails('10006566')" class="location-card"> -->
-          <div @click="showDetails('61b24aa4cb8a94ae2c9f9a53')" class="location-card">
+          <div @click="showDetails('61b6ed46a64a821250ab6197')" class="location-card">
           <img class="location-img" src="~@/assets/imgs/home-page/homes/cabin/1.webp"/>
           <h4>Carpathian Log Home</h4>
       </div>
 
       <!-- <div @click="showDetails('10306576')" class="location-card"> -->
-      <div @click="showDetails('61b24aa4cb8a94ae2c9f9a56')" class="location-card">
+      <div @click="showDetails('61b6ed47a64a821250ab61ab')" class="location-card">
           <img class="location-img" src="~@/assets/imgs/home-page/homes/kezhan/1.webp"/>
           <h4>Kezhan</h4>
       </div>
 
       <!-- <div @click="showDetails('10706536')" class="location-card"> -->
-      <div @click="showDetails('61b24aa4cb8a94ae2c9f9a59')" class="location-card">
+      <div @click="showDetails('61b6ed47a64a821250ab61b7')" class="location-card">
         <img class="location-img" src="~@/assets/imgs/home-page/homes/trullo/1.webp"/>
         <h4>Trulli</h4>
       </div>
 
       <!-- <div @click="showDetails('10602146')" class="location-card"> -->
-       <div @click="showDetails('61b24aa4cb8a94ae2c9f9a5c')" class="location-card">
+       <div @click="showDetails('61b6ed47a64a821250ab61c8')" class="location-card">
         <img class="location-img" src="~@/assets/imgs/home-page/homes/camper/1.webp"/>
         <h4>Camper</h4>
       </div>
