@@ -614,6 +614,14 @@ input[type="number"]::-webkit-inner-spin-button {
 .layout-width-grid{
 width: 1120px;
 }
+.loader-details{
+    grid-column: 2;
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 600px;
+    width: 150px;
+    height: 150px;
+}
 @media (max-width: 375px) {
     .stay-details {
         display: grid;
