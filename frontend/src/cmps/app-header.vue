@@ -89,7 +89,7 @@
       </div>
     </section> -->
 
-    <section v-if="currPage !== all" class="mobile-nav">
+    <!-- <section v-if="currPage !== all" class="mobile-nav">
       <div class="mobile-option">
         <img src= "../assets/imgs/icons/user/search.png" />
         <span @click="toHome" >Explore</span>
@@ -107,7 +107,7 @@
         <span>Profile</span>
         <login/>
       </div>
-    </section>
+    </section> -->
   </header>
 </template>
 <script>
