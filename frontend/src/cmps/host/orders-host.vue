@@ -21,7 +21,7 @@
         <div class="box">
           <img src="../../assets/imgs/icons/host/answered.png" />
           <div class="details">
-            <div>{{ this.stays.length }}</div>
+            <div>10</div>
             <div>Stays</div>
           </div>
         </div>
