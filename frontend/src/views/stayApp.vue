@@ -245,6 +245,7 @@
       </div>
     </section>
     <!-- Card Grid Display -->
+    <img v-if="!staysForDisplay" :src="require('../assets/imgs/loader.gif')" class="loader"/>
     <div v-if="staysForDisplay" class="center-20 airbnb gray-222222">{{this.staysForDisplay.length}} stays <span v-if="filterByLoc !== 'all' && filterByLoc">in {{this.staysForDisplay[0].loc.country}}</span></div>
     <!-- in {{this.staysForDisplay[0].loc.country}} -->
     <section v-if="staysForDisplay" class="grid-card-container">

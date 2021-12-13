@@ -390,7 +390,7 @@
               <div class="review-date">{{this.stay.reviews[0].by.date}}</div>
             </div>
           </div>
-          <div  class="vibrous">{{ this.stay.reviews[0].txt }}</div>
+          <div  class="vibrous-reviews">{{ (this.stay.reviews[0].txt).substring(1,105) }}...</div>
         </div>
         <div class="reviews-spacing">
           <div class="flex-row">
@@ -407,7 +407,7 @@
               <div class="review-date">{{this.stay.reviews[1].by.date}}</div>
             </div>
           </div>
-          <div  class="vibrous"> {{this.stay.reviews[1].txt}}</div>
+          <div class="vibrous-reviews">{{ (this.stay.reviews[1].txt).substring(1,106) }}...</div>
         </div>
         <div class="reviews-spacing">
           <div class="flex-row">
@@ -424,7 +424,7 @@
               <div class="review-date">November 2020</div>
             </div>
           </div>
-          <div  class="vibrous">{{ this.stay.reviews[2].txt }}</div>
+          <div  class="vibrous-reviews">{{ (this.stay.reviews[2].txt).substring(1,104) }}...</div>
         </div>
         <div class="reviews-spacing">
           <div class="flex-row">
@@ -441,7 +441,7 @@
               <div class="review-date">July 2020</div>
             </div>
           </div>
-          <div  class="vibrous">{{ this.stay.reviews[3].txt }}</div>
+          <div  class="vibrous-reviews">{{ (this.stay.reviews[3].txt).substring(1,101) }}...</div>
         </div>
         <div class="reviews-spacing">
           <div class="flex-row">
@@ -458,7 +458,7 @@
               <div class="review-date">October 2020</div>
             </div>
           </div>
-          <div class="vibrous">{{ this.stay.reviews[4].txt }}</div>
+          <div class="vibrous-reviews">{{ (this.stay.reviews[4].txt).substring(1,105) }}...</div>
         </div>
         <div class="reviews-spacing">
           <div class="flex-row">
@@ -475,7 +475,7 @@
               <div class="review-date">January 2021</div>
             </div>
           </div>
-          <div  class="vibrous">{{ this.stay.reviews[5].txt }}</div>
+          <div class="vibrous-reviews">{{ (this.stay.reviews[5].txt).substring(1,105) }}...</div>
         </div>
       </div>
       <div>
@@ -559,7 +559,8 @@
     <div class="host-details-info-stay">
       <h3 class="airbnb">Things to know</h3>
     </div>
-    <div class="flex-row host-details-info-stay-display">
+<div class="layout-width-grid">
+      <div class="flex-row host-details-info-stay-display">
       <div class="width-33">
         <div>
           <div class="airbnb-medium spacing-15px">House rules</div>
@@ -647,6 +648,7 @@
         </div>
       </div>
     </div>
+</div>
     <div class="stay-reserve-mobile flex-column">
       <div class="details-reserve-mobile">
         <div class="flex-row spacing-5px center-10 spacing-5px"> 
@@ -767,9 +769,6 @@ export default {
       }
     },
     async sendOrderRequest() {
-
-      
-
       this.newOrder.createdAt = Date.now();
       this.newOrder.startDate = this.currentTrip.startDate;
       this.newOrder.endDate = this.currentTrip.endDate;
