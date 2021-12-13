@@ -41,13 +41,13 @@ app.use('/api/user', userRoutes)
 app.use('/api/stay',stayRoutes)
 connectSockets(http, session)
 
-app.get('/**', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'index.html'))
-})
+// app.get('/**', (req, res) => {
+//     res.sendFile(path.join(__dirname, 'public', 'index.html'))
+// })
 
 const logger = require('./services/logger.service')
 
 const port = process.env.PORT || 3030;
-app.listen(port, () => {
+http.listen(port, () => {
 console.log(`App listening on port ${port}!`)
 });

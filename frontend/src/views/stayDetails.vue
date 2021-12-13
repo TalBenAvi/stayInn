@@ -135,59 +135,59 @@
             <div class="airbnb">1 double bed</div>
           </div>
         </div>
-        <!-- <div class="stay-info-desc-end">
+        <div class="stay-info-desc-end">
           <h3>What this place offers</h3>
           <div class="offeres-layout">
             <div class="houseRules-layout">
               <div class="spacing flex-center">
                 <div class="spacing-10px-right">
-                  <img class="icons" :src="require(`../assets/imgs/icons/${this.stay.amenities[0]}.png`)"  />
+                  <img class="icons" :src="require(`../assets/imgs/icons/Wifi.png`)"  />
                 </div>
-                <div class="center">{{ this.stay.amenities[0] }}</div>
+                <div class="center">Wifi</div>
               </div>
               <div class="spacing flex-center">
                 <div class="spacing-10px-right">
-                  <img class="icons" :src="require(`../assets/imgs/icons/${this.stay.amenities[1]}.png`)" />
+                  <img class="icons" :src="require(`../assets/imgs/icons/Kitchen.png`)" />
                 </div>
-                <div class="center">{{ this.stay.amenities[1] }}</div>
+                <div class="center">Kitchen</div>
               </div>
               <div class="spacing flex-center">
                 <div class="spacing-10px-right">
-                  <img class="icons" :src="require(`../assets/imgs/icons/${this.stay.amenities[2]}.png`)" />
+                  <img class="icons" :src="require(`../assets/imgs/icons/Washer.png`)" />
                 </div>
-                <div class="center">{{ this.stay.amenities[2] }}</div>
+                <div class="center">Washer</div>
               </div>
               <div class="spacing-44px flex-center">
                 <div class="spacing-10px-right">
-                  <img class="icons" :src="require(`../assets/imgs/icons/${this.stay.amenities[3]}.png`)" />
+                  <img class="icons" :src="require(`../assets/imgs/icons/Free parking.png`)" />
                 </div>
-                <div class="center">{{ this.stay.amenities[3] }}</div>
+                <div class="center">Free parking</div>
               </div>
             </div>
             <div class="amenities-layout">
               <div class="spacing flex-center">
                 <div class="spacing-10px-right">
-                  <img class="icons" :src="require(`@/assets/imgs/icons/${this.stay.amenities[4]}.png`)" />
+                  <img class="icons" :src="require(`@/assets/imgs/icons/Dryer.png`)" />
                 </div>
-                <div class="center">{{ this.stay.amenities[4] }}</div>
+                <div class="center">Dryer</div>
               </div>
               <div class="spacing flex-center">
                 <div class="spacing-10px-right">
-                  <img class="icons" :src="require(`../assets/imgs/icons/${this.stay.amenities[5]}.png`)" />
+                  <img class="icons" :src="require(`../assets/imgs/icons/Dedicated workspace.png`)" />
                 </div>
-                <div class="center">{{ this.stay.amenities[5] }}</div>
+                <div class="center">Dedicated workspace</div>
               </div>
               <div class="spacing flex-center">
                 <div class="spacing-10px-right">
-                  <img class="icons" :src="require(`../assets/imgs/icons/${this.stay.amenities[6]}.png`)" />
+                  <img class="icons" :src="require(`../assets/imgs/icons/Iron.png`)" />
                 </div>
-                <div class="center">{{ this.stay.amenities[6] }}</div>
+                <div class="center">Iron</div>
               </div>
               <div class="spacing-44px flex-center">
                 <div class="spacing-10px-right">
-                  <img class="icons" :src="require(`../assets/imgs/icons/${this.stay.amenities[7]}.png`)" />
+                  <img class="icons" :src="require(`../assets/imgs/icons/Pool.png`)" />
                 </div>
-                <div class="center">{{ this.stay.amenities[7] }}</div>
+                <div class="center">Pool</div>
               </div>
             </div>
           </div>
@@ -196,7 +196,7 @@
               show all {{ this.stay.amenities.length }} amenities
             </button>
           </div>
-        </div> -->
+        </div>
       </div>
       <div class="stay-reserve-layout">
         <div :style="determinePos">
@@ -375,7 +375,7 @@
         </div>
       </div>
       <div class="reviews-display-data airbnb">
-        <div>
+        <div class="reviews-spacing">
           <div class="flex-row">
             <div class="center spacing-10px-right">
               <img
@@ -383,7 +383,7 @@
                 :src="require(`@/assets/imgs/profile_pic/${this.stay.reviews[0].by.fullName}.jpg`)"                       
               />
             </div>
-            <div class="center">
+            <div class="center flex-column">
               <div class="short-exmple">
                 {{ this.stay.reviews[0].by.fullName }}
               </div>
@@ -392,7 +392,7 @@
           </div>
           <div  class="vibrous">{{ this.stay.reviews[0].txt }}</div>
         </div>
-        <div>
+        <div class="reviews-spacing">
           <div class="flex-row">
             <div class="center spacing-10px-right">
               <img
@@ -409,7 +409,7 @@
           </div>
           <div  class="vibrous"> {{this.stay.reviews[1].txt}}</div>
         </div>
-        <div>
+        <div class="reviews-spacing">
           <div class="flex-row">
             <div class="center spacing-10px-right">
               <img
@@ -426,7 +426,7 @@
           </div>
           <div  class="vibrous">{{ this.stay.reviews[2].txt }}</div>
         </div>
-        <div>
+        <div class="reviews-spacing">
           <div class="flex-row">
             <div class="center spacing-10px-right">
               <img
@@ -443,7 +443,7 @@
           </div>
           <div  class="vibrous">{{ this.stay.reviews[3].txt }}</div>
         </div>
-        <div>
+        <div class="reviews-spacing">
           <div class="flex-row">
             <div class="center spacing-10px-right">
               <img
@@ -460,7 +460,7 @@
           </div>
           <div class="vibrous">{{ this.stay.reviews[4].txt }}</div>
         </div>
-        <div>
+        <div class="reviews-spacing">
           <div class="flex-row">
             <div class="center spacing-10px-right">
               <img
@@ -556,10 +556,10 @@
         </div>
       </div>
     </div>
-    <div class="full-width">
+    <div class="host-details-info-stay">
       <h3 class="airbnb">Things to know</h3>
     </div>
-    <div class="flex-row full-width">
+    <div class="flex-row host-details-info-stay-display">
       <div class="width-33">
         <div>
           <div class="airbnb-medium spacing-15px">House rules</div>
@@ -639,13 +639,26 @@
         <div class="airbnb-medium spacing-15px">Cancellation policy</div>
         <div class="flex-row spacing-15px">
           <div>
-            <div class="airbnb">
+            <div class="airbnb width-33">
               Cancel before Dec 6 and get a 50% refund, minus the first night
               and service fee.
             </div>
           </div>
         </div>
       </div>
+    </div>
+    <div class="stay-reserve-mobile flex-column">
+      <div class="details-reserve-mobile">
+        <div class="flex-row spacing-5px center-10 spacing-5px"> 
+          <div class="airbnb-medium font-size-19px spacing-2-right">${{ Number(this.stay.price).toLocaleString() }}</div><div class="airbnb center-5px font-14"><span class="spacing-2-right">/</span>night</div>
+        </div>
+         <div class="airbnb mobile-date-reserve">
+              <date-picker v-if="currentTrip" :tripdate="tripDates" />
+        </div>
+      </div>
+        <div >
+          <gardient-btn @reserveStay="reserveStay()"></gardient-btn>
+        </div>
     </div>
   </div>
 </template>

@@ -10,6 +10,7 @@
         grid-column: 1 / -1;
     }
 }
+
 .name {
     margin-top: 19px;
     margin-bottom: 13px;
@@ -22,6 +23,7 @@
     height: 15px;
 }
 .location-name {
+    padding: 10px;
     width: 1120px;
     display: flex;
     flex-direction: row;
@@ -140,7 +142,8 @@
 .vibrous {
     line-height: 1.65;
     letter-spacing: 0.01em;
-    margin-bottom: 50px;
+    padding-bottom: 50px;
+    // margin-top: ;
 }
 .short-exmple {
     font-family: airbnb-medium;
@@ -165,9 +168,14 @@
     font-size: 0.85rem;
     color: $black;
     background-color: white;
+    display: block;
 }
 .show-more-amenities :hover {
     cursor: pointer;
+}
+.reviews-spacing {
+    display: block;
+    height: 225px;
 }
 .icon {
     width: 40px;
@@ -563,7 +571,9 @@ input[type="number"]::-webkit-inner-spin-button {
     color: white;
     background-color: #ff385c;
 }
-
+.host-details-info-stay {
+    width: 1120px;
+}
 .user-msg {
     margin-bottom: 15px;
     text-align: center;
@@ -593,7 +603,10 @@ input[type="number"]::-webkit-inner-spin-button {
         height: 40px;
     }
 }
-@media (max-width: 400px) {
+.stay-reserve-mobile {
+    display: none;
+}
+@media (max-width: 375px) {
     .stay-details {
         display: grid;
         grid-template-columns: 0 375px 0;
@@ -607,6 +620,7 @@ input[type="number"]::-webkit-inner-spin-button {
         }
     }
     .name {
+        padding: 10px;
         margin-top: 80px;
     }
     .location-name {
@@ -617,9 +631,11 @@ input[type="number"]::-webkit-inner-spin-button {
     }
     .imgs-layout {
         width: 375px;
+        gap: 0px;
     }
     .img1 {
         width: 100%;
+        border-radius: 0px;
     }
     .img2 {
         display: none;
@@ -662,7 +678,7 @@ input[type="number"]::-webkit-inner-spin-button {
         width: 375px;
     }
     .stay-info-desc {
-        width: 42.3%;
+        width: 100%;
         padding-top: 32px;
         padding-bottom: 14px;
         font-family: airbnb-book;
@@ -672,34 +688,39 @@ input[type="number"]::-webkit-inner-spin-button {
         border-bottom: #dddddd solid 1px;
     }
     .stay-info-desc-end {
-        width: 42.3%;
+        width: 100%;
         padding-top: 32px;
         padding-bottom: 14px;
         padding-right: 20px;
         padding-left: 20px;
         font-family: airbnb-book;
         font-size: 0.75rem;
-        border-bottom: #dddddd solid 1px;
+        border-bottom: none;
     }
     .reviews-rating-data {
         display: none;
     }
     .reviews-display-data {
         display: grid;
-        row-gap: 5px;
+        row-gap: 1px;
         column-gap: 20px;
-        grid-template-columns: 20%;
-        // grid-template-rows: % 16.67% 16.67% 16.67% 16.67% 16.67%;
-        padding-bottom: 100px;
+        grid-template-columns: 100%;
+        padding-bottom: 510px;
     }
     .reviews-display {
         width: 375px;
+        padding: 15px;
     }
     .review-date {
         padding-bottom: 0px;
     }
     .host-details-info-stay {
         display: none;
+    }
+    .host-details-info-stay-display {
+        width: 100vw;
+        margin-bottom: 80px;
+        padding: 10px;
     }
     .do-not-show-400 {
         display: none;
@@ -712,9 +733,94 @@ input[type="number"]::-webkit-inner-spin-button {
     .stay-reserve-layout {
         display: none;
     }
+    .stay-reserve-mobile {
+        display: block;
+        height: 120px;
+        width: 100%;
+        align-items: center;
+        position: fixed;
+        background: rgb(255, 255, 255);
+        top: 588px;
+        border-top: #dddddd solid 1px;
+    }
+    .location-name-map {
+        padding: 10px;
+    }
     .stay-location-map {
         width: 375px;
         border-bottom: #dddddd solid 1px;
-        margin-bottom: 50px;
+        margin-bottom: 32px;
+    }
+    .width-33 {
+        width: 100vw;
+    }
+    .check-available {
+        height: 45px;
+        width: 108px;
+        font-size: 14px;
+        margin-top: 12.5px;
+        border-radius: 9px;
+        position: fixed;
+        right: 22px;
+        bottom: 3px;
+    }
+    .mobile-date-reserve {
+        width: 100px;
+        *.w-full {
+            width: 74px;
+            border: none;
+            border-bottom: solid 0.5px $black;
+
+        }
+    }
+    .details-reserve-mobile {
+        width: 100px;
+        margin-left: 15px;
+        font-size: 16px;
+    }
+    .show-more-amenities {
+        display: none;
+    }
+    .user-msg {
+        margin-bottom: 5px;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        bottom: 0;
+        background-color: #fff;
+        color: $black;
+        font-family: airbnb;
+        font-size: 15px;
+        padding: 13px;
+        left: 0px;
+        bottom: 76.5px;
+        width: 100%;
+        border-radius: 0px;
+        box-shadow: rgb(0 0 0 / 8%) 0px 1px 1px;
+        border: 1px solid #c7c7c7;
+        z-index: 10;
+        transition: 3s;
+
+        img {
+            position: absolute;
+            left: 0;
+            margin-inline-start: 20px;
+            width: 20px;
+            height: 20px;
+        }
+    }
+    .baner {
+        grid-column: 2;
+        grid-row: 1;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        -o-object-fit: cover;
+        object-fit: cover;
+    }
+    h3{
+        padding: 10px;
     }
 }

@@ -43,6 +43,7 @@ function query(filterBy) {
     order.buyer._id = user._id
     // order.host = await userService.getById(order.user._id)
     const addedOrder = await storageService.post('order', order)
+    console.log('1',addedOrder);
     socketService.emit('add-order',addedOrder)
     return addedOrder
   }
